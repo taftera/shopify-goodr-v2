@@ -1,0 +1,134 @@
+{%- if product_variable != blank -%}
+{%- assign break_loop = false -%}
+{%- for collection in collections -%}
+	{%- assign all_my_products = collection.products %}
+	{%- for tmp_product in all_my_products -%}
+		{%- if tmp_product.handle == product_variable -%}
+			{%- assign product = tmp_product -%}
+			{%- assign break_loop = true -%}
+			{%- break -%}
+		{%- endif -%}
+	{%- endfor -%}
+	{%- if break_loop -%}
+    	{% break %}
+  	{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+
+{%- if product.title.size > 0 -%}				
+<div class="product-tile product-tile-new">
+  {% if product.featured_image != blank %}
+  	<div class="product-tile_image-wrapper">
+      {% if product.images.size > 2 %}
+      <a class="product-tile__image hover-effect lazy" href="{{ product.url | within: collection }}" data-src='{{ product.images[2].src | img_url: '600x' }})'>
+      {% else %}
+      <a class="product-tile__image" href="{{ product.url | within: collection }}" >
+      {% endif %}
+        <img class="lazy" data-src='{{ product.featured_image.src | img_url: '600x' }}' />
+      </a>
+      {% if product.tags contains 'Polarized' %}
+		{% if product.tags contains 'bfgs' %}
+          <h6 class="product-tile__flag">Polarized + Wider</h6>
+        {% else %}
+          <h6 class="product-tile__flag">Polarized</h6>
+        {% endif %}
+      {% endif %}
+      {% if block.settings.virtual_try_on %}
+		<a href="#" class="virtual_btn"><img class="virtual-icon" src="{{ 'virtual-icon.png' | file_img_url: 'master' }}" /> TRY THEM ON</a>
+	  {% endif %}
+    </div>
+  {% endif %}
+      
+
+  <p class="product-tile__type">
+    {{ product.type }}
+  </p>
+  <p class="product-tile__title">
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+  </p>
+
+      <a href="{{ product.url | within: collection }}#reviews">
+        
+        {% if product.metafields.yotpo.bottomline == blank or product.metafields.yotpo.bottomline   contains "text-m write-review-btn-hidden"  %}
+        
+       <div class="yotpo bottomline">
+<div class="yotpo-bottomline pull-left  star-clickable" style="width:90px;">  
+       <span class="yotpo-stars"> 
+         <span class="yotpo-icon yotpo-icon-empty-star pull-left"></span>
+         <span class="yotpo-icon yotpo-icon-empty-star pull-left"></span>
+         <span class="yotpo-icon yotpo-icon-empty-star pull-left"></span>
+         <span class="yotpo-icon yotpo-icon-empty-star pull-left"></span>
+         <span class="yotpo-icon yotpo-icon-empty-star pull-left"></span> </span>      
+ <div class="yotpo-clr"></div> </div></div>
+        	
+        {% else %}
+        
+<div class="yotpo bottomLine" data-product-id="{{ product.id }}"  data-url="{{ product.url }}">
+{%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+{%- assign time_now = 'now' | date: '%s' %}
+{%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+{%- assign diff_seconds_from_live = time_now | minus: yotpo_live_time %}
+{%- assign yotpo_bottomline_last_updated = product.metafields.yotpo.bottomline_update_time | date: '%s' %}
+{%- assign diff_seconds_from_last_bottomline_update = time_now | minus: yotpo_bottomline_last_updated %}
+{%- if yotpo_live_time and diff_seconds_from_live < 86400 and yotpo_bottomline_last_updated and diff_seconds_from_last_bottomline_update < 86400 -%}
+ {%- assign yotpo_bottomline_obsolete = false %}
+{%- else %}
+ {%- assign yotpo_bottomline_obsolete = true %}
+{%- endif %}
+{%- if yotpo_offload_content == 'yes' and yotpo_bottomline_obsolete != true -%}
+ {{ product.metafields.yotpo.bottomline }}
+{%- endif %}
+</div>
+     {% endif %}
+      </a>
+      
+  <p class="product-tile__price">
+    {% if product.compare_at_price > product.price %}
+
+      {% if product.price_varies %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        {% if product.tags contains 'Final Sale' %}
+    		FINAL SALE
+    	{% else %}
+    		{{ 'products.product.on_sale' | t }}
+    	{% endif %}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% else %}
+
+      {% if product.price_varies %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+    	{% comment %}
+    	  The following if statement hides the price on sold out items 
+    	  - per request for marathon collections 
+    	{% endcomment %}
+        {% if product.available %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+
+    {% endif %}
+
+    {% if product.compare_at_price > product.price %}
+      <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+      <s>{{ product.compare_at_price | money }}</s>
+    {% endif %}
+
+    {% unless product.available %}
+      {{ 'products.product.sold_out' | t }}
+    {% endunless %}
+  </p>
+  {% if product.variants.size == 1 and product.available %}
+    <a class="js-quick-buy button button--small button--full" data-product-id="{{ product.variants[0].id }}" data-product-quantity="{{ product.variants[0].inventory_quantity }}">{{ 'products.product.add_to_cart' | t }}</a>
+  {% endif %}
+</div>
+{%- else -%}
+	{%- comment -%}
+		No product yet. Show onboarding one.
+	{%- endcomment -%}
+{%- endif -%}

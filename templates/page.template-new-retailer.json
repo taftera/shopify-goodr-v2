@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "a59c13c5-3bd3-46c9-aca5-662beef97a7d": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "WANT TO BE A GOODR RETAILER",
+            "text": "Well you've come to the right place. Whether it's our easy buy-in, pain free ordering, free POP retail stand, or low minimums (we can keep going) we're here to make this sh!t easy. So if you're in, just fill out a few questions below and we'll be in touch.",
+            "image": "shopify:\/\/shop_images\/goodr_PHG_Group_Shot_full_line_010.jpg",
+            "banner_height": "600px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "1258bccf-c743-4cd2-933b-3d2b3a818979": {
+          "type": "awards_press_block",
+          "settings": {
+            "show_awards_1": true,
+            "awards_icon_1": "shopify:\/\/shop_images\/easy_retailerjpg-1550000671451.jpg",
+            "awards_text_1": "Hitting minimums and filling out all sorts of paperwork sucks. At goodr we offer low minimums (24 units) which makes getting on board easy peasy.",
+            "awards_url_1": "",
+            "show_awards_2": true,
+            "awards_icon_2": "shopify:\/\/shop_images\/pain_free_orderingjpg-1550000713163.jpg",
+            "awards_text_2": "We get that ordering can be a real pain in the @$$. Which is why we have our own online B2B portal making ordering and shipping, pain free.",
+            "awards_url_2": "",
+            "show_awards_3": true,
+            "awards_icon_3": "shopify:\/\/shop_images\/retail_stand_retailerjpg-1550000741163.jpg",
+            "awards_text_3": "Making sure our shades stand out in your store is key for both of us. That's why every first order comes with a free retail POP stand that holds six different shades.",
+            "awards_url_3": "",
+            "show_awards_4": false,
+            "awards_text_4": "Awards Text",
+            "awards_url_4": ""
+          }
+        },
+        "919a0ece-2c40-4109-a5df-fdf3440f8fd7": {
+          "type": "bleed_image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_0289_edit_1.jpg"
+          }
+        },
+        "1d47e56a-42a5-4829-bb99-c3ebdf61bf36": {
+          "type": "html",
+          "settings": {
+            "code": "<div data-tf-widget=\"ftPoSX\" data-tf-iframe-props=\"title=Retailer Registration\" data-tf-hidden=\"utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx\" style=\"width:100%;height:400px;\"><\/div><script src=\"\/\/embed.typeform.com\/next\/embed.js\"><\/script>",
+            "width": "100%"
+          }
+        },
+        "ac13da19-33f4-4b29-9908-c2dcc12ecc2f": {
+          "type": "html",
+          "settings": {
+            "code": "<div data-tf-widget=\"U23wRNUl\" data-tf-iframe-props=\"title=Intl. Retailer Registration\" data-tf-hidden=\"utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_content=xxxxx\" style=\"width:100%;height:400px;\"><\/div><script src=\"\/\/embed.typeform.com\/next\/embed.js\"><\/script>",
+            "width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "a59c13c5-3bd3-46c9-aca5-662beef97a7d",
+        "1258bccf-c743-4cd2-933b-3d2b3a818979",
+        "919a0ece-2c40-4109-a5df-fdf3440f8fd7",
+        "1d47e56a-42a5-4829-bb99-c3ebdf61bf36",
+        "ac13da19-33f4-4b29-9908-c2dcc12ecc2f"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

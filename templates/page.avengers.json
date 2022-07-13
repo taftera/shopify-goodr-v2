@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "a5a51667-430d-4727-8f2a-0056aec543c8": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marvel-Landing-Page-w-LockUp3.jpg"
+          }
+        },
+        "92a2d162-b95e-405d-b202-49f4c1902c18": {
+          "type": "intro",
+          "settings": {
+            "title": "AVENGERS ASSEMBLE!!!",
+            "text": "<p>AVENGERS ASSEMBLE!!! We teamed up with Marvel to create universe-saving sunnies inspired by Earth's Mightiest Heroes. (Impressed? Of course you are.) What's your vibe? Genius billionaire philanthropist? Wakandan warrior? Super spy? Man out of time? SMASH SMASH SMASH? Demigod with amazing hair? These battle-ready shades won't slip or bounce when you fight the forces of evil. (Or imagine fighting the forces of evil, while laying on the beach.)\n<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "94c3ea34-b3b3-4b15-ad8a-46fd914b93af": {
+          "type": "double_product",
+          "settings": {
+            "title": "AVENGERS COLLECTION",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "captain-americas-uv-shield",
+            "product2": "mjolnir-it-s-a-soft-j"
+          }
+        },
+        "fe86f38e-2881-4fad-bb7d-d735f309f954": {
+          "type": "double_product",
+          "settings": {
+            "title": "",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "j-a-r-v-i-s-vision",
+            "product2": "wakanda-finders"
+          }
+        },
+        "efd50e20-ee97-41c5-a331-63ad7f8bf10e": {
+          "type": "html",
+          "settings": {
+            "code": "<div class=\"klaviyo-form-WiLNLZ\"><\/div>",
+            "width": "100%"
+          }
+        },
+        "3c80348a-7778-4112-a9fe-e8c0a97b45fb": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Avengers-Outline_Captain-Americas-UV-Shield_hero-angle-1.png",
+            "width": "33%",
+            "align_image": "left"
+          }
+        },
+        "c5e3c618-ea56-424c-9e83-6d4138436fdd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Avengers-Outline_Wakanda-Finders_hero-angle-1.png",
+            "width": "33%",
+            "align_image": "center"
+          }
+        },
+        "e8fcee0a-dd24-49fe-bf99-35c35b9cfa23": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goode_Avengers-Outline_Black-Widow-Bifocals_hero-angle-1.png",
+            "width": "33%",
+            "align_image": "right"
+          }
+        },
+        "43733965-8128-4384-a770-730ca4d57e60": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Avengers-Outline_Hulk-Smash_hero-angle-1.png",
+            "width": "33%",
+            "align_image": "left"
+          }
+        },
+        "7d116e9c-3732-41e5-b45f-8608cd32d11c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Avengers-Outline_Mjolnir-Its-A-Soft-J_hero-angle-1.png",
+            "width": "33%",
+            "align_image": "center"
+          }
+        },
+        "bcc08388-d92c-4734-87b1-d1eaa277dd08": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Avengers-Outline-JARVIS-Vision_hero-angle-1.png",
+            "width": "33%",
+            "align_image": "right"
+          }
+        },
+        "a09572f6-635f-4b78-9174-5ca898eb84cd": {
+          "type": "html",
+          "settings": {
+            "code": "<div id=\"quizify\" class=\"quizify\" data-store-id=\"6abba5d8ab1f4f32243e174beb754661\"><\/div><p><\/p>",
+            "width": "100%"
+          }
+        },
+        "05e3731f-1ffc-4e2a-ac39-f4e7565a2e18": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "a5a51667-430d-4727-8f2a-0056aec543c8",
+        "92a2d162-b95e-405d-b202-49f4c1902c18",
+        "94c3ea34-b3b3-4b15-ad8a-46fd914b93af",
+        "fe86f38e-2881-4fad-bb7d-d735f309f954",
+        "efd50e20-ee97-41c5-a331-63ad7f8bf10e",
+        "3c80348a-7778-4112-a9fe-e8c0a97b45fb",
+        "c5e3c618-ea56-424c-9e83-6d4138436fdd",
+        "e8fcee0a-dd24-49fe-bf99-35c35b9cfa23",
+        "43733965-8128-4384-a770-730ca4d57e60",
+        "7d116e9c-3732-41e5-b45f-8608cd32d11c",
+        "bcc08388-d92c-4734-87b1-d1eaa277dd08",
+        "a09572f6-635f-4b78-9174-5ca898eb84cd",
+        "05e3731f-1ffc-4e2a-ac39-f4e7565a2e18"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

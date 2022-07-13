@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "5a54291f-8f1b-4dad-ad70-37d143c03413": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "I DO MY OWN STUNTS ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/I_do_my_own_stunts_400.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6": {
+          "type": "text",
+          "settings": {
+            "title": "AN OPEN LETTER TO HOLLYWOOD FROM ASPIRING ACTION STAR BRUNK LUMPSTACK",
+            "text": "<p>DEAR HOLLYWOOD,\n<br><br>\nMY NAME IS BRUNK LUMPSTACK. I’M 25 YEARS OLD, 269 POUNDS OF SOLID MUSCLE, AND I JUST MOVED TO LOS ANGELES FROM CUT AND SHOOT, TEXAS. YOU’RE WELCOME. (AND YES, CUT AND SHOOT IS A REAL CITY!!! DON’T EVER QUESTION ME!!!)\n<br><br>\nOBVIOUSLY, I’M HOTTER THAN EATING GHOST PEPPERS IN A DEATH VALLEY SAUNA. MUSCLES? JACKED. FACE? CHISELED. BUTT? AN APPLE. BUT MY BEST FEATURE? I. DO. ALL. MY. OWN. STUNTS. YEAHHHHHAHARGHHHHHWOOOOOHOOOOOOO!!!!!\n<br><br>\nEXCEPT FIRE. BRUNK LUMPSTACK DOESN’T DO ANY STUNTS INVOLVING FIRE. NO SETTING ME ON FIRE. NO JUMPING OVER FIRE. NO RUNNING AWAY FROM A FIERY EXPLOSION. I WON’T EVEN FLICK A LIGHTER. USE CGI!!!!! SEE, WHEN I WAS A KID, I BURNED MY FINGER ON A CANDLE AND IT GAVE ME A VERY BAD OWIEEE!!!! IF YOU PITCH ME A FIRE STUNT, I’LL PITCH YOU IN A DUMPSTER!!!! WOOOOOOO!!!!\n<br><br>\nOH, AND EXCEPT HEIGHTS. BRUNK LUMPSTACK DOESN’T DO ANY STUNTS INVOLVING HEIGHTS.  NO SKYDIVING. NO JUMPING OFF BUILDINGS. NO STAIRS. I WON’T EVEN RIDE AN ELEVATOR. USE CGI!!!! SEE, WHEN I WAS A KID, MY GYM TEACHER MADE ME JUMP OFF THE DIVING BOARD, AND IT WAS SO SCARY, I PEED MY TRUNKS!!!! IF YOU MAKE ME DO A HEIGHT STUNT, I’LL MAKE YOU A HUMAN PRETZEL! WOOOOOOO!!!!\n<br><br>\nOH, AND EXCEPT WATER. AND  FIGHTING. AND BOXING. AND SKIING. AND ALL OTHER SPORTS. AND EXCEPT VEHICLES. NO PLANES, CARS, BOATS, MOTORCYCLES, BICYCLES, SKATEBOARDS, OR SEGWAYS. AND NO RUNNING. LET’S JUST CUT OUT ALL STUNTS INVOLVING EXTREME OR MILD PHYSICAL ACTIVITY. BRUNK LUMPSTACK ONLY WALKS AT A BRISK PACE!!! YOU WANT MORE, USE CGI!!!! WOOOOOOO!!!!\n<br><br>\nSO, I DO ALL MY OWN STUNTS, WITH THOSE FEW EXCEPTIONS LISTED ABOVE. MY ONLY DEMAND IS THAT I WEAR GOODR WRAP G SUNGLASSES IN EVERY SHOT. SEE, WHEN I WAS A KID, JESSICA CRANBERRY TOLD ME I HAD WEIRD EYES, AND SHE’S RIGHT!!! I DO!!!! AND IT STILL MAKES ME CRY, 20 YEARS LATER!!! SO COVER THEM!!! NOW, LET’S GET RICH, BABY!!! WOOOOOO!!!!  \n<br><br>\nSINCERELY,<br>\nBRUNK LUMPSTACK\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/g_Do_My_Own_Stunts_1067.jpg"
+          }
+        },
+        "bef05653-7174-4d65-a7aa-e6acc35cf392": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": "i-do-my-own-stunts"
+          }
+        },
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "DOUBLE DARE YOU TO READ THESE BLOGS",
+            "content": "",
+            "article1": "origin-story\/extreme-dumpster-diving-origin-story",
+            "article2": "origin-story\/look-ma-no-hands-origin-story",
+            "article3": "origin-story\/scream-if-you-hate-gravity-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "5a54291f-8f1b-4dad-ad70-37d143c03413",
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6",
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8",
+        "bef05653-7174-4d65-a7aa-e6acc35cf392",
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

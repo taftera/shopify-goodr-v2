@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "165243630586ebb9ce": {
+      "type": "new-header-banner-2-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Ffordable_headers_2.jpg",
+        "title": "$25 ACTIVE SUNGLASSES FOR ANYONE",
+        "heading_align": "left",
+        "bg_image": "shopify:\/\/shop_images\/Ffordable_headers_palm_1.jpg",
+        "heading_color": "#ffffff",
+        "heading_overlay": true,
+        "heading_overlay_color": "#e86384",
+        "image_align": "right",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_size_d": 82,
+        "heading_size_m": 42
+      }
+    },
+    "1652438284b49226aa": {
+      "type": "new-header-banner-2-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Ffordable_headers_3.jpg",
+        "title": "COSTS LESS THAN THAT HAIRCUT NOBODY NOTICED YET(AWWW)",
+        "heading_align": "left",
+        "bg_image": "shopify:\/\/shop_images\/Ffordable_headers_palm_1.jpg",
+        "heading_color": "#ffffff",
+        "heading_overlay": false,
+        "heading_overlay_color": "#e86384",
+        "image_align": "left",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_size_d": 42,
+        "heading_size_m": 32
+      }
+    },
+    "16524431368bfa07be": {
+      "type": "new-featured-collection",
+      "settings": {
+        "title": "'FFORDABLE FASHION",
+        "collection": "fordable"
+      }
+    },
+    "16524402985c9d0f2b": {
+      "type": "new-review-grid-section",
+      "blocks": {
+        "3e4d8498-4fa8-4f81-beb1-7172ffb9f3c1": {
+          "type": "review_item",
+          "settings": {
+            "title": "Exactly what I was <br>looking for",
+            "content": "<p>I like these better than my Ray Bans and they are a fraction of the price. They look good, good quality, and doesn’t break the bank if you lose them or break them.<\/p>",
+            "author_name": "Caleb G.",
+            "show_star": true
+          }
+        },
+        "a55a23c1-9bca-4a14-a2ea-6d4ed8991ba8": {
+          "type": "review_item",
+          "settings": {
+            "title": "GREAT<br>SUNGLASSES!",
+            "content": "<p>These sunglasses are really comfortable, lightweight and fit great. I am so happy to have found polarized sunglasses that are affordable!<\/p>",
+            "author_name": "MEGAN P.",
+            "show_star": true
+          }
+        },
+        "92c4c1ba-225d-4748-897b-8a80c63bc72e": {
+          "type": "review_item",
+          "settings": {
+            "title": "you get more than <br>you pay for",
+            "content": "<p>Great sunnies, no slip, easy to wear and they look cool. By comparison, I have a $400 designer pair that always get stretched out and constantly slip.<\/p>",
+            "author_name": "Elizabeth R.",
+            "show_star": true
+          }
+        },
+        "79cd9922-ad4d-482f-bea8-228c06da3240": {
+          "type": "review_item",
+          "settings": {
+            "title": "Sunglasses <br>I Really Want",
+            "content": "<p>Great looking, safe for eyes, and at a reasonable price. Why wouldn’t I buy several pair? I did!!!<\/p>",
+            "author_name": "Bruce A.",
+            "show_star": true
+          }
+        }
+      },
+      "block_order": [
+        "3e4d8498-4fa8-4f81-beb1-7172ffb9f3c1",
+        "a55a23c1-9bca-4a14-a2ea-6d4ed8991ba8",
+        "92c4c1ba-225d-4748-897b-8a80c63bc72e",
+        "79cd9922-ad4d-482f-bea8-228c06da3240"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16524408859f8c6178": {
+      "type": "new-icon-box-section",
+      "blocks": {
+        "6db6d6e8-2228-4a23-98b3-6ba4395a3aa7": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFun.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFun.jpg",
+            "icon_url": "shopify:\/\/pages\/fun"
+          }
+        },
+        "79a690df-f617-4a68-8e44-e74ea31da505": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFashionable.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFashionable.jpg",
+            "icon_url": "shopify:\/\/pages\/fashionable"
+          }
+        },
+        "5de28fa2-60ed-40e3-8353-9339d6b9069e": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFunctional.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFunctional.jpg",
+            "icon_url": "shopify:\/\/pages\/functional"
+          }
+        }
+      },
+      "block_order": [
+        "6db6d6e8-2228-4a23-98b3-6ba4395a3aa7",
+        "79a690df-f617-4a68-8e44-e74ea31da505",
+        "5de28fa2-60ed-40e3-8353-9339d6b9069e"
+      ],
+      "settings": {
+        "title": "",
+        "show_border": false
+      }
+    },
+    "165363399843e307a5": {
+      "type": "new-newsletter",
+      "settings": {
+        "section_title": "Subscribe",
+        "subheading": "",
+        "form_code": "Xnk3BC"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165243630586ebb9ce",
+    "1652438284b49226aa",
+    "16524431368bfa07be",
+    "16524402985c9d0f2b",
+    "16524408859f8c6178",
+    "165363399843e307a5"
+  ]
+}

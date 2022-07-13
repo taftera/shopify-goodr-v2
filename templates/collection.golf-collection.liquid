@@ -1,0 +1,189 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+{% assign collectionMobileBanner = collection.metafields.global.header_mobile_image %}
+{% assign collectionHeaderHorizontalAlign = collection.metafields.global.header_horizontal_align | downcase | remove:" " %}
+{% assign collectionHeaderVerticalAlign = collection.metafields.global.header_vertical_align | downcase | remove:" " %}
+{% assign collectionHeaderContentWidth = collection.metafields.global.header_content_width | downcase | remove:" " %}
+{% assign collectionHeaderGradientWidth = collection.metafields.global.header_gradient_width | downcase | remove:" " %}
+{% assign collectionMobileDescText = collection.metafields.global.mobile_description_text %}
+{% assign collectionMobileHeaderHorizontalAlign = collection.metafields.global.mobile_header_horizontal_align | downcase | remove:" " %}
+{% assign collectionMobileHeaderVerticalAlign = collection.metafields.global.mobile_header_vertical_align | downcase | remove:" " %}
+
+
+<header role="banner" class="hero-banner new-header horizontal-align--{{ collectionHeaderHorizontalAlign }} mobile-horizontal-align--{{ collectionMobileHeaderHorizontalAlign }} vertical-align--{{ collectionHeaderVerticalAlign }} mobile-vertical-align--{{ collectionMobileHeaderVerticalAlign }}">
+  	<img class="desktop-img" src="{{ collectionBanner }}" alt="Desktop Header Img" />
+  	<img class="mobile-img"  src="{{ collectionMobileBanner }}" alt="Mobile Header Img" />
+  	<div class="banner-content" style="max-width: {{ collectionHeaderContentWidth }};">
+    	<h1 class="h1 collection__title">{{ collection.title }}</h1>
+    	<div class="content">
+			<p class="text-color--white collection__description collection__description_desktop">{{ collection.description }}</p>
+          	<p class="text-color--white collection__description collection__description_mobile">{% if collectionMobileDescText != blank %} {{ collectionMobileDescText }} {% else %} {{ collection.description }} {% endif %}</p>
+		</div>
+	</div>
+  	<div class="new-header-overlay" style="max-width: {{ collectionHeaderGradientWidth }};"></div>
+</header>
+
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Ah, the popular crowd. The Nicklaus, Woods, Mickelson and Daly-level polarized golf sunglasses. Taking these sunglasses out to the golf course at least ensures you’ll LOOK the part of a champion golfer. But with Flamingo-eye technology lenses and the best-looking frames in the game, you can step up to the first tee confident. Confident that when you duck hook your first shot into the water, at least you’ll still look good in your playing partner’s Instagram story. The best golf sunglasses will turn heads out on the course, the range, the putting green, and they’ll make the hole look AT LEAST twice as big it really is. While we can’t guarantee our golf sunglasses will make more of your putts drop, that’s really not on us now, is it? </p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+	{% if type == "The Runways" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>Every time you golf, there’s another opponent 93 million miles away: the sun. (Unless you’re golfing at night, which seems pretty difficult, and kind of fun, but mostly difficult.) Yes, the sun blasts light on the course, which is good, the sun also blasts light directly into your eyes, which doesn’t help your performance. Your eyeballs need a break from the nasty sunrays so you can keep track of your golf balls. In other words, if you’re smacking balls, and you don’t want to lose your golf balls, protect your balls, so you can keep your balls on your balls. You need golf sunglasses with polarized lenses.</p>
+                      	<p>But you don’t just need a pair of golf sunglasses that block the sun on the golf course. You need the best golf sunglasses that are fashion forward with real UV protection. For many years, golfers had a reputation for wearing unattractive attire, usually involving garish plaid platterns and dated sunglasses styles. This stereotype became party of pop culture, inspiring others to mock golfers, calling them insulting names, like “Bad Clothes McGee.” (So hurtful.) So, what’s the best way to combat this negative golf trope? Colorful cat-eye frame sunglasses withOUT nosepads that don’t slip or bounce while DESTROYING your 10-year-old cousin at golf, and taunting them. What’s more, our golf sunglasses feature polarized lenses, which improve your depth perception, and the perception that you have depth, as a fun-loving fashionista golfer.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if type == "The OGs" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>goodr golf sunglasses in the OG frame style are par for the course. The OG frame features a classic shape with our polarized lens. The lightweight frame features an all grip, no slip, no bounce, specialized rubber grip coating so there is no need for bulky nose pads or those annoying glasses straps. Polarized lenses that help to block UV light will enhance your vision both on and off the golf course. There is nothing worse than tanking your game because you miss an easy shot thanks to the glare monster. Don’t be the laughing stock of the golf course with cheesy golf sunglasses that are ten times the price. Polarized lenses are here to save your game!! Whether you need this enhancement to spot devious gophers, or you just need help spotting the ball on the course these OG golf sunglasses features our Flamingo Eye technology. Here at goodr we believe that the best golf sunglasses should be fashionable, functional, fun, and affordable (or ‘ffordable to those in the know!) </p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Why is goodr the gold standard for GOLF SUNGLASSES? Let us tell you. And you can believe every word we say because we’re golf sunglasses experts. Carl the Flamingo is frequently called upon by the golf greats for mentorship and margs. </p>
+              		<p>When you’re playing golf, there are a few key features to focus on (besides the ball, hitting the ball, aiming the ball to go into the hole, not getting in the way of other golfers backswings as they try to hit the ball, etc.). You want to feel good, look good, and see good. Right? Right. And golf is one of those sports where, strangely, the more you spend, the more expensive your equipment is. Weird how that works. But also, the more sad you are if something breaks. Or isn't performing up to that price tag. No one likes being sad. And no one likes spending an absurd amount of cash on sadness, especially when it's ugly golf sunglasses.  So what if you can feel good, look good, and see good without being sad and splashing the cash unnecessarily? Impossible? Crazy talk? Grammatically incorrect? Ok, you have us on that last one. Grammar has never been our strong suit. But fun, fashionable, functional, and 'ffordable golf sunglasses are where we shine like the sun's rays we promise to protect your eyeballs from. </p>
+              		<p>We can also up the ante and say you'll be able to have all of those key features, only GOODR with goodr's golf sunglasses. Let's talk about that first one, shall we? FEELING goodr golf sunglasses starts with a lightweight comfortable fit and what is more comfortable than a soft silicone grip coating that prevents the frames from slipping down your nose? Even when the sweat starts a drip drip drippin'. Even when you start second guessing your stance and you bounce your head up and down in a frantic nod as you check your grip and your feet position and your grip and your feet position and your grip again. Even when the pressure is on to make par and the heat of the day is so high that the sun's rays can be seen shimmering above the course green while you squint at a mirage of John Daly giving you a thumbs up as you set your hips. Nothing. Nothing is more comfortable is the answer. You forgot that was a question, didn't you? Anyway, with goodr golf sunglasses, there's also no need for bulky, unsightly nose pads that always leave those awkward lines that shout to the world: "HEY I WAS RECENTLY WEARING A PAIR OF GOLF SUNGLASSES AND THEY WERE SO UNCOMFORTABLE THAT THOSE AWFUL NOSE PADS HAVE PRESSED INTO MY NOSE SKIN AND CREATED AN AWKWARD ITCHY IMPRINT THAT WILL LAST HOURS EVEN THOUGH I ONLY WORE THE SHADES FOR 30 MINUTES." Our   golf sunglasses feature lightweight frames that will sit comfortably on your schnoz through every swing like a tiny friend hugging your face. And it's not just your adorable nose that will feel goodr. Your wallet will thank you when you've only spent $25 or $35 for this incredible addition to your golf attire. At that price point, go ahead! Invest in that Honma golf club set! Take that trip to Northern Ireland to play on the Royal County Down green! Get that extra plaid golf cap. Sure, you have too many already, but at goodr's sunglasses price, you can also grab another pair that will perfectly match!</p>
+              		<p>Which transitions us seamlessly into LOOK goodr. The stylish pairings of goodr's frames with the wide variety of colored polarized lenses with UV400 protection are fashionable AND functional and won't drag your game or your dope outfit down. There are frame shapes that pair perfectly with every face, every style, and every personality. Feeling feisty? We've got a frame shape for you. Feeling confident? Your cocky eyes are covered. Feeling drunk? The best golf sunglasses from goodr won't slip off your drunky face. Check out what we've got! The OG original frame shape which literally looks good on everyone. No, seriously. We dare you to take a bad photo while wearing our OG frames. It can't be done. Then there are the BFGs for those who have larger noggins. And you know what they say? The bigger the head, the bigger the balls. Golf balls, that is. Wait, those are standard size. The bigger the golf cap. And sunglasses. We've lost our train of thought now, we're just so focused on those above standard size golf balls. Where were we? Oh yeah, there's also the Circle G round frames for those who fancy themselves a golfing influencer with a refined and stylish, yet enviable game play. The Runways sunglasses offer that sexy swoop to go with your swish and swing, with lenses that have just a hint of cat-eye sass while you're on the grass. We encourage you to get a few pairs in each frame style to match your daily outfit and mood while you head off to the course for an afternoon game with that "client" because you're after that "big account" that will bring the "business" to the "next level." Don't forget to tip your bartender.</p>
+              		<p>And that brings us to SEE goodr. Kind of important in a game where you have to see the ball to hit it in a desired direction, right? Ever heard of Flamingo Eye(tm) Technology? NO?!?!?!? We guess that's okay, since we made it up. But yes, it is actually trademarked. And yes, it's absolutely a feature you want in your sunglass lenses. Each goodr pair of golf sunglasses comes with our trademarked Flamingo Eye(tm) HD contrast performance lens technology. Which is fancy-speak for durable lenses that are designed for seeing details and contrast. So not only are your peepers protected from the sun and glare off the bottom of the white cup in the hole when you reach in to retrieve your ball after earning that bogey flamingo, but you can actually SEE the golf course and putting green. Each blade of grass, every grain of sand, every devious gopher that pops up to disrupt your putt, you'll be able to see it all with clear vision through your polarized lenses. (Please note that Flamingo Eye(tm) technology does not guarantee protection from gopher bites. Do not pet the gophers or try to feed them peanuts and beer. They will turn into slimy monsters after midnight and destroy the golf carts and tear up the immaculate green course that you love to play on. And then where would your game be? Sounds worse than a sand trap). Plus, your depth perception will be on point. Don't you think being able to accurately gauging distances on the green will enhance your play? We think so. For us, depth perception comes in handy particularly when we have to dodge and duck under those triple bogey balls hit by other, inferior golfers, while darting across the course because counting is hard and we accidentally skipped hole eight because we're all four margs deep and Carl is causing a commotion with the golf cart.</p>
+              		<p>So there you have it. The trifecta. The triple threat. The three musketeers of what completes a golfers game. You know that feeling when you hit below par on a particularly challenging course? That is the SAME feeling you get when you purchase the best golf sunglasses from goodr. Our quality, stylish and comfortable sunglasses with performance lenses at this ridonkulous price point will have you feeling great. TIMES A MILLION. </p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>

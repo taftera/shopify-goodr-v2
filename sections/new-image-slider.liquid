@@ -1,0 +1,276 @@
+<section id="section-{{ section.id }}" class="image-slider">
+  	<div class="{{ section.settings.section_width }}">
+		<div class="row">
+          	<div class="col-xs-12 col-md-12">
+              	{%- if section.settings.title != blank -%}
+              	<h2 class="h3 section__heading text-align--center{% if section.settings.title_mobile != blank %} enable_mobile_title{% endif %}">
+                  <span class="desktop-title" >{{ section.settings.title }}</span>
+                  {%- if section.settings.title_mobile != blank -%}
+                  <span class="mobile-title" >{{ section.settings.title_mobile }}</span>
+                  {%- endif -%}
+              	</h2>
+              	{%- endif -%}
+              	<div class="image-slider-wrapper">
+					<div class="image-slider-box">
+						<div class="swiper-container swiper-image-slider">
+							<div class="swiper-wrapper">
+								{%- for block in section.blocks -%}
+                              		{%- if block.settings.image != blank -%}
+										<div class="swiper-slide"  {{ block.shopify_attributes }}>
+											<div class="image-item">
+												<div class="image-box">
+                                                  	{%- if block.settings.image_url != blank -%}<a href="{{ block.settings.image_url }}" {% if template.name == "index" %} onclick="gtag('event', 'Click', { 'event_category': 'VCB', 'event_label':'{{ block.settings.image_url }}', 'event_action':'Spot {{ forloop.index }}' });" {% endif %}>{%- endif -%}
+														<img
+            												src="{{ block.settings.image | img_url: 'master' }}"
+            												alt="{{ block.settings.image.alt | escape }}"
+          												>
+                                                  	{%- if block.settings.image_url != blank -%}</a>{%- endif -%}
+                                  				</div>
+											</div>
+										</div>
+                              		{%- endif -%}
+								{%- endfor -%}
+							</div>
+						</div>
+                      	{%- if section.blocks.size > 1 -%}
+							<div class="swiper-button swiper-button-prev">
+								<svg viewBox="0 0 100 100"><path d="M 20,50 L 60,90 L 60,85 L 25,50  L 60,15 L 60,10 Z" class="arrow"></path></svg>
+              				</div>
+							<div class="swiper-button swiper-button-next">
+                   				<svg viewBox="0 0 100 100"><path d="M 20,50 L 60,90 L 60,85 L 25,50  L 60,15 L 60,10 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg>
+							</div>
+						{%- endif -%}
+					</div>
+				</div>
+          	</div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+  {
+    "name": "New Image Slider",
+	"class": "new-image-slider-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "NO SLIP. NO BOUNCE. ALL POLARIZED<br> $25 ACTIVE SUNGLASSES FOR ANYONE"
+      },
+	  {
+        "type": "text",
+        "id": "title_mobile",
+        "label": "Heading Mobile (optional)",
+        "default": "$25 ACTIVE SUNGLASSES FOR ANYONE"
+      },
+	  {
+        "type": "select",
+        "id": "section_width",
+        "label": "Section Width",
+        "options": [
+          {
+            "value": "container",
+            "label": "Container"
+          },
+		  {
+            "value": "container--wide",
+            "label": "Container wide"
+          },
+          {
+            "value": "container--fluid",
+            "label": "Full width"
+          }
+        ],
+        "default": "container--fluid"
+      }
+	],
+	"blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+		  {
+            "type": "url",
+            "id": "image_url",
+            "label": "Image Url"
+          }
+        ]
+      }
+	],
+    "presets": [
+      {
+        "name": "New Image Slider"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.image-slider {
+    padding: 50px 0px;
+}
+  
+.image-slider-wrapper {
+    padding-top: 50px;
+}
+.image-slider-box .image-box {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.image-slider-box .image-box:hover {
+	border-color: #10435e;     
+}
+.image-slider-box .image-box img {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+  
+.image-slider-box {
+    position: relative;
+}
+.image-slider-box .swiper-button-next:after, .image-slider-box .swiper-button-prev:after {
+    display: none;
+}
+.image-slider-box .swiper-button {
+    width: 50px;
+    height: 50px;
+}
+.image-slider-box .swiper-button svg {
+    width: 100%;
+}
+.image-slider-box .swiper-button.swiper-button-next {
+    right: -50px;
+}
+.image-slider-box .swiper-button.swiper-button-prev {
+    left: -50px;
+}
+.image-slider-box .swiper-container {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.section__heading.enable_mobile_title .mobile-title {
+    display: none;
+}
+.image-slider-box .swiper-slide {
+    width: auto;
+}
+.image-slider-box .swiper-slide .image-item {
+    padding: 0 15px;
+}  
+  
+  
+  
+@media screen and (min-width: 1200px){  
+.image-slider .container--fluid {
+    padding: 0 4rem;
+}
+}
+
+@media screen and (max-width: 1199px){
+.image-slider-wrapper {
+    padding-left: 20px;
+  	padding-right: 20px;
+}
+.image-slider-box .swiper-button {
+    width: 40px;
+    height: 40px;
+}
+.image-slider-box .swiper-button.swiper-button-next {
+    right: -35px;
+}
+.image-slider-box .swiper-button.swiper-button-prev {
+    left: -35px;
+}
+}
+
+@media screen and (max-width: 991px){
+.image-slider-box .swiper-slide .image-item {
+    padding: 0 10px;
+} 
+}
+
+@media screen and (max-width: 767px){
+.image-slider-wrapper {
+    padding-top: 30px;
+} 
+.image-slider {
+    padding: 40px 0px 30px;
+}
+.section__heading.enable_mobile_title .desktop-title {
+    display: none;
+}
+.section__heading.enable_mobile_title .mobile-title {
+    display: inline-block;
+}
+.image-box.mobile-show-box {
+ 	display: inline-block !important;
+}
+.image-box.mobile-hide-box {
+ 	display: none !important;
+}
+.image-slider-box .swiper-slide .image-item {
+    padding: 0 7.5px;
+} 
+}
+  
+@media screen and (max-width: 480px){
+.image-slider-box .swiper-container {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+}
+</style>
+
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+
+<script>
+jQuery(document).ready(function($) {
+  	
+	const swiper = new Swiper('.swiper-image-slider', {
+		lazy: true,
+      	loop: true,
+      	loopedSlides: 2,
+		slidesPerView: 1,
+        spaceBetween: 0,
+      	navigation: {
+          	nextEl: ".swiper-button-next",
+          	prevEl: ".swiper-button-prev",
+        },
+      	breakpoints: {
+        	480: {
+          		slidesPerView: 2,
+              	loopedSlides: 3,
+        	},	
+        	768: {
+          		slidesPerView: 2,
+              	loopedSlides: 3,
+        	},
+        	990: {
+          		slidesPerView: 3,
+              	loopedSlides: 4,
+        	},
+          	{% if section.settings.section_width == "container--fluid" %}
+          	1400: {
+          		slidesPerView: 4,
+              	loopedSlides: 5,
+        	},
+          	1600: {
+          		slidesPerView: 5,
+              	loopedSlides: 6,
+        	},
+          	{% endif %}
+      	}
+	});
+});  
+</script>

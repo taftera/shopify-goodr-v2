@@ -1,0 +1,137 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+					<p>Did you wake up this morning feeling like you want to look like Pitbull? Well, consider your search over because we’ve got quite the selection of white polarized sunglasses made just for you. Shopping this look has never been easier. Channel the vibes of one of the greatest musicians of our generations with the likes of Iced By Yetis, Au Revoir, Gopher, and Side Scroll Eye Roll. Your swag levels at your next bachelor or bachelorette party in Miami will be hard to fathom. Boys weekend in Vegas? Sandbagging your local turkey trot? Looking for some women’s sunnies? We’ve got a pair aptly named “Gingham Is Soo Last Season.” Trying to look like a trendy hipster on all your business zoom calls? No zoom filters needed! How about our flashy circle framed shades called Stop, Drop, and Scroll? Going to Halloween as a Stormtrooper? Traveling out of the country or trying to look like the dudes from the "I'm On A Boat" music video? Now that's what we call fashion. Shop any pair of our white sunglasses for the perfect addition to your costume.</p>
+                  	<p>In 2017, white oval sunnies became en vogue, and as we head into 2022, there’s no doubt they’re going to be trending again. Get yours before they become vintage... again!</p>
+					<p>In the words of Denzel Curry, “these ain’t glasses, baby... these are Clout goggles!”. Call ‘em polarized sunglasses, or call ‘em Clout goggles... we don’t care what the hell you call them, ‘long as you buy them. It’s really the self-clout we're concerned with here. If wearing white framed polarized sunglasses makes you lean into self-love and self-clout then we’re here to support you wholeheartedly while you shop away.</p>
+					<p>If you’re the active type, we’ve got a pair of white sunglasses for your next run, gravel ride, CrossFit competition, Mario Kart tournament, or golf tournament. And if you’re unsure what frame or style is right for you, there’s really no white or wrong way to go about it. We’ve got the aviator-style sunglasses as well as wayfarer, cat eye, and circle framed shades should they tickle your fancy. Just like a cheesecake factory menu, we've literally got it all. Starting at just $25, these no-slip, no-bounce, all polarized sunnies will be sure to enhance both your performance on the field of play AND off it! Plus, we’ve been called “Decent” by many well-known publications. Join the style movement and stand united with the rest of us!</p>
+                  	<p>If it’s not clear by now, we’ve got a pair of polarized shades for everyone in the family! Plus, you DEFINITELY don’t look like an attention-seeking douchebag either, we promise. Just kidding, we love you. We 'ship you! (Is that what the kids are saying nowadays?) Sometimes we just pick on a customer because, why not? This is how our brand has fun.</p>
+                  	<p>So, what are you waiting for? On your next visit to the goodr.com site, head straight on over to our white shades collection page and shop away. With endless categories of styles, how could you not want to take yourself shopping for some new lens accessories? We only have one life to live; life’s too short not to own at least three pairs of decent white-framed, polarized sunglasses.</p>
+                  	<p>Your search for the best sunnies is over! Shop our unmatched collection today at an affordable price and discover your new favorite accessories.</p>
+                  	<p>And in the words of the aforementioned Pitbull... Dale!</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

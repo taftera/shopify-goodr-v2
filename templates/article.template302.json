@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "5a54291f-8f1b-4dad-ad70-37d143c03413": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "SCREAM IF YOU HATE GRAVITY ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Scream_If_You_Hate_Gravity_400.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6": {
+          "type": "text",
+          "settings": {
+            "title": "COMEDIAN DOES STAND-UP WHILE SKI JUMPING OFF A CLIFF",
+            "text": "<p>WHILE DROPPING OFF A 255-FOOT CLIFF IN MOUNT TARGHEE, WYOMING, EXCELLENT SKIER AND MEDIOCRE COMEDIAN LARS FREZNIKKEL DELIVERED THE FOLLOWING STAND-UP ROUTINE:\n<br><br>\n“WHOA! HOPE NOBODY CALLS THE DEA ON ME. BECAUSE RIGHT NOW I AM REALLY HIGH. RIGHT? GETTING HIGH? RIGHT? CANNABIS? MAKE SOME NOISE IF YOU LIKE CANNABIS. YEAH! WOO! AFTER THIS SHOW, YOU’LL ALL BE ARRESTED. HEH.\n<br><br>\n“MAN… DOES ANYBODY ELSE HATE GRAVITY? LIKE, REALLY, REALLY HATE GRAVITY? NOT THE MOVIE. THE MOVIE’S GREAT.  I’M TALKING ABOUT GRAVITY, THE NATURAL PHENOMENON BY WHICH ALL THINGS WITH MASS OR ENERGY ARE ATTRACTED TO ONE ANOTHER. SEE, I THOUGHT THAT FORCE WAS CALLED “ALCOHOL AND DESPERATION.” BUT IT’S NOT “ALCOHOL AND DESPERATION.”  IT'S GRAVITY!!\n<br><br>\n“ON EARTH, GRAVITY GIVES WEIGHT TO PHYSICAL OBJECTS. HAVE YOU HEARD ABOUT THIS? IT’S TRUE. GRAVITY GIVES WEIGHT TO PHYSICAL OBJECTS. YEAH. SO, TURNS OUT IT’S NOT MY FAULT MY HIGH SCHOOL JEANS DON’T FIT. IT’S GRAVITY’S FAULT! OHHHHH! SCREAM IF YOU HATE GRAVITY, EVERYONE!!!. YEAH! THAT’S RIGHT. F$ GRAVITY!!!\n<br><br>\n“WHAT ELSE… OH, YEAH. ALBERT EINSTEIN CREATED THE GENERAL THEORY OF RELATIVITY. HAVE YOU HEARD ABOUT THIS? EINSTEIN DESCRIBED GRAVITY AS NOT A FORCE, BUT A CURVATURE IN THE SPACE-TIME CONTINUUM. THAT’S RIGHT. GRAVITY IS NOT A FORCE. IT’S A CURVATURE IN THE SPACE-TIME CONTINUUM. YEAH. WHAT A F***NG PERV. STOP CHECKING OUT THE SPACE-TIME CONTINUUM,  DIRTY OLD MAN!!!\n<br><br>\n“ALSO, WHAT’S THE DEAL WITH HIS HAIR? REALLY? THAT’S HOW A GENIUS STYLES HIS HAIR?! THE MAN IS SO SMART HIS LAST NAME IS A WORD MEANING “ SMART,” BUT HE LOOKS LIKE A DRUNKEN CIRCUS CLOWN? OHHH, YOU CAN FIGURE OUT THE FORMULA FOR “E EQUALS MC SQUARED,” BUT YOU CAN’T FIGURE OUT THE FORMULA TO BUY A F***ING COMB. IT’S PRETTY SIMPLE. BUYING A COMB? PRETTY SIMPLE. MAKE SOME NOISE IF YOU OWN COMBS. YEAH. WOO!!! GIVE IT UP FOR COMBS!!! HEH.\n“WELL, I’M ABOUT TO GET THE LIGHT. AND BY ‘THE LIGHT,’ I MEAN HIT THE GROUND AND EAT MAJOR SH*T. SO I’LL LEAVE YOU WITH THIS: IF YOU’RE EXTREME, GET GOODR WRAP G SUNGLASSES. THEY DON’T SLIP OR BOUNCE WHILE YOU BOMB DOING STAND-UP. IF YOU THINK THIS LANDING’S GOING TO HURT, TRY LANDING THESE JOKES! HEH. OKAY, THAT’S MY TIME! I’M  LARS FREZNIKKEL. PLEASE CALL AN AMBULANCE.”\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Scream_If_You_Hate_Gravity_1067.jpg"
+          }
+        },
+        "fbd49a09-69db-4850-94f7-340f357b0334": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": "scream-if-you-hate-gravity"
+          }
+        },
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "SCREAM IF YOU LIKE READING",
+            "content": "",
+            "article1": "origin-story\/save-a-bull-ride-a-rodeo-clown-origin-story",
+            "article2": "origin-story\/look-ma-no-hands-origin-story",
+            "article3": "origin-story\/nuclear-gnar-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "5a54291f-8f1b-4dad-ad70-37d143c03413",
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6",
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8",
+        "fbd49a09-69db-4850-94f7-340f357b0334",
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

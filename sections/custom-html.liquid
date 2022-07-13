@@ -1,0 +1,43 @@
+<section class="{{ section.settings.width }}">
+  	<div class="row">
+    	<div class="col-xs-12 col-md-12">
+      		{%- if section.settings.html_area != blank -%}
+        		{{ section.settings.html_area }}
+      		{%- endif -%}
+        </div>
+  	</div>
+</section>
+
+{% schema %}
+{
+	"name": "Custom HTML",
+    "settings": [
+		{
+   			"type": "html",
+   			"id": "html_area",
+   			"label": "Custom HTML",
+   			"default": "<div><p>Some HTML content</p></div>"
+	  	},
+      	{
+   			"type":      "select",
+   			"id":        "width",
+   			"label":     "Section Width",
+   			"options": [
+     			{
+       				"value": "container",
+       				"label": "Container Width"
+     			},
+     			{
+       				"value": "container-fluid",
+       				"label": "Full Width"
+     			}
+   			],
+   			"default":   "container"
+		}
+    ],
+    "presets": [{
+        "name": "Custom HTML",
+        "category": "Text"
+    }]
+}
+{% endschema %}

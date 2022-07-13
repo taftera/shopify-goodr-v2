@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 mbm rte">
+      <h1 class="page__title">{{ 'customer.account.title' | t }}</h1>
+
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+
+      {% paginate customer.orders by 20 %}
+        {% if customer.orders.size != 0 %}
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th>{{ 'customer.orders.order_number' | t }}</th>
+                <th class="td-center--medium-up">{{ 'customer.orders.date' | t }}</th>
+                <th class="td-center--medium-up">{{ 'customer.orders.payment_status' | t }}</th>
+                <th class="td-center--medium-up">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                <th class="td-right--medium-up">{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
+                <tr class="responsive-table-row">
+                  <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
+                  <td data-label="{{ 'customer.orders.date' | t }}" class="td-center--medium-up">{{ order.created_at | date: format: 'month_day_year' }}</td>
+                  <td data-label="{{ 'customer.orders.payment_status' | t }}" class="td-center--medium-up">{{ order.financial_status_label }}</td>
+                  <td data-label="{{ 'customer.orders.fulfillment_status' | t }}" class="td-center--medium-up">{{ order.fulfillment_status_label }}</td>
+                  <td data-label="{{ 'customer.orders.total' | t }}"  class="td-right--medium-up">{{ order.total_price | money }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          <p>{{ 'customer.orders.none' | t }}</p>
+        {% endif %}
+
+        {% if paginate.pages > 1 %}
+          {% include 'pagination' %}
+        {% endif %}
+
+      {% endpaginate %}
+
+      <h2>{{ 'customer.account.details' | t }}</h2>
+
+      {{ customer.default_address | format_address }}
+
+      <p><a href="/account/addresses">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></p>
+
+      <div class="row middle-xs">
+        <div class="col-xs-6">
+
+        </div>
+        <div class="col-xs-6 text-align--right">
+          <p>{{ 'Log out' | customer_logout_link }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "f0676bb7-407e-4461-bb1f-4dbbbc08c66f": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "PT CRUISER SWEEPSTAKES",
+            "text": "We're giving away a freaking PT Cruiser!!!",
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_009_1_1.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "9fc890a2-8b1a-4b8d-8531-6c206315f1f7": {
+          "type": "text",
+          "settings": {
+            "title": "INTRODUCING SHRIMP MY RIDE",
+            "text": "<p>Check out Carl's shrimped out ride. A goodrfied PT Cruiser with flamingo seat covers; shrimp-shaped cushions, and matching sunglasses. Carl drove it last. If the inside smells like rancid shellfish, that's not a bug. It's a feature. Here's how you can get your seat in a shrimp seat: <\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "e1bcd3d1-533f-4f85-95b0-9c804ed25792": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_007_2_1.jpg",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "5d1232bc-371e-4959-93b3-f2deea363545": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "1. STARTING THURSDAY, NOVEMBER 25",
+            "content": "<p>Vroom vroom... buckle your seatbelts and start your engines. Place an order on goodr.com and get entered into the sweepstakes to win the ultimate shrimp cocktail.<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_032_1.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "e26a8654-da0b-4d5c-985e-406d77b0bc28": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "2. A WINNER WILL BE SELECTED",
+            "content": "<p>Unlike an actual car race, this winner will be selected at random. Each order is an entry, so it's totally cool if you keep forgetting that random person on your holiday list. Go ahead and place another order!<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_018_1.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "60c867e0-bb25-4bfa-bda3-f84aabca7bc3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "3. GET READY FOR THE RIDE OF YOUR LIFE",
+            "content": "<p>Cruise in style. Complete with flamingo seat covers and shrimp cushions.*\n<\/p><p>\n*Shrimp cushions are not edible. This car is not a literal shrimp cocktail. <\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_006_1.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "f622ce9e-eb82-44ed-a8b2-52ac5e3807d5": {
+          "type": "text",
+          "settings": {
+            "title": "YOU HAVE A 1 IN 50,000 CHANCE",
+            "text": "<p>Of winning this one-of-a-kind custom decorated pre-owned 2006 PT Cruiser.<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "ce70ceb6-c1e5-478a-bfb5-ddbf38297cbf": {
+          "type": "function_block",
+          "settings": {
+            "title": "",
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_027_1.jpg",
+            "image_aligment": "right",
+            "tab_title_1": "TIMEFRAME",
+            "tab_text_1": "Starting Thursday, November 25th, 2021 at 12:01am PST and ending Monday, December 6th, 2021 at 11:59pm PST, all orders placed from goodr.com will be entered into the sweepstakes.",
+            "tab_title_2": "ENTRIES",
+            "tab_text_2": "Place an order for anything exceeding $1 on goodr.com within the timeframe to be entered. One order = one entry.",
+            "tab_title_3": "WINNER",
+            "tab_text_3": "After the Sweepstakes period, a winner will be chosen at random and notified by goodr within a week with information on how to receive their prize.",
+            "tab_title_4": "TERMS & CONDITIONS",
+            "tab_text_4": "Want to know the boring legal stuff? You can read it all <a href=\"https:\/\/goodr.com\/pages\/terms-conditions-3\">here<\/a>.",
+            "tab_title_5": "",
+            "tab_text_5": "",
+            "tab_title_6": "",
+            "tab_text_6": "",
+            "tab_title_7": "",
+            "tab_text_7": "",
+            "tab_title_8": "",
+            "tab_text_8": ""
+          }
+        },
+        "c8280719-4af8-4660-8690-e5fbfa9f143d": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "Get the goodr orders rolling",
+            "content": "<p>Sweet shades to wear while you lean back and set the cruise control.<\/p>",
+            "virtual_try_on": false,
+            "product1": "flamingos-on-a-booze-cruise",
+            "product2": "kitty-hawkers-ray-blockers",
+            "product3": "i-pickled-these-myself"
+          }
+        },
+        "4dfbdf63-969a-48b7-8e9c-4909f23830fc": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_035_1.jpg"
+          }
+        },
+        "16f3a608-a910-4be3-85af-8e82017609ae": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "KEEP CRUISIN'",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/golden-shades-winner-exclusive-interview",
+            "article2": "goodrtimes\/s03e19",
+            "article3": "goodrtimes\/goodr-cabana"
+          }
+        }
+      },
+      "block_order": [
+        "f0676bb7-407e-4461-bb1f-4dbbbc08c66f",
+        "9fc890a2-8b1a-4b8d-8531-6c206315f1f7",
+        "e1bcd3d1-533f-4f85-95b0-9c804ed25792",
+        "5d1232bc-371e-4959-93b3-f2deea363545",
+        "e26a8654-da0b-4d5c-985e-406d77b0bc28",
+        "60c867e0-bb25-4bfa-bda3-f84aabca7bc3",
+        "f622ce9e-eb82-44ed-a8b2-52ac5e3807d5",
+        "ce70ceb6-c1e5-478a-bfb5-ddbf38297cbf",
+        "c8280719-4af8-4660-8690-e5fbfa9f143d",
+        "4dfbdf63-969a-48b7-8e9c-4909f23830fc",
+        "16f3a608-a910-4be3-85af-8e82017609ae"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

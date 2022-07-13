@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "be7c569b-1365-4f58-ab15-dcb124aa3b40": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "S03E19: SEASON WRAP AUDIENCE Q&A",
+            "text": "CULTURE goodr podcast",
+            "image": "shopify:\/\/shop_images\/CULTURE_header_new.jpg",
+            "banner_height": "200px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "640ccdd5-9edc-4425-938e-bb646745f5eb": {
+          "type": "text",
+          "settings": {
+            "title": "CULTURE SEASON WRAP: BURNING QUESTIONS",
+            "text": "<p>After writing the blog for season 3, episode 18 of CULTURE goodr, the copywriters cried with joy, called a Lyft to LAX, boarded an 11-hour flight from Los Angeles to Tahiti, rode a cab to the InterContinental Resort hotel, checked into their rooms, changed into their swimsuits, walked to the beach, spread out their towels, laid down in the sun, closed their eyes, and were just about to relax, when Carl The Flamingo splashed them with cold water and screamed, “YOU’RE NOT DONE! YOU GOTTA WRITE A BLOG FOR EPISODE 19!!! NO!!!! NOT HERE!!!!! GET YOUR CANDY ASSES BACK TO THE OFFICE!!!”<\/p>\n<p>So here we are.<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "b0c17f14-8e51-4215-a91d-8e2b14672f6b": {
+          "type": "html",
+          "settings": {
+            "code": "<div id=\"buzzsprout-player-9359161\"><\/div><script src=\"https:\/\/www.buzzsprout.com\/1056625\/9359161-s03e19-culture-season-wrap-audience-q-a.js?container_id=buzzsprout-player-9359161&amp;player=small\" type=\"text\/javascript\" charset=\"utf-8\"><\/script>",
+            "width": "100%"
+          }
+        },
+        "48e7730e-5f86-4897-96b8-d404ad833f66": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Culture-Goodr-Email-Season-3-Final-Ep-1.jpg",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "43098f26-b719-4691-ad45-c43809c2873a": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "",
+            "show_article_content": true,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "9e013b7a-68d2-4b99-9bbf-811b3817ef2e": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Culture_SDL_Shaun_010_2.jpg"
+          }
+        },
+        "00cbc3eb-84b2-4f57-9f16-6d72204c01b5": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "CATCH UP ON CULTURE",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/s03e18",
+            "article2": "goodrtimes\/s03e17",
+            "article3": "goodrtimes\/s03e16"
+          }
+        }
+      },
+      "block_order": [
+        "be7c569b-1365-4f58-ab15-dcb124aa3b40",
+        "640ccdd5-9edc-4425-938e-bb646745f5eb",
+        "b0c17f14-8e51-4215-a91d-8e2b14672f6b",
+        "48e7730e-5f86-4897-96b8-d404ad833f66",
+        "43098f26-b719-4691-ad45-c43809c2873a",
+        "9e013b7a-68d2-4b99-9bbf-811b3817ef2e",
+        "00cbc3eb-84b2-4f57-9f16-6d72204c01b5"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

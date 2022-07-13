@@ -1,0 +1,134 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Everything great on this good green earth is green. Avocados, frogs, leaves, the recycling logo, spinach in your teeth, Oscar the grouch, envy… that got dark really fast. Dark green, that is. But everyone will certainly be filled with envy when they see you sporting goodr’s polarized sunglasses. Out golfing? Take our Mary Queen of Golf bottle sunglasses out for a turn. Turning over a new leaf? Sport the olive-colored frame aviator sunglasses Buzzed on the Tower on your face. Trying to get more veggies in your diet? Slurp the Mint Julep Electroshocks down with their dark frames and larger size for those with watermelon heads.</p>
+					<p>All of these shady sport lens are all polarized and all fun. They're not cheap sunglasses either, though the low price point begs to differ. Sure, you could get green sunglasses on eBay or craigslist or out of the landscape bins if you're diving in your neighbor's refuse to catch them in the act of sneaking forbidden trash items into what's supposed to be an eco-friendly initiative. But wouldn't you rather give your gaze a brand-spankin' new look? And you can, starting at just $25! That's like buying .0004% of a 2021 Corvette. Or 32 limes, if they're at market price and in season. But you could probably only get like seven avocados for that price which is definitely not enough to make a party-size guacamole tray, so you might as well invest your dollar dollar bills y'all in some green sunglasses.</p>
+                  	<p>Still not convinced that these shades are in your future? The grass is greener with the green and yellow aviator sunnies Tales of a Greenskeeper (copyright pending). Literally. Because their lens also feature our Flamingo Eye (trademark) technology that makes every shade of color pop like that refreshing can of lemon-lime soda in your hand. Or go high fashion with a cat-eye shape and our clear, tinted framed sunglasses that do double the work and protect against the evil blue light that emanates from computer screens with Workin' It From Home, our transparent-ish sunglasses that feature the blue mirage blue-blocking clear lens. None of the aforementioned shades piquing your green interest? How about a pair of our best sellers, the Kitty Hawkers' Ray Blockers, which feature a teal green aviator style frame with pink highlights and reflective lens.</p>
+					<p>We've got endless categories of fun eyewear accessories in every color imaginable (not really, just the main ones). Women, men, non-binary, it's all the same in the dark green shade of the trees. So join in the fun with these wayfarer style frames with blue-green reflective lens that are aptly named Nessie's Midnight Orgy, one of the goodr originals that always delights. Have we convinced you to shop the collection and place an order that you'll surely track the shipping obsessively on? If not, then why are you even still here? What does this information mean to you? Why would you view this page? And why are you wasting your time?</p>
+					<p>If we have convinced you, then bravo! Those are the kind of results we're looking for here at goodr, inc. No filters needed when you rock these spunky shades because obviously, they amazeballs. If we could give them away for free, we would. But obviously, that's a terrible business decision... so while they aren't free, they for sure are affordable. Keep your eyes peeled too because maybe we'll throw in some free shipping too! No promises, but we want to get your hopes up.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,124 @@
+<div class="drawer drawer--left">
+  	<a class="drawer-close--left" title="Close menu">{% include 'icon-close' %}</a>
+  	<nav role="navigation">
+      
+    	<form action="/search" method="get" role="search">
+      		<div class="row middle-xs">
+        		<div class="col-xs-9 col-sm-9" style="max-width: calc(100% - 54px);flex-basis: calc(100% - 54px);">
+          			<label for="Search" class="label-hidden">
+            			{{ 'general.search.placeholder' | t }}
+          			</label>
+          			<input type="search"
+                 		name="q"
+                 		id="Search"
+                 		class="big-search__text"
+                 		value="{{ search.terms | escape }}"
+                 		placeholder="{{ 'general.search.placeholder' | t }}">
+        		</div>        
+        		<div class="col-xs-3 col-sm-3" style="max-width: 54px;flex-basis: 54px;">
+          			<button type="submit" class="big-search__button button--text" style="padding: 0;">
+            			{% include 'icon-search' %}
+            			<span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+					</button>          
+        		</div>        
+			</div>
+        </form>
+    
+    	<ul class="nav-mobile">
+      		{% for link in linklists.new-mobile-menu-2.links %}
+        		{% if link.links != blank %}
+          			<li class="nav-mobile__item">
+            			<a class="nav-link--parent" href="{{ link.url }}" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Mobile', 'event_label':'{{ link.title }}', 'event_action':'{{ link.title }} - Main Link' });">
+              				{{ link.title }}
+            			</a>
+						<span class="sub-nav__toggle-icon"><svg height="16" width="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" aria-labelledby="icon_4996" aria-hidden="false"><title id="icon_4996">rightChevronIcon</title><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><path d="M4.99999998,15 L11.5,8.53 C11.6429478,8.39071221 11.72357,8.19958747 11.72357,7.99999996 C11.72357,7.80041253 11.6429478,7.60928779 11.5,7.47 L4.99999998,0.999999956 L4.64999998,1.34999996 C4.26227638,1.74003742 4.26227638,2.36996251 4.64999998,2.75999997 L9.87000001,7.99999996 L4.60999998,13.24 C4.22227638,13.6300375 4.22227638,14.2599626 4.60999998,14.65 L4.99999998,15 Z" fill="currentColor"></path></g></svg></span>                        
+            			<ul class="ml-submenu" id="menu-{{ link.handle }}">
+                          	<li class="ml-back">
+								<span class="ml-back-label"><svg height="16" width="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" aria-labelledby="icon_2252" aria-hidden="false"><title id="icon_2252">leftChevronIcon</title><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><path d="M11,15 L4.53999998,8.53 C4.39705219,8.39071221 4.31643003,8.19958747 4.31643003,7.99999996 C4.31643003,7.80041253 4.39705219,7.60928779 4.53999998,7.47 L11,0.999999956 L11.35,1.34999996 C11.7377236,1.74003742 11.7377236,2.36996251 11.35,2.75999997 L6.12999999,7.99999996 L11.39,13.24 C11.7777236,13.6300375 11.7777236,14.2599626 11.39,14.65 L11,15 Z" fill="currentColor"></path></g></svg> {{ link.title }}</span>
+							</li>
+              				{% for childlink in link.links %}
+                				<li>
+                  					<a class="nav-link--child" href="{{ childlink.url }}" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Mobile', 'event_label':'{{ link.title }}', 'event_action':'{{ childlink.title }}' });">
+                    					{{ childlink.title }}
+                  					</a>
+                  					{% if childlink.links != blank %}
+                  						<span class="js-subnav-toggle sub-nav__toggle" data-target="menu-{{ childlink.handle }}"></span>
+                  						<ul id="menu-{{ childlink.handle }}">
+                    						{% for grandchildlink in childlink.links %}
+                      							<li>
+                        							<a class="nav-link--grandchild" href="{{ grandchildlink.url }}" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Mobile', 'event_label':'{{ link.title }}', 'event_action':'{{ grandchildlink.title }}' });">
+                          								{{ grandchildlink.title }}
+                        							</a>
+                      							</li>
+                    						{% endfor %}
+                  						</ul>
+                  					{% endif %}
+                				</li>
+              				{% endfor %}
+            			</ul>
+          			</li>
+        		{% else %}
+          			<li class="nav-mobile__item">
+            			<a class="nav-link--parent" href="{{ link.url }}" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Mobile', 'event_label':'{{ link.title }}', 'event_action':'{{ link.title }}' });">
+              				{{ link.title }}
+            			</a>
+          			</li>
+        		{% endif %}
+      		{% endfor %}
+    	</ul>
+	</nav>
+	
+  	{% comment %}
+  	<ul class="nav--mobile-utility">
+    	{% if section.settings.mobile_nav_search %}
+      		<li><a class="js-open-search" href="/search">Search</a></li>
+    	{% endif %}
+    	{% if section.settings.help_link != blank %}
+      		<li><a href="{{ section.settings.help_link }}">Help</a></li>
+    	{% endif %}
+
+    	{% if shop.customer_accounts_enabled %}
+      		<li>
+        		{% if customer %}
+          			{% if customer.first_name != blank %}
+            			<a href="/account">Hi {{ customer.first_name }}</a>
+          			{% else %}
+            			<a href="/account">{{ 'layout.customer.account' | t }}</a>
+          			{% endif %}
+        		{% else %}
+            		<a href="/account/login" id="customer_login_link" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Mobile', 'event_label':'Login', 'event_action':'Login' });">Login</a>
+        		{% endif %}
+      		</li>
+    	{% endif %}
+  	</ul>
+  	{% endcomment %}
+</div>
+
+{% schema %}
+  {
+    "name": "Left drawer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "mobile_nav_search",
+        "label": "Show search toggle in mobile nav drawer",
+        "default": true
+      },
+      {
+        "type": "url",
+        "id": "help_link",
+        "label": "Help link"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+$('.sub-nav__toggle-icon').on('click', function(e){
+	$(this).next().addClass('open');
+});
+
+$('.ml-back').on('click', function(e){
+	$(this).closest('.ml-submenu').removeClass('open');
+});
+</script>

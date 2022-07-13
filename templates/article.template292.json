@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "f08f03ef-7937-4d2d-8ffb-77e4b93f4696": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "goodr CELEBRATES PI DAY WITH “I DON’T KNOW WHEN TO STOP” THEMED SHADES",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/On_Face.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "761e2d2e-f15a-4100-bfff-aca027afebd7": {
+          "type": "text",
+          "settings": {
+            "title": "Happy Pi Day!",
+            "text": "<p>If you’re a math nerd, you’re probably celebrating 3\/14 by posting that “mind blown” meme that shows “3.14” looks like “PIE” in the mirror. (So spooky.) Or maybe you’re asking friends, “What’s the expression for the volume of a thick crust pizza with height \"a\" and radius \"z”? (The formula for volume is π·(radius)2·(height), making the answer ‘pi·z·z·a,’ obviously.) Or maybe you’re on the Mathmeat dating app bragging that your sex drive is like pi, it never ends. (To which your match will respond, “Ew. That’s not a good thing.”)\n<br><br>\nHowever, if you’re NOT a math enthusiast, you probably don’t get the fuss. Why should you give a f*** about π? In high school, your smug math teacher used to say, “You better learn this, because you’re not always going to have a calculator in your pocket!” Cut to the present, and guess what? We ALL have calculators in our pockets, on our phones! What a moron. The word-loving copywriting team at goodr drinks all day to try to forget the pointless sh*t they learned in high school math class. So here’s the deets on Pi Day.\n<br><br>\nPi, represented by the Greek letter ‘π,’  is the ratio of a circle's circumference to its diameter, approximately equal to 3.14159. As a mathematical constant, the number doesn’t change, regardless of circle size. Also, pi is an irrational and transcendental number, so its decimal representation never ends or settles into a pattern. On 3\/14, math lovers challenge each other to see who can recite the most digits from memory, while everyone else runs from the room screaming. Just kidding, we all love it. Let’s give it a try!\n<br><br>\n3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919…\n<br><br>\nIn celebration of March 14, we’re releasing Pi-themed sunnies named “I Don’t Know When To Stop.” These green circular sunglasses with amber lenses feature π, pi diagrams and “c=2πr or c=πd” on the frames, plus a lens etching of “d=1.8,” the diameter of the Circle G lens!!! These sunglasses won’t slip or bounce while you make out with three statisticians. The first statistician overshoots, and kisses your nose. The second statistician undershoots, and kisses your neck. The third one gets you smack dab on the lips. Bullseye. (Or should we say…BULLSPI?!?!!)\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "92a9bc16-3e67-4291-bd62-ea16cb246ac0": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Square_Lifestyle_d9a6131d-4906-4b62-ba31-ecf420ca50fa.jpg"
+          }
+        },
+        "b0e7ee2e-389e-4a6c-9848-480c29696137": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "IF YOU'RE NOT A NUMBERS PERSON, HERE ARE SOME MORE WORDS",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "article1": "origin-story\/professor-00g-origin-story",
+            "article2": "origin-story\/i-have-these-on-vinyl-too-origin-story",
+            "article3": "origin-story\/carl-the-flamingo-plush-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "f08f03ef-7937-4d2d-8ffb-77e4b93f4696",
+        "761e2d2e-f15a-4100-bfff-aca027afebd7",
+        "92a9bc16-3e67-4291-bd62-ea16cb246ac0",
+        "b0e7ee2e-389e-4a6c-9848-480c29696137"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

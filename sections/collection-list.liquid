@@ -1,0 +1,144 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available when you add "Collection list" section in the Theme Editor.
+
+  Theme Store required settings
+  - Heading: title of the collection list section
+  - Collection
+{%- endcomment -%}
+
+
+
+<section class="collection-list container--full col_list_hide_home">
+
+  {% if section.settings.title != blank %}
+      <h3 class="text-align--center" style="color:#4ec0b2">{{ section.settings.title | escape }}</h3>
+  {% endif %}
+
+  {%- assign noOfBlocks = section.blocks.size -%}
+  {%- assign blockWidth = 'col-xs-6 col-md-3 col-lg-3' -%}
+
+  {% if noOfBlocks == '3' %}
+    {%- assign blockWidth = 'col-xs-10 col-md-4' -%}
+  {% endif %}
+
+  <div class="row center-md collection-list__slider">
+
+  {% for block in section.blocks %}
+    {%- assign collection = collections[block.settings.collection] -%}
+
+    <div class="{{ blockWidth }}">
+      <a href="{{ collection.url | default: "#" }}" class="collection-list-item" {{ block.shopify_attributes }}>
+        {% if block.settings.collection_image != blank %}
+          <div class="collection-list__image">
+            {{ block.settings.collection_image | img_url: '600x600', crop: 'center' | img_tag }}
+          </div>
+        {% elsif collection.image != blank or collection.products.first != blank %}
+          {%- assign image_object = collection.image | default: collection.products.first.featured_image -%}
+          <div class="collection-list__image">
+            {{ image_object | img_url: '600x600', crop: 'center' | img_tag }}
+          </div>
+        {% elsif collection == empty %}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+        {% endif %}
+
+        <div class="collection-list__title">
+          {%- assign default_label = 'homepage.onboarding.collection_title' | t -%}
+          {% if block.settings.custom_title != blank %}
+            <h2>{{ block.settings.custom_title }}</h2>
+          {% else %}
+            <h2>{{ collection.title | default: default_label }}</h2>
+          {% endif %}
+            <p><span class="button button--small">Shop Now</span></p>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Collection list",
+    "max_blocks": 12,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Collection list"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "label": "Collection",
+            "id": "collection",
+            "type": "collection"
+          },
+          {
+            "type": "text",
+            "id": "custom_title",
+            "label": "Optional custom title for collection"
+          },
+          {
+            "label": "Collection image",
+            "id": "collection_image",
+            "type": "image_picker",
+            "info": "Upload a custom image here if you like, otherwise this will default to the collection featured image, and then the first product in the collection."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection list",
+        "category": "Collection",
+        "blocks": [
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+
+<script type="text/javascript">
+$(function() {
+  $('.collection-list__slider').slick({
+    dots: true,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '80px',
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: "unslick"
+      }
+    ]
+  });
+});
+</script>

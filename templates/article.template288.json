@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "1a33c4d6-f942-41de-b49b-71d852363c6b": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "THANKS, THEY'RE VINTAGE ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Vintage_400_thumbnail.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "6ce27f38-e82c-4207-9e92-bdda5e83efa9": {
+          "type": "text",
+          "settings": {
+            "title": "3 BATSH*T CRAZY EMAILS ABOUT “THANKS, THEY’RE VINTAGE” SUNGLASSES",
+            "text": "<p>Dear goodr,\n<br><br>\nWhat’s wrong with you?! Did you all get lobotomies for Christmas?!?!?! The “Thanks, They’re Vintage” sunglasses are NOT vintage. They’re RETRO!!! According to the dictionary (EVER HEARD OF IT?!!), vintage means “characterized by excellence, maturity, and enduring appeal; classic,” with true vintage at 50 years old. Retro means “involving, relating to, or reminiscent of an earlier time; retrospective,\" imitating a style at least 10-15 years old. I DEMAND you rename these sunglasses “Thanks, They’re Retro.” What do you think, words have no meaning!?!? Should we all speak gibberish?!?!! Florbetty stimp zartkuss! Wipeggle snarf ploot! Does that make you happy? DOES IT?!??! I hope you get ebola.\n<br><br>\nSincerely,\nByron\n<br><br><b>\nDear Byron,\n<br><br>\nThe sunglasses ARE 50 years old. They just look 10-15 years old because they had cosmetic surgery. The secret to looking good is not a healthy diet, regular exercise, and 8 hours of sleep every night. It’s liposuction, Botox, and drinking the blood of the young. How old are you, by the way? Got any kids? Just curious.\n<br><br>\nYours in flamingo love,\ngoodr\n<\/b>\n<br><br>\nDear goodr,\n<br><br>\nTHANK YOU for using “they’re” correctly!!! I work as a professional Grammar Not See. (Formerly “Grammar Nazi,” we recently learned that word is problematic.) That means from 9 to 5 on Monday through Friday, I roam the internet, scouring social media, comment sections and message boards for incorrect uses  of “their,” “there” and “they’re.” Then I post a comment shaming the perps as if they committed an atrocious war crime. It’s the only way they’ll learn. But clearly, there’s no need to teach anything to you fine folks! “Thanks, They’re Vintage.” Beautiful. Tell the copy team their excellent work tickles my heart.\n<br><br>\nYours,\nDelilah\n<br><br><b>\nDear Delilah,\n<br><br>\nWe passed your message to the Copy Coven. Their on there monthly 3-week vacation and said they’re is no chance they give a shit.\n<br><br>\nYours in flamingo love,\ngoodr\n<\/b><br><br>\nDear goodr,\n<br><br>\nHELP ME!!!! PLEASE!!! OH GOD OH GOD OH GOD. I put on “Thanks, They’re Vintage” sunglasses and a spirit who died 50 years ago possessed me! Then he wandered around my office and said EXTREMELY problematic things to EVERYONE!!! Maybe that stuff was okay to say when the spirit died in 1972. But not in 2022! Eugene Shackleton — that was the spirit’s name – offended people of all races, all genders, all sexualities, all ages, and all abilities!!!! It was horrible. Just horrible. He said the C-word, the F-word, the R-word, you name it! Pick a letter of the alphabet and attach “-word” to it – he said it! But everyone thinks it was me! OH GOD OH GOD OH GOD. By the time I was able to overpower Eugene and regain control of my body, the damage was done. But nobody believes me!!!! Please, tell my co-workers at The Sunglasses Shack that it wasn’t me!!! It was Eugene Shackleton!!!\n<br><br>\nAnxiously awaiting your reply,\nRandall\n<br><br><b>\nDear Randall,\n<br><br>\nWe asked you nicely to stock our sunglasses, and you said no. This is what happens when retailers reject us. We take revenge. Nasty soul-scarring revenge. You’ll pay. You’ll all pay. Let this be a lesson to all retailers. HA HA HA HA HA! SQUAWWWWK!!!\n<br><br>\nYours in flamingo love,\ngoodr<\/b>\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "5301ec13-4844-4a4b-8342-598aecf158dd": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vintage_bleed.jpg"
+          }
+        },
+        "c7815a0b-0d09-4c48-b977-0fa4b7bb84a6": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "b89ff144-ff7b-4bdd-95e0-e8a1d9563321": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "THESE BLOGS ARE RETRO",
+            "content": "",
+            "article1": "origin-story\/cheesy-flight-attendant-origin-story",
+            "article2": "goodrtimes\/love-letters-to-carl",
+            "article3": "origin-story\/carl-the-flamingo-plush-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "1a33c4d6-f942-41de-b49b-71d852363c6b",
+        "6ce27f38-e82c-4207-9e92-bdda5e83efa9",
+        "5301ec13-4844-4a4b-8342-598aecf158dd",
+        "c7815a0b-0d09-4c48-b977-0fa4b7bb84a6",
+        "b89ff144-ff7b-4bdd-95e0-e8a1d9563321"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

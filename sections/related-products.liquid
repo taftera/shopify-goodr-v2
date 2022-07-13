@@ -1,0 +1,136 @@
+<!-- Solution brought to you by Caroline Schnapp -->
+<!-- See this: https://docs.shopify.com/support/your-store/products/can-i-recommend-related-products#finding-a-relevant-collecitons -->
+
+{% if section.settings.show_related_products %}
+
+  {% assign same_vendor = false %}
+  {% assign same_type = false %}
+
+  {% comment %}
+    Collections to ignore.
+    Never pick related items from those.
+  {% endcomment %}
+
+  {% assign exclusions = 'frontpage,all' | split: ',' %}
+
+  {% comment %}
+    Looking for a relevant collection.
+  {% endcomment %}
+
+  {% if product.metafields.c_f['Related Products'] %}
+    {% assign collection = collections[product.metafields.c_f['Related Products']] %}
+  {% endif %}
+
+  {% assign found_a_collection = false %}
+  {% if collection and collection.all_products_count > 1 %}
+    {% unless exclusions contains collection.handle %}
+      {% assign found_a_collection = true %}
+    {% endunless %}
+  {% endif %}
+  {% unless found_a_collection %}
+    {% for c in product.collections %}
+      {% unless exclusions contains c.handle or c.all_products_count < 2 %}
+        {% assign found_a_collection = true %}
+        {% assign collection = c %}
+        {% break %}
+      {% endunless %}
+    {% endfor %}
+  {% endunless %}
+
+  {% comment %}
+    If we have a relevant collection.
+  {% endcomment %}
+
+  {% if found_a_collection %}
+
+    {% assign products_to_show = section.settings.number_products %}
+
+    {% case products_to_show %}
+      {% when 1 %}
+        {% assign grid_item_width = 'col-xs-12' %}
+      {% when 2 %}
+        {% assign grid_item_width = 'col-xs-6' %}
+      {% when 3 %}
+        {% assign grid_item_width = 'col-xs-6 col-md-4' %}
+      {% when 4 %}
+        {% assign grid_item_width = 'col-xs-6 col-md-3' %}
+      {% when 5 %}
+        {% assign grid_item_width = 'col-xs-6 col-md-3' %}
+      {% when 6 %}
+        {% assign grid_item_width = 'col-xs-6 col-md-4 col-lg-3' %}
+      {% else %}
+        {% assign grid_item_width = 'col-xs-6 col-md-4 col-lg-3' %}
+    {% endcase %}
+
+    {% assign counter = 0 %}
+    {% assign break_at = products_to_show %}
+    {% assign current_product = product %}
+    {% assign show_quick_buy = false %}
+
+    {% capture related_items %}
+      {% for product in collection.products %}
+        {% include 'bold-product' with product, hide_action: 'skip' %}
+        {% unless product.handle == current_product.handle %}
+           {% unless same_vendor and current_product.vendor != product.vendor %}
+             {% unless same_type and current_product.type != product.type %}
+               <div class="{{ grid_item_width }}">
+                 {% include 'product-tile' %}
+               </div>
+               {% assign counter = counter | plus: 1 %}
+               {% if counter == break_at %}
+                 {% break %}
+               {% endif %}
+             {% endunless %}
+          {% endunless %}
+        {% endunless %}
+      {% endfor %}
+    {% endcapture %}
+
+    {% assign related_items = related_items | trim %}
+
+    {% unless related_items == blank %}
+
+    <div class="container--fluid">
+      <aside class="row center-xs">
+        <div class="col-xs-12">
+          {% if section.settings.heading != blank %}
+          <h2 class="text-align__center">{{ section.settings.heading }}</h1>
+          {% endif %}
+        </div>
+        {{ related_items }}
+      </aside>
+    </div>
+
+    {% endunless %}
+
+  {% endif %}
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Related products",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_related_products",
+        "label": "Show related products?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Section title"
+      },
+      {
+        "type":   "range",
+        "id":     "number_products",
+        "min":       2,
+        "max":       8,
+        "step":      1,
+        "label":     "Number of products",
+        "default":   4
+      }
+    ]
+  }
+{% endschema %}

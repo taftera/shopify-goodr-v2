@@ -1,0 +1,2569 @@
+<div class="container">
+  <div class="custom-content row">
+    {% for block in section.blocks %}
+      {% case block.settings.width %}
+        {% when '25%' %}
+          {%- assign max_height = 250 -%}
+          {%- assign block_width = 'col-xs-6 col-sm-3' -%}
+        {% when '33%' %}
+          {%- assign max_height = 345 -%}
+          {%- assign block_width = 'col-xs-6 col-sm-4' -%}
+        {% when '50%' %}
+          {%- assign max_height = 530 -%}
+          {%- assign block_width = 'col-xs-6 col-sm-6' -%}
+        {% when '66%' %}
+          {%- assign max_height = 720 -%}
+          {%- assign block_width = 'col-xs-12 col-sm-8' -%}
+        {% when '75%' %}
+          {%- assign max_height = 810 -%}
+          {%- assign block_width = 'col-xs-12 col-sm-9' -%}
+        {% when '100%' %}
+          {%- assign max_height = 1090 -%}
+          {%- assign block_width = 'col-xs-12 col-sm-12' -%}
+    	{% when '100%-offset' %}
+          {%- assign max_height = 1090 -%}
+          {%- assign block_width = 'col-xs-12  col-sm-10 col-xs-offset-0 col-sm-offset-1' -%}
+   		{% else %}
+    	  {%- assign block_width = 'col-xs-12' -%}
+      {% endcase %}
+
+          {% case block.type %}
+            {% when 'image' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+						{% if block.settings.image != blank %}
+							{%- assign img_url = block.settings.image | img_url: 'master' -%}
+							<div class="text-align--{{ block.settings.align_image }}">
+							<img id="{{ img_id }}"
+								class="custom__image lazyload js"
+								src="{{ block.settings.image | img_url: '600x600' }}"
+								data-src="{{ img_url }}"
+								alt="{{ block.settings.image.alt | escape }}">
+							</div>
+						{% else %}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+					</div>
+				</div>
+            {% when 'image_with_text' %}
+    			<div class="col-xs-12 content-devider content-devider-top"></div>
+				<div class="col-xs-12 title-text-row">
+					<div class="text-align--{{ block.settings.title_align_text }}">
+						{% if block.settings.title != blank %}
+							<h4 class="h4">{{ block.settings.title | escape }}</h3>
+						{% endif %}
+					</div>
+				</div>
+    			{% capture image_content %}
+					<div class="col-xs-12 col-sm-5 text-align-xs--center" >
+						{% if block.settings.image != blank %}
+							{%- assign img_url = block.settings.image | img_url: 'master'  -%}
+							<img id="{{ img_id }}"
+								class="custom__image lazyload js"
+								src="{{ block.settings.image | img_url: '600x600' }}"
+								data-src="{{ img_url }}"
+								alt="{{ block.settings.image.alt | escape }}">
+						{% else %}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+					</div>
+				{% endcapture %}
+				{% if block.settings.image_aligment == "left" %}
+					{{ image_content}}
+				{% endif %}
+				<div class="col-xs-12 col-sm-7" >
+					<div class="text-align--{{ block.settings.align_text }}">
+						{% if block.settings.content != blank %}
+						<div class="rte-setting">{{ block.settings.content }}</div>
+						{% endif %}
+					</div>
+				</div>
+    			{% if block.settings.image_aligment == "right" %}
+					{{ image_content}}
+    				<div class="col-xs-12 content-devider content-devider-bottom"></div>
+				{% endif %}
+          	{% when 'text' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+						<div class="text-align--{{ block.settings.align_text }}">
+							{% if block.settings.title != blank %}
+							<h4 class="h4">{{ block.settings.title | escape }}</h4>
+							{% endif %}
+                          	{% if block.settings.show_page_content %}
+								<div class="rte-setting show_page_content">{{ page.content }}</div>
+							{% else %}
+								{% if block.settings.text != blank %}
+								<div class="rte-setting">{{ block.settings.text }}</div>
+								{% endif %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+    		{% when 'intro' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+						<div class="text-align--{{ block.settings.align_text }}">
+							{% if block.settings.title != blank %}
+							<h3 class="h3">{{ block.settings.title | escape }}</h3>
+							{% endif %}
+							{% if block.settings.text != blank %}
+							<div class="rte-setting">{{ block.settings.text }}</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% when 'heading' %}
+			</div>
+		</div>
+		<div class="heading-row" title="{{ block.settings.image.alt | escape }}" style="background-image:url('{% if block.settings.image != blank %} {%- assign img_url = block.settings.image | img_url: 'master' -%}{{img_url}}{% endif %}');">
+			<div class="container">
+				<div class="custom-content row ">
+					<div class="text-align--{{ block.settings.align_text }} custom__item--{{block.id}} col-xs-12 col-sm-10 col-xs-offset-0 col-sm-offset-1 ">
+						{% if block.settings.title != blank %}
+						<h1 class="h1">{{ block.settings.title | escape }}</h1>
+						{% endif %}
+						{% if block.settings.text != blank %}
+						<div class="rte-setting">{{ block.settings.text }}</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="custom-content row">
+			{% when 'bleed_image' %}
+			</div>
+		</div>
+		<div class="bleed_image-row">
+			{% if block.settings.image != blank %} {%- assign img_url = block.settings.image | img_url: 'master' -%}<img alt="{{ block.settings.image.alt | escape }}" src="{{img_url}}" />{% endif %}
+		</div>
+		<div class="container">
+			<div class="custom-content row">
+            {% when 'video' %}
+                  <div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+						<div class="text-align--{{ block.settings.align_text }}">
+							{% if block.settings.title != blank %}
+							<h4 class="h4">{{ block.settings.title | escape }}</h4>
+							{% endif %}
+							{% if block.settings.cotent != blank %}
+							<div class="rte-setting">{{ block.settings.cotent }}</div>
+							{% endif %}
+						</div>
+						<section class="video-banner" id="vid">
+							{{ block.settings.video_background | img_url: '850x480', crop: 'center' | img_tag: block.settings.image.alt, 'video-banner__background'}}
+							<div class="video-banner__content">
+								<div class="video-banner__caption">
+								{% if block.settings.text != blank %}
+								<h3 class="text-color--white mbs">{{ block.settings.text }}</h3>
+								{% endif %}
+							
+								<a class="play-video" href="#"
+								data-izimodal-open="#video-modal{{block.id}}"
+								data-izimodal-zindex="20000"
+								data-izimodal-preventclose=""> Play Video </a>
+								</div>
+							</div>
+						</section>
+
+						<div class="iziModal" id="video-modal{{block.id}}">
+							<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+							<div class="rte__video-wrapper">
+								<div class="youtube-player" id="{{ block.settings.video_url.id }}"></div>    
+                              {%- comment -%}
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?controls=0&showinfo=0&frameborder=0&modestbranding=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen allow="autoplay;encryted-media"></iframe>
+                              {%- endcomment -%}
+							</div>
+						</div>
+					</div>
+				</div>
+            {% when 'product' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+                      	{%- if block.settings.product != blank -%}
+							{%- include 'product-tile-blog', product_variable: block.settings.product %}
+                        {%- endif -%}  
+					</div>
+				</div>
+            {% when 'single_product_wide' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="single-product-wide custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+                      	{%- if block.settings.product != blank -%}
+                      		{%- include 'product-tile-blog-wide', product_variable: block.settings.product %}
+                        {%- endif -%}
+					</div>
+				</div>
+            {% when 'triple_product' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+                <div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-10">
+					<div class="text-align--center">
+						{% if block.settings.title != blank %}
+							<h4 class="h4">{{ block.settings.title | escape }}</h4>
+						{% endif %}
+						{% if block.settings.content != blank %}
+							<div class="rte-setting">{{ block.settings.content }}</div>
+						{% endif %}
+					</div>
+                </div>
+				<div class="col-xs-12 col-sm-4">
+                  	{%- if block.settings.product1 != blank -%}
+						{%- include 'product-tile-blog-simple', product_variable: block.settings.product1 %}
+                    {%- endif -%}
+				</div>
+                <div class="col-xs-12 col-sm-4">
+                  	{%- if block.settings.product2 != blank -%}
+						{%- include 'product-tile-blog-simple', product_variable: block.settings.product2 %}
+                    {%- endif -%}
+				</div>
+				<div class="col-xs-12 col-sm-4">
+                  	{%- if block.settings.product3 != blank -%}
+                  		{%- include 'product-tile-blog-simple', product_variable: block.settings.product3 %}
+                    {%- endif -%}
+				</div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+            {% when 'triple_product_new' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+                <div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-10">
+					<div class="text-align--center">
+						{% if block.settings.title != blank %}
+							<h4 class="h4">{{ block.settings.title | escape }}</h4>
+						{% endif %}
+						{% if block.settings.content != blank %}
+							<div class="rte-setting">{{ block.settings.content }}</div>
+						{% endif %}
+					</div>
+                </div>
+				<div class="col-xs-12 col-sm-4">
+                  	{%- if block.settings.product1 != blank -%}
+                  		{%- include 'product-tile-new', product_variable: block.settings.product1 %}
+                    {%- endif -%}
+				</div>
+                <div class="col-xs-12 col-sm-4">
+                  	{%- if block.settings.product2 != blank -%}
+						{%- include 'product-tile-new', product_variable: block.settings.product2 %}
+                    {%- endif -%}
+				</div>
+				<div class="col-xs-12 col-sm-4">
+                  	{%- if block.settings.product3 != blank -%}
+						{%- include 'product-tile-new', product_variable: block.settings.product3 %}
+					{%- endif -%}
+				</div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+            {% when 'double_product' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+                <div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-10">
+					<div class="text-align--center">
+						{% if block.settings.title != blank %}
+							<h4 class="h4">{{ block.settings.title | escape }}</h4>
+						{% endif %}
+						{% if block.settings.content != blank %}
+							<div class="rte-setting">{{ block.settings.content }}</div>
+						{% endif %}
+					</div>
+                </div>  
+				<div class="col-xs-12 col-sm-6">
+                  	{%- if block.settings.product1 != blank -%}
+						{%- include 'product-tile-new', product_variable: block.settings.product1 %}
+                    {%- endif -%}
+				</div>
+                <div class="col-xs-12 col-sm-6">
+                  	{%- if block.settings.product2 != blank -%}
+						{%- include 'product-tile-new', product_variable: block.settings.product2 %}
+                    {%- endif -%}
+				</div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+            {% when 'collection' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }}" {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+						{%- assign collection = collections[block.settings.collection] -%}
+              
+						<a href="{{ collection.url | default: "#" }}" class="collection-list-item" {{ block.shopify_attributes }}>
+							{% if collection.image != blank or collection.products.first != blank %}
+								{%- assign image_object = collection.image | default: collection.products.first.featured_image -%}
+								<div class="collection-list__image">
+									{{ image_object | img_url: '600x600', crop: 'center' | img_tag }}
+								</div>
+							{% elsif collection == empty %}
+								{% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+								{{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+							{% endif %}
+
+							<div class="collection-list__title">
+								{%- assign default_label = 'homepage.onboarding.collection_title' | t -%}
+								<h2>{{ collection.title | default: default_label }}</h2>
+								<p><span class="button button--small">Shop Now</span></p>
+							</div>
+						</a>
+					</div>
+				</div> 
+                    
+            {% when 'html' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+						{% if block.settings.code != blank %}
+							{{ block.settings.code }}
+						{% endif %}
+					</div>
+				</div>
+			
+			{% when 'klaviyo_form' %}
+				<div class="custom__item custom__item--{{block.id}} {{ block_width }} " {{ block.shopify_attributes }}>
+					<div class="custom__item-inner custom__item-inner--{{ block.type }}" id="{{ img_wrapper_id }}">
+                      	<div class="klaviyo_form_box">
+                          	<div class="klaviyo_form_box_inner">
+								{% if block.settings.title != blank %}
+	        	              		<h2 class="klaviyo_form_title">{{ block.settings.title }}</h2>
+								{% endif %}
+    	                  		{% if block.settings.text != blank %}
+		                      		<p class="klaviyo_form_text">{{ block.settings.text }}</p>
+								{% endif %}
+                      			{% if block.settings.code != blank %}
+                      				<div class="klaviyo_form_content">{{ block.settings.code }}</div>
+								{% endif %}
+                            </div>
+                      	</div>
+					</div>
+				</div>
+              
+			{% when 'recent_posts' %}
+              	<div class="col-xs-12 content-dev ider content-devider-top"></div>
+                	<div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-10">
+						<div class="text-align--center">
+							{% if block.settings.title != blank %}
+								<h4 class="h4">{{ block.settings.title | escape }}</h4>
+							{% endif %}
+							{% if block.settings.content != blank %}
+								<div class="rte-setting">{{ block.settings.content }}</div>
+							{% endif %}
+						</div>
+                	</div>  
+					<div class="col-xs-12 col-sm-4">
+						{%- assign article = articles[block.settings.article1] -%}
+						{% if article.title.size > 0 %}
+                      		<div class="recent_posts">
+                              	{% if article.image != blank %}
+                              		<div class="article_image-wrapper">
+                                  		<a href="{{ article.url }}">
+                                        	{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+                                      	</a>
+                              		</div>
+                              	{% endif %}
+                              	<h4 class="article_title">
+    								<a href="{{ article.url }}">{{ article.title }}</a>
+  								</h4>
+                              	<p class="article-text">
+      								{% if article.excerpt.size > 0 %}
+        								{{ article.excerpt | strip_html | truncatewords: 20 }}
+      								{% else %}
+          								{{ article.content | strip_html | truncatewords: 20 }}
+      								{% endif %}
+    							</p>
+                            </div>
+						{% endif %}
+					</div>
+                	<div class="col-xs-12 col-sm-4">
+						{%- assign article = articles[block.settings.article2] -%}
+						{% if article.title.size > 0 %}
+							<div class="recent_posts">
+                              	{% if article.image != blank %}
+                              		<div class="article_image-wrapper">
+                                  		<a href="{{ article.url }}">
+                                        	{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+                                      	</a>
+                              		</div>
+                              	{% endif %}
+                              	<h4 class="article_title">
+    								<a href="{{ article.url }}">{{ article.title }}</a>
+  								</h4>
+                              	<p class="article-text">
+      								{% if article.excerpt.size > 0 %}
+        								{{ article.excerpt | strip_html | truncatewords: 20 }}
+      								{% else %}
+          								{{ article.content | strip_html | truncatewords: 20 }}
+      								{% endif %}
+    							</p>
+                            </div>
+						{% endif %}
+					</div>
+                	<div class="col-xs-12 col-sm-4">
+						{%- assign article = articles[block.settings.article3] -%}
+						{% if article.title.size > 0 %}
+							<div class="recent_posts">
+                              	{% if article.image != blank %}
+                              		<div class="article_image-wrapper">
+                                  		<a href="{{ article.url }}">
+                                        	{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+                                      	</a>
+                              		</div>
+                              	{% endif %}
+                              	<h4 class="article_title">
+    								<a href="{{ article.url }}">{{ article.title }}</a>
+  								</h4>
+                              	<p class="article-text">
+      								{% if article.excerpt.size > 0 %}
+        								{{ article.excerpt | strip_html | truncatewords: 20 }}
+      								{% else %}
+          								{{ article.content | strip_html | truncatewords: 20 }}
+      								{% endif %}
+    							</p>
+                            </div>
+						{% endif %}
+					</div>
+              	<div class="col-xs-12 content-devider content-devider-bottom"></div> 
+              
+              {% when 'banner_heading' %}
+				<div class="heading-row banner-header" title="{{ block.settings.image.alt | escape }}" style="background-image:url('{% if block.settings.image != blank %} {%- assign img_url = block.settings.image | img_url: 'master' -%}{{img_url}}{% endif %}');{% if block.settings.banner_height != blank %}min-height: {{ block.settings.banner_height }};{% endif %}">
+					<div class="custom-content align-item-{{ block.settings.align_vertical_text }}">
+						<div class="content-box text-align--{{ block.settings.align_text }} custom__item--{{block.id}} ">
+							{% if block.settings.title != blank %}
+								<h1 class="h1">{{ block.settings.title | escape }}</h1>
+							{% endif %}
+							{% if block.settings.text != blank %}
+								<div class="rte-setting">{{ block.settings.text }}</div>
+							{% endif %}
+						</div>
+					</div>
+                  	{%- assign op2 = block.settings.overlay_opacity -%}
+                  	{%- assign op1 = op2 | plus: 0.1 -%}
+                  	<div class="background-overlay" style="background: linear-gradient(0deg, rgba(0,0,0,{{ op1 }}) 0%, rgba(0,0,0,{{ op2 }}) 20%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);"></div>
+				</div>
+
+              {% when 'recent_posts_category' %}
+              	<div class="col-xs-12 content-dev ider content-devider-top"></div>
+                	<div class="col-xs-12 col-xs-offset-0 col-sm-offset-1 col-sm-10">
+						<div class="text-align--center">
+							{% if block.settings.title != blank %}
+								<h4 class="h4">{{ block.settings.title | escape }}</h4>
+							{% endif %}
+							{% if block.settings.content != blank %}
+								<div class="rte-setting">{{ block.settings.content }}</div>
+							{% endif %}
+						</div>
+                	</div>
+     
+              		{%- assign blog = blogs[block.settings.blog_category] -%}
+              
+              		{%- if blog != blank  -%}
+              
+              			{% assign featuredArticles = blog.articles | sort:'published_at' | reverse %}
+              			{%- for article in featuredArticles limit: 3 -%}
+              				<div class="col-xs-12 col-sm-4">
+								<div class="recent_posts">
+									{% if article.image != blank %}
+										<div class="article_image-wrapper">
+											<a href="{{ article.url }}">
+												{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+											</a>
+										</div>
+									{% endif %}
+									<h4 class="article_title">
+										<a href="{{ article.url }}">{{ article.title }}</a>
+									</h4>
+									<p class="article-text">
+										{% if article.excerpt.size > 0 %}
+											{{ article.excerpt | strip_html | truncatewords: 20 }}
+										{% else %}
+											{{ article.content | strip_html | truncatewords: 20 }}
+										{% endif %}
+									</p>
+								</div>
+							</div>
+              			{% endfor %}
+              		{% else %}
+						{% assign featuredBlogs = "goodrtimes,gift-guides,news" | split: "," %}
+							{% for featuredBlog in featuredBlogs %}
+								{% if blogs[featuredBlog].articles %}
+									{% if featuredArticles %}
+										{% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
+									{% else %}
+										{% assign featuredArticles = blogs[featuredBlog].articles %}
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						{% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+              
+						{% for article in featuredArticles limit:3 %}
+							<div class="col-xs-12 col-sm-4">
+								<div class="recent_posts">
+									{% if article.image != blank %}
+										<div class="article_image-wrapper">
+											<a href="{{ article.url }}">
+												{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+											</a>
+										</div>
+									{% endif %}
+									<h4 class="article_title">
+										<a href="{{ article.url }}">{{ article.title }}</a>
+									</h4>
+									<p class="article-text">
+										{% if article.excerpt.size > 0 %}
+											{{ article.excerpt | strip_html | truncatewords: 20 }}
+										{% else %}
+											{{ article.content | strip_html | truncatewords: 20 }}
+										{% endif %}
+									</p>
+								</div>
+							</div>
+						{% endfor %}
+              		{% endif %}
+              	
+              {% when 'podcast_post_block' %}
+              	<div class="col-xs-12 content-dev ider content-devider-top"></div>
+                	<div class="{{ block_width }}">
+						<div class="text-align--{{ block.settings.align_text }}">
+							{% if block.settings.title != blank %}
+								<h4 class="h4">{{ block.settings.title | escape }}</h4>
+							{% endif %}
+							{% if block.settings.content != blank %}
+								<div class="rte-setting">{{ block.settings.content }}</div>
+							{% endif %}
+						</div>
+                      	<div class="row">
+              			{%- assign article = articles[block.settings.article1] -%}
+						{% if article.title.size > 0 %}
+              				<div class="col-xs-12 col-sm-4">
+	                      		<div class="recent_posts">
+    	                          	{% if article.image != blank %}
+        	                      		<div class="article_image-wrapper">
+            	                      		<a href="{{ article.url }}">
+                	                        	{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+                    	                  	</a>
+                        	      		</div>
+                            	  	{% endif %}
+                              		<h4 class="article_title">
+	    								<a href="{{ article.url }}">{{ article.title }}</a>
+  									</h4>
+        	                      	<p class="article-text">
+      									{% if article.excerpt.size > 0 %}
+        									{{ article.excerpt | strip_html | truncatewords: 20 }}
+	      								{% else %}
+    	      								{{ article.content | strip_html | truncatewords: 20 }}
+      									{% endif %}
+    								</p>
+                	            </div>
+							</div>
+              			{% endif %}
+              			{%- assign article = articles[block.settings.article2] -%}
+						{% if article.title.size > 0 %}
+    	            		<div class="col-xs-12 col-sm-4">
+								<div class="recent_posts">
+                    	          	{% if article.image != blank %}
+                        	      		<div class="article_image-wrapper">
+                            	      		<a href="{{ article.url }}">
+                                	        	{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+                                    	  	</a>
+                              			</div>
+                              		{% endif %}
+                              		<h4 class="article_title">
+    									<a href="{{ article.url }}">{{ article.title }}</a>
+  									</h4>
+                              		<p class="article-text">
+      									{% if article.excerpt.size > 0 %}
+        									{{ article.excerpt | strip_html | truncatewords: 20 }}
+      									{% else %}
+          									{{ article.content | strip_html | truncatewords: 20 }}
+      									{% endif %}
+    								</p>
+                            	</div>
+							</div>
+						{% endif %}
+              			{%- assign article = articles[block.settings.article3] -%}
+						{% if article.title.size > 0 %}
+                			<div class="col-xs-12 col-sm-4">
+								<div class="recent_posts">
+                              		{% if article.image != blank %}
+                              			<div class="article_image-wrapper">
+                                  			<a href="{{ article.url }}">
+                                        		{{ article.image.src | img_url: '800x' | img_tag: article.featured_image.alt }}  	
+                                      		</a>
+                              			</div>
+                              		{% endif %}
+                              		<h4 class="article_title">
+    									<a href="{{ article.url }}">{{ article.title }}</a>
+  									</h4>
+                              		<p class="article-text">
+	      								{% if article.excerpt.size > 0 %}
+    	    								{{ article.excerpt | strip_html | truncatewords: 20 }}
+      									{% else %}
+          									{{ article.content | strip_html | truncatewords: 20 }}
+      									{% endif %}
+    								</p>
+                        	    </div>
+							</div>
+						{% endif %}
+                        </div>
+              		</div>
+              	<div class="col-xs-12 content-devider content-devider-bottom"></div>
+              
+              {% when 'awards_press_block' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+              	<div class="awards_press_section">
+                  	{% if block.settings.show_awards_1 %}
+					<div class="awards_press_item">
+                        {% if block.settings.awards_icon_1 != blank %}
+                      		<div class="awards_press_icon" >
+                              	{% if block.settings.awards_url_1 != blank %}
+                              		<a href="{{ block.settings.awards_url_1 }}" >
+                              	{% endif %}
+                                    {%- assign img_url = block.settings.awards_icon_1 | img_url: 'master'  -%}  
+									<img id="{{ img_id }}"
+										class="custom__image lazyload js"
+										src="{{ img_url }}"
+										data-src="{{ img_url }}"
+										alt="{{ block.settings.awards_icon_1.alt | escape }}">
+                                {% if block.settings.awards_url_1 != blank %}
+                              		</a>
+                              	{% endif %}
+                        	</div>
+						{% else %}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+                      	{% if block.settings.awards_text_1 != blank %}
+                      		<div class="awards_press_text">
+                          		{% if block.settings.awards_url_1 != blank %}
+                              		<a href="{{ block.settings.awards_url_1 }}" >
+                              	{% endif %}
+                          			{{ block.settings.awards_text_1 }}
+                                {% if block.settings.awards_url_1 != blank %}
+                              		</a>
+                              	{% endif %}
+                      		</div>
+                      	{% endif %}
+					</div>
+                  	{% endif %}
+                  	{% if block.settings.show_awards_2 %}
+					<div class="awards_press_item">
+                        {% if block.settings.awards_icon_2 != blank %}
+                      		<div class="awards_press_icon" >
+                              	{% if block.settings.awards_url_2 != blank %}
+                              		<a href="{{ block.settings.awards_url_2 }}" >
+                              	{% endif %}
+                                    {%- assign img_url = block.settings.awards_icon_2 | img_url: 'master'  -%}  
+									<img id="{{ img_id }}"
+										class="custom__image lazyload js"
+										src="{{ img_url }}"
+										data-src="{{ img_url }}"
+										alt="{{ block.settings.awards_icon_2.alt | escape }}">
+                                {% if block.settings.awards_url_2 != blank %}
+                              		</a>
+                              	{% endif %}
+                        	</div>
+						{% else %}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+                      	{% if block.settings.awards_text_2 != blank %}
+                      		<div class="awards_press_text">
+                          		{% if block.settings.awards_url_2 != blank %}
+                              		<a href="{{ block.settings.awards_url_2 }}" >
+                              	{% endif %}
+                          			{{ block.settings.awards_text_2 }}
+                                {% if block.settings.awards_url_2 != blank %}
+                              		</a>
+                              	{% endif %}
+                      		</div>
+                      	{% endif %}
+					</div>
+                  	{% endif %}
+                  	{% if block.settings.show_awards_3 %}
+					<div class="awards_press_item">
+                        {% if block.settings.awards_icon_3 != blank %}
+                      		<div class="awards_press_icon" >
+                              	{% if block.settings.awards_url_3 != blank %}
+                              		<a href="{{ block.settings.awards_url_3 }}" >
+                              	{% endif %}
+                                    {%- assign img_url = block.settings.awards_icon_3 | img_url: 'master'  -%}  
+									<img id="{{ img_id }}"
+										class="custom__image lazyload js"
+										src="{{ img_url }}"
+										data-src="{{ img_url }}"
+										alt="{{ block.settings.awards_icon_3.alt | escape }}">
+                                {% if block.settings.awards_url_3 != blank %}
+                              		</a>
+                              	{% endif %}
+                        	</div>
+						{% else %}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+                      	{% if block.settings.awards_text_3 != blank %}
+                      		<div class="awards_press_text">
+                          		{% if block.settings.awards_url_3 != blank %}
+                              		<a href="{{ block.settings.awards_url_3 }}" >
+                              	{% endif %}
+                          			{{ block.settings.awards_text_3 }}
+                                {% if block.settings.awards_url_3 != blank %}
+                              		</a>
+                              	{% endif %}
+                      		</div>
+                      	{% endif %}
+					</div>
+                  	{% endif %}
+                  	{% if block.settings.show_awards_4 %}
+					<div class="awards_press_item">
+                        {% if block.settings.awards_icon_4 != blank %}
+                      		<div class="awards_press_icon" >
+                              	{% if block.settings.awards_url_4 != blank %}
+                              		<a href="{{ block.settings.awards_url_4 }}" >
+                              	{% endif %}
+                                    {%- assign img_url = block.settings.awards_icon_4 | img_url: 'master'  -%}  
+									<img id="{{ img_id }}"
+										class="custom__image lazyload js"
+										src="{{ img_url }}"
+										data-src="{{ img_url }}"
+										alt="{{ block.settings.awards_icon_4.alt | escape }}">
+                                {% if block.settings.awards_url_4 != blank %}
+                              		</a>
+                              	{% endif %}
+                        	</div>
+						{% else %}
+							{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+                      	{% if block.settings.awards_text_4 != blank %}
+                      		<div class="awards_press_text">
+                              	{% if block.settings.awards_url_4 != blank %}
+                              		<a href="{{ block.settings.awards_url_4 }}" >
+                              	{% endif %}
+                          			{{ block.settings.awards_text_4 }}
+                                {% if block.settings.awards_url_4 != blank %}
+                              		</a>
+                              	{% endif %}
+                      		</div>
+                      	{% endif %}
+					</div>
+                  	{% endif %}
+                </div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+             
+             {% when 'function_block' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+              	<div class="function_block_section">
+                  	<div class="middle-xs rte image-{{ block.settings.image_aligment }}" >
+						<div class="col-xs-12 col-sm-6">
+							{% if block.settings.title != blank %}
+								<h3>{{ block.settings.title }}</h3>
+							{% endif %}
+                        	{% if block.settings.tab_title_1 != blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_1 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_1 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_2!= blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_2 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_2 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_3!= blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_3 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_3 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_4!= blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_4 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_4 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_5 != blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_5 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_5 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_6 != blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_6 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_6 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_7 != blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_7 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_7 }}</span></p>
+                        	{% endif %}
+                          	{% if block.settings.tab_title_8 != blank %}  
+								<h5 class="is-accordion-title">{{ block.settings.tab_title_8 }}</h5>
+								<p class="is-accordion-content" style="display: none;"><span>{{ block.settings.tab_text_8 }}</span></p>
+                        	{% endif %}
+						</div>
+						<div class="col-xs-12 col-sm-6">
+                          	{% if block.settings.image != blank %}
+                          		{%- assign img_url = block.settings.image | img_url: 'master'  -%}  
+								<img id="{{ img_id }}"
+									class="custom__image lazyload js"
+									src="{{ img_url }}"
+									data-src="{{ img_url }}"
+									alt="{{ block.settings.image.alt | escape }}">
+                          	{% else %}
+								{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+							{% endif %}
+                      	</div>
+					</div>
+                </div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+              
+             {% when 'performance_block' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+              	<div class="performance_block_section">
+                  	<div class="rte" >
+						<div class="col-xs-12 col-sm-12">
+							{% if block.settings.title != blank %}
+								<h3>{{ block.settings.title }}</h3>
+							{% endif %}
+                          	{% if block.settings.text != blank %}
+                          		<div class="description">
+                          			{{ block.settings.text }}
+                          		</div>
+                          	{% endif %}
+						</div>
+                    </div>
+                  	<div class="center-xs">
+        				<div class="col-xs-12 col-md-5">
+          					<h3 class="tag__title">Made For</h3>
+                          	{% if block.settings.show_beasting %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-activity-beasting_120x.jpg?v=16099350398833050020" alt=""><br>
+            							beasting
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_biking %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-great-for-biking_120x.jpg?v=13907632673555987386" alt=""><br>
+            							biking
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_running %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-great-for-running_120x.jpg?v=10319077289137186306" alt=""><br>
+            							running
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_golf %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-great-for-golfing.jpg?v=1560195372" alt=""><br>
+            							golfing
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_game %}
+            					<span class="product__tag">
+            						<img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-activity-gaming.jpg?v=1604016455" alt=""><br>
+            							gaming
+            					</span>
+                          	{% endif %}
+                      	</div>
+        				<div class="col-xs-12 col-md-5">
+          					<h3 class="tag__title">Great For</h3>
+            				{% if block.settings.show_beasting1 %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-activity-beasting_120x.jpg?v=16099350398833050020" alt=""><br>
+            							beasting
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_biking1 %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-great-for-biking_120x.jpg?v=13907632673555987386" alt=""><br>
+            							biking
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_running1 %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-great-for-running_120x.jpg?v=10319077289137186306" alt=""><br>
+            							running
+            					</span>
+                          	{% endif %}
+                            {% if block.settings.show_golf1 %}
+            					<span class="product__tag">
+            						<img src="//cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-great-for-golfing.jpg?v=1560195372" alt=""><br>
+            							golfing
+            					</span>
+                          	{% endif %}
+                          	{% if block.settings.show_game1 %}
+            					<span class="product__tag">
+            						<img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/icon-activity-gaming.jpg?v=1604016455" alt=""><br>
+            							gaming
+            					</span>
+                          	{% endif %}
+        				</div>
+                  	</div>
+                </div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+              
+             {% when 'video_row_block' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+              	<div class="video_row_block_section">
+                  	<div class="rte" >
+						<div class="col-xs-12 col-sm-12">
+							<div class="text-align--{{ block.settings.align_text }}">
+								{% if block.settings.title != blank %}
+									<h3>{{ block.settings.title | escape }}</h3>
+								{% endif %}
+							</div>
+						</div>
+                    </div>
+                  	<div class="center-xs">
+                  		{% if block.settings.show_video_1 %}
+                  		<div class="custom__item custom__item--v1" {{ block.shopify_attributes }} >
+							<section class="video-banner" id="vid">
+								{{ block.settings.video_background_1 | img_url: '850x480', crop: 'center' | img_tag: block.settings.image.alt, 'video-banner__background'}}
+								<div class="video-banner__content">
+									<div class="video-banner__caption">
+										<a class="play-video" href="#"
+										data-izimodal-open="#video-modalv1"
+										data-izimodal-zindex="20000"
+										data-izimodal-preventclose=""> Play Video </a>
+									</div>
+								</div>
+							</section>
+                          	{% if block.settings.text_1 != blank %}
+                              	<div class="text-align--{{ block.settings.align_text_1 }}">
+                          			<p class="video-title ">{{ block.settings.text_1 }}</p>
+                              	</div>
+                            {% endif %}
+							<div class="iziModal" id="video-modalv1">
+								<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+								<div class="rte__video-wrapper">
+									<div class="youtube-player" id="{{ block.settings.video_url_1.id }}"></div>
+								</div>
+							</div>
+                    	</div>
+                      	{% endif %}
+                      	{% if block.settings.show_video_2 %}
+                  		<div class="custom__item custom__item--v2" {{ block.shopify_attributes }} >
+							<section class="video-banner" id="vid">
+								{{ block.settings.video_background_2 | img_url: '850x480', crop: 'center' | img_tag: block.settings.image.alt, 'video-banner__background'}}
+								<div class="video-banner__content">
+									<div class="video-banner__caption">
+										<a class="play-video" href="#"
+										data-izimodal-open="#video-modalv2"
+										data-izimodal-zindex="20000"
+										data-izimodal-preventclose=""> Play Video </a>
+									</div>
+								</div>
+							</section>
+                          	{% if block.settings.text_2 != blank %}
+                              	<div class="text-align--{{ block.settings.align_text_2 }}">
+                          			<p class="video-title ">{{ block.settings.text_2 }}</p>
+                              	</div>
+							{% endif %}
+							<div class="iziModal" id="video-modalv2">
+								<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+								<div class="rte__video-wrapper">
+									<div class="youtube-player" id="{{ block.settings.video_url_2.id }}"></div>
+								</div>
+							</div>
+						</div>
+                  		{% endif %}
+                      	{% if block.settings.show_video_3 %}
+                  		<div class="custom__item custom__item--v3" {{ block.shopify_attributes }} >
+							<section class="video-banner" id="vid">
+								{{ block.settings.video_background_3 | img_url: '850x480', crop: 'center' | img_tag: block.settings.image.alt, 'video-banner__background'}}
+								<div class="video-banner__content">
+									<div class="video-banner__caption">
+										<a class="play-video" href="#"
+										data-izimodal-open="#video-modalv3"
+										data-izimodal-zindex="20000"
+										data-izimodal-preventclose=""> Play Video </a>
+									</div>
+								</div>
+							</section>
+                          	{% if block.settings.text_3 != blank %}
+                              	<div class="text-align--{{ block.settings.align_text_3 }}">
+                          			<p class="video-title ">{{ block.settings.text_3 }}</p>
+                              	</div>
+                            {% endif %}
+							<div class="iziModal" id="video-modalv3">
+								<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+								<div class="rte__video-wrapper">
+									<div class="youtube-player" id="{{ block.settings.video_url_3.id }}"></div>
+								</div>
+							</div>
+						</div>
+                  		{% endif %}
+					</div>
+              	</div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+              
+             {% when 'tech_block' %}
+              <div class="col-xs-12 content-dev ider content-devider-top"></div>
+              	<div class="tech_block_section">
+                  	<div class="col-xs-12">
+                  		<div class="tab-menu">
+  							<ul class="make-tabs">
+                              	{% if block.settings.lens_code != blank %}
+    								<li><a href="#lens-view">Lens view</a></li>
+                              	{% endif %}
+                              	{% if block.settings.lens_tech_img != blank %}
+    								<li><a href="#lens-tech">Lens tech</a></li>
+                              	{% endif %}
+                              	{% if block.settings.frame_size_img != blank %}
+    								<li><a href="#frame-size">Frame info</a></li>
+                              	{% endif %}
+  							</ul>
+                          	{% if block.settings.lens_code != blank %}
+  								<div class="tab-content" id="lens-view">
+    								{{ block.settings.lens_code }}
+  								</div>
+                          	{% endif %}
+                          	{% if block.settings.lens_tech_img != blank %}
+  								<div class="tab-content" id="lens-tech">
+									{{ block.settings.lens_tech_img | img_url: '1200x' | img_tag }}
+  								</div>
+                          	{% endif %}
+                          	{% if block.settings.frame_size_img != blank %}
+  								<div class="tab-content" id="frame-size">
+    								{{ block.settings.frame_size_img | img_url: '1200x' | img_tag }}
+    								{% include 'prop65-warning' %}
+  								</div>
+                          	{% endif %}
+						</div>
+                  	</div>
+              	</div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+              
+             {% when 'blog_menu' %}
+				<div class="new-page-blog-menu">
+					{% include 'blog-menu' %}
+				</div>
+              
+              
+             {% when 'IG_Block' %}
+				<div class="col-xs-12 content-dev ider content-devider-top"></div>
+              		<div class="ig_block_section">
+                  		<div class="col-xs-12">
+                  			<div class="ig-header">
+  								{% if block.settings.insta_title != blank %}
+        							<h3 class="title">
+          								{{ block.settings.insta_title }}
+        							</h3>
+              					{% endif %}
+              					{% if block.settings.insta_subtitle != blank %}
+            						<p class="subtitle">{{ block.settings.insta_subtitle }}</p>
+              					{% endif %}
+                  				{% if block.settings.insta_button_text != blank and block.settings.insta_button_link != blank %}
+          							<a class="btn button custom-btn" target="_blank" href="{{ block.settings.insta_button_link }}" >{{ block.settings.insta_button_text }}</a>
+          						{% endif %}
+                      		</div>
+                          	<div class="ig-content">
+                          		{% if block.settings.instagram_img_1 != blank %}
+      								<div class="instagram-item" >
+              							<a class="instagram-item-inner" {% if block.settings.instagram_link_1 != blank %} href="{{ block.settings.instagram_link_1 }}" rel="noopener noreferrer" target="_blank" {% endif %} > 
+	              							<img class="instagram-img" src="{{ block.settings.instagram_img_1 | img_url: '400x' }}" />
+              							</a>
+  									</div>
+      							{% endif %}
+      							{% if block.settings.instagram_img_2 != blank %}
+      								<div class="instagram-item" >
+              							<a class="instagram-item-inner" {% if block.settings.instagram_link_2 != blank %} href="{{ block.settings.instagram_link_2 }}" rel="noopener noreferrer" target="_blank" {% endif %} > 
+	              							<img class="instagram-img" src="{{ block.settings.instagram_img_2 | img_url: '400x' }}" />
+              							</a>
+  									</div>
+      							{% endif %}
+          						{% if block.settings.instagram_img_3 != blank %}
+      								<div class="instagram-item" >
+              							<a class="instagram-item-inner" {% if block.settings.instagram_link_3 != blank %} href="{{ block.settings.instagram_link_3 }}" rel="noopener noreferrer" target="_blank" {% endif %} > 
+	              							<img class="instagram-img" src="{{ block.settings.instagram_img_3 | img_url: '400x' }}" />
+              							</a>
+  									</div>
+      							{% endif %}
+          						{% if block.settings.instagram_img_4 != blank %}
+      								<div class="instagram-item" >
+              							<a class="instagram-item-inner" {% if block.settings.instagram_link_4 != blank %} href="{{ block.settings.instagram_link_4 }}" rel="noopener noreferrer" target="_blank" {% endif %} > 
+	              							<img class="instagram-img" src="{{ block.settings.instagram_img_4 | img_url: '400x' }}" />
+              							</a>
+  									</div>
+      							{% endif %}
+                          	</div>
+                  		</div>
+              		</div>
+              <div class="col-xs-12 content-devider content-devider-bottom"></div>
+              
+          {% endcase %}
+    {% endfor %}
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Page New Content",
+    "class": "blog-content-section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Sub Title",
+            "default": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store."
+          },
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background Image"
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+   			"type": "checkbox",
+   			"id": "show_page_content",
+   			"label": "Show Page Content",
+   			"default": false
+		  },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "50%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              },
+              {
+                "value": "100%-offset",
+                "label": "100% With Extra Side Space"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "intro",
+        "name": "Intro Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "50%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "50%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "align_image",
+            "label": "Image alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          }
+	    ]
+      },
+	  {
+        "type": "bleed_image",
+        "name": "Bleed Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image_with_text",
+        "name": "Image with Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "select",
+            "id": "title_align_text",
+            "label": "Title Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+          {
+            "type": "select",
+            "id": "image_aligment",
+            "label": "Image Align",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "name": "Video",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+          },
+          {
+            "type": "textarea",
+            "id": "cotent",
+            "label": "Text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+            "type": "video_url",
+            "id": "video_url",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+          },
+      	  {
+        	"type": "image_picker",
+        	"id": "video_background",
+        	"label": "Video background"
+      	  },
+		  {
+        	"type": "text",
+        	"id": "text",
+        	"label": "Text",
+        	"info": "Optional"
+      	  },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              },
+              {
+                "value": "100%-offset",
+                "label": "100% With Extra Side Space"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+		  {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+          {
+            "type": "select",
+            "id": "image_aligment",
+            "label": "Image Align",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "single_product_wide",
+        "name": "Single Product Wide",
+        "settings": [
+		  {
+   			"type": "checkbox",
+   			"id": "virtual_try_on",
+   			"label": "Show Virtual Try On",
+   			"default": false
+		  },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+        ]
+      },
+	  {
+        "type": "triple_product",
+        "name": "Triple Product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+			"default": "Use this text to share information"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+   			"type": "checkbox",
+   			"id": "virtual_try_on",
+   			"label": "Show Virtual Try On",
+   			"default": false
+		  },
+          {
+            "type": "product",
+            "id": "product1",
+            "label": "Product 1"
+          },
+		  {
+            "type": "product",
+            "id": "product2",
+            "label": "Product 2"
+          },
+		  {
+            "type": "product",
+            "id": "product3",
+            "label": "Product 3"
+          }
+        ]
+      },
+	  {
+        "type": "triple_product_new",
+        "name": "New Triple Product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+			"default": "Use this text to share information"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+   			"type": "checkbox",
+   			"id": "virtual_try_on",
+   			"label": "Show Virtual Try On",
+   			"default": false
+		  },
+          {
+            "type": "product",
+            "id": "product1",
+            "label": "Product 1"
+          },
+		  {
+            "type": "product",
+            "id": "product2",
+            "label": "Product 2"
+          },
+		  {
+            "type": "product",
+            "id": "product3",
+            "label": "Product 3"
+          }
+        ]
+      },
+	  {
+        "type": "double_product",
+        "name": "Double Product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+			"default": "Use this text to share information"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+   			"type": "checkbox",
+   			"id": "virtual_try_on",
+   			"label": "Show Virtual Try On",
+   			"default": false
+		  },
+          {
+            "type": "product",
+            "id": "product1",
+            "label": "Product 1"
+          },
+		  {
+            "type": "product",
+            "id": "product2",
+            "label": "Product 2"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "50%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "html",
+        "name": "Custom HTML",
+        "settings": [
+          {
+            "type": "html",
+            "id": "code",
+            "label": "HTML"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "50%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          }
+        ]
+      },
+	  {
+        "type": "klaviyo_form",
+        "name": "KLAVIYO FORM",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+			"default": "SIGN UP FOR EMAIL AND YOU'LL GET: <strong>NOTHING!</strong>"
+          },
+		  {
+            "type": "text",
+            "id": "text",
+            "label": "Sub Heading",
+            "default": "That's right, nothing but epic emails about sunglasses"
+          },
+          {
+            "type": "html",
+            "id": "code",
+            "label": "Form Code",
+			"default": "<div class='klaviyo-form-JtXXHb'></div>"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "50%",
+            "options": [
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33%",
+                "label": "33%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              },
+              {
+                "value": "66%",
+                "label": "66%"
+              },
+              {
+                "value": "75%",
+                "label": "75%"
+              },
+              {
+                "value": "100%",
+                "label": "100%"
+              }
+            ]
+          }
+        ]
+      },
+	  {
+        "type": "recent_posts",
+        "name": "RECENT POSTS",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+			"default": "Recent Blog"
+          },
+		  {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+            "type": "article",
+            "id": "article1",
+            "label": "Blog 1"
+          },
+		  {
+            "type": "article",
+            "id": "article2",
+            "label": "Blog 2"
+          },
+		  {
+            "type": "article",
+            "id": "article3",
+            "label": "Blog 3"
+          }
+        ]
+      },
+	  {
+        "type": "recent_posts_category",
+        "name": "RECENT POSTS CATEGORY",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+			"default": "Recent Blog"
+          },
+		  {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+            "type": "blog",
+            "id": "blog_category",
+            "label": "Blog Category"
+          }
+        ]
+      },
+	  {
+        "type": "banner_heading",
+        "name": "Banner Heading",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Sub Title",
+            "default": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store."
+          },
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background Image"
+          },
+		  {
+            "type": "text",
+            "id": "banner_height",
+            "label": "Banner Height",
+            "default": "400px",
+			"info": "Ex: 400px"
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+		  {
+            "type": "select",
+            "id": "align_vertical_text",
+            "label": "Vertical alignment",
+            "default": "end",
+            "options": [
+              {"value": "start", "label": "Start"},
+              {"value": "center", "label": "Centered"},
+              {"value": "end", "label": "End"}
+            ]
+          },
+		  {
+    		"type": "range",
+    		"id": "overlay_opacity",
+    		"min": 0,
+    		"max": 1,
+    		"step": 0.1,
+    		"label": "Backgroung Overlay Opacity",
+    		"default": 0.8
+		  }
+        ]
+      },
+	  {
+        "type": "podcast_post_block",
+        "name": "Podcast Post Block",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+			"default": "Recent Blog"
+          },
+		  {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content",
+			"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+		  {
+            "type": "article",
+            "id": "article1",
+            "label": "Blog 1"
+          },
+		  {
+            "type": "article",
+            "id": "article2",
+            "label": "Blog 2"
+          },
+		  {
+            "type": "article",
+            "id": "article3",
+            "label": "Blog 3"
+          },
+		  {
+            "type": "select",
+            "id": "width",
+            "label": "Container width",
+            "default": "100%",
+            "options": [
+              {
+                "value": "100%",
+                "label": "100%"
+              },
+              {
+                "value": "100%-offset",
+                "label": "100% With Extra Side Space"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "left",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          }
+        ]
+      },
+	  {
+        "type": "awards_press_block",
+        "name": "AWARDS / PRESS BLOCK",
+        "settings": [
+		  {
+        	"type": "header",
+        	"content": "Awards Item 1"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_awards_1",
+   			"label": "Show Awards",
+   			"default": false
+		  },
+		  {
+            "type": "image_picker",
+            "id": "awards_icon_1",
+            "label": "Awards Icon"
+          },
+		  {
+            "type": "text",
+            "id": "awards_text_1",
+            "label": "Awards Text",
+			"default": "Awards Text"
+          },
+		  {
+   			"type": "url",
+   			"id": "awards_url_1",
+   			"label": "Awards Link"
+		  },
+		  {
+        	"type": "header",
+        	"content": "Awards Item 2"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_awards_2",
+   			"label": "Show Awards",
+   			"default": false
+		  },
+		  {
+            "type": "image_picker",
+            "id": "awards_icon_2",
+            "label": "Awards Icon"
+          },
+		  {
+            "type": "text",
+            "id": "awards_text_2",
+            "label": "Awards Text",
+			"default": "Awards Text"
+          },
+		  {
+   			"type": "url",
+   			"id": "awards_url_2",
+   			"label": "Awards Link"
+		  },
+   		  {
+        	"type": "header",
+        	"content": "Awards Item 3"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_awards_3",
+   			"label": "Show Awards",
+   			"default": false
+		  },
+		  {
+            "type": "image_picker",
+            "id": "awards_icon_3",
+            "label": "Awards Icon"
+          },
+		  {
+            "type": "text",
+            "id": "awards_text_3",
+            "label": "Awards Text",
+			"default": "Awards Text"
+          },
+		  {
+   			"type": "url",
+   			"id": "awards_url_3",
+   			"label": "Awards Link"
+		  },
+		  {
+        	"type": "header",
+        	"content": "Awards Item 4"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_awards_4",
+   			"label": "Show Awards",
+   			"default": false
+		  },
+		  {
+            "type": "image_picker",
+            "id": "awards_icon_4",
+            "label": "Awards Icon"
+          },
+		  {
+            "type": "text",
+            "id": "awards_text_4",
+            "label": "Awards Text 4",
+			"default": "Awards Text"
+          },
+		  {
+   			"type": "url",
+   			"id": "awards_url_4",
+   			"label": "Awards Link"
+		  }
+        ]
+      },
+	  {
+        "type": "function_block",
+        "name": "FUNCTION BLOCK",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+			"default": "LOOK GOOD, BIKE GOODR."
+          },
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+		  {
+            "type": "select",
+            "id": "image_aligment",
+            "label": "Image Align",
+            "default": "right",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 1"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_1",
+            "label": "Tab Title",
+			"default": "1 Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_1",
+            "label": "Tab Text",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit."
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 2"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_2",
+            "label": "Tab Title",
+			"default": "2 Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_2",
+            "label": "Tab Text",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit."
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 3"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_3",
+            "label": "Tab Title",
+			"default": "3 Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_3",
+            "label": "Tab Text",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit."
+          },
+	 	  {
+        	"type": "header",
+        	"content": "Function Tab 4"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_4",
+            "label": "Tab Title",
+			"default": "4 Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_4",
+            "label": "Tab Text",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit."
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 5"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_5",
+            "label": "Tab Title",
+			"default": "5 Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_5",
+            "label": "Tab Text",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit."
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 6"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_6",
+            "label": "Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_6",
+            "label": "Tab Text"
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 7"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_7",
+            "label": "Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_7",
+            "label": "Tab Text"
+          },
+		  {
+        	"type": "header",
+        	"content": "Function Tab 8"
+      	  },
+		  {
+            "type": "text",
+            "id": "tab_title_8",
+            "label": "Tab Title"
+          },
+		  {
+            "type": "textarea",
+            "id": "tab_text_8",
+            "label": "Tab Text"
+          }
+        ]
+      },
+	  {
+        "type": "performance_block",
+        "name": "PERFORMANCE BLOCK",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+			"default": "BFGs: BEAST F*CKING GOODRS"
+          },
+		  {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+			"default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit.</p>"
+          },
+		  {
+        	"type": "header",
+        	"content": "MADE FOR ITEMS"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_beasting",
+   			"label": "Show Beasting",
+   			"default": true
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_biking",
+   			"label": "Show Biking",
+   			"default": false
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_running",
+   			"label": "Show Running",
+   			"default": false
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_golf",
+   			"label": "Show Golfing",
+   			"default": false
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_game",
+   			"label": "Show Gaming",
+   			"default": false
+		  },
+      	  {
+        	"type": "header",
+        	"content": "GREAT FOR ITEMS"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_beasting1",
+   			"label": "Show Beasting",
+   			"default": false
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_biking1",
+   			"label": "Show Biking",
+   			"default": true
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_running1",
+   			"label": "Show Running",
+   			"default": true
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_golf1",
+   			"label": "Show Golfing",
+   			"default": false
+		  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_game1",
+   			"label": "Show Gaming",
+   			"default": false
+		  }
+        ]
+      },
+	  {
+        "type": "video_row_block",
+        "name": "VIDEO ROW BLOCK",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+          },
+		  {
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+		  {
+        	"type": "header",
+        	"content": "Video Box 1"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_video_1",
+   			"label": "Show Video Box",
+   			"default": false
+		  },
+		  {
+            "type": "video_url",
+            "id": "video_url_1",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+          },
+      	  {
+        	"type": "image_picker",
+        	"id": "video_background_1",
+        	"label": "Video background"
+      	  },
+		  {
+        	"type": "text",
+        	"id": "text_1",
+        	"label": "Video Title"
+      	  },
+          {
+            "type": "select",
+            "id": "align_text_1",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+		  {
+        	"type": "header",
+        	"content": "Video Box 2"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_video_2",
+   			"label": "Show Video Box",
+   			"default": false
+		  },
+		  {
+            "type": "video_url",
+            "id": "video_url_2",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+          },
+      	  {
+        	"type": "image_picker",
+        	"id": "video_background_2",
+        	"label": "Video background"
+      	  },
+		  {
+        	"type": "text",
+        	"id": "text_2",
+        	"label": "Video Title"
+      	  },
+          {
+            "type": "select",
+            "id": "align_text_2",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          },
+		  {
+        	"type": "header",
+        	"content": "Video Box 3"
+      	  },
+		  {
+   			"type": "checkbox",
+   			"id": "show_video_3",
+   			"label": "Show Video Box",
+   			"default": false
+		  },
+		  {
+            "type": "video_url",
+            "id": "video_url_3",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+          },
+      	  {
+        	"type": "image_picker",
+        	"id": "video_background_3",
+        	"label": "Video background"
+      	  },
+		  {
+        	"type": "text",
+        	"id": "text_3",
+        	"label": "Video Title"
+      	  },
+          {
+            "type": "select",
+            "id": "align_text_3",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+          }
+        ]
+      },
+	  {
+        "type": "tech_block",
+        "name": "TECH BLOCK",
+        "settings": [
+		  {
+        	"type": "header",
+        	"content": "LENS VIEW"
+      	  },
+          {
+            "type": "html",
+            "id": "lens_code",
+            "label": "Lens Code",
+            "info": "<widgetic-embed></widgetic-embed>"
+          },
+		  {
+        	"type": "header",
+        	"content": "LENS TECH"
+      	  },
+		  {
+        	"type": "image_picker",
+        	"id": "lens_tech_img",
+        	"label": "Lens Tech Image"
+      	  },
+		  {
+        	"type": "header",
+        	"content": "FRAME SIZE"
+      	  },
+		  {
+        	"type": "image_picker",
+        	"id": "frame_size_img",
+        	"label": "Frame Size Image"
+      	  }
+        ]
+      },
+	  {
+        "type": "blog_menu",
+        "name": "BLOG MENU",
+        "settings": [
+		  
+        ]
+      },
+	  {
+        "type": "IG_Block",
+        "name": "IG BLOCK",
+        "settings": [
+		  {
+			"type": "header",
+        	"content": "Instagram Title Box"
+	  	  },
+	  	  {
+        	"type": "text",
+        	"id": "insta_title",
+        	"label": "Heading",
+        	"default": "FOLLOW @RUNGOODR"
+      	  },
+	  	  {
+        	"type": "text",
+        	"id": "insta_subtitle",
+        	"label": "Sub Heading",
+        	"default": "Sub text section. More text can go here to explain why to follow on Instagram"
+      	  },
+	  	  {
+        	"type": "text",
+        	"id": "insta_button_text",
+        	"label": "Button text",
+			"default": "Follow"
+      	  },
+	  	  {
+        	"type": "url",
+        	"id": "insta_button_link",
+        	"label": "Button Link",
+			"info": "Ex: https://www.instagram.com/rungoodr"
+      	  },
+	  	  {
+        	"type": "header",
+        	"content": "Instagram Box 1"
+      	  },
+	  	  {
+        	"type": "image_picker",
+        	"id": "instagram_img_1",
+        	"label": "Instagram image"
+      	  },
+      	  {
+        	"type": "url",
+        	"id": "instagram_link_1",
+        	"label": "Instagram Link"
+      	  },
+	  	  {
+        	"type": "header",
+        	"content": "Instagram Box 2"
+      	  },
+	  	  {
+        	"type": "image_picker",
+        	"id": "instagram_img_2",
+        	"label": "Instagram image"
+      	  },
+      	  {
+        	"type": "url",
+        	"id": "instagram_link_2",
+        	"label": "Instagram Link"
+      	  },
+	  	  {
+        	"type": "header",
+        	"content": "Instagram Box 3"
+      	  },
+	  	  {
+        	"type": "image_picker",
+        	"id": "instagram_img_3",
+        	"label": "Instagram image"
+      	  },
+      	  {
+        	"type": "url",
+        	"id": "instagram_link_3",
+        	"label": "Instagram Link"
+      	  },
+	  	  {
+        	"type": "header",
+        	"content": "Instagram Box 4"
+      	  },
+	  	  {
+	        "type": "image_picker",
+	        "id": "instagram_img_4",
+    	    "label": "Instagram image"
+      	  },
+      	  {
+        	"type": "url",
+        	"id": "instagram_link_4",
+        	"label": "Instagram Link"
+      	  }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Page New Content",
+		"category": "Advanced layout",
+        "blocks": [
+          {
+            "type": "text"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "6c30924c-1074-452a-9a75-7eb215484d2f": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GOBBLE GOBBLE GOBBLE GOGGLES",
+            "text": "A Story About Thanksgiving Running Sunglasses",
+            "image": "shopify:\/\/shop_images\/Thanskgving_header_OS.png",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "b686c8b6-719a-4fd3-8d14-166c3886b5ec": {
+          "type": "text",
+          "settings": {
+            "title": "TURKEYS TAKE REVENGE ON HUMANS IN THANKSGIVING HORROR MOVIE ‘BASTER’",
+            "text": "",
+            "show_article_content": true,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "12e8ff1f-6f7f-4147-bff5-20ce369c1c3b": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": "gobble-gobble-gobble-goggles"
+          }
+        },
+        "dea13f97-2344-43b8-aa7e-c6fd8389560a": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Holiday_2021_Gobble_Gobble_Gobble_Goggles_product_010.jpg"
+          }
+        },
+        "c4078480-7ec2-4f9e-a7a8-0896215750ef": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "FEAST ON THESE OTHER BLOGS",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/radioactive-spectral-spectacles",
+            "article2": "goodrtimes\/dont-tab-shame-me-origin-story",
+            "article3": "goodrtimes\/fade-er-ade-shades-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "6c30924c-1074-452a-9a75-7eb215484d2f",
+        "b686c8b6-719a-4fd3-8d14-166c3886b5ec",
+        "12e8ff1f-6f7f-4147-bff5-20ce369c1c3b",
+        "dea13f97-2344-43b8-aa7e-c6fd8389560a",
+        "c4078480-7ec2-4f9e-a7a8-0896215750ef"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

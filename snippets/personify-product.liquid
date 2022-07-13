@@ -1,0 +1,20 @@
+  <script>
+  //Prep Data  
+  var apiJSON = JSON.stringify({
+    "categorycode": "{{ product.collections.first }}",
+    "pagesize": 0,
+    "productname": "{{ product.title }}",
+    "productcode": "{{ product.id }}",
+    "unitprice": parseFloat(Math.round({{ product.price }}) / 100).toFixed(2),
+    "producturl": "{{ product.url }}",
+    "productimage": "{{ image | img_url: '300x300' }}",
+    "productprice": parseFloat(Math.round({{ product.price }}) / 100).toFixed(2),
+    "productcategories": "{% if product.tags.size > 0 %}{{ product.tags | join: "|" }}{% endif %}",
+    "sessionid": getPersonifyCookie("PERSONIFY"),
+    "shopperid": getPersonifyShopperId(),
+	"referrer": personify_referrer
+  });
+  
+  //Call API
+  callAPI(apiJSON, "viewpdp", false, null);
+</script>

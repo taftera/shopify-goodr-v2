@@ -1,0 +1,17 @@
+{% assign warning_body_text = 'Goodr sunglasses have metal screws that can potentially expose you to nickel. Nickel is known to the State of California to cause cancer.' %}
+{% assign warning_link_prompt = 'For more information go to ' %}
+{% assign warning_link_text = 'www.P65Warnings.ca.gov' %}
+{% assign warning_href = 'https://www.p65warnings.ca.gov/' %}
+{% assign warning_img_src = 'https://cdn.shopify.com/s/files/1/0084/1616/5946/files/noun_Warning_672170.png?16136250800559185700' %}
+
+<div class='warning-content'>
+  <div class="warning-icon">
+  	<span><img src=" {{ warning_img_src }}"></span>
+  </div>
+  <div class="warning-message">
+    <p>
+      {{ warning_body_text }} 
+      {{ warning_link_prompt }}<a target="_blank" href="{{ warning_href }}">{{ warning_link_text }}</a>
+    </p> 
+  </div>
+</div>

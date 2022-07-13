@@ -1,0 +1,55 @@
+{% include 'personify' %}
+{% include 'personify-content' %}
+
+<article role="article" itemscope itemtype="http://schema.org/Article">
+<style>
+a.question {
+    font-size: 19px;
+    font-weight: 600;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    color: #10435e;
+}
+a.question:before {
+    content: "";
+    width: 34px;
+    height: 34px;
+  	background-image: url('{{ 'Goodr_Favicon_Options-05_1.png' | file_img_url: '34x34' }}');
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+h3 {
+    text-transform: uppercase;
+  	margin-bottom: 1.5rem;
+}
+h4.h3 {
+    font-size: 1.75rem;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    line-height: 1.1em;
+    font-weight: bold !important;
+    color: #10435e;
+    text-transform: uppercase;
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+  	margin-bottom: 1.5rem;
+  	letter-spacing: normal;
+}
+.h3 {
+    font-size: 1.75rem;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    line-height: 1.1em;
+    font-weight: bold !important;
+    color: #10435e;
+    text-transform: uppercase;
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+  	margin-bottom: 1.5rem;
+}
+</style>
+  	
+  	{% include 'blog-menu' %}
+  	{% section 'page-sunglasses-guide' %}
+
+</article>

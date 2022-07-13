@@ -1,0 +1,15 @@
+    {% if product.tags contains 'Polarized' %}
+        {% if product.tags contains 'non-reflective' %}
+        <img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/Non_Reflective_Polarized.jpg?8086" alt="Polarized non-reflective Lens Tech"/>
+        {% elsif product.tags contains 'reflective' %}
+        <img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/Reflective_Polarized.jpg?8086" alt="Polarized Reflective Lens Tech"/>
+        {% elsif product.tags contains 'gradient' %}
+        <img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/Gradient_Polarized.jpg?8086" alt="Polarized Gradient Lens Tech"/>
+        {% endif %}      
+      {% else %}
+        {% if product.tags contains 'clear' %}
+        <img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/blue_light_blocking_lens_tech.jpg?v=1604085270" alt="Non-Polarized Lens Tech - Clear"/>           
+        {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/Non_Polarized.jpg?8086" alt="Non-Polarized Lens Tech"/>
+        {% endif %}        
+    {% endif %}

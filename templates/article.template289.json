@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "1fb89a74-b2ad-48ee-af9e-f2b2c29e0c79": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "I HAVE THESE ON VINYL TOO ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/goodr_Mach_G_Circle_G_Inline_Model_Update_2022_I_Have_These_In_Vinyl_Too_Lifestyle_004.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "86a2a479-e2c4-406c-b05b-28211a236e6d": {
+          "type": "text",
+          "settings": {
+            "title": "5 ESSENTIAL ALBUMS TO OWN ON VINYL THAT YOU’VE PROBABLY NEVER HEARD OF",
+            "text": "<p>5. The Rockroaches – General Salt’s Butts Club\n<br><br>\nSome say Squirtgun is The Rockroaches’ finest album, but nothing beats the Butts Club. The ground-breaking cover featured all four members poking out the crack of an enormous baboon ass. The album begins with “Winter of Hate “, an innovative mix of yowling cats, sassy bagpipes, and gut-wrenching yodels. And who can forget the “secret track” that boldly blends didgeridoos, theremins, and sharpsichords? The original mono edition of the album still sounds incredible. (Not the monophonic version, the version The Rockroaches recorded while suffering from infectious mononucleosis.)\n<br><br>\n4. Serenitee – Talk To You Later\n<br><br>\nSure, the album cover might turn a few heads, with artwork of a naked baby lying on the beach. But it’s a 90s grunge rock classic. Really. You’re not just buying this for the naked baby on the cover. No way. That would be sick. You’re not a perv. You’re normal. You like art. It’s normal to like art. Go to a museum and look at the art, you’ll see plenty of naked Cupids and stuff. This cover is like that. You’re not a pervert. You’re NOT. It’s all about the music. It’s not weird to own this. Anyone who says it’s weird is weird. Not you. It’s art. This naked baby lying on the beach is art. It doesn’t awaken anything in you. Not one bit.\n<br><br>\n3. Inconspicuous T.H.I.N.. – Ready For Birth\n<br><br>\nReady For Birth is the debut studio album by Saskatchewan rapper The Inconspicuous T.H.I.N. This ambitious 1992 concept album tells the story of the MC’s experiences as an embryo and fetus. On track one, he narrates the sperm fertilizing the egg while smacking rival sperm back with nunchucks. Tracks two through nine recap the nine months of pregnancy, in between brags of future sexual prowess and how fancy his mother’s womb is. The penultimate song features the rapper’s birth, with a hook sampling his mom’s screams during HIS birth. And of course, the final song “No, I’m Not Pro-Life, I’m Pro-Choice, Weirdos” needs no explanation. Did we mention the production exclusively samples pyrophone organs, nyckelharpas, and hyperbass flutes? It’s a funky fresh delight!\n<br><br>\n2. [REDACTED]\n<br><br>\n[REDACTED] We don’t want you to know about this album. The more people that know, the less cool it is.\n<br><br>\n1. Carl the Flamingo – I Have These on Vinyl, Too\n<br><br>\nThe story of I Have These on Vinyl, Too is the classic tale of the artist triumphing over record labels that refuse to release their music because it is “terrible.”  After a grueling day in the studio drunkenly improvising songs over boom-bap nu-metal techno riffs, Carl The Flamingo gifted the album on CD to every goodr employee. And every goodr employee listened to one song, cringed, and smashed the disc into pieces. Carl responded by blaring his music over the speakers in the office and everyone quit their jobs. The “Carl’s Music Sucks” Strike went on for eight months in 2019, before Carl finally caved. When he released his album online in 2020, it earned high praise from people who were losing their minds due to the COVID-19 lockdown. So put on your matching I Have These On Vinyl, Too sunnies, and enjoy a forgotten classic that’s so bad it’s good and so good it’s bad.\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "19f6903f-60b0-4f4b-a15c-381b1822117a": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Mach_G_Circle_G_Inline_Model_Update_2022_I_Have_These_In_Vinyl_Too_BEAST_Lifestyle_004.jpg"
+          }
+        },
+        "b9b6d023-8a5f-4968-b911-1655b7890c9e": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "3cce6ff1-04f4-44b2-bb87-c1d28a02ec02": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "some underground blogs you never heard of",
+            "content": "",
+            "article1": "goodrtimes\/freshly-baked-man-buns-origin-story",
+            "article2": "goodrtimes\/im-wearing-burgundy-origin-story",
+            "article3": "origin-story\/stay-fly-ornithologists"
+          }
+        }
+      },
+      "block_order": [
+        "1fb89a74-b2ad-48ee-af9e-f2b2c29e0c79",
+        "86a2a479-e2c4-406c-b05b-28211a236e6d",
+        "19f6903f-60b0-4f4b-a15c-381b1822117a",
+        "b9b6d023-8a5f-4968-b911-1655b7890c9e",
+        "3cce6ff1-04f4-44b2-bb87-c1d28a02ec02"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

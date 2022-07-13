@@ -1,0 +1,258 @@
+<!-- Video Box Section  -->
+<section id="section-{{ section.id }}" class="video-box-section">
+	<div class="container--fluid">
+  		<div class="row">
+          	<div class="video_row_block_section">
+            	<div class="rte" >
+					<div class="col-xs-12 col-sm-12">
+						<div class="text-align--{{ section.settings.align_text }}">
+							{%- if section.settings.title != blank -%}
+                          		<h2 class="section__heading"><span>{{ section.settings.title }}</span></h2>
+							{%- endif -%}
+						</div>
+					</div>
+				</div>
+			</div>
+  		</div>
+	</div>
+  	<div class="video-bg section-height-{{ section.settings.section_height }}">
+      	<div class="video-box-wrapper">
+      		{%- if section.settings.show_video_icon and section.settings.video_url != blank -%}
+				<div class="video-box__icon">
+					<a class="play-video-btn" href="#" data-izimodal-open="#video-modal-{{ section.id }}" data-izimodal-zindex="20000" data-izimodal-preventclose="" {% if template.name == "page" and page.template_suffix contains '4f' %} onclick="gtag('event', 'Click', { 'event_category': '4F', 'event_label':'{{ section.settings.video_url }}', 'event_action':'{{ page_title }} Icons' });" {% endif %}>
+                  		<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="0 0 20 20"><path d="M10.12.233C4.702.233.31 4.626.31 10.044c0 5.419 4.392 9.811 9.81 9.811 5.419 0 9.811-4.392 9.811-9.81 0-5.42-4.392-9.812-9.81-9.812zM7.86 12.891V7.198l5.346 2.846-5.347 2.847z"></path></svg>
+                  	</a>
+					<div class="iziModal" id="video-modal-{{ section.id }}">
+						<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+						<div class="rte__video-wrapper">
+							<div class="youtube-player" id="{{ section.settings.video_url.id }}"></div>
+						</div>
+					</div>
+				</div>
+          	{%- endif -%}
+          	{%- if section.settings.overlay_color != blank -%}<div class="bg_color_overlay" style="background-color: {{ section.settings.overlay_color }};opacity: {{ section.settings.overlay_opacity }};"></div>{%- endif -%}  
+      		<div class="video-autoplay-wrapper">
+          		{%- if section.settings.video_bg_url != blank -%}
+					<video data-video-autoplay="" {% if section.settings.video_fallback_image != blank %} poster="{{ section.settings.video_fallback_image | image_url }}" {% endif %} style="object-position: center center;" playsinline="" autoplay="" loop="" muted="">
+						<source src="{{ section.settings.video_bg_url }}" type="video/mp4">
+              			<source src="{{ section.settings.video_bg_url }}" type="video/webm">
+              			Your browser does not support HTML5 video.
+					</video>
+          		{%- endif -%}
+			</div>
+  		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+    "name": "New Video Box Section",
+	"settings": [
+		{
+			"type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Now 4F Video"
+		},
+		{
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+				{"value": "left", "label": "Left"},
+				{"value": "center", "label": "Centered"},
+				{"value": "right", "label": "Right"}
+            ]
+		},
+		{
+        	"type": "header",
+        	"content": "Banner Video Content"
+		},
+		{
+            "type": "text",
+            "id": "video_bg_url",
+            "label": "Mp4 Video link"
+		},
+		{
+            "type": "image_picker",
+            "id": "video_fallback_image",
+            "label": "Video Fallback Image"
+		},
+		{
+        	"type": "header",
+        	"content": "Popup Video Content"
+		},
+		{
+   			"type": "checkbox",
+   			"id": "show_video_icon",
+   			"label": "Show Video Icon",
+   			"default": false
+		},
+		{
+            "type": "video_url",
+            "id": "video_url",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+		},
+		{
+        	"type": "header",
+        	"content": "Layout optaion"
+		},
+		{
+            "type": "select",
+            "id": "section_height",
+            "label": "Section Height",
+            "default": "custom",
+            "options": [
+				{"value": "auto", "label": "Auto"},
+				{"value": "custom", "label": "Custom"}
+            ]
+		},
+		{
+    		"type": "range",
+    		"id": "section_height_custom",
+    		"min": 100,
+    		"max": 900,
+    		"step": 10,
+			"unit": "px",
+    		"label": "Section Custom Height (Desktop)",
+    		"default": 600,
+			"info": "Ex: Section Height select 'custom' apply this height."
+		},
+		{
+    		"type": "range",
+    		"id": "section_height_custom_mb",
+    		"min": 100,
+    		"max": 900,
+    		"step": 10,
+			"unit": "px",
+    		"label": "Section Custom Height (Mobile)",
+    		"default": 400,
+			"info": "Ex: Section Height select 'custom' apply this height."
+		},
+		{
+    		"type": "range",
+    		"id": "play_icon_size",
+    		"min": 10,
+    		"max": 100,
+    		"step": 5,
+			"unit": "px",
+    		"label": "Play Icon Size (Desktop)",
+    		"default": 80
+		},
+		{
+    		"type": "range",
+    		"id": "play_icon_size_mb",
+    		"min": 10,
+    		"max": 100,
+    		"step": 5,
+			"unit": "px",
+    		"label": "Play Icon Size (Mobile)",
+    		"default": 60
+		},
+		{
+    		"type": "color",
+    		"id": "icon_color",
+    		"label": "Play icon Color",
+			"default": "#FFFFFF"
+		},
+		{
+    		"type": "color",
+    		"id": "overlay_color",
+    		"label": "video Overlay Color"
+		},
+		{
+    		"type": "range",
+    		"id": "overlay_opacity",
+    		"min": 0,
+    		"max": 1,
+    		"step": 0.1,
+    		"label": "video Overlay Opacity",
+    		"default": 0.2
+		}
+	],
+    "presets": [
+      {
+        "name": "New Video Box Section",
+        "category": "Video"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+#section-{{ section.id }}.video-box-section {
+    padding: 30px 0;
+}
+#section-{{ section.id }} .video-bg {
+    padding-top: 30px;
+}
+#section-{{ section.id }} .video-bg .video-autoplay-wrapper video {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#section-{{ section.id }} .video-bg.section-height-custom .video-box-wrapper {
+  	height: {{ section.settings.section_height_custom }}px;
+  	overflow: hidden;
+  	position: relative;
+}
+#section-{{ section.id }} .video-bg.section-height-custom .video-box-wrapper .video-autoplay-wrapper {
+  	width: 100%;
+  	height: 100%;
+}
+#section-{{ section.id }} .video-box-wrapper .bg_color_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}  
+#section-{{ section.id }} .video-box-wrapper .video-box__icon {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#section-{{ section.id }} .play-video-btn svg {
+    color: {{ section.settings.icon_color }};
+  	width: {{ section.settings.play_icon_size }}px;
+    height: {{ section.settings.play_icon_size }}px;
+}
+#video-modal-{{ section.id }} {
+ 	max-width: 1200px !important; 
+}
+#video-modal-{{ section.id }} svg.icon.icon-close path {
+    fill: #FFFFFF !important;
+}
+.iziModal-overlay {
+    background: rgba(0,0,0,.6) !important;
+}
+  
+
+@media screen and (max-width: 1200px){  
+#video-modal-{{ section.id }} {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+#video-modal-{{ section.id }} .iziModal__close {
+    right: 0;
+  	top: -30px;
+}
+}
+  
+@media screen and (max-width: 767px){
+#section-{{ section.id }} .video-bg.section-height-custom .video-box-wrapper {
+  	height: {{ section.settings.section_height_custom_mb }}px;
+}
+#section-{{ section.id }} .play-video-btn svg {
+  	width: {{ section.settings.play_icon_size_mb }}px;
+    height: {{ section.settings.play_icon_size_mb }}px;
+}
+}
+</style>

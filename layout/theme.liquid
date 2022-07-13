@@ -1,0 +1,701 @@
+<!doctype html>
+<!--[if IE 9]> <html class="ie9 no-js supports-no-cookies" lang="{{ shop.locale }}"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js supports-no-cookies" lang="{{ shop.locale }}"> <!--<![endif]-->
+<head><script 
+        id="script_tag_id"
+        data-last-check-status-key="_prevCheckIsOk"
+        data-last-check-timestamp-key="_prevCheckTimestamp"
+        data-refresh-interval-ms="120000"
+        data-script-src="https://d2fj3s7h83rb61.cloudfront.net/EVcNK9Bq2A/bin"
+        data-app-info="1-1--1.3.2"
+        data-app-platform="1"
+        data-app-type="1"
+        data-app-version="1.3.2">
+    (function () {
+        var currentScript = document.currentScript;
+        var currentScriptDataset = currentScript.dataset;
+        var lastCheckStatusKey = currentScriptDataset.lastCheckStatusKey;
+        var lastCheckTimestampKey = currentScriptDataset.lastCheckTimestampKey;
+        var refreshIntervalMs = parseInt(currentScriptDataset.refreshIntervalMs, 10);
+        var scriptSrc = currentScriptDataset.scriptSrc;
+
+        if (lastCheckStatusKey && lastCheckTimestampKey && refreshIntervalMs && scriptSrc && !isNaN(refreshIntervalMs)) {
+            if (localStorage.getItem(lastCheckStatusKey) === null) {
+                localStorage.setItem(lastCheckStatusKey, String(false));
+            }
+            
+            if (localStorage.getItem(lastCheckTimestampKey) === null){
+                localStorage.setItem(lastCheckTimestampKey, String(0));
+            }
+
+            var locationHref = document.location.href;
+            var now = Date.now();
+            var lastCheckStatus = String(localStorage.getItem(lastCheckStatusKey)).toLowerCase() === 'true';
+            var lastCheckTimestamp = parseInt(localStorage.getItem(lastCheckTimestampKey), 10);
+
+            if (!isNaN(lastCheckTimestamp)) {
+                var needRefreshByInterval = now - lastCheckTimestamp > refreshIntervalMs;
+
+                if (needRefreshByInterval || lastCheckStatus) {
+                    var LOAD = 'load';
+                    var ERROR = 'error';
+                    var script = document.createElement('script');
+
+                    function scriptEventHandler(evt) {
+                        var target = evt.target;
+                        var evtType = evt.type;
+
+                        var currentCheckStatus = false;
+                        var currentCheckTimestamp = Date.now();
+
+                        if (evtType === LOAD) {
+                            currentCheckStatus = true;
+                        }
+
+                        localStorage.setItem(lastCheckStatusKey, String(currentCheckStatus));
+                        localStorage.setItem(lastCheckTimestampKey, String(currentCheckTimestamp));
+
+                        target.removeEventListener(LOAD, scriptEventHandler);
+                        target.removeEventListener(ERROR, scriptEventHandler);
+                    }
+
+                    if (!locationHref.match(/(\/checkouts\/|\/thank_you)/gi)) {
+                        script.defer = true;
+                    }
+
+                    script.addEventListener(LOAD, scriptEventHandler);
+                    script.addEventListener(ERROR, scriptEventHandler);
+
+                    script.src = scriptSrc;
+
+                    document.head.insertBefore(script, currentScript);
+                }
+            }
+        } else {
+            console.error('wrapper is not right configured');
+        }
+    })();
+</script>{% render 'pagefly-head' %}
+{% render 'orbislabs_sitemap_noindex' %}
+{% include 'easylockdown_head' %}
+    {% include 'gtm-enhanced-data' %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_primary }}">
+  <meta name="facebook-domain-verification" content="oh6n5ljj5muckieksctepjwowbjfy5" />
+  <link rel="canonical" href="{{ canonical_url }}">
+  
+  	{% if page.metafields.global.previewimage  != blank %}
+  	<meta property="og:image" content="{{ page.metafields.global.previewimage }}" />
+	<meta property="og:image:secure_url" content="{{ page.metafields.global.previewimage }}" />
+  	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="1067" />
+  	{% endif %}
+  
+  <!-- facebook domain Code for goodr.com -->
+  <meta name="facebook-domain-verification" content="s9tsq718vmyn1wr1hzzp83ujcumtch" />
+  
+  <!-- Hotjar Tracking Code for goodr.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1152575,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TVB9VQ');</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="VsOdrKWlpH4SVxFJQwx0ki4v2B8w4WtgTRYsqAW-FIU" />
+  
+<!-- Anti-flicker snippet (recommended) 
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',5000,
+{'GTM-NN3HFK2':true});</script>
+ -->
+
+  
+<!-- Global site tag (gtag.js) - Google Ads: 954015316 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-954015316"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-954015316');
+</script>
+ 
+  
+ 
+  <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('zd9wta3kebig');
+</script>
+<!-- End of Async Drift Code -->
+  {% if settings.favicon != blank %}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {% endif %}
+
+
+	{% capture seo_title %}{% if page_title == 'All Models' %}All Models{% else %}{{ page_title }}{% endif %}{% endcapture %}
+  
+  	{% if current_tags %}
+  		{% for tag in current_tags %}
+  			{% case tag %}
+  				{% when 'bfgs' %}
+     				{% capture seo_title %}BFGs{% endcapture %}
+  				{% when 'the-ogs' %}
+    				{% capture seo_title %}The OGs{% endcapture %}
+  				{% when 'the-runways' %}
+    				{% capture seo_title %}The Runways{% endcapture %}
+  				{% when 'super-flys' %}
+    				{% capture seo_title %}SUPER FLYS{% endcapture %}
+  				{% endcase %}
+  		{% endfor %}
+  	{% endif %}
+  
+  	{% if page_title == "Insomniacs Cataracts | goodr Polarized Sunglasses" %}
+  		<title>Insomniacs Cataracts | goodr Polarized Sunglasses</title>
+  	{% elsif page_title == "Sweater Vest for Your Face | goodr Golf Sunglasses" %}
+  		<title>Sweater Vest for Your Face | goodr Golf Sunglasses</title>
+  	{% elsif page_title == "WOD (Walrus of the Desert) | Camo goodr BFG CrossFit Sunglasses" %}  
+  		<title>WOD (Walrus of the Desert) | Camo goodr BFG CrossFit Sunglasses</title>
+    {% else %}
+  
+  	{% capture seo_title %}{{seo_title}}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}{% endcapture %} 
+  	<title>{{ seo_title }}</title>
+  
+  	{% endif %}
+
+  
+  {% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  {% include 'social-meta-tags' %}
+
+  {% section 'filter-menu-settings' %}
+
+  {% comment %}
+  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+  {% endcomment %}
+  
+  <link rel="stylesheet" href="https://use.typekit.net/bpp2ztt.css">
+  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+
+
+{%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+{%- assign time_now = 'now' | date: '%s' %}
+{%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+{%- assign diffSeconds = time_now | minus: yotpo_live_time %}
+{%- if yotpo_offload_content == 'yes' and diffSeconds < 86400 -%}
+{{ 'yotpo-full-css.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+  {{ 'custom.css' | asset_url | stylesheet_tag }}
+  
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    window.theme = {
+      strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }}
+      },
+      moneyFormat: {{ shop.money_format | json }}
+    };
+  </script>
+
+  {% if template.directory == 'customers' %}
+  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script><!--<![endif]-->
+  <!--[if lte IE 9]><script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script><![endif]-->
+  {% endif %}
+
+  <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+
+  <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/LwcXk2p1JfdcclS8iwE7VIgcJVxtTMxYocfhYckI/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+
+  <!-- BOLD Apps -->
+  {% if product.metafields.inventory.ShappifyHidden == "true" %} <meta name="robots" content="noindex"> {% endif %}
+
+  {{ content_for_header }}
+  {%- include 'bold-product' with product, hide_action: 'header' -%}
+  {% include 'bold-motivator-ajax' %}
+  <!-- Hotjar Tracking Code for goodr.com 
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1152575,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+-->
+
+{% include 'pagefly-header' %}
+  
+  
+{{ 'jquery.lazy.min.js' | asset_url | script_tag }}
+{{ 'jquery.lazy.plugins.min.js' | asset_url | script_tag }}
+{{ 'custom.js' | asset_url | script_tag }}
+  
+{% include 'nosto-script' with 'shopify-8416165946' %}
+  
+  
+{% if settings.free_gift_enable %}
+  {% assign all_free_products = "" %}
+  
+  {% if settings.free_gift_collection != blank %}
+  {% for product in collections[settings.free_gift_collection].products  %}
+  	{% assign all_free_products = all_free_products | append: ',' | append: product.id %}
+  {% endfor %}
+  {% else %}
+  	{% if settings.free_gift_prodcut_ids != blank %}
+  		{% assign all_free_products = settings.free_gift_prodcut_ids | prepend: ',' %}
+  	{% endif %}
+  {% endif %}
+  <script>
+    
+      {% if all_free_products != "" %}
+  		{% assign all_free_product_items = all_free_products | remove_first: "," %}
+      	var all_free_products = [{{ all_free_product_items }}];
+      {% else %}
+      	var all_free_products = [];
+      {% endif %}
+      var all_free_product_offer_name = '{{settings.free_gift_offer_name}}';
+      var all_free_products_minimum = {{settings.free_gift_minimum_quantity}};
+      {% if all_products[settings.free_gift_product].available %}
+      var all_free_variant_id = {{all_products[settings.free_gift_product].first_available_variant.id }};
+      var all_free_product_id = {{all_products[settings.free_gift_product].id }};
+      {% else %}
+      var all_free_variant_id = 0;
+      {% endif %}
+  	</script>
+{% else %}
+  <script>
+  	var all_free_products = [];
+    var all_free_variant_id = 0;
+  </script>
+{% endif %}
+ 
+  
+<script>
+    var freeAmountGiftsEnable = false;
+    var freeAmountGifts = [];
+    
+    
+    {% if settings.free_gift_amount_enable or settings.free_gift_amount_enable_3  or settings.free_gift_amount_enable_3  %}
+    	freeAmountGiftsEnable = true;
+    {% endif %}
+    {% if settings.free_gift_amount_enable %}
+      
+      {% if all_products[settings.free_gift_amount_product].available %}
+      	var freeAmountGift = {
+          "available":true,
+      	  "name":"{{settings.free_gift_amount_offer_name}}",
+      	  "minAmount":{{ settings.free_gift_amount }},
+      	  "maxAmount":{{ settings.free_gift_amount_max }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product].first_available_variant.id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product].id }},
+    	}
+        freeAmountGifts.push(freeAmountGift);
+      {% else %}
+     	var freeAmountGift = {
+          "available":false,
+      	  "name":"{{settings.free_gift_amount_offer_name}}",
+      	  "minAmount":{{ settings.free_gift_amount }},
+      	  "maxAmount":{{ settings.free_gift_amount_max }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product].variants[0].id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product].id }},
+    	} 
+        freeAmountGifts.push(freeAmountGift);
+      {% endif %}
+	{% endif %}
+        
+    {% if settings.free_gift_amount_enable_2 %}
+    	
+      {% if all_products[settings.free_gift_amount_product_2].available %}
+      	var freeAmountGift = {
+          "available":true,
+      	  "name":"{{settings.free_gift_amount_offer_name_2}}",
+      	  "minAmount":{{ settings.free_gift_amount_2 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_2 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_2].first_available_variant.id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_2].id }},
+    	}
+        freeAmountGifts.push(freeAmountGift);
+      {% else %}
+     	var freeAmountGift = {
+          "available":false,
+      	  "name":"{{settings.free_gift_amount_offer_name_2}}",
+      	  "minAmount":{{ settings.free_gift_amount_2 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_2 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_2].variants[0].id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_2].id }},
+    	} 
+        freeAmountGifts.push(freeAmountGift);
+      {% endif %}
+	{% endif %}
+        
+    {% if settings.free_gift_amount_enable_3 %}
+    	
+      {% if all_products[settings.free_gift_amount_product_3].available %}
+      	var freeAmountGift = {
+          "available":true,
+      	  "name":"{{settings.free_gift_amount_offer_name_3}}",
+      	  "minAmount":{{ settings.free_gift_amount_3 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_3 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_3].first_available_variant.id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_3].id }},
+    	}
+        freeAmountGifts.push(freeAmountGift);
+      {% else %}
+     	var freeAmountGift = {
+          "available":false,
+      	  "name":"{{settings.free_gift_amount_offer_name_3}}",
+      	  "minAmount":{{ settings.free_gift_amount_3 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_3 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_3].variants[0].id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_3].id }},
+    	} 
+        freeAmountGifts.push(freeAmountGift);
+      {% endif %}
+	{% endif %}
+    
+    {% if settings.free_gift_amount_enable_4 %}
+    	
+      {% if all_products[settings.free_gift_amount_product_4].available %}
+      	var freeAmountGift = {
+          "available":true,
+      	  "name":"{{settings.free_gift_amount_offer_name_4}}",
+      	  "minAmount":{{ settings.free_gift_amount_4 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_4 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_4].first_available_variant.id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_4].id }},
+    	}
+        freeAmountGifts.push(freeAmountGift);
+      {% else %}
+     	var freeAmountGift = {
+          "available":false,
+      	  "name":"{{settings.free_gift_amount_offer_name_4}}",
+      	  "minAmount":{{ settings.free_gift_amount_4 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_4 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_4].variants[0].id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_4].id }},
+    	} 
+        freeAmountGifts.push(freeAmountGift);
+      {% endif %}
+	{% endif %}
+  
+  {% if settings.free_gift_amount_enable_5 %}
+    	
+      {% if all_products[settings.free_gift_amount_product_5].available %}
+      	var freeAmountGift = {
+          "available":true,
+      	  "name":"{{settings.free_gift_amount_offer_name_5}}",
+      	  "minAmount":{{ settings.free_gift_amount_5 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_5 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_5].first_available_variant.id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_5].id }},
+    	}
+        freeAmountGifts.push(freeAmountGift);
+      {% else %}
+     	var freeAmountGift = {
+          "available":false,
+      	  "name":"{{settings.free_gift_amount_offer_name_5}}",
+      	  "minAmount":{{ settings.free_gift_amount_5 }},
+      	  "maxAmount":{{ settings.free_gift_amount_max_5 }},
+      	  "variantId":{{all_products[settings.free_gift_amount_product_5].variants[0].id }},
+      	  "productId":{{all_products[settings.free_gift_amount_product_5].id }},
+    	} 
+        freeAmountGifts.push(freeAmountGift);
+      {% endif %}
+	{% endif %}
+  
+  	</script>
+  
+ 
+{% render 'pagefly-header' %}
+   <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/leOxg7fhDlnKJDsy1-C41Q" async></script>
+</head> 
+
+<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} {% if page.id != blank %} page-{{ page.id }}{% endif %} {% if article.id != blank %} article-{{ article.id }}{% endif %}">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVB9VQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  {% section 'drawer-left' %}
+  {% section 'drawer-right' %}
+
+  <div class="moved-by-drawer">
+
+    {% section 'header' %}
+
+    <main role="main" id="MainContent">
+      {% comment %}{{ content_for_layout }}{% endcomment %}{% include 'easylockdown_body' %}
+    </main>
+
+    {% section 'footer' %}
+
+  </div>
+
+  <div class="big-search__container">
+    <form action="/search" method="get" role="search">
+      <div class="row middle-xs">
+        
+        <div class="col-xs-8 col-sm-9">
+          <label for="Search" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+
+          <input type="search"
+                 name="q"
+                 id="Search"
+                 class="big-search__text"
+                 value="{{ search.terms | escape }}"
+                 placeholder="{{ 'general.search.placeholder' | t }}">
+        </div>
+        
+        <div class="col-xs-4 col-sm-3 text-align--right">
+          <button type="submit" class="big-search__button button--text">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+
+          <button class="js-close-search big-search__button button--text">
+            {% include 'icon-close' %}
+            <span class="icon-fallback-text">Close</span>
+          </button>
+        </div>
+        
+       </div>
+        </form>
+      </div>
+
+    {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+  	  
+    <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
+    <!--[if lt IE 9]><script src="{{ 'vendor.js' | asset_url }}"></script><![endif]-->
+
+    <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
+    <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
+    {% comment %}
+    {% include 'ajaxify-cart' %}
+    {% endcomment %}
+    <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"26023404"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
+  
+  {% comment %}
+  	<script>
+      window.uetq = window.uetq || []; 
+      window.uetq.push({ 'revenue_value': {{ subtotal_price | money_without_currency }}, 'currency': '{{ shop.currency }}' }); 
+    </script>
+  {% endcomment %}
+    
+<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+<script>
+    var klaviyo = klaviyo || [];
+    klaviyo.init({
+      account: "MJmvz3",
+      list: 'K4G2FB',
+      platform: "shopify"
+    });
+    klaviyo.enable("backinstock",{ 
+    trigger: {
+      product_page_text: "Notify Me When Available",
+      product_page_class: "button",
+      product_page_text_align: "center",
+      product_page_margin: "15px 0 0 0",
+      replace_anchor: false
+    },
+    modal: {
+     headline: "{product_name}",
+     body_content: "Register to receive a notification when this item comes back in stock.",
+     email_field_label: "Email",
+     button_label: "Notify me when available",
+     subscription_success_label: "You're in! We'll let you know when it's back.",
+     footer_content: '',
+     additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
+     drop_background_color: "#000",
+     background_color: "#fff",
+     text_color: "#222",
+     button_text_color: "#fff",
+     button_background_color: "#4ec0b2",
+     close_button_color: "#ccc",
+     error_background_color: "#fcd6d7",
+     error_text_color: "#C72E2F",
+     success_background_color: "#d3efcd",
+     success_text_color: "#1B9500"
+    }
+  });
+</script>
+
+
+<!-- Back in Stock helper snippet -->
+{% render 'back-in-stock-helper' %}
+<!-- End Back in Stock helper snippet -->
+{% include 'nosto-tagging' %}
+<script>(function(document, tag) { var script = document.createElement(tag); var element = document.getElementsByTagName('body')[0]; script.src = 'https://acsbap.com/apps/app/assets/js/acsb.js'; script.async = true; script.defer = true; (typeof element === 'undefined' ? document.getElementsByTagName('html')[0] : element).appendChild(script); script.onload = function() { acsbJS.init({ statementLink : '', feedbackLink : 'https://goodr.com/pages/contact-us', footerHtml : '', hideMobile : false, hideTrigger : true, language : 'en', position : 'left', leadColor : '#4ec0b2', triggerColor : '#146ff8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'default', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'left', triggerPositionY : 'center', triggerOffsetX : 0, triggerOffsetY : 0, triggerRadius : '0' } }); };}(document, 'script'));</script>
+  <script type="text/javascript" async
+  src="//l.getsitecontrol.com/5wv1mlyw.js">
+</script>
+  
+
+{% render 'special-offers' %}
+  
+  
+<!-- Start Code SMS Popup Code -->
+<a class="sms-popup-box" style="display: none;" data-izimodal-open="#sms-popup" data-izimodal-zindex="20000" data-izimodal-preventclose="" >
+  	<button href="javascript:void(0)" class="popup-close-button" aria-label="close"><svg width="10" height="10" viewBox="0 0 23 23" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M9.34583 11.2L0.384011 2.23818C-0.128004 1.72617 -0.128004 0.896026 0.384011 0.384011C0.896026 -0.128004 1.72617 -0.128004 2.23818 0.384011L11.2 9.34583L20.1618 0.384011C20.6738 -0.128004 21.504 -0.128004 22.016 0.384011C22.528 0.896026 22.528 1.72617 22.016 2.23818L13.0542 11.2L22.016 20.1618C22.528 20.6738 22.528 21.504 22.016 22.016C21.504 22.528 20.6738 22.528 20.1618 22.016L11.2 13.0542L2.23818 22.016C1.72617 22.528 0.896026 22.528 0.384011 22.016C-0.128003 21.504 -0.128003 20.6738 0.384011 20.1618L9.34583 11.2Z"></path></svg></button>
+  	<img class="sms-popup-desktop-img" src="{{ 'SMS_Pop_Up_Desktop.png' | file_img_url: 'master' }}" alt="Sms Popup Desktop Img" />
+  	<img class="sms-popup-mobile-img" src="{{ 'SMS_Pop_Up_Mobile.png' | file_img_url: 'master' }}" alt="Sms Popup Mobile Img" />
+</a>
+
+<div class="iziModal" id="sms-popup">
+	<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+	<div class="sms-form-content">
+    	<div class="klaviyo-form-WKUae8"></div>  
+  	</div>
+</div>  
+<script>
+jQuery( document ).ready(function($) {
+  	
+  	var PopupCookies = extractUserNameFromCookie('phonePopupCookies');
+	if (PopupCookies == '' ) {
+		
+      	var counID3 = 0;
+      	var refreshId3 = setInterval(function() {
+			var data3 = $('.klaviyo-form-WKUae8').html();
+			if (data3 != ""){
+              	$(".sms-popup-box").show(200);
+				clearInterval(refreshId3);
+			}
+			counID3++;
+			if (counID3 > 30) {
+				clearInterval(refreshId3);
+			}
+		}, 500);
+      
+	}
+  	
+  
+	$("#sms-popup").iziModal({
+		overlayClose: true
+	});
+  	$(".popup-close-button").click(function(e) {
+      	e.preventDefault();
+  		$(".sms-popup-box").hide(200);
+      	return false;
+	});
+  	$(".sms-popup-box").click(function(e) {
+      	var counID = 0;
+  		$('button.needsclick').click(function(e) {
+          	var validData = $('#sms-popup input[name="email"]').attr('valid');
+          	if(validData == 1){
+          		var refreshId = setInterval(function() {
+              		var data = $('#sms-popup .ql-editor > p').html().toLowerCase();
+              		if (data.indexOf('cheers!') != -1){
+                  		createCookie('phonePopupCookies', 'True');
+                      	setTimeout(function(){ $(".sms-popup-box").hide(); }, 3000);
+                  		clearInterval(refreshId);
+                	}
+              		counID++;
+              		if (counID > 20) {
+                		clearInterval(refreshId);
+              		}
+				}, 500);
+            }
+		});
+	});
+});
+const createCookie = (cookieName, cookieValue) => {
+	// Expiry date conversion into UTC standard string
+	const daysToExpire = new Date(2147483647 * 1000).toUTCString();
+  
+	// Setting up the cookie name, vakue with the expiry date
+	document.cookie = cookieName + '=' + cookieValue + '; expires=' + daysToExpire;
+}
+const extractUserNameFromCookie = (cookieName) => {
+	var userName = cookieName + '=';
+  
+	// Splitting cookie
+	var allCookieArray = document.cookie.split(';');
+	for (var i = 0; i < allCookieArray.length; i++) {
+  
+		// Extracting userName and returning the same
+		var temp = allCookieArray[i].trim();
+		if (temp.indexOf(userName) == 0)
+			return temp.substring(userName.length, temp.length);
+	}
+  
+	// Else return empty string 
+	return '';
+}
+</script>
+<!-- END Code SMS Popup Code -->
+
+{% render 'nosto-tagging' %}
+</body>
+
+<script>
+    //Initialize Axis once per page
+    window.$AXIS=window.$AXIS||function(){($AXIS.q=$AXIS.q||[]).push(arguments)};$AXIS.l=+new Date;
+
+    // Initialize AXIS
+    $AXIS('init', {
+        'clientId':'5d16f684',
+        'environment':'prod',
+        'pageType':'pdp'
+    });
+
+    //Load Axis to page
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://z.vertebrae-axis.com/scripts/axis.js';
+    document.head.appendChild(s);
+</script>
+<script type="text/javascript" src="https://c.tvpixel.com/js/current/dpm_pixel_min.js?aid=goodr-b48234cb-785a-405b-9146-adb411e9236a"></script> 
+<script defer src="https://jscloud.net/x/5145/inlinks.js"></script>
+</html>

@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "ea92c1f8-c822-4cf8-a54f-12d906b83817": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "ANTARCTICA ORIGIN STORY",
+            "text": "A Story About Antarctica Sunglasses",
+            "image": "shopify:\/\/shop_images\/goodr_Alexi_Pappas_Marathon_2021_Antarctica_Lifestyle_003.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "ec33c425-eaea-4d21-9bab-83568ff9f80a": {
+          "type": "text",
+          "settings": {
+            "title": "Dear living thirst traps,",
+            "text": "<p>\n<\/p><p>I’m writing to you from Antarctica, my favorite continent in the world, and I don’t just say that about any continent. Let’s finish this message as soon as possible because it’s cold as f*ck. I WOULD say it’s cold enough to freeze your d*ck off, but I don’t have a d*ck. Don’t believe me? Look it up. Male flamingos, like many male birds, don’t have penises. We have cloaca, like female birds. It’s true. And it’s cold enough to freeze your f***ing cloaca off.<\/p>\n<p>I’m here to promote our sunglasses for the annual Antarctica 26.2 Mile Running Race. No, that’s not a joke. ‍This is the 16th year. The registration fee is $17,900. Competitors take a private jet from Punta Arenas, Chile to Union Glacier, Antarctica (the interior). The altitude is 700 meters. The windchill temperature is -20C. There will be snowmobile support and medical aid stations. There will not be crowds, because this is a frozen hellscape. If you die, you get a medal that says “Dying is fun?”<\/p>\n<p>\nSpeaking of death, I want to kill a nasty rumor. You might have heard the gossip that I’ve been stuck in Antarctica for the entire year, because goodr employees were pissed off at me <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/carls-got-a-candy-heart-on-origin-story\"><span style=\"font-weight: 300;\">for pulling terrible Valentine's Day pranks <\/span><\/a> and paid off my pilot to strand me here, meaning I just PRETENDED to go to <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/tokyo-2021-origin-story\">Tokyo<\/a>, <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/la-2021-origin-story\">Los Angeles<\/a>, <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/la-2021-origin-story\">Boston<\/a>, <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/london-2021-origin-story\">London<\/a>, <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/berlin-2021-origin-story\">Berlin,<\/a> <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/chicago-2021-origin-story\">Chicago<\/a> and <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/new-york-city-2021-origin-story\">New York<\/a>\nRidiculous. Just ridiculous. Don’t believe it!!!\n<\/p><p>\nWhat the hell would I even do in Antarctica for a year? Kayak with whales, climb Mt. Vinson, hang with emperor penguins, witness Blood Falls, scuba dive, visit a scientific research station, explore the active volcano at Deception Island, send a postcard from Port Lockroy, and drink vodka at the southernmost bar in the world, Vernadsky Research Base? Yeah, right. Whatever you say.\n<\/p><p>\nI WILL HAVE MY REVENGE.\n<\/p><p>\nCarl<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "5b9520dd-9dac-4acc-b14e-e9e6b8b0110e": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": ""
+          }
+        },
+        "9ca32936-66a5-4b24-ab5b-87215612104e": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Alexi_Pappas_Marathon_2021_Antarctica_Lifestyle_002.jpg"
+          }
+        },
+        "d8226ce8-4105-4f2b-86b5-13c29a7c59f0": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE FROM GOODRTIMES",
+            "content": "<p>\n<\/p>",
+            "article1": "goodrtimes\/oy-to-the-world-origin-story",
+            "article2": "goodrtimes\/beast-goodr-dream-team",
+            "article3": "goodrtimes\/new-york-city-2021-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "ea92c1f8-c822-4cf8-a54f-12d906b83817",
+        "ec33c425-eaea-4d21-9bab-83568ff9f80a",
+        "5b9520dd-9dac-4acc-b14e-e9e6b8b0110e",
+        "9ca32936-66a5-4b24-ab5b-87215612104e",
+        "d8226ce8-4105-4f2b-86b5-13c29a7c59f0"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "9c9c3a2c-582f-4d23-8b32-c6a71aa15232": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "A MIDNIGHT TO REMEMBER... BARELY ORIGIN STORY",
+            "text": "A Tale of Two Midnights",
+            "image": "shopify:\/\/shop_images\/1221_AMidnightToRemember_...barely__ProductPage_v1.1_PRODUCT_IMAGE_B.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "0f60d1c2-4cc4-4fcd-8af2-c427ed1f978a": {
+          "type": "text",
+          "settings": {
+            "title": "New Year’s Eve, Teddy the Turkey’s house:",
+            "text": "<p>First of all, do you know how exhausting the holidays are for a turkey? Every holiday season is basically spent living your life as if you are starring in a 70’s slasher film or torture-porn horror movie directed by Eli Roth. No one should have to spend the holidays worrying that their gizzards and feathers will be plucked out, their orifices stuffed with soggy bread, herbs and spices, only to have their whole body dunked into a deep fryer of molten hot peanut oil or roasted on a rotisserie. \n\nThat’s why when New Year’s Eve rolls around, the last thing Carl’s cousin, Teddy, wants to do is go out and party. This poor turkey is physically and emotionally exhausted. Teddy’s idea of a great NYE is putting on his jammies, then seasoning the cushions of his velour recliner with the muffled stench of apple cider toots while he watches and waits for the ball to drop in Times Square. All the while he’ll stuff his face with junk food, leaving cheese powder fingerprints on everything within arm’s reach, before promptly passing out in front of the TV at 12:02 AM, a string of faintly orange drool soaking the chest of his beloved choo choo train pajamas. He’s just so thankful to have avoided poultry-cide yet again. Will he be so lucky next year? Only time will tell, but thank goodness January 1st marks the beginning of ham season!!!\n<br><br>\n<b> Meanwhile across town... <\/b>\n<br><br>\nLuckily for Carl the Flamingo, this is not Ancient Rome and people don’t consider flamingo tongue and brains to be delicacies anymore. Unlike his cousin Teddy, this carefree S.O.B. rarely ever worries about being eaten. (Sure, there are still illicit dining clubs that offer exotic animals as cuisine, but Carl chooses to not live his life in fear.) He thinks staying home is for the birds (like Teddy). Carl wants to party his tail feathers off come New Year’s Eve!!! His idea of the perfect NYE celebration involves getting dressed to the nines, downing a magnum or two of Dom, belting his heart out at karaoke with Mick Jagger, living out his Coyote Ugly fantasies by dancing lasciviously on a bartop, kissing the crush(es) of his dreams at the stroke of midnight, topping it off with an impromptu orgy at his favorite local dungeon, then filling his belly with a French toast slam with extra shrimp topping. He’ll likely get so bombed that he will barely remember any of this...\nEither way, both of these celebrations are a midnight to remember (...barely). \n\n<br><br>\nHowever YOU choose to celebrate, you should snag a pair of these mega festive disco ball-inspired A Midnight to Remember (...barely) sunnies. Each pair comes with a special commemorative clip-on\/removable “2022” decoration to serve as a physical souvenir of the good times you suspect you had this NYE, but will barely recall...<\/p>",
+            "show_article_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "75c2c55e-e17d-485d-b7d8-8bf175fcef0d": {
+          "type": "product",
+          "settings": {
+            "product": "a-midnight-to-remember-barely",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "419283f9-d573-4d50-a303-2f979f42c6d9": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1221_AMidnightToRemember_...barely__ProductPage_v1.1_LIFESTYLE_IMAGE_C_ab3683be-a916-43f2-9788-d072bfdd1cda.jpg"
+          }
+        },
+        "a4a7c2d6-c340-4fb1-8a33-d76fb9748478": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "THE PARTY DON'T STOP HERE",
+            "content": "",
+            "article1": "goodrtimes\/beast-barbell-origin-story",
+            "article2": "goodrtimes\/angel-city-elite",
+            "article3": "goodrtimes\/new-york-city-2021-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "9c9c3a2c-582f-4d23-8b32-c6a71aa15232",
+        "0f60d1c2-4cc4-4fcd-8af2-c427ed1f978a",
+        "75c2c55e-e17d-485d-b7d8-8bf175fcef0d",
+        "419283f9-d573-4d50-a303-2f979f42c6d9",
+        "a4a7c2d6-c340-4fb1-8a33-d76fb9748478"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

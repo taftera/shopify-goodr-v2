@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "55453f5d-ef12-40a0-a5f6-3e5de77e205d": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "goodr x LA LGBT Center: Pride and no Prejudice",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/goodr_holiday_2022_pride_no_prejudice_Lifestyle_005_full_res.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "01086861-fe54-40a8-868c-83193208ee57": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "show_article_content": true,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "b6625351-abd2-4821-a039-f74795b335d4": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_holiday_2022_pride_no_prejudice_Lifestyle_001_full_res.jpg"
+          }
+        },
+        "5789d087-9f72-462d-921a-6e615fc3c451": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "05ec2e38-76b7-4d52-a53c-005e4deb47ed": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ OUR OTHER PHILANTHROPY ORIGIN STORIES",
+            "content": "",
+            "article1": "goodrtimes\/lgbtq-af-origin-story",
+            "article2": "goodrtimes\/the-gangs-all-queer-origin-story",
+            "article3": "goodrtimes\/goodr-x-denver-zoo-penguins"
+          }
+        }
+      },
+      "block_order": [
+        "55453f5d-ef12-40a0-a5f6-3e5de77e205d",
+        "01086861-fe54-40a8-868c-83193208ee57",
+        "b6625351-abd2-4821-a039-f74795b335d4",
+        "5789d087-9f72-462d-921a-6e615fc3c451",
+        "05ec2e38-76b7-4d52-a53c-005e4deb47ed"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

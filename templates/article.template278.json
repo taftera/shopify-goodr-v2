@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "abc7fdd1-dc8f-4166-a3c3-3b00ba1a2478": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "STAY FLY, ORNITHOLOGISTS ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Ornithologists_1600_400_header_2.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.7
+          }
+        },
+        "e364b7ff-e8bd-411d-91b9-1bfa95cf5828": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>On Wednesday, two ornithologists at the Natural Avian Museum released the single “Stay Fly, Ornithologists.” The song features a bubbling pop-rap beat and lyrics full of cheesy bird puns. The ornithologists added that they are each going through an existential crisis, feeling crushing emotional pain, loneliness, and despair.\n<br><br>\n“I cuckold you like a cuckoo, you’re so damn lame \/ You think you can talk big? Toucan play at that game!” raps Bessie Efferfester, a 39-year-old ornithologist, in the first verse. “I’m fly like an eagle soaring past the prairie \/ You? You’re about as fly as a cassowary!”\n<br><br>\n“My verse is inspired by the collapse of my 12-year marriage to Simon,” Bessie told the goodrTIMES. “I tried online dating and realized I’m past my prime. Most people don’t respond. Those that do, say something hurtful. One man asked: “Are you into younger men?” Ouch. Just like that, I’m old. My options are limited. I’m past my prime. I had a crush on someone at work, but they’re taken, so what’s the point? Why tell them? Just to make things awkward? No thanks. I’m tired of it all. Sometimes at night, when I cook dinner alone in my mediocre apartment, I press the release valve on my InstaPot and watch the steam burst out. Fast at first. A steady hiss. Then slower and slower, until it’s just a few wisps of air. I feel like that steam is my capacity for love. I used to have a big burst of love to give. Now there are a few wisps. Soon there will be nothing. What then?”\n<br><br>\n“I’m colorful like a peacock, you can’t bear it \/\/ I’m original, you copy me like a parrot!” raps Lyndon Plonkenton, a 45-year-old ornithologist, in the second verse. “Flamingos are the best, and that is not a thesis \/ Quack quack! Like a duck, I got a corkscrew penis!” The chorus then plays, which is “Stay Fly, Ornithologists” repeated eight times in Autotune.\n<br><br>\n“My verse is inspired by the stony silence of my house,” Lyndon told the goodrTIMES. “My wife Millicent and I are empty-nesters (HA HA, bird reference!) With our son Cleveland in college in Cleveland (HA HA, coincidence!), we find ourselves with oodles of free time. I don’t know what to do with it. I used to want to be great. I fantasized about becoming a superstar ornithologist, interviewed by the press (HA HA, the real press, not you!), and adored by millions. But the truth is I’m not great. I’m a medium talent. My growth was to grow from a small talent to a medium talent. Medium talents can’t be great talents. It’s like trying to dress a cassowary in an evening gown – it won’t fit, and trying to make it fit will get you hurt. I’m ready to settle. Yesterday I opened my curtains for the first time in ages. I saw a tree with craggy drooping skeleton branches and crispy cold rat-brown leaves the shape of teardrops. It occurred to me that I am that sad tree. For I am in the autumn of life. Soon to be in the winter. Hopefully my regrets fall away like those leaves.”\n<br><br>\nAs of this writing this, Bessie and Lyndon’s “Stay Fly, Ornithologists” music video has 7,233 views on YouTube. “That’s appropriate,” said Nessie wryly, as she adjusted her stylish orange polarized Stay Fly, Ornithologists goodr PHG sunglasses. “We’re not really that good. We wish we were, but we’re not. Remember to smash that subscribe button!\n<\/p>",
+            "show_article_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "d09bb762-9a88-41f8-bfa0-7cbac2d1cf9a": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ornithologists_1600_1067_bleed.jpg"
+          }
+        },
+        "0093aaa0-46d2-49fd-af0f-7282caf399b5": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "fc165f98-840f-406d-aa23-8a0b6a40227e": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE TO EARN YOUR PHG",
+            "content": "<p>LOOKING SCHOLARLY ALREADY!!!<\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "abc7fdd1-dc8f-4166-a3c3-3b00ba1a2478",
+        "e364b7ff-e8bd-411d-91b9-1bfa95cf5828",
+        "d09bb762-9a88-41f8-bfa0-7cbac2d1cf9a",
+        "0093aaa0-46d2-49fd-af0f-7282caf399b5",
+        "fc165f98-840f-406d-aa23-8a0b6a40227e"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

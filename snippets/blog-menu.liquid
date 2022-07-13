@@ -1,0 +1,221 @@
+<div class='container goodertimes-blogs'>
+	<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12"><h1 class="blog-title"><a href="https://goodr.com/blogs/goodrtimes"><img alt="goodrTIMES" width="200" src="{{ 'Goodr-Times-Logo-13.png' | file_img_url: 'master' }}" /></a></h1></div>
+	</div>
+  {% if linklists.goodr-times-menu.links != blank %}
+  	<ul class="nav-goodertimes mobile-hide">
+		{% for childlink in linklists.goodr-times-menu.links %}
+            <li class="nav-item">
+                <a class="nav-link--child" href="{{ childlink.url }}">
+                	{{ childlink.title }}
+                  {% if childlink.links != blank %}
+                  	<span class="sub-nav__toggle"></span>
+                  {% endif %}
+				</a>
+				{% if childlink.links != blank %}
+                  	<ul class="menu-child">
+                    	{% for grandchildlink in childlink.links %}
+                      		<li>
+                        		<a class="nav-link--grandchild" href="{{ grandchildlink.url }}">
+                        			{{ grandchildlink.title }}
+                        		</a>
+                      		</li>
+                    	{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+		{% endfor %}
+    </ul>
+	<nav role="navigation" class="goodertimes-navigation" style="display:none;">
+    	<ul class="nav-mobile">
+			{% for childlink in linklists.goodr-times-menu.links %}
+            	<li>
+                	<a class="nav-link--child" href="{{ childlink.url }}">
+                    	{{ childlink.title }}
+                  	</a>
+                  	{% if childlink.links != blank %}
+                  		<span class="js-subnav-toggle sub-nav__toggle" data-target="menu-{{ childlink.handle }}">Open subnav</span>
+                  		<ul id="menu-{{ childlink.handle }}">
+                    		{% for grandchildlink in childlink.links %}
+                      			<li>
+                        			<a class="nav-link--grandchild" href="{{ grandchildlink.url }}">
+                          				{{ grandchildlink.title }}
+                        			</a>
+                      			</li>
+                    		{% endfor %}
+                  		</ul>
+                  	{% endif %}
+                </li>
+			{% endfor %}
+    	</ul>
+	</nav>
+  {% endif %}
+</div>
+
+<style>
+.goodertimes-blogs a {
+  	text-decoration: none;
+  	color: #10435e;
+}
+.blog-title {
+    color: #10435e;
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+    text-transform: uppercase;
+    text-align: center;
+  	margin: 20px 0px;
+  	font-size: 38px;
+}
+.goodertimes-navigation .nav-mobile li {
+    position: relative;
+    border-bottom: 1px solid #161d25;
+}
+.goodertimes-navigation .nav-mobile ul {
+    display: none;
+    border: 0;
+  	margin-bottom: 10px;
+}
+.goodertimes-navigation .nav-mobile ul li {
+    border: 0;
+}
+.goodertimes-navigation .nav-link--child {
+    padding: 0.75rem 0;
+	margin: 0;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: "futura-pt-bold","futura",sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	position: relative;
+}  
+.nav-goodertimes {
+    border: 1px solid #10435e;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    width: 100%;
+}
+.nav-goodertimes .nav-item {
+    width: 100%;
+  	position: relative;
+}
+.nav-goodertimes ul {
+    border: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: left;
+    background: #ffffff;
+    padding: 10px 0px;
+  	border-top: 1px solid #10435e;
+  	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+  	display: none;
+  	z-index: 2;
+}
+.nav-goodertimes .nav-item .nav-link--child {
+    padding: 0;
+    font-size: 18px;
+  	line-height: 24px;
+  	padding: 10px 0px;
+}
+.nav-goodertimes .nav-item .sub-nav__toggle {
+    height: 24px;
+    width: 20px;
+  	position: relative;
+  	display: inline-block;
+}
+.nav-goodertimes .nav-item .sub-nav__toggle:after {
+    height: 24px;
+    width: 20px;
+  	position: relative;
+  	display: inline-block;
+  	line-height: 24px;
+}
+.nav-goodertimes .nav-link--grandchild {
+    padding: 0.30rem 0.9375rem;
+  	margin-left: 0;
+	text-decoration: none;
+	font-size: 0.875rem;
+	font-family: "brandon-grotesque",sans-serif;
+	display: block;
+	position: relative;
+  	line-height: 18px;
+}
+.nav-goodertimes .nav-item .nav-link--child:hover .sub-nav__toggle:after {
+    color: #4ec0b2;
+}
+.nav-goodertimes .nav-item:hover .menu-child {
+    display: block;
+}
+.nav-goodertimes .nav-link--grandchild span {
+    font-weight: bold;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    display: block;
+  	padding-top: 15px;
+}
+.nav-goodertimes ul.menu-child li:first-child .nav-link--grandchild span {
+    padding-top: 0px;
+}
+.nav-goodertimes .nav-link--grandchild:hover span {
+    color: #10435e;
+}
+.nav-goodertimes .nav-link--grandchild[href="#"] {
+    pointer-events: none;
+    cursor: default;
+  	padding-top: 0px;
+  	padding-bottom: 0px;
+}
+  
+.goodertimes-navigation .nav-mobile .nav-link--grandchild[href="#"] {
+    pointer-events: none;
+    cursor: default;
+  	padding: 0px;
+}
+.goodertimes-navigation .nav-mobile ul li:first-child .nav-link--grandchild span {
+    padding-top: 0px;
+}
+.goodertimes-navigation .nav-mobile .nav-link--grandchild:hover span {
+    color: #10435e;
+}
+.goodertimes-navigation .nav-mobile .nav-link--grandchild span {
+    font-weight: bold;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    display: block;
+  	padding-top: 15px;
+}
+.goodertimes-navigation .nav-mobile .nav-link--grandchild {
+    padding: 0.30rem 0;
+  	line-height: 18px;
+}
+  
+  
+@media only screen and (max-width: 991px){
+ 	.nav-goodertimes .nav-item .nav-link--child {
+    	font-size: 16px;
+    }
+  	.nav-goodertimes .nav-item .sub-nav__toggle:after {
+  		line-height: 21px;
+	}
+  	.nav-goodertimes .nav-link--grandchild {
+		font-size: 15px;
+  		line-height: 17px;
+	}
+}
+  
+@media only screen and (max-width: 767px){
+ 	.goodertimes-navigation {
+     	display: block !important;
+      	margin-bottom: 30px;
+    }
+  	.mobile-hide {
+     	display: none !important; 
+    }
+  	.blog-title {
+    	font-size: 32px;
+	}
+}
+</style>

@@ -1,0 +1,16 @@
+<script>
+  //Prep Data  
+  var apiJSON = JSON.stringify({    
+    "contentid": "blog{{ blog.id }}",
+    "contentname": location.pathname,
+    "contenttitle": "{{ blog.title }}",
+    "contenturl": "{{ blog.url }}",
+    "contentcategory": "{% if blog.tags.size > 0 %}{{ blog.tags | join: "|" }}{% endif %}",  
+    "sessionid": getPersonifyCookie("PERSONIFY"),
+    "shopperid": getPersonifyShopperId(),
+	"referrer": personify_referrer
+  });
+    
+  //Call API
+  callAPI(apiJSON, "viewcontent", false, null);
+</script>

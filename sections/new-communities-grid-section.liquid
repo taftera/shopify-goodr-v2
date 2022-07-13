@@ -1,0 +1,138 @@
+<section id="section-{{ section.id }}" class="communities-grid-section">
+  	<div class="container">
+		<div class="row">
+          	<div class="col-xs-12 col-md-12">
+              	{%- if section.settings.title != blank -%}
+              	<h2 class="h3 section__heading text-align--center"><span>{{ section.settings.title }}</span></h2>
+              	{%- endif -%}
+              	<div class="communities-box-container">
+					<div class="row middle-xs">
+						{%- for block in section.blocks -%}
+							{%- if block.settings.icon != blank -%}
+                      		<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="icon-box">
+									{%- if block.settings.icon_url != blank -%}<a href="{{ block.settings.icon_url }}" {% if template.name == "index" %} onclick="gtag('event', 'Click', { 'event_category': 'Home', 'event_label':'{{ block.settings.icon_url }}', 'event_action':'Communities' });" {% endif %}>{%- endif -%}
+										<div class="icon_image{% if block.settings.image != blank %} hover-effect lazy{% endif %}" {% if block.settings.image != blank %} data-src="{{ block.settings.image | img_url: 'master' }}" {% endif %}>
+                                  			<img
+            									src="{{ block.settings.icon | img_url: 'master' }}"
+            									alt="{{ block.settings.icon.alt | escape }}"
+          									>
+                                  		</div>
+                                  	{%- if block.settings.icon_url != blank -%}</a>{%- endif -%}
+								</div>
+                      		</div>
+							{%- endif -%}
+						{%- endfor -%}
+					</div>
+				</div>
+          	</div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+  {
+    "name": "New Communities Grid",
+	"class": "new-communities-grid-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+	],
+	"blocks": [
+      {
+        "type": "communities_item",
+        "name": "Communities Item",
+        "settings": [
+		  {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+		  {
+            "type": "url",
+            "id": "icon_url",
+            "label": "Icon Url"
+          },
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Lifestyle images"
+          }
+        ]
+      }
+	],
+    "presets": [
+      {
+        "name": "New Communities Grid"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.communities-grid-section {
+    padding: 40px 0px;
+}
+.communities-box-container .row {
+    justify-content: center;
+}
+.communities-box-container .icon-box {
+    text-align: center;
+    margin: 15px 0px;
+    -webkit-perspective: 1000;
+	background: transparent;
+}
+.communities-box-container {
+    text-align: center;
+    padding-top: 30px;
+}
+.communities-box-container .icon-box a {
+    display: grid;
+}
+
+.communities-box-container .icon-box .icon_image {
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.communities-box-container .icon-box .icon_image.hover-effect {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  	-webkit-transition: all .5s ease;
+  	-moz-transition: all .5s ease;
+  	-o-transition: all .5s ease;
+  	transition: all .5s ease;
+}
+.communities-box-container .icon-box .icon_image.hover-effect img {
+    opacity: 1;
+  	-webkit-transition: all .5s ease;
+  	-moz-transition: all .5s ease;
+  	-o-transition: all .5s ease;
+  	transition: all .5s ease;
+} 
+.communities-box-container .icon-box .icon_image.hover-effect:hover img {
+    opacity: 0;
+}
+
+
+  
+  
+@media screen and (max-width: 767px){
+.communities-grid-section {
+    padding: 30px 0px;
+}
+.communities-box-container {
+    padding-top: 20px;
+}
+.communities-box-container .icon-box .icon_image.hover-effect {
+    background-image: none !important;
+}
+.communities-box-container .icon-box .icon_image.hover-effect:hover img {
+    opacity: 1;
+}
+}
+</style>

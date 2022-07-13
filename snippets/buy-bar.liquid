@@ -1,0 +1,18 @@
+
+<div class="buy-bar container-fluid" data-buy-bar>
+    <div class="row middle-xs">
+      <div class="hide--small col-sm-6">
+        <p>
+          {{ product.title }}
+        </p>
+      </div>
+      <div class="col-xs-3">
+        <span data-product-price class="buy-bar__price">
+          {{ product.selected_or_first_available_variant.price | money }}
+        </span>
+      </div>
+      <div class="col-xs-9 col-sm-3 text-align--right">
+        <a class="js-quick-buy button button--full" data-product-id="{{ product.variants[0].id }}" data-product-quantity="{{ product.variants[0].inventory_quantity }}">{{ 'products.product.add_to_cart' | t }}</a>
+      </div>
+    </div>
+</div>

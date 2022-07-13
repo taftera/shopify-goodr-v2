@@ -1,0 +1,97 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "a59c13c5-3bd3-46c9-aca5-662beef97a7d": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "WORK GOODR",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Carl_s_Single_Ready_to_Flamingle-_OG-CRL2018-TL1_Lifestyle_33_copy.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "23da9b5d-3b82-4411-bdf4-d3a3bde39f29": {
+          "type": "intro",
+          "settings": {
+            "title": "ABOUT US",
+            "text": "",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "83aa372e-fa60-4fa9-8eb2-19353265717f": {
+          "type": "text",
+          "settings": {
+            "title": "per our mission statement",
+            "text": "<p>We are recklessly committed to fun. Blah blah blah Sunglasses. \n<br><br>\nWe believe that running is fun and your gear should be too. We love dogs in the office, but more importantly we like doing cool shit. We believe done is better than perfect, the only way to get better is to fail, and most of all, having fucking fun!\n<br><br>\nAt our core we are a young, fun and irreverent brand and we love to push the limits. You want in?<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "919a0ece-2c40-4109-a5df-fdf3440f8fd7": {
+          "type": "bleed_image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_0289_edit_1.jpg"
+          }
+        },
+        "9c0fa0ae-0465-44f5-8351-1a8e7e313bf6": {
+          "type": "heading",
+          "settings": {
+            "title": "OH, AND WE WERE NAMED ONE OF INC'S BEST PLACES TO WORK!",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/IMG_3409_edit_1_66569585-f586-4289-baf2-52f9431c2122.jpg",
+            "align_text": "center"
+          }
+        },
+        "1258bccf-c743-4cd2-933b-3d2b3a818979": {
+          "type": "awards_press_block",
+          "settings": {
+            "show_awards_1": true,
+            "awards_icon_1": "shopify:\/\/shop_images\/pfdcb1f96543744b1e8737e4383443f3dbincbwp2019standardlogo-1646862025208.jpg",
+            "awards_text_1": "",
+            "awards_url_1": "",
+            "show_awards_2": true,
+            "awards_icon_2": "shopify:\/\/shop_images\/companybadge-1646862131322.jpg",
+            "awards_text_2": "",
+            "awards_url_2": "",
+            "show_awards_3": true,
+            "awards_icon_3": "shopify:\/\/shop_images\/whc_enterprise_logo_20211636147004415-1646862025212.jpg",
+            "awards_text_3": "",
+            "awards_url_3": "",
+            "show_awards_4": false,
+            "awards_text_4": "Awards Text",
+            "awards_url_4": ""
+          }
+        },
+        "1d47e56a-42a5-4829-bb99-c3ebdf61bf36": {
+          "type": "html",
+          "settings": {
+            "code": "<!-- \n<div class=\"hire-jobs\"><\/div>\n<script id=\"hire-embed-loader\" async defer src=\"https:\/\/hire.withgoogle.com\/s\/embed\/hire-jobs.js?company=goodrcom\"><\/script>\n-->\n\n<div id=\"grnhse_app\"><\/div>\n<script src=\"https:\/\/boards.greenhouse.io\/embed\/job_board\/js?for=goodr\"><\/script>",
+            "width": "75%"
+          }
+        }
+      },
+      "block_order": [
+        "a59c13c5-3bd3-46c9-aca5-662beef97a7d",
+        "23da9b5d-3b82-4411-bdf4-d3a3bde39f29",
+        "83aa372e-fa60-4fa9-8eb2-19353265717f",
+        "919a0ece-2c40-4109-a5df-fdf3440f8fd7",
+        "9c0fa0ae-0465-44f5-8351-1a8e7e313bf6",
+        "1258bccf-c743-4cd2-933b-3d2b3a818979",
+        "1d47e56a-42a5-4829-bb99-c3ebdf61bf36"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

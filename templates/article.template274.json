@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "09006669-28ef-4b41-98e4-31f4970e3e09": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "LET'S MAKE POUR CHOICES ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Square_Lifestyle_24b4ef53-691d-4184-9c61-641cea747097.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "c0716263-420f-482a-9669-38935eb8d677": {
+          "type": "text",
+          "settings": {
+            "title": "CARL’S FAILED ATTEMPT AT AN ADVICE COLUMN",
+            "text": "<p>Dear Carl,\n<br><\/p><p>\nI have been involved in a relationship with the same man for over a decade. We’ll call him “Biff.” He promised me that on our 10th anniversary he would propose marriage. Carl, our anniversary has come and gone with no proposal. If I am being totally honest he has never been much of a romantic. Usually for Christmas he gives me something like a tub of about-to-expire shortening he found in the back of his mother’s pantry. One year he gave me a case of dead stock replacement mop heads. I am starting to become weary that he has no intention of marrying me at all. I do all of his laundry and prepare his meals for the week, but am not allowed to know where he lives.  \n\nI have grown increasingly suspicious that something is going on between him and his secretary, “Tammy.” He often takes care of her cat, Kisses, when she travels out of the country for her plastic surgery tourism addiction. Carl, did you even know that one can get a breast augmentation punch card?!  Here I thought those were only for things like free coffee and hoagies!!! He makes me duck down in the passenger seat to hide while we’re parked in her driveway.  Even when the temperature is below zero outside, he refuses to leave the engine running to let me have a little heat. I guess it’s OK. It’s only for a few minutes. He says he doesn’t want me to die of carbon monoxide poisoning. He’s really so thoughtful.\n<br><\/p><p>\nThis Christmas Eve Biff left me home alone while he took Tammy out for a “working dinner” at the most expensive steakhouse in town. He gave her a set of diamond stud earrings and a trip for two to Maui for the two of them to go on a “business retreat.” He assures me that their relationship is strictly professional. \n<br><\/p><p>\nCarl, Biff is such a selfless, loving, and caring man. He even lets me have his side of coleslaw when we go out for BBQ, because he knows how much I love mayonnaise. I don’t think it matters that he is allergic to cabbage. It’s the thought that counts. How can I convince him that I am his soulmate? I really want to start the New Year on a high note.\n<br><\/p><p>\n <em> Sincerely,\nHopeful in Oshkonogin <\/em> \n<br><\/p><p>\n<br><\/p><p>\nDear Hopeless in Oshkonogin: Dump his ungrateful, cheating ass. Sounds like you’ve been making some poor choices. Let’s focus on making pour choices this year instead. Will someone get this woman a drink?! NOT BIFF. If you really want to stick it to him, cut the crotch out of all of his pants and scatter them on Tammy’s lawn.\n<br><\/p><p>\nUnfortunately the Oshkonogin Daily Argus editor was NOT pleased with Carl the Flamingo’s blunt advice. What can we say? Some people just can’t handle the cold hard truth. Carl didn’t let the rejection phase him though. He stopped over at The Screaming Dill, Oshkonogin’s beloved local dive bar, where he dreamed up these booze-printed Let’s Make Pour Choices sunnies over a Moscow Mule. \n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "91b8a849-e98b-485a-b761-f6c8271c655b": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "WANT TO READ MORE IN 2022?",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/suck-on-this-origin-story",
+            "article2": "goodrtimes\/what-budget-origin-story",
+            "article3": "goodrtimes\/dont-tab-shame-me-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "09006669-28ef-4b41-98e4-31f4970e3e09",
+        "c0716263-420f-482a-9669-38935eb8d677",
+        "91b8a849-e98b-485a-b761-f6c8271c655b"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

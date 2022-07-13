@@ -1,0 +1,12 @@
+  <script>
+  //Prep Data  
+  var apiJSON = JSON.stringify({   
+    "categorycode": "{{ collection.title }}",
+    "sessionid": getPersonifyCookie("PERSONIFY"),
+    "shopperid": getPersonifyShopperId(),
+	"referrer": personify_referrer
+  });
+  
+  //Call API
+  callAPI(apiJSON, "viewcategory", false, null);
+</script>

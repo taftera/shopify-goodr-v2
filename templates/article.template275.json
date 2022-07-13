@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "c4f134e7-5a8e-4268-951d-0d218bd6b8c1": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "WHAT BUDGET? ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Square_Lifestyle.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "7ec93ada-9455-4fd6-8242-a4f5ff68d397": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Carl_s_Monthly_Budget_v1.png"
+          }
+        },
+        "6b664951-9f54-488b-8bd6-1aeac224e03f": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Everybody wants to make a fresh start on the new year. And everybody fails. Let’s face it, you’re never going to be a different person. You’ll always be you. You can’t change your habits cold turkey! Not even Carl the Flamingo’s idiot cousin Teddy the Turkey can do that, and he’s literally a cold turkey. Because Carl hacked into his AC and made his apartment refrigerator-cold in the middle of the night to prank him. But we digress.\n<br><\/p><p>\nYou can’t eliminate your shortcomings. All you can do is contain them. So we say, embrace your indulgences! Blow your budget on whatever gives you joy! NOW!!! That’s what life is all about, dummy! You can’t spend money when you’re dead! (In Heaven, everything’s free. In Hell, you pay with blood. And in Purgatory, the stores are empty.)\n<br><\/p><p>\nWe created What Budget? sunglasses to celebrate throwing financial caution to the wind -- or better yet, in the wood chipper. In celebration of their release (which is part of our 2022 Anti-Resolution line), we’re sharing goodr CEO Carl the Flamingo’s monthly budget for inspo. Whenever you consider a purchase, ask yourself, “What Would Carl Do?”\n<br><\/p><p>\nCARL THE FLAMINGO’S MONTHLY BUDGET\n<br><\/p><p>\n13.76% -- Piña coladas <br>\n13.76% -- Shrimp<br>\n13.76% -- Mansion & nest mortgages<br>\n9.17% -- Yacht maintenance<br>\n9.17% -- Random bullshit<br>\n7.34% -- Lipo, botox & feather transplants<br>\n6.42% -- Squid Games<br>\n4.59% -- Immortality elixir<br>\n4.59% -- Robot servants<br>\n4.59% -- Space vacations<br>\n4.59% -- Dinners with Satan<br>\n2.75% -- Condoms<br>\n2.75% -- Bribes<br>\n2.75% -- Gold pills that make pee sparkle<br>\n<\/p>",
+            "show_article_content": false,
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "82717d3b-b013-4dd7-a833-163674432943": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "WANT TO READ MORE IN 2022?",
+            "content": "<p><\/p>",
+            "article1": "origin-story\/suck-on-this-origin-story",
+            "article2": "origin-story\/lets-make-pour-choices-origin-story",
+            "article3": "goodrtimes\/citron-alt-delete-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "c4f134e7-5a8e-4268-951d-0d218bd6b8c1",
+        "7ec93ada-9455-4fd6-8242-a4f5ff68d397",
+        "6b664951-9f54-488b-8bd6-1aeac224e03f",
+        "82717d3b-b013-4dd7-a833-163674432943"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

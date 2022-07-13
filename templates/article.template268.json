@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "370807bf-f00d-45db-bc0c-caa99d41ad0b": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "Golden Shades Winner",
+            "text": "An Exclusive Interview with Jeff from OKC",
+            "image": "shopify:\/\/shop_images\/goodr_Golden_Shades_Grandpa_Dan_011.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "7a630cd9-d0ca-4420-a6c9-95b0f1351825": {
+          "type": "text",
+          "settings": {
+            "title": "GRANDPA DAN SAT DOWN WITH THE GOLDEN SHADES WINNER",
+            "text": "<p>\n<\/p><p><b>Grandpa Dan:<\/b> Can you take us through the moment you opened up your package to find the Golden goodrs inside? What was going through your mind?<\/p>\n<p><b>Jeff from OKC:<\/b> Let me start with a bit of a back story.  My wife (Sarah) is an avid marathoner.  She was told about the goodr brand back in the summer time by her best friend Kacie Price.  Kacie is an athlete...  Her sport is Tennis.  Raves about the goodr glasses, etc.  Sarah decides she needs a pair, especially while doing her long runs.  She gets a pair, loves them decides she needs to get her step dad a pair for Fathers Day.  She gives the glasses to Jim, he loves them...  However, the next day he brings them back to me and says...  I love these but I can't keep them... I really need prescriptions in my sun glasses.  So, I lucked into my first pair of goodrs.  So...  How did I come to win the Golden Ticket?\n<\/p>\nI wore my original pair of goodr glasses everyday...  Early Oct. I was outside playing football with my sons.  Nolan, my oldest, threw the ball, hit my glasses and broke em.  I was like...  Damn.  No choice but to order another pair.  Get online, buy new pair.  I bought them either on the 15th or the 16th of October.  Fast forward a few days.  I'm leaving for Scottsdale to go play golf with my buddies to celebrate my upcoming 40th birthday.  I'm thinking to myself...  I sure hope my goodrs show up before I leave.  I have an early flight out on the 26th.  Go to the mailbox late afternoon on the 25th hoping my shipment had arrived.  Open up the mailbox...  YES!!  Glasses had arrived.  I was pumped!\nI go in the house to open my box up.  Here's where it gets fun.  Open it up to find 2 goodr boxes and a little \"Golden Ticket\"...  I'm thinking to myself did I win something??  \n\nGo back to the order on either the 15th or 16th.  Kid you not, full truth.  I had no idea the sweepstakes was going on.  NO IDEA.\n\nSo...  I read the ticket and I'm in shock.  365 pairs of goodr glasses.  Holy cow!  Then I open up both boxes and find the GOLDEN goodrs!!  I just started smiling immediately. \nI go find Sarah and said something like \"babe...  I pretty sure I just won the goodr sweepstakes.  She reads it...  Pretty sure she made a Willy Wonka reference \"I've got a golden ticket\".  We both had a heck of a laugh.  Then I got online and emailed Grandpa Dan to let him know the Golden goodrs had found a new home!  Got an email back from Grandpa Dan confirming I was the lucky winner!  Let's just say my birthday week was pretty special!",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "a2d1e36c-3131-4d1e-b0c5-ebb3583f18eb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image1.jpg",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "a35e9162-4329-4f3f-a1e5-458b4c274032": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p><b>Grandpa Dan:<\/b> How do the Golden Shades themselves compare to your expectations?<\/p>\n<p> <b>Jeff from OKC:<\/b> Golden Shades beat any and every expectation!  Let's just say they are housed in a very safe spot!\n<\/p><p> <b>Grandpa Dan:<\/b> What sort of special occasions will you wear the Golden Shades for?\n<\/p><p><b> Jeff from OKC:<\/b> The Golden Shades will be making appearances at special events and some special destinations along this journey!  We will be sure to share all of them with the Goodr team via social!  \n<\/p><p> <b>Grandpa Dan: <\/b>What do you plan on doing with your 365 pairs of goodrs?\n<\/p><p><b> Jeff from OKC:<\/b> Well...  1000% I'm going to be sharing my winnings with Family, friends, and some strangers along the way!  We have to share this win with everyone possible.  We love the goodr brand!  Let's go...  No doubt we will find many during this journey that will become goodr loyalists!  Gonna be fun.\n<\/p><p> <b>Grandpa Dan:<\/b> Have you experienced an uptick in fame and exposure since winning the contest?\n<\/p><p> <b>Jeff from OKC: <\/b>Exposure and Fame at an all time high.  Let's just say my instagram has been pretty active! \n<\/p><p><b> Grandpa Dan:<\/b> What’s the first word that comes to mind when you think about the Golden Shades?\n<\/p><p> <b>Jeff from OKC: <\/b>WINNING!<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "5296e329-0f55-4ea1-80af-18377b89a194": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image0_3.jpg",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "8b7b3cc5-4900-4d51-9a68-baddfcd8fd02": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Golden_Shades_Grandpa_Dan_006.jpg"
+          }
+        },
+        "3bb694d1-47d9-4ee2-8caf-6f2efa6d51f0": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "INJECT MORE GOODRTIMES STRAIGHT INTO MY VEINS",
+            "content": "",
+            "article1": "goodrtimes\/is-santa-real-origin-story",
+            "article2": "goodrtimes\/beast-goodr-dream-team",
+            "article3": "goodrtimes\/lost-in-transition-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "370807bf-f00d-45db-bc0c-caa99d41ad0b",
+        "7a630cd9-d0ca-4420-a6c9-95b0f1351825",
+        "a2d1e36c-3131-4d1e-b0c5-ebb3583f18eb",
+        "a35e9162-4329-4f3f-a1e5-458b4c274032",
+        "5296e329-0f55-4ea1-80af-18377b89a194",
+        "8b7b3cc5-4900-4d51-9a68-baddfcd8fd02",
+        "3bb694d1-47d9-4ee2-8caf-6f2efa6d51f0"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

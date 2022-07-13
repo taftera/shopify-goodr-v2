@@ -1,0 +1,257 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+{% assign collectionMobileBanner = collection.metafields.global.header_mobile_image %}
+{% assign collectionHeaderHorizontalAlign = collection.metafields.global.header_horizontal_align | downcase | remove:" " %}
+{% assign collectionHeaderVerticalAlign = collection.metafields.global.header_vertical_align | downcase | remove:" " %}
+{% assign collectionHeaderContentWidth = collection.metafields.global.header_content_width | downcase | remove:" " %}
+{% assign collectionHeaderGradientWidth = collection.metafields.global.header_gradient_width | downcase | remove:" " %}
+{% assign collectionMobileDescText = collection.metafields.global.mobile_description_text %}
+{% assign collectionMobileHeaderHorizontalAlign = collection.metafields.global.mobile_header_horizontal_align | downcase | remove:" " %}
+{% assign collectionMobileHeaderVerticalAlign = collection.metafields.global.mobile_header_vertical_align | downcase | remove:" " %}
+
+
+<header role="banner" class="hero-banner new-header horizontal-align--{{ collectionHeaderHorizontalAlign }} mobile-horizontal-align--{{ collectionMobileHeaderHorizontalAlign }} vertical-align--{{ collectionHeaderVerticalAlign }} mobile-vertical-align--{{ collectionMobileHeaderVerticalAlign }}">
+  	<img class="desktop-img" src="{{ collectionBanner }}" alt="Desktop Header Img" />
+  	<img class="mobile-img"  src="{{ collectionMobileBanner }}" alt="Mobile Header Img" />
+  	<div class="banner-content" style="max-width: {{ collectionHeaderContentWidth }};">
+    	<h1 class="h1 collection__title">{{ collection.title }}</h1>
+    	<div class="content">
+			<p class="text-color--white collection__description collection__description_desktop">{{ collection.description }}</p>
+          	<p class="text-color--white collection__description collection__description_mobile">{% if collectionMobileDescText != blank %} {{ collectionMobileDescText }} {% else %} {{ collection.description }} {% endif %}</p>
+		</div>
+	</div>
+  	<div class="new-header-overlay" style="max-width: {{ collectionHeaderGradientWidth }};"></div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% comment %}
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>The Popular Crowd of running sunglasses is just like the popular crowd from high school… highly desirable and admired by many (except this crowd isn’t insufferable, and they won’t leave you doubting your self-confidence at any waking moment).</p>
+					<p>These exclusive shades with polycarbonate lenses rank amongst our most favored by runners, and who says you shouldn’t follow the masses and choose what everyone else likes? Screw individuality!</p>
+					<p>Our elite crew of the best running sunglasses also screams “fun.” Have you ever heard a name that’s more fun than <a href="https://goodr.com/products/carls-single-and-ready-to-flamingle?nosto=categorypage-nosto-1-fallback-nosto-1"><b>CARL'S SINGLE AND READY TO FLAMINGLE</b></a>? Obviously not. There are flamingos on them for crying out loud.</p>
+					<p>Oh, and they have polarized lenses and block out the UV rays decently well too… which I guess is also worth mentioning. In the words of Regina George herself, “Get in loser. We’re going shopping for running sunglasses.” ...or something like that.</p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endcomment %}
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+    {% if type == "The OGs" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>OG is a slang term for someone who's incredibly exceptional, authentic, or "old-school." It can be earnestly used for a legend like Michael Jordan or more ironically, like for that friend who can unwrap a Starburst with their mouth. (As first read on Dictionary.com, and confirmed by goodr.)</p>
+						<p>We’re not saying that our running sunglasses will turn you into Michael Jordan, but if you’re aspiring to be that friend who can unwrap a starburst with their mouth (while running perhaps?) we’ve got you covered. Okay, maybe don’t try that. That sounds dangerous. What you should try though, is wearing our OG running sunglasses on your next running adventure.. Our signature line of shades keep the sun out of your eyes, stay in place while you run, and ultimately make you look like an original gangster. And who doesn’t want to be the running trails OG?! From Bad and Bamboozy to Dark Night Clubbin, our non-reflective technology, and polarized lenses for UV protection, are the perfect trail run accessory. Or taco run accessory. You decide. After all, you’re the OG runner.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if type == "Circle Gs" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>You may not immediately think of hipsters as avid runners, but the rise of the Circle G is here to challenge that stereotype. These circle lens, polarized running sunglasses are here to convert Vampire Weekend enthusiasts into Boston qualifiers. They are known to turn oat milk latte lovers into five minute milers. On the rare occasion, the Circle Gs can even transform record-spinning, beanie wearing, plaid-shirt loving folks into Sunday morning long-runners. Ain’t that some shit. Skeptical? Grab a pair of these $25 round-framed running sunglasses and prepare to be transformed. You can still wear your beanie on your long run, though we do caution it can cause overheating in the summer. Whether you take to the roads or prefer trail running, you’ll be covered with UV protection, no slip, no bounce, and all polarized lenses. Embrace change!</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if type == "MACH Gs" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>Run (or fly) away at mach speed with goodr MACH G sunglasses. These polarized, aviator style lenses stay put while trail running or running at new speeds - or not, nobody cares how fast you are going. This may be our take on the iconic Top Gun flick, but these MACH G aviators soar to new heights (on the trails or in life) on their own, making them the best running sunglasses in the game. No slip, no bounce, and hell no to face indents from those old school, plastic, cheap-o nose pads we all saw Maverick begrudgingly rockin' with shame. The MACH G sunglasses were designed to optimize your performance while running, blocking out the UV rays to protect your squints, but in all seriousness, they look fly as hell no matter what you are doing. So if you would rather lounge back as dash-two in the cockpit of your private jet, sipping Dom Perignon with your pinky up, you do you. But make sure to invite us...after all, these are our MACH G sunglasses and YOU are wearing them, so you kind of owe us. You can thank us for all the compliments you are sure to get later.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if type == "The Runways" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>It should go without saying that the Runways are among the top choices for best running sunglasses. Don’t make us say why. Alright, we’ll do it...they’ve got the word RUN right there in the title. How did you miss that? We really put it on a silver platter for you. The Runways are where fashion meets performance..because it’s not enough to merely PR your next race. You need to have a perfectly Instagrammable picture to accompany that accomplishment. These polarized Catwalk-styled sunglasses come in all sorts of different colored frame and lens combinations. So whether pink, black, tortoiseshell, or polka dot is your jam, we’ve got you covered. And for those days where you have a truly awful run, at least you’ll still look good and can fake it til you make it across the finish line, metaphorically or literally speaking. Grab yours today for just $35. Scholars have claimed these to be the best running sunglasses in the game, guaranteed to make you feel fit and fabulous immediately after purchase.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if type == "The VRGs" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>If you’re like a lot of stubborn, gear-obsessed runners we know, you’ve probably procrastinated actually going out for your run by researching the various technology of assorted running items, including running sunglasses, and reading every damn review you can get your non-sweaty hands on. You could spend time researching polarized lenses, nose pads, UV protection, polycarbonate lenses among other boring, non-sexy topics. But ultimately we know you wanna look cool af in your race pics and not like the other normies who are wearing goodr OGs (no shade to the OG fans though, but just saying your favorite flavor of ice cream is probably vanilla.)</p>
+						<p>This is where goodr’s VRGs step in. You could look like you’re running the 2031 edition of [INSERT NAME HERE] Marathon or [INSERT NAME HERE] trail running palooza, while everyone else is stuck in 2021. AND the VRGs have all the same features of the tried and true OGs, no-slip, no-bounce, all fun.</p>
+						<p>Now, you’re probably thinking, “But goodr overlords, I’m not cool or fashionable enough to pull off this futuristic, sleek style.’ Well, YOU”RE WRONG. You are cool enough. You made it all the way to almost the bottom of this very long page, so that’s how we know you’re cool. We know you’re a fashion icon, so be sure you’re friends know you’re America’s Next Top Model by rocking these VRGs on your next run.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if type == "BFGs" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>Are you part of the BMC….Big Melon Club?  Have ever been referred to as “Fat Head” or “Dome Piece”?  Been told your Gigantic Noggin has its own gravitational pull? Or been called Orange On A Toothpick?  One last clarifying question, just to help confirm you have a Colossal Coconut….does your bike helmet feel like a sock trying to squeeze over a soccer ball?</p>
+						<p>If you answered yes to any of these wildly technical sunglasses questions, then our BFG’s  are the perfect large sunglasses to compliment your glorious honeydew melon of a cranium.</p>
+						<p>Or, you might have also heard the age-old adage that people with big heads have big brains, big frontal lobes, big spaces between their eyes, or big…(insert an explicit body part here like toes)….actually, the correct answer is people with huge John Travolta Attics have an overwhelming need for big ass sunglasses to fit their Olive Garden sized pasta bowl of a noodle.</p>
+						<p>You don’t need to be on PED’s to fit your Think Tank into goodr’s legendary BFG large sunglasses.  The frames are sturdy enough to work on your grandeur braincase and the polarized lenses will protect your eyes…..even as the gravitational pull of your Einstein Crown brings the sun closer to your face.</p>
+						<p>But seriously, back to being called Orange On A Toothpick as a child, goodr’s  <a href="https://goodr.com/products/that-orange-crush-rush">The Orange Crush Rush </a>were obviously designed for you and will create the greatest pairing since peanut butter met jelly.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>At goodr, we believe that if you run, you’re a runner. It doesn’t matter if you run 26.2K marathons every year, crush an hour on the treadmill every morning, or jog around the block once in a while to make a funny image on Strava. You’re running, therefore you’re a runner. Congrats! Running is so much cooler than crawling. (Shots fired, babies.)</p>
+					<p>Runners need gear for peak performance. Depending on the person, essential gear includes comfortable running shoes, running clothes, compression socks, a sports watch, a drinks carrier, a heart rate monitor, a bag of frozen peas to promptly ice injuries (and then maybe eat right out of the bag, what, don’t judge), and of course, sunglasses.</p>
+					<p>However, many running sunnies are expensive, ugly and overengineered. At goodr, we make sunglasses that embrace the four F’s -- fun, fashionable, functional and ‘ffordable. (Yes, we make up words here, it’s kind of our thing. Here’s another word: Flortocka! It means “I bonked, throw me a beer.”) In fact, goodr was created specifically for runners. For the company’s origin story, let’s go all the way back to the year 2015.</p>
+					<p>One day “avid runner” Stephen Lease looked in the mirror and had an awakening: He looked like the biggest tool in the world. Lame hat, dorky shades, compression everything, giant arm sleeves, run belt with gels, and a performance diaper. (Okay, the performance diaper is a joke, but everything else is true). "What the f*** am I wearing right now?" he wondered.</p>
+					<p>After hitting rock bottom, Stephen noticed most runners weren't wearing overpriced high-performance sunglasses. They wore cheap sunnies from gas stations. There was a huge opportunity for stylish, fun, functional, affordable shades in the running space. This was the seed of goodr! (A pink, flamingo-shaped seed, watered with piña coladas.)</p>
+					<p>Stephen co-founded goodr with two friends from high school: recovering lawyer Ben Abell and biology major turned rappin' actress Keri Blunt. They created goodr’s brand: badass sunglasses that speak to the four F's. They also crafted the mission statement: We exist to give you permission to be unabashedly yourself… unless you're an a**hole. (And the mascot is a drunk kleptomaniac flamingo named Carl. It just makes sense, people.)</p>
+					<p>What makes goodrs great for runners? They have polarized lenses and frames with grip coating. They stay on your face. Whether you’re marathon training, treadmill running or sprinting away from an angry bear, these shades won’t slip or bounce. Runners need to see the world around them to avoid obstacles and find low-key places to pee, poo and vomit. The polycarbonate lenses are polarized so you can see the world with maximum beaugorgity. (That means “beautiful and gorgeous,” we’re making up words again.) And the sunglasses block UV light! In fact, the UV protection is so good that the sun hates us. The sun is evil and wants to hurt your eyes, but we won’t let it. You’re welcome.</p>
+					<p>goodr makes $25 to $35 active sunglasses for everyone. The OG frames are the most popular. Of course, runners come in all shapes and sizes, so we offer a variety of frames. BFGs (Big F***ing goodrs) fit runners with big heads. Circle Gs (teacup frames) fit hipster runners who liked running before it was cool. Runways (cat-eye frames) fit fashionista runners. Mach G (aviator frames) fit runners who feel the need...the need for speed. And finally, VRG frames fit runners who time-traveled here from a dystopian future.</p>
+					<p>We think it’s important to keep prices low, at $25-$35. Let’s face it, sunnies don’t last forever. When you use glasses actively, they get lost, stolen, snapped, scratched, immolated, blended, or exploded. It’s just part of life. Of course, we WANT your sunnies to last forever. We run meticulous quality control on every pair and include a microfibre bag for protection, plus detailed care &amp; cleaning instruction cards. But life is unpredictable. One day they might get dinged. Why spend $200 on one pair of shades? How long do those things really last? And doesn’t it get boring wearing the same pair every day?</p>
+					<p>Our CEO, Stephen, likes to say that for $25 we can put a smile on somebody’s face. Runners need to smile, because some aspects of running aren’t fun. (Like, for example, the running, HA.) goodr was created by runners who love to hate running and hate to love running, which explains RUN goodr’s mission statement: Running is fun? When you’re embracing your authentic self, you have the energy to go that extra mile. Or the wisdom to know that you need to take a break. Either way, you’ll look like straight fire in goodr’s colorful frames. The names are also colorful, like Ginger’s Soul, Flamingos on a Booze Cruise, Amelia Earhart Ghosted Me, Influencers Pay Double, and Mai Tai Me Up, Daddy!</p>
+					<p>Our sunglasses might put a smile on your face the moment you see the colorful box. (Hopefully you don’t have problems with porch pirates. We’d like to rig the boxes so they blast glitter all over porch pirates, but alas, we haven’t perfected the technology yet.) It’s a pink and teal box full of tropical flamingomical vibes. (“Flamingomical” means “flamingo-like, “we’re making up words again.) Sure, you won’t need the snazzy packaging, but your cat will love it! Cats give our shipping and packaging a 100% approval rating. According to cats, goodr makes the best running sunglasses. If you disagree, then you hate cats.</p>
+					<p>Runners have a lot to think about, like cadence, fuel, form, chafing, foot strike, lactic acid, pace, pickups, splits, strides, and the 10% rule. (That means drinking beer 10% of the time during marathons, right?) Why not take complicated sunglasses off the table? At goodr, we believe running sunglasses should be simple: fun, fashionable, functional and ‘ffordable. We love F words! (Especially one F-word that we yell every time we bonk.)</p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>

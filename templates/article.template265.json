@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "40ab795a-763c-4f46-abe9-2eaf174ce655": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "OY TO THE WORLD ORIGIN STORY",
+            "text": "A Story About Hanukkah Running Sunglasses",
+            "image": "shopify:\/\/shop_images\/Oy_To_The_World_OS_header.png",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "25ad037a-1a7b-4ef5-b928-f8d1a2a53e6f": {
+          "type": "text",
+          "settings": {
+            "title": "A GUIDE TO YIDDISH SLANG BY CARL THE FLAMINGO",
+            "text": "<p><br><strong>Chutzpah:<\/strong> extreme self-confidence or audacity.\n(It took real chutzpah for my idiot cousin, Teddy the Turkey, to ask me to write this origin story for him.)\n<br><br>\n<strong>Klutz:<\/strong> a clumsy, awkward, or foolish person.\n(Teddy the Turkey is such a f***ing klutz he tripped and got his head stuck in the toilet. Which is why he asked me to write this origin story for him.)\n<br><br>\n<strong>Kvell:<\/strong>  feel happy and proud.\n(Teddy the Turkey’s parents won’t be kvellin after I tell them he tripped and got his head stuck in the toilet.)\n<br><br>\n<strong>Mensch:<\/strong>  a person of integrity and honor.\n(“Teddy the Turkey is a real mensch,” said no one, ever. )\n<br><br>\n<strong>Meshuggeneh:<\/strong> senseless; crazy\n(You must be meshuggeneh if you believe that <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/carl-and-his-idiot-cousin-teddy\"><span style=\"font-weight: 300;\">origin story about how Teddy the Turkey<\/span><\/a> and I met. You really think he hit me in the head with a rolling pan and I grew a magic wattle, which taught me a valuable lesson? Get the f*** out of here.)<br><br>\n<strong>Nosh:<\/strong>  eat food enthusiastically or greedily.\n(Teddy the Turkey’s so stupid if he fell asleep in a sauna he’d nosh on himself.)\n<br><br>\n<strong>Oy vey:<\/strong>  An expression of woe.\n(As in: “Oy vey, I have to write this origin story!” Look, these Oy! To The World Hanukkah-themed sunglasses are dope af. But I ALREADY wrote an origin story for our Hanukkah sunnies last year <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/we-had-lights-first-origin-story\"><span style=\"font-weight: 300;\">(We Had Lights First)<\/span><\/a>. Why do I have to do it AGAIN this year?! IT’S NOT FAIR!!!! There are MUCH better things I could be doing right now. Like drinking.”.\n<br><br>\n<strong>Plotz:<\/strong>  collapse or be beside oneself with frustration or annoyance\n(I am so tired of writing this f***ing origin story I could plotz.)\n<br><br>\n<strong>Putz:<\/strong>  a stupid or worthless person; or, slang for a penis\n(Did you hear that <a href=\"https:\/\/goodr.com\/blogs\/goodrtimes\/dont-tab-shame-me-origin-story\"><span style=\"font-weight: 300;\">hopeless tabaholic<\/span><\/a> Teddy the Turkey got his head stuck in the toilet? What a putz. Speaking of putzes: did you know male turkeys don’t have penises?!?! Instead, they have cloaca, like the female turkeys! HAHAHAHAHA--wait. Male flamingos don’t have penises either. DAMNIT.)\n<br><br>\n<strong>Schlep:<\/strong>  haul or carry (something heavy or awkward)\n(Some goodr employees got Teddy the Turkey’s head out of the toilet. He’s feeling weak, so they’re schlepping him to a couch. They BETTER put towels down. Toilet water’s nasty.)\n<br><br>\n<strong>Schmuck:<\/strong>  a foolish or contemptible person; or, slang for a penis\n(Yeah, I don’t have a schmuck, but at least I’m not a schmuck.)\n<br><br>\n<strong>Spiel:<\/strong>  a long or fast speech or story, primarily intended as a means for persuasion\n(This spiel is over. Blah blah blah, buy Oy! To The World sunglasses.)\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "097e9dc0-48da-42b9-ae8e-12084eb4fea8": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": ""
+          }
+        },
+        "fa915be4-ba3f-4b0c-bc16-8f163ddce3b2": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Holiday_2021_Oy_To_The_World_dog_product_003.jpg"
+          }
+        },
+        "15160b31-1ada-41c7-a0be-d509a058bc3d": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "MORE FESTIVE READS FOR YOU FESTIVE FLAMINGOS",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/gobble-gobble-gobble-goggles-origin-story",
+            "article2": "goodrtimes\/radioactive-spectral-spectacles",
+            "article3": "goodrtimes\/beast-barbell-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "40ab795a-763c-4f46-abe9-2eaf174ce655",
+        "25ad037a-1a7b-4ef5-b928-f8d1a2a53e6f",
+        "097e9dc0-48da-42b9-ae8e-12084eb4fea8",
+        "fa915be4-ba3f-4b0c-bc16-8f163ddce3b2",
+        "15160b31-1ada-41c7-a0be-d509a058bc3d"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

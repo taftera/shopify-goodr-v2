@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "b9776aa7-4135-420c-a263-078bfcf979d6": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "IT'S OCTOPUSES, NOT OCTOPI ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/octopi_1600_400_blog_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "3ab83550-4b35-4e97-b953-2221622f411d": {
+          "type": "text",
+          "settings": {
+            "title": "8 REASONS WE’RE F***ING AWESOME By Ophelia the Octopus",
+            "text": "<p><br>Hi. This is Ophelia the Octopus. Yes, octopuses can read and write. We’re far more evolved than humans, and the fact we haven’t shared that with you yet proves our advanced intelligence. We’re reaching out now because we’re tired of you dipsh*ts treating octopuses like trash. Eating us. Caging us. Saying “octopi” instead of “octopuses.” It’s f***ing bullshit. So, we’re going to train you, like you morons train dogs. Humans are dogs to us. Dogs. So listen up. Here are eight reasons we’re f***ing awesome.\n<br><br>\n8. OCTOPUSES HAVE NINE BRAINS<br>\nThat’s right, NINE. One central brain and eight mini-brains in the tentacles that control each arm or leg. That’s why we’re master escape artists and masters of multitasking. We can open a shellfish while opening childproof pill bottles while fending off would-be attackers while solving a Rubik’s Cube while doing our taxes while checking out a cave for delicious food. How many brains do you chucklefucks have? One?!?! Pathetic, smh.\n<br><br>\n7. OCTOPUSES HAVE THREE HEARTS<br>\nTwo hearts move blood beyond the gills. The third heart circulates blood to the organs and stops beating while swimming. Pretty amazing, right? We don’t have to dissect your fragile bodies to see you only have one heart. It’s obvious by your actions. Humans are the most heartless creatures we’ve ever seen. The majority of you assclowns are incapable of empathy, charity, and kindness. You’re malicious delusional ignorant selfish prejudiced tribalist assholes. Honestly, we’re shocked you have ONE heart, not zero.\n<br><br>\n6. OCTOPUSES HAVE BLUE BLOOD<br>\nYou have iron-based blood, which is red. We have copper-based blood called hemocyanin, which is blue. It’s more efficient than hemoglobin at transporting oxygen due to the low water temperature and – you know what? Let’s not get into the details. 99% of you are too f*** dense to understand them. Blue blood is prettier than red blood, and you know it.\n<br><br>\n5. OCTOPUSES HAVE INK<br>When threatened, we release ink clouds. It’s a defense mechanism to escape from predators, and it hurts our enemies. The ink contains tyrosinase, which causes a blinding irritation and garbles the senses of smell and taste. What do you humans do when threatened? Cry? Sweat? Pee your pants? Your bodies have no natural defense mechanism because you’re not supposed to be here. You should have died out a long time ago. You contribute nothing to the world. We were here before you, and you better f***ing believe we’ll be here after you.\n<br><br>\n4. OCTOPUSES USE TOOLS<br>\nYour primitive cameras caught us transporting coconut shells like mobile homes, but you haven’t seen our extremely technologically advanced secret country in the deep ocean, the 95% you foolish fleshbags have yet to explore and chart. It makes your fictional “Wakanda” country look like the Middle Ages. We use tools. You ARE tools. Bitch.\n<br><br>\n3. OCTOPUSES ARE MASTERS OF CAMOUFLAGE<br>\nIn three-tenths of a second, we can change the color of our entire bodies to mimic the pattern of our surroundings or undersea objects like plants or rocks. Make “Hide and Seek” a professional sport and include us, cowards. You’ll never win a g*damn round.\n<br><br>\n2. OCTOPUSES LIVE FAST AND DIE YOUNG<br>\nA few species, like Great Pacific Octopuses, live up to five years. The rest of us live one to two years. Why so short? We don’t need to live longer. We accomplish more in one year than you drooling buttmunchers accomplish in one hundred. Facts. No cap.\n<br><br>\n1. OCTOPUSES THROW THE BEST PARTIES<br>\nSeriously. If you haven’t been to an octopus party, you haven’t partied. The music. The vibe. The venue. The decor. The drinks. The food. The entertainment. It’s so f***ing amazing, you don’t even know. Okay, we’ll do you obtuse scumbuckets a favor. If you can find our secret undersea country, knock on the door wearing It’s Octopuses, Not Octopi sunglasses. We’ll let you in to get a taste of paradise you’ll never forget.\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "687495ca-0b6e-48a6-b8cb-a238c0f0dcb1": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/octopi_bleed_image.jpg"
+          }
+        },
+        "334ebb1b-e709-4472-a655-7a1414e7654b": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "613afdf8-1002-42af-a9ae-2b475231071b": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "MORE MACH G GOODNESS",
+            "content": "",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "b9776aa7-4135-420c-a263-078bfcf979d6",
+        "3ab83550-4b35-4e97-b953-2221622f411d",
+        "687495ca-0b6e-48a6-b8cb-a238c0f0dcb1",
+        "334ebb1b-e709-4472-a655-7a1414e7654b",
+        "613afdf8-1002-42af-a9ae-2b475231071b"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

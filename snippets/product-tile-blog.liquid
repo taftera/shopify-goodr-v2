@@ -1,0 +1,116 @@
+{%- if product_variable != blank -%}
+{%- assign break_loop = false -%}
+{%- for collection in collections -%}
+	{%- assign all_my_products = collection.products %}
+	{%- for tmp_product in all_my_products -%}
+		{%- if tmp_product.handle == product_variable -%}
+			{%- assign product = tmp_product -%}
+			{%- assign break_loop = true -%}
+			{%- break -%}
+		{%- endif -%}
+	{%- endfor -%}
+	{%- if break_loop -%}
+    	{% break %}
+  	{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+
+{%- if product.title.size > 0 -%}
+{% capture image_content %}
+{% if product.featured_image != blank %}
+  <div class="col-xs-12 col-sm-6">
+  	<div class="product-tile_image-wrapper">
+      {% if product.images.size > 2 %}
+      <a class="product-tile__image hover-effect" href="{{ product.url | within: collection }}" style="background-image:url({{ product.images[2].src | img_url: '600x' }})">
+      {% else %}
+      <a class="product-tile__image" href="{{ product.url | within: collection }}" >
+      {% endif %}
+        {{ product.featured_image.src | img_url: '600x' | img_tag: product.featured_image.alt }}
+      </a>
+      {% if product.tags contains 'Polarized' %}
+		{% if product.tags contains 'bfgs' %}
+          <h6 class="product-tile__flag">Polarized + Wider</h6>
+        {% else %}
+          <h6 class="product-tile__flag">Polarized</h6>
+        {% endif %}
+      {% endif %}
+    </div>
+	</div>
+  {% endif %}
+{% endcapture %}
+<div class="product-tile product-tile-single row">
+	
+  {% if block.settings.image_aligment == "left" %}
+{{ image_content}}
+  	{% endif %}
+  
+  <div class="col-xs-12 col-sm-6">
+<h4 class="product-tile__title">
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+  
+  <p class="product-tile__price">
+    {% if product.compare_at_price > product.price %}
+
+      {% if product.price_varies %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        {% if product.tags contains 'Final Sale' %}
+    		FINAL SALE
+    	{% else %}
+    		{{ 'products.product.on_sale' | t }}
+    	{% endif %}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% else %}
+
+      {% if product.price_varies %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+    	{% comment %}
+    	  The following if statement hides the price on sold out items 
+    	  - per request for marathon collections 
+    	{% endcomment %}
+        {% if product.available %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+
+    {% endif %}
+
+    {% if product.compare_at_price > product.price %}
+      <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+      <s>{{ product.compare_at_price | money }}</s>
+    {% endif %}
+
+    {% unless product.available %}
+      {{ 'products.product.sold_out' | t }}
+    {% endunless %}
+  </p>
+  
+  
+  </h4>
+    {% if block.settings.content != blank %}
+		<div class="rte-setting">{{ block.settings.content }}</div>
+	{% endif %}
+    
+    
+  {% if product.variants.size == 1 and product.available  %}
+    <a class="js-quick-buy button button--small button--full" data-product-id="{{ product.variants[0].id }}" data-product-quantity="{{ product.variants[0].inventory_quantity }}">{{ 'products.product.add_to_cart' | t }}</a>
+  {% endif %}
+</div>
+    {% if block.settings.image_aligment == "right" %}
+
+  {{ image_content }}
+    
+	{% endif %}
+  
+  
+</div>
+{%- else -%}
+	{%- comment -%}
+		No product yet. Show onboarding one.
+	{%- endcomment -%}
+{%- endif -%}

@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "be1ae911-a281-4ed6-a988-7a5d458f9a73": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "ADD THE CHROME PACKAGE ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/CHROME_PACKAGE_BLOG_HEADER.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "3aa6d44c-6bbd-4bc9-be9e-c64e8cee6607": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Do you suspect that one of the reasons why you never get a second date is because your dates don’t think your 1987 sloppy jalopy is up to snuff? (Uh yeah, we totally agree with you that it couldn’t possibly be because you always invite your mother to tag along on your first dates, or that your dating profile username is Norman_Bates_69.) It’s most definitely your car.\n<br><br>\nMaybe you should consider upgrading your vehicle? We know what you’re thinking, that’s too expensive!!! You’re right, a NEW vehicle would be too expensive. But how about suping up that old hooptie of yours with some sexy upgrades?! \n<br><br>\nBy adding some updated features to your vehicle you can vastly improve its sex appeal. It will probably still perform like crap and smell like old cigarettes and your mother’s Jean Nate after-bath splash mist, but that’s beside the point! Think flashy. Think shiny. Think chrome.\n<br><br>\nLet’s start with the exterior, you will need:\n<br><br>\n-Chrome door handles<br>\n-Chrome trim around headlights and tail lights<br>\n-Chrome mirror covers<br>\n-Chrome gas cap (This one really impresses gents and ladies.)<br>\n-Chrome bumpers<br>\n-Chrome grill (You’ll probably also score bonus points if you get a chrome dental grill for yourself while you’re at it.)\n<br><br>\nNext, let’s tackle the interior!!! You will need:\n<br><br>\n-Chrome heat and AC vents<br>\n-Chrome control panels<br>\n-Chrome trim around the shifter (Bonus points if you can get a shifter that looks like a chrome skull with red rhinestone eyes. That’s badass!!!)<br>\n-Chrome. CHROME. CHROOOOOME!!!! (Did we say chrome?)\n<br><br>\nYour new mission in life will be finding these parts for a 1987 piece of crap. We’ve just given your life a new purpose. We’ve just filled the void you’ve been trying to fill with all of those awful dates. You’re welcome. This is kind of, like, a totally impossible challenge, which just makes it that much more satisfying when (if?) you succeed. Like that time you spent countless hours trying to find an E.T. game cartridge in that landfill. (Or were you burying a body? We don’t remember.) OK, that was a bad example. You know what? You should probably just make things super easy on yourself. Order a pair of these Add the Chrome Package sunnies with chrome-a-licious silver lenses and call it a day. \n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "98c58a90-66c4-4451-9a4a-22d1f557599e": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CHROME_PACKAGE_BLEED.jpg"
+          }
+        },
+        "44c22899-292d-4d3e-823d-4aa7246e3c2a": {
+          "type": "product",
+          "settings": {
+            "product": "add-the-chrome-package",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "68abf2f4-da50-498c-911c-16fcf8274552": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "MORE MACH G GOODNESS",
+            "content": "",
+            "article1": "origin-story\/cheesy-flight-attendant-origin-story",
+            "article2": "origin-story\/its-octopuses-not-octopi-origin-story",
+            "article3": "goodrtimes\/frequent-skymall-shoppers-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "be1ae911-a281-4ed6-a988-7a5d458f9a73",
+        "3aa6d44c-6bbd-4bc9-be9e-c64e8cee6607",
+        "98c58a90-66c4-4451-9a4a-22d1f557599e",
+        "44c22899-292d-4d3e-823d-4aa7246e3c2a",
+        "68abf2f4-da50-498c-911c-16fcf8274552"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head><script 
+        id="script_tag_id"
+        data-last-check-status-key="_prevCheckIsOk"
+        data-last-check-timestamp-key="_prevCheckTimestamp"
+        data-refresh-interval-ms="120000"
+        data-script-src="https://d2fj3s7h83rb61.cloudfront.net/EVcNK9Bq2A/bin"
+        data-app-info="1-1--1.3.2"
+        data-app-platform="1"
+        data-app-type="1"
+        data-app-version="1.3.2">
+    (function () {
+        var currentScript = document.currentScript;
+        var currentScriptDataset = currentScript.dataset;
+        var lastCheckStatusKey = currentScriptDataset.lastCheckStatusKey;
+        var lastCheckTimestampKey = currentScriptDataset.lastCheckTimestampKey;
+        var refreshIntervalMs = parseInt(currentScriptDataset.refreshIntervalMs, 10);
+        var scriptSrc = currentScriptDataset.scriptSrc;
+
+        if (lastCheckStatusKey && lastCheckTimestampKey && refreshIntervalMs && scriptSrc && !isNaN(refreshIntervalMs)) {
+            if (localStorage.getItem(lastCheckStatusKey) === null) {
+                localStorage.setItem(lastCheckStatusKey, String(false));
+            }
+            
+            if (localStorage.getItem(lastCheckTimestampKey) === null){
+                localStorage.setItem(lastCheckTimestampKey, String(0));
+            }
+
+            var locationHref = document.location.href;
+            var now = Date.now();
+            var lastCheckStatus = String(localStorage.getItem(lastCheckStatusKey)).toLowerCase() === 'true';
+            var lastCheckTimestamp = parseInt(localStorage.getItem(lastCheckTimestampKey), 10);
+
+            if (!isNaN(lastCheckTimestamp)) {
+                var needRefreshByInterval = now - lastCheckTimestamp > refreshIntervalMs;
+
+                if (needRefreshByInterval || lastCheckStatus) {
+                    var LOAD = 'load';
+                    var ERROR = 'error';
+                    var script = document.createElement('script');
+
+                    function scriptEventHandler(evt) {
+                        var target = evt.target;
+                        var evtType = evt.type;
+
+                        var currentCheckStatus = false;
+                        var currentCheckTimestamp = Date.now();
+
+                        if (evtType === LOAD) {
+                            currentCheckStatus = true;
+                        }
+
+                        localStorage.setItem(lastCheckStatusKey, String(currentCheckStatus));
+                        localStorage.setItem(lastCheckTimestampKey, String(currentCheckTimestamp));
+
+                        target.removeEventListener(LOAD, scriptEventHandler);
+                        target.removeEventListener(ERROR, scriptEventHandler);
+                    }
+
+                    if (!locationHref.match(/(\/checkouts\/|\/thank_you)/gi)) {
+                        script.defer = true;
+                    }
+
+                    script.addEventListener(LOAD, scriptEventHandler);
+                    script.addEventListener(ERROR, scriptEventHandler);
+
+                    script.src = scriptSrc;
+
+                    document.head.insertBefore(script, currentScript);
+                }
+            }
+        } else {
+            console.error('wrapper is not right configured');
+        }
+    })();
+</script>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <meta name="robots" content="noindex">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ 'checkout.scss.css' | asset_url | stylesheet_tag }}
+    {{ checkout_scripts }}
+
+    <link rel="stylesheet" href="https://use.typekit.net/bpp2ztt.css">
+    <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0084/1616/5946/files/Goodr_Favicon_Options-05_1.png?v=1586910452" type="image/png">
+    <style>
+		button.tooltip-control {
+    		border: none;
+    		background: none;
+    		padding: 0;
+    		margin: 0;
+            outline: 0;
+		}
+      	button:focus, button.btn:focus {
+      		border-color: #000 !important;
+    		-webkit-box-shadow: 0 0 0 1px #000 !important;
+    		box-shadow: 0 0 0 1px #000 !important;
+      	}
+    </style>
+  </head>
+  <body>
+{% include 'personify' %}
+{% include 'personify-receipt' %}
+
+
+    {{ skip_to_content_link }}
+	
+    {% if settings.checkout_topbar_enable %}
+	<div style="background: {{ settings.color_checkout_section }};color: {{ settings.color_checkout_text }};font-size: 0.875rem;text-align: center;padding: 0.4em 30px;" >
+      	{% if settings.checkout_link %}
+      		<a href="https://goodr.com/pages/covid-19-shipping-update" target="_blank" style="color: {{ settings.color_checkout_text }};" >
+		{% endif %}          
+          	{{ settings.checkout_text }}
+        {% if settings.checkout_link %}      
+      		</a>
+      	{% endif %}
+    </div>
+    {% endif %}
+    
+   
+    <div class="banner" data-header>
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </div>
+
+    {{ order_summary_toggle }}
+
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main" role="main">
+          <div class="main__header">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </div>
+          <div class="main__content">
+            {{ content_for_layout }}
+            <style>
+              	#canada_shipping{
+                  margin-top: 20px;
+    text-align: left;
+                  color: #10435e;
+                  display:none;}
+            	#canada_shipping a {
+    color: #10435e;
+    text-decoration: underline;
+}
+            </style>
+
+          </div>
+          <div class="main__footer">
+            {{ content_for_footer }}
+          </div>
+        </div>
+        <div class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+     <script>
+       var node = document.createElement("div");
+       node.setAttribute("id", "canada_shipping");
+       node.innerHTML = 'NOTICE: <a href="https://goodr.com/pages/so-you-want-to-ship-goodrs-to-canada" target="_blank">About Shipping to Canada</a>';
+       if(document.getElementsByClassName("section--shipping-address").length>0){document.getElementsByClassName("section--shipping-address")[0].appendChild(node);}
+       if(document.getElementsByClassName("section--shipping-method").length>0){document.getElementsByClassName("section--shipping-method")[0].appendChild(node);}
+       
+       
+       function checkcountry(){
+        var selectedCountry = document.getElementById("checkout_shipping_address_country").value;
+          if(selectedCountry == "Canada")
+          {
+          	document.getElementById("canada_shipping").style.display = "block";
+          }
+          else
+            {
+          	document.getElementById("canada_shipping").style.display = "none";
+          }
+        }
+      var shippingDropDown = document.getElementById("checkout_shipping_address_country");
+      if(shippingDropDown != null)
+      {
+        shippingDropDown.addEventListener("change",checkcountry );
+        checkcountry();
+      }
+       {% if checkout.shipping_address.country == "Canada" %}
+       document.getElementById("canada_shipping").style.display = "block";
+       {% endif %}
+    </script>
+    
+<script>
+  window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+    ga('require', 'GTM-NN3HFK2');
+var checkoutLabel;
+if(Shopify.Checkout.step) {
+    checkoutLabel = Shopify.Checkout.step.split("_").map(function(string){return string.charAt(0).toUpperCase() + string.slice(1);}).join(" ");
+} 
+
+window.dataLayerData = window.dataLayerData || {};
+window.dataLayerData.customer = window.dataLayerData.customer || {};
+window.dataLayerData.cart = window.dataLayerData.cart || {};
+window.dataLayerData.collection = window.dataLayerData.collection || {};
+window.dataLayerData.page = window.dataLayerData.page || {};
+window.dataLayerData.product = window.dataLayerData.product || {};
+
+var pageType = window.dataLayerData.page.template ? window.dataLayerData.page.template : "Checkout > " + checkoutLabel;
+
+ga('set', 'contentGroup1', pageType); 
+ga('set', 'contentGroup2', window.dataLayerData.page.collection); 
+
+ga('set', 'userId', __st.cid);
+ga('set', 'dimension1', __st.cid);
+ga('set', 'dimension2', window.dataLayerData.customer.totalSpent);
+ga('set', 'dimension3', window.dataLayerData.customer.ordersCount);
+ga('set', 'dimension4', window.dataLayerData.customer.tags ? window.dataLayerData.customer.tags.join(",") : undefined);
+ga('set', 'dimension5', pageType);
+ga('set', 'dimension6', window.dataLayerData.cart.total);
+ga('set', 'dimension7', window.dataLayerData.cart.count);
+ga('set', 'dimension8', window.dataLayerData.page.collection);
+ga('set', 'dimension9', window.dataLayerData.collection.productCount);
+ga('set', 'dimension10', window.dataLayerData.product.title);
+ga('set', 'dimension11', window.dataLayerData.product.sku);
+ga('set', 'dimension12', window.dataLayerData.product.type);
+ga('set', 'dimension13', window.dataLayerData.product.brand);
+ga('set', 'dimension14', window.dataLayerData.product.price);
+ga('set', 'dimension15', window.dataLayerData.product.inStock);
+ga('set', 'dimension16', window.dataLayerData.product.stockQty);
+ga('set', 'dimension17', window.dataLayerData.product.tags ? window.dataLayerData.product.tags.join(",") : undefined);
+ga('set', 'dimension18', window.dataLayerData.product.hasNoVariants);
+ga('set', 'dimension19', window.dataLayerData.product.numVariants);
+    };
+</script>
+
+<script>
+document.addEventListener('keyup', function(event) {
+  	/* First Name Validation */
+  	if (event.target.id == 'checkout_shipping_address_first_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+	if (event.target.id == 'checkout_billing_address_first_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* Last Name Validation */
+  	if (event.target.id == 'checkout_shipping_address_last_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_last_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* Address1 Validation */
+  	if (event.target.id == 'checkout_shipping_address_address1') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_address1') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* Address2 Validation */
+  	if (event.target.id == 'checkout_shipping_address_address2') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_address2') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* City Name Validation */
+  	if (event.target.id == 'checkout_shipping_address_city') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_city') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+});
+document.addEventListener('change', function(event) {
+  	/* First Name Validation */
+  	if (event.target.id == 'checkout_shipping_address_first_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+	if (event.target.id == 'checkout_billing_address_first_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* Last Name Validation */
+  	if (event.target.id == 'checkout_shipping_address_last_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_last_name') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* Address1 Validation */
+  	if (event.target.id == 'checkout_shipping_address_address1') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_address1') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* Address2 Validation */
+  	if (event.target.id == 'checkout_shipping_address_address2') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_address2') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z0-9 ]/g, "");
+  		event.target.value = str1;
+    }
+  	/* City Name Validation */
+  	if (event.target.id == 'checkout_shipping_address_city') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+  	if (event.target.id == 'checkout_billing_address_city') { 
+      	var str = event.target.value;
+  		var str1 = str.replace(/[^a-zA-Z ]/g, "");
+  		event.target.value = str1;
+    }
+});
+</script>
+   
+  </body>
+</html>

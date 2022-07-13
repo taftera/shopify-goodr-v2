@@ -1,0 +1,18 @@
+  <script>
+  //Prep Data  
+  var apiJSON = JSON.stringify({    
+    "contentid": "{{ article.id }}",
+    "contentname": location.pathname,
+    "contenttitle": "{{ article.title }}",
+    "contentimage": "{{ article.image | img_url: '300x300' }}",
+    "contenturl": "{{ article.url }}",
+    "contentcategory": "{% if article.tags.size > 0 %}{{ article.tags | join: "|" }}{% endif %}",
+    "contentdescription": "{{ article.excerpt }}",    
+    "sessionid": getPersonifyCookie("PERSONIFY"),
+    "shopperid": getPersonifyShopperId(),
+	"referrer": personify_referrer
+  });
+  
+  //Call API
+  callAPI(apiJSON, "viewcontent", false, null);
+</script>

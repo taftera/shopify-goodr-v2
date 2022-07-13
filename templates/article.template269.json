@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "93256b93-6448-4e12-866f-8af0a92e8f1e": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GOOD GOODY GAMBLE",
+            "text": "A Story About A Dice Rolling Game",
+            "image": "shopify:\/\/shop_images\/goodr_December_Blitz_2021_Holiday_Goody_Gamble_010.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "f63feebb-4bc5-432a-8bd1-49f989fdcd06": {
+          "type": "text",
+          "settings": {
+            "title": "goodr Goody Gamble: Game Rules",
+            "text": "<p>Introducing the goodr Goody Gamble! A die-rolling gift-stealing game with 12 mystery prizes. You can play it with up to 12 people, or all by yourself if you want to hog all the gifts. (Who needs friends?! Your cats are your friends!)<br><br>\n\nThis goodrified game has a pink die and crazy rules created by Carl the Flamingo while drunk on eggnog. What are the rules?! What are the prizes?! Will your friendships survive the backstabbing?!  We won't say. But the critics are raving!<br><br>\n\n“Can I buy you?” -- Monopoly Guy<br><br>\n\n“Can I eat you?” -- Hungry Hungry Hippo<br><br>\n\n“Needs more murder.”  -- Squid Game creators<br><br>\n\n<b>To see the rules, scan the QR Code or scroll down:<\/b>\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "ecb77376-e257-4cb4-87d7-c44d38bd7b7a": {
+          "type": "intro",
+          "settings": {
+            "title": "HOW TO PLAY:",
+            "text": "<p><br>\n<strong>1. <\/strong>Gather 1-12 adult friends. For the best experience, 6 to 12 people. It's okay if they act like children.<br><br>\n<strong>2.<\/strong> The order goes from oldest to youngest. (Hint: If you don't know who Olivia Rodrigo is, you're old.)<br><br>\n<strong>3. <\/strong>The first person rolls the dice. Whatever number they get is their door prize.<br><br>\n\n<strong>4. <\/strong>The second person rolls the dice. Whatever number they get is their door prize. And so on.<br><br>\n\n<strong>5.<\/strong> If you roll a number that's already been taken, you can choose to take that item from that person. (You may recognize this game as \"White Elephant\" or \"Make Everyone Hate Each Other.\")<br><br>\n\n<strong>6.<\/strong>If you roll a winning number, you must yell \"Squawk squawk, mother flocker!\" If you don't, you lose your turn.\nIf someone rolls a losing number, everyone must squawk at them like they're booing: <br><br>\n\n<strong>7. <\/strong>“Squuuuuuaaaaaaawk.”\nRepeat this process until all doors are open, or all participants Hunger Games fight each other to the death.\n<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "a1b62f8e-af51-41ad-99fe-170019d3ffc1": {
+          "type": "intro",
+          "settings": {
+            "title": "OPTIONAL BUT HIGHLY ENCOURAGED RULES",
+            "text": "",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "854a50a6-0fcb-4815-8cd2-1bd8d3184bc9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goody_gamble_bag_21868780-a4b9-43c9-8ee0-a1346c16db9b.png",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "6b457a1b-eac4-4cc3-a10c-d6e0c4f25cdb": {
+          "type": "intro",
+          "settings": {
+            "title": "",
+            "text": "<p>\n<strong>1.<\/strong> You can make side bets at any time.<br><br>\n\n<strong>2. <\/strong>If anyone's legal name is Carl, they go first, regardless of age. (Sorry, great-great-Grandpa.)\n\n<strong>3. <\/strong>If you roll a losing number, take a shot.<br><br>\n<strong>4. <\/strong>If you discover a secret microphone in the dice, ignore it, take a shot, and discuss your secrets.<br><br>\n\n<strong>5. <\/strong>End the event with a DANCE goodr. (Winner picks a song for everyone to dance to for at least one minute.)\n\n<\/p>",
+            "width": "50%",
+            "align_text": "left"
+          }
+        },
+        "d9445cf4-371a-49c5-89cf-309841da36c9": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": "goody-gamble"
+          }
+        },
+        "63af8864-aeee-47fe-be63-a7bbbb84139a": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_December_Blitz_2021_Holiday_Goody_Gamble_010_28200a35-735f-433e-a0e3-189176c611db.jpg"
+          }
+        },
+        "c04e9ddd-a418-430d-a65a-daf1d6f48c8a": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ ON FOR MORE SHENANIGANS",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/oy-to-the-world-origin-story",
+            "article2": "goodrtimes\/golden-shades-winner-exclusive-interview",
+            "article3": "goodrtimes\/radioactive-spectral-spectacles"
+          }
+        }
+      },
+      "block_order": [
+        "93256b93-6448-4e12-866f-8af0a92e8f1e",
+        "f63feebb-4bc5-432a-8bd1-49f989fdcd06",
+        "ecb77376-e257-4cb4-87d7-c44d38bd7b7a",
+        "a1b62f8e-af51-41ad-99fe-170019d3ffc1",
+        "854a50a6-0fcb-4815-8cd2-1bd8d3184bc9",
+        "6b457a1b-eac4-4cc3-a10c-d6e0c4f25cdb",
+        "d9445cf4-371a-49c5-89cf-309841da36c9",
+        "63af8864-aeee-47fe-be63-a7bbbb84139a",
+        "c04e9ddd-a418-430d-a65a-daf1d6f48c8a"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "89a94249-b60d-496c-9527-baf4b75264ca": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GOODR GIVES BACK",
+            "text": "How we are hoping to make the world goodr.",
+            "image": "shopify:\/\/shop_images\/goodr_Philanthrophy_Header_BLOG_HEADER_336db125-8536-4dc9-ae59-11832e6fcbcb.jpg",
+            "banner_height": "200px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "276108de-faa0-4ac6-8b04-9599af6c6f86": {
+          "type": "text",
+          "settings": {
+            "title": "WE GIVE A FLOCK",
+            "text": "<p>We’re recklessly committed to fun… blah blah blah sunglasses! But we’re also recklessly committed to giving a flock about what matters most. No blah blah blah. At goodr, we’re what some might call overly enthusiastic about a lot of things, but some of these groups we’ve partnered with in the past and will continue in the future make our tail feathers flush pink with pleasure. Because they’re changing the world for good. \n<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "0f5f7bfa-6168-4732-b033-d93e35bf2b16": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OnePercentForThePlanet_Lifestyle_020_1.jpg",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "53813ace-7d89-4e8f-9515-f0e6ff2c262e": {
+          "type": "text",
+          "settings": {
+            "title": "These Shades Are Trash",
+            "text": "<p>These shades are, LITERALLY, trash. The sunnies we recycle each year have atmospheric clear frames with oceanic blue lenses are made from 100% recycled plastic, the box is made from recycled paper, and 100% of the proceeds go to 1% For The Planet to give back to our planet. <\/p><p> All purchases from goodr.com help our pledge to give 1% of our annual gross sales to a variety of environmental nonprofits. Find out below where our 1% goes.<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "6ed2350e-8adc-48f5-bb25-41dd5050c58c": {
+          "type": "function_block",
+          "settings": {
+            "title": "1% FOR THE PLANET",
+            "image": "shopify:\/\/shop_images\/goodr_OnePercentForThePlanet_2020_These_Shades_Are_Trash_Carl_006_1_ee74e1e4-1f35-4acb-a5d3-ca43af63b5ea.jpg",
+            "image_aligment": "right",
+            "tab_title_1": "",
+            "tab_text_1": "",
+            "tab_title_2": "PROTECT OUR WINTERS",
+            "tab_text_2": "Educating and empowering the outdoor community to take action to protect their passions.",
+            "tab_title_3": "PANDAS INTERNATIONAL",
+            "tab_text_3": "Ensuring the preservation and propagation of the endangered Giant Panda.",
+            "tab_title_4": "CALIFORNIA WILDLIFE CENTER",
+            "tab_text_4": "Rescuing and rehabilitating injured and orphaned native wildlife.",
+            "tab_title_5": "HEAL THE BAY",
+            "tab_text_5": "Protecting the Greater Los Angeles coastline and restoring the waterways.",
+            "tab_title_6": "CORAL REEF ALLIANCE",
+            "tab_text_6": "Restoring and protecting the world’s coral reefs through partnerships with local communities.",
+            "tab_title_7": "NSW WILDLIFE INFORMATION AND RESCUE",
+            "tab_text_7": "Australia’s largest wildlife rescue organization.",
+            "tab_title_8": "CALIFORNIA STATE PARK FOUNDATION",
+            "tab_text_8": "Delivering innovative solutions for protecting and developing California’s State Parks."
+          }
+        },
+        "3646d8bf-50ac-437b-b484-30275250607f": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "PROTECT YOUR EYES FOR GOOD",
+            "content": "<p>Every purchase contributes to our 1% pledge.<\/p>",
+            "virtual_try_on": false,
+            "product1": "a-gingers-soul",
+            "product2": "bodhis-ultimate-ride",
+            "product3": "buzzed-on-the-tower"
+          }
+        },
+        "80072835-3207-4821-9b14-e59e3ec3a18b": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "de984880-0540-4fa8-b494-9780145b43e0": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "Check out some of the other incredible groups we've collaborated with for some sweet shades and even sweeter causes.",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "21cd42fe-634f-4d8a-86ae-29b321330335": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "BREAKING SILENCE",
+            "content": "<p>Community is pivotal in helping survivors of interpersonal violence heal. Aligning with the Breaking Silence group annual march, Walk Together, goodr created these sunnies to support the cause. All proceeds went to support their mission to engage and inspire communities to take action and recognize their responsibility for the impact interpersonal violence has on our culture. <\/p><p>\nKeep an eye out for our next exclusive Breaking Silence pair.<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_Breaking_Silence_Walk_and_Squawk_Together_lifestyle_008_1.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "d982c7bc-038a-4411-b224-9caf03262ecf": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "WAGS & WALKS",
+            "content": "<p>This partnership with this community of dog lovers brought about these rather fetching shades called Stay Pawsitive. All proceeds went to the mission to save pups from high kill shelters and place them in their furever homes. Plus anyone who adopted a loving doggo from the Wags & Walks organization received this pair of sunnies for free so they could properly attire their frequent frolics with their new fur friend.<\/p>",
+            "image": "shopify:\/\/shop_images\/Wags-_-Walks-03.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "758e52cd-8401-4372-b4ac-90fed3010234": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "THE LOS ANGELES LGBT CENTER",
+            "content": "<p>Pride isn't just about slapping a rainbow on a sunglass (although rainbow sunnies look sick af). Our stated purpose as a company is: we exist to give you the permission to be unabashedly yourself…unless you’re an asshole. And that certainly includes being proudly gay, lesbian, bisexual, transgender, queer, plus any gender identities and sexual orientations not specifically covered by that umbrella (intersex, asexual, etc). <\/p><p>\n\nOur models here are sporting our The Gang's All Queer shades. Check in to find out what pair will support next Pride month!\n<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_Pride_2021_The_Gang_s_All_Queer_lifestyle_020_1.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "78319f24-f835-482f-aeea-ca77b39950fc": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "DENVER ZOO",
+            "content": "<p> Mbeli, Kali and Gunther became Denver Zoo's new troop of gorillas at the recommendation of the Association of Zoo and Aquariums Gorilla Species Survival Plan ensuring a healthy, genetically diverse population of gorillas in human care which provides an insurance policy for the species as the wild population declines. These shades are called Bringing Silverback in honor of those three awesome apes and 100% of proceeds go to supporting the wildlife conservation and education initiatives of the non-profit Denver Zoo.<\/p><p>\nStay tuned for our next Denver Zoo collaboration shades!<\/p>",
+            "image": "shopify:\/\/shop_images\/0921_DenverZoo_ImBringingSilverback_ProductPageAssets_SIDE_IMAGE.jpg",
+            "title_align_text": "left",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "e7a5de90-3eed-431e-a128-a90e181e619d": {
+          "type": "html",
+          "settings": {
+            "code": "<div class=\"text-align--center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https:\/\/goodr.com\/collections\/all-models\" target=\"_blank\" class=\"button button--extra large\">\n          SHOP MORE GOODR\n        <\/a>\n<\/div><p><\/p>",
+            "width": "100%"
+          }
+        },
+        "2f21c1a8-9440-4d76-a329-1f9433810631": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OnePercentForThePlanet_Lifestyle_028_1_1.jpg"
+          }
+        },
+        "11873a74-2b83-4ba2-81ac-1d929cb60d5d": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "Do More goodr",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/citron-alt-delete-origin-story",
+            "article2": "goodrtimes\/im-wearing-burgundy-origin-story",
+            "article3": "goodrtimes\/a-gingers-soul-origin-story"
+          }
+        },
+        "96ff5b65-83fa-4ba8-8cf6-1717616c1bce": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"margin:0 auto;\" class=\"pxFormGenerator\" id=\"ChGzBpurJ2dtb-s7Vswp0g\"><\/div>",
+            "width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "89a94249-b60d-496c-9527-baf4b75264ca",
+        "276108de-faa0-4ac6-8b04-9599af6c6f86",
+        "0f5f7bfa-6168-4732-b033-d93e35bf2b16",
+        "53813ace-7d89-4e8f-9515-f0e6ff2c262e",
+        "6ed2350e-8adc-48f5-bb25-41dd5050c58c",
+        "3646d8bf-50ac-437b-b484-30275250607f",
+        "80072835-3207-4821-9b14-e59e3ec3a18b",
+        "de984880-0540-4fa8-b494-9780145b43e0",
+        "21cd42fe-634f-4d8a-86ae-29b321330335",
+        "d982c7bc-038a-4411-b224-9caf03262ecf",
+        "758e52cd-8401-4372-b4ac-90fed3010234",
+        "78319f24-f835-482f-aeea-ca77b39950fc",
+        "e7a5de90-3eed-431e-a128-a90e181e619d",
+        "2f21c1a8-9440-4d76-a329-1f9433810631",
+        "11873a74-2b83-4ba2-81ac-1d929cb60d5d",
+        "96ff5b65-83fa-4ba8-8cf6-1717616c1bce"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

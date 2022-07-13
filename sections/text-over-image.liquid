@@ -1,0 +1,249 @@
+
+{% if section.settings.button_background != blank %}
+<style>
+.section-{{ section.id}} .button {
+  background-color: {{ section.settings.button_background }};
+  border-color: {{ section.settings.button_background }};
+  color: {{ section.settings.button_text_color }};
+}
+.section-{{ section.id}} .button:hover {
+  background-color: {{ section.settings.button_background_hover }};
+  border-color: {{ section.settings.button_background_hover }};
+  color: {{ section.settings.button_text_color }};
+}
+.section-{{ section.id}} a.slide-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+{% endif %}
+{% if section.settings.color_text != blank %}
+<style>
+.section-{{ section.id}} .banner__text {
+  	color: {{ section.settings.color_text }};
+}
+</style>
+{% endif %}
+
+<section class="containter--full text-over-image {{ section.settings.height }} section-{{ section.id}}
+  {% if section.settings.mobile_banner == blank %} text-over-image__mobile-min-height {% endif %}"
+  style="background-image: url({{ section.settings.background | img_url: '1600x' }});">
+  {% unless section.settings.show_button and section.settings.url != blank %}
+	<a class="slide-link" href="{{ section.settings.url }}" title="{{ section.settings.alt }}">
+  {% endunless %}
+  <div class="text-over-image__content
+    text-align--{{ section.settings.text_align }}
+    vertical--{{ section.settings.vertical_position }}
+    {% if section.settings.mobile_banner != blank %} hide--small {% endif %}
+    ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-4
+        {% if section.settings.horizontal_position == 'middle' %}
+          col-sm-offset-3 col-lg-offset-4
+        {% elsif section.settings.horizontal_position == 'right' %}
+          col-sm-offset-6 col-lg-offset-8
+        {% endif %}
+        ">
+        <h2 class="section__title">{{ section.settings.title | escape }}</h2>
+        <div class="banner__text text-color--">{{ section.settings.content }}<br><br></div>
+        {% if section.settings.show_button and section.settings.url != blank %}
+        <p><a href="{{ section.settings.url }}" title="{{ section.settings.alt }}" class="button">{{ section.settings.button_text }}</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% unless section.settings.show_button and section.settings.url != blank %}
+  	</a>
+  {% endunless %}
+  {% if section.settings.mobile_banner != blank %}
+    <div class="text-over-image__mobile hide--medium-up">
+      {% capture image_size %}800x{% endcapture %}
+      {% if section.settings.url != blank %}
+      <a href="{{ section.settings.url }}">
+      {% endif %}
+      <img src="{{ section.settings.mobile_banner | img_url: image_size }}"
+          srcset="{{ section.settings.mobile_banner | img_url: image_size }} 1x, {{ section.settings.mobile_banner | img_url: image_size, scale: 2 }} 2x"
+          alt="{{ section.settings.alt | default: shop.name }}">
+      {% if section.settings.url != blank %}
+      </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Text over image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Shop All"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "info": "Go ahead and use basic HTML tags here if you like"
+      },
+      {
+        "type": "select",
+        "id": "horizontal_position",
+        "label": "Text horizontal position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default":   "left",
+        "info":      "Left"
+      },
+      {
+        "type": "select",
+        "id": "vertical_position",
+        "label": "Text vertical position",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default":   "top",
+        "info":      "Top"
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default":   "left",
+        "info":      "Left"
+      },
+      {
+        "type": "select",
+        "id": "height",
+        "label": "Banner height",
+        "options": [
+          {
+            "value": "full-height",
+            "label": "Full height"
+          },
+          {
+            "value": "tall-height",
+            "label": "Tall"
+          },
+          {
+            "value": "short-height",
+            "label": "Short"
+          }
+        ],
+        "default":   "full-height",
+        "info":      "Full"
+      },
+      {
+        "type":      "color",
+        "id":        "color_text",
+        "label":     "Text color",
+        "default":   "#ffffff"
+      },
+      {
+        "type": "image_picker",
+        "id": "background",
+        "label": "Background image"
+      },
+      {
+        "type": "text",
+        "id": "url",
+        "label": "URL",
+        "default": "/collections/all"
+      },
+	  {
+		"type": "checkbox",
+		"id": "show_button",
+		"label": "Show Button",
+		"default": true
+	  },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "Shop"
+      },
+      {
+        "type": "color",
+        "id": "button_background",
+        "label": "Button background color",
+        "info": "Choose none to default to global button color"
+      },
+      {
+        "type": "color",
+        "id": "button_background_hover",
+        "label": "Button background hover color"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button text color"
+      },
+      {
+        "type": "text",
+        "id": "alt",
+        "label": "ALT Tag",
+        "default": "Shop all items"
+      },
+      {
+        "type": "header",
+        "content": "Mobile banner"
+      },
+      {
+        "type": "paragraph",
+        "content": "To use an optional banner just for mobile, upload an image here. It must have the text embedded into it. To default back to the regular banner content, just delete this image."
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_banner",
+        "label": "Mobile banner"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text over image",
+        "category": "Promotional"
+      }
+    ]
+  }
+{% endschema %}

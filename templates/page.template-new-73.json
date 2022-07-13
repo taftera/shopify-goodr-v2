@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "821eaa24-e31f-4f4a-9659-30fdb204a90d": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "BFCM '21",
+            "text": "GET ALL YOUR HOLIDAY SHOPPING DONE IN ONE FELL SWOOP <p>+ WIN A GOODRFIED PT CRUISER!<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_011.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "c2f3532c-3300-481b-8b83-3d93d90fc7d9": {
+          "type": "intro",
+          "settings": {
+            "title": "WHO DOESN'T LOVE A GOOD 6-PACK?",
+            "text": "<p>\n<\/p><p>Be it on your stomach or in the fridge, it's officially #6PackSZN.\n<\/p><p>Raise your hand if you LOVE buying all of your family members separate presents. Yeah, us neither. This year, goodr is here to make things easy on you. We've got 4 different pre-built 6-packs with a smattering of our top hits to make things easy on all your gift purchasing season.<\/p>\n<p><b>Oh sorry, we totally buried the lede here. EVERY purchase of a 6-pack from 11\/25-11\/30 comes with a free 7th pair of sunglasses...just for you. Because while it's great you're taking care of your closest homies, gotta remember to treat yourself as well. Just add the pair of your choosing after putting the 6-pack in cart, and it will magically become FREE. Happy freakin' holidays, y'all!<\/b><\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "e7291a31-a647-494e-9209-6e4c4bf97fa5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_December_Blitz_2021_BFCM_Pre_Packs_015_f2b539b2-0901-4709-b097-12fac159a899.jpg",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "112ccda6-c684-44bf-93b2-4c3557ee1183": {
+          "type": "text",
+          "settings": {
+            "title": "TO SUMMARIZE FOR Y'ALL:",
+            "text": "<ul>\n<li>Buy any 6-pack of goodrs below<\/li>\n<li>Pick out a FREE PAIR for yourself!<\/li>\n<\/ul>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "eedcbd00-e472-48dd-a70b-ec393c736a17": {
+          "type": "double_product",
+          "settings": {
+            "title": "",
+            "content": "",
+            "virtual_try_on": false,
+            "product1": "the-originals-six-pack",
+            "product2": "reginald-the-unicorn-six-pack"
+          }
+        },
+        "2ea69d4c-fd6f-41aa-aa1a-b509d8895e76": {
+          "type": "double_product",
+          "settings": {
+            "title": "",
+            "content": "",
+            "virtual_try_on": false,
+            "product1": "flock-stars-six-pack",
+            "product2": "party-starter-six-pack"
+          }
+        },
+        "d1b9634b-d4cd-481d-b94e-247e1e380b12": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<h2>BUT WAIT, THERE'S MORE!<\/h2>\n<p><b>Any purchase made during this period will be entered in a raffle to win a completely tricked out 2006 PT Cruiser, aptly named Shrimp My Ride.<\/b>\n<\/p><p><b>THE NITTY GRITTY<\/b><\/p>\n<p>- No purchase necessary to enter. See full <a href=\"%E2%80%9Chttps:\/\/goodr.com\/pages\/terms-conditions-3%E2%80%9D\">terms and conditions<\/a> for details.<\/p>\n<p>- Void where prohibited by law. Eligibility restrictions apply.<\/p>\n<p>- Sweepstakes valid from November 25 at 12:01am PST to  December 6 at 11:59pm PST.<\/p>",
+            "show_page_content": false,
+            "width": "50%",
+            "align_text": "left"
+          }
+        },
+        "a1667fb0-5c0b-44eb-a7a8-a2959fece102": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_PT_Cruiser_Giveaway_Shrimp_My_Ride_029_22e37390-30a6-4be5-b877-2aa516aaa128.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "00070b57-e791-42fc-84ca-a57d87b75802": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_December_Blitz_2021_BFCM_Pre_Packs_015_d13b8d1f-cee3-4867-bfbd-bb9802884589.jpg"
+          }
+        },
+        "38573602-820e-4769-bea1-6a40dc5f4d78": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE GOODRTIMES",
+            "content": "",
+            "article1": "goodrtimes\/golden-shades-winner-exclusive-interview",
+            "article2": "goodrtimes\/lost-in-transition-origin-story",
+            "article3": "goodrtimes\/beast-goodr-dream-team"
+          }
+        }
+      },
+      "block_order": [
+        "821eaa24-e31f-4f4a-9659-30fdb204a90d",
+        "c2f3532c-3300-481b-8b83-3d93d90fc7d9",
+        "e7291a31-a647-494e-9209-6e4c4bf97fa5",
+        "112ccda6-c684-44bf-93b2-4c3557ee1183",
+        "eedcbd00-e472-48dd-a70b-ec393c736a17",
+        "2ea69d4c-fd6f-41aa-aa1a-b509d8895e76",
+        "d1b9634b-d4cd-481d-b94e-247e1e380b12",
+        "a1667fb0-5c0b-44eb-a7a8-a2959fece102",
+        "00070b57-e791-42fc-84ca-a57d87b75802",
+        "38573602-820e-4769-bea1-6a40dc5f4d78"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

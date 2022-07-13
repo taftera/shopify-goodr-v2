@@ -1,0 +1,139 @@
+<section class="container-fluid video-banner">
+  {{ section.settings.background | img_url: '1600x' | img_tag: 'Video banner background', 'video-banner__background'}}
+  <div class="video-banner__content">
+    <div class="video-banner__caption">
+      {{ section.settings.logo | img_url: '800x' | img_tag: page.title, 'video-logo' }}<br>
+      <a class="play-video" href="#"
+       data-izimodal-open="#video-modal"
+       data-izimodal-zindex="20000"
+       data-izimodal-preventclose=""> Play Video </a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row pvm">
+    <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+      <h1 class="text-align--center pbs">{{ page.title }}</h1>
+      {{ page.content }}
+
+      <h2 class="text-align--center">Rules</h2>
+      <div class="rte">
+      {{ section.settings.rules }}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container--fluid">
+  <div class="row middle-xs pbm">
+    <div class="col-xs-10 col-xs-offset-1 slider">
+    {% for block in section.blocks %}
+      {% if block.type == 'image' %}
+        <div>
+          {{ block.settings.gallery_pic | img_url: '1600x' | img_tag }}
+        </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+{%- assign winners = false -%}
+{% for block in section.blocks %}
+  {% if block.type == 'winner' %}
+    {%- assign winners = true -%}
+  {% endif %}
+  {% break %}
+{% endfor %}
+
+{% if winners == true %}
+<div class="container--fluid">
+  <div class="row center-xs pbm">
+    <div class="col-xs-12">
+      <h2 class="text-align--center">Winners</h2>
+    </div>
+    {% for block in section.blocks %}
+      {% if block.type == 'winner' %}
+        <div class="col-xs-4 col-md-3">{{ block.settings.winner_pic | img_url: '800x' | img_tag }}</div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+<div class="iziModal" id="video-modal">
+  <a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+  <div class="rte__video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ section.settings.videoURL.id }}?controls=0&showinfo=0&frameborder=0&modestbranding=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen allow="autoplay;encryted-media"></iframe>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Pina Colada Mile",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background",
+        "label": "Banner image"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image",
+        "info": "Transparent PNG please"
+      },
+      {
+        "type": "video_url",
+        "id": "videoURL",
+        "label": "Video URL",
+        "accept": ["youtube"],
+        "info": "Add a YouTube video URL here. ie. https://www.youtube.com/watch?v=fl3iI_BaFTs"
+      },
+      {
+        "type": "textarea",
+        "id": "rules",
+        "label": "Rules"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "label": "Image",
+            "id": "gallery_pic",
+            "type": "image_picker"
+          }
+        ]
+      },
+      {
+        "type": "winner",
+        "name": "Winner",
+        "settings": [
+          {
+            "label": "Image",
+            "id": "winner_pic",
+            "type": "image_picker"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Mile",
+        "category": "Page content"
+    }]
+  }
+{% endschema %}
+
+<script>
+  $(function() {
+    $('.slider').slick();
+  });
+
+</script>

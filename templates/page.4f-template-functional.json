@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "165243630586ebb9ce": {
+      "type": "new-header-banner-2-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Functional_headers_2.jpg",
+        "title": "$25 ACTIVE SUNGLASSES FOR ANYONE",
+        "heading_align": "left",
+        "bg_image": "shopify:\/\/shop_images\/Functional_headers_palm_1_f927ff2b-c62f-41bb-a6ef-9f468a33223e.jpg",
+        "heading_color": "#ffffff",
+        "heading_overlay": true,
+        "heading_overlay_color": "#4ec0b2",
+        "image_align": "right",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_size_d": 82,
+        "heading_size_m": 42
+      }
+    },
+    "1652438284b49226aa": {
+      "type": "new-header-banner-2-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Functional_headers_3.jpg",
+        "title": "NO SLIP. NO BOUNCE. ALL POLARIZED. ALL FUN.",
+        "heading_align": "left",
+        "bg_image": "shopify:\/\/shop_images\/Functional_headers_palm_1_f927ff2b-c62f-41bb-a6ef-9f468a33223e.jpg",
+        "heading_color": "#ffffff",
+        "heading_overlay": false,
+        "heading_overlay_color": "#4ec0b2",
+        "image_align": "left",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_size_d": 42,
+        "heading_size_m": 32
+      }
+    },
+    "16524431368bfa07be": {
+      "type": "new-featured-collection",
+      "settings": {
+        "title": "FUNCTIONAL FASHION",
+        "collection": "functional"
+      }
+    },
+    "16524402985c9d0f2b": {
+      "type": "new-review-grid-section",
+      "blocks": {
+        "3e4d8498-4fa8-4f81-beb1-7172ffb9f3c1": {
+          "type": "review_item",
+          "settings": {
+            "title": "Great outdoor <br>sunglasses",
+            "content": "<p>I wanted a pair of sturdy sunglasses to go hiking instead of my prescription ones and these work really well. They are stylish, stay put and durable.<\/p>",
+            "author_name": "Patricia E.",
+            "show_star": true
+          }
+        },
+        "a55a23c1-9bca-4a14-a2ea-6d4ed8991ba8": {
+          "type": "review_item",
+          "settings": {
+            "title": "Fits my surfer <br>small head",
+            "content": "<p>Fits my surfer small head perfectly 🙃 great to run in and can barely feel them! Very lightweight, would recommend!<\/p>",
+            "author_name": "Malinda S.",
+            "show_star": true
+          }
+        },
+        "92c4c1ba-225d-4748-897b-8a80c63bc72e": {
+          "type": "review_item",
+          "settings": {
+            "title": "Great <br>sunglasses",
+            "content": "<p>Very light, look great and good clarity. The fit is so well that they feel like they'd never fall off my face.<\/p>",
+            "author_name": "Finn W.",
+            "show_star": true
+          }
+        },
+        "79cd9922-ad4d-482f-bea8-228c06da3240": {
+          "type": "review_item",
+          "settings": {
+            "title": "Great, durable <br>sunglasses",
+            "content": "<p>I bought 2 extra pairs of Goodr's after buying 2 that I use all the time. So now I have an extra pair in my Pickleball bag and at our beach house. They are so comfortable and durable, and I love the colors!!<\/p>",
+            "author_name": "Dawn M.",
+            "show_star": true
+          }
+        }
+      },
+      "block_order": [
+        "3e4d8498-4fa8-4f81-beb1-7172ffb9f3c1",
+        "a55a23c1-9bca-4a14-a2ea-6d4ed8991ba8",
+        "92c4c1ba-225d-4748-897b-8a80c63bc72e",
+        "79cd9922-ad4d-482f-bea8-228c06da3240"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16524408859f8c6178": {
+      "type": "new-icon-box-section",
+      "blocks": {
+        "6db6d6e8-2228-4a23-98b3-6ba4395a3aa7": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFun.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFun.jpg",
+            "icon_url": "shopify:\/\/pages\/fun"
+          }
+        },
+        "79a690df-f617-4a68-8e44-e74ea31da505": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFashionable.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFashionable.jpg",
+            "icon_url": "shopify:\/\/pages\/fashionable"
+          }
+        },
+        "5de28fa2-60ed-40e3-8353-9339d6b9069e": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFfordable.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFfordable.jpg",
+            "icon_url": "shopify:\/\/pages\/ffordable"
+          }
+        }
+      },
+      "block_order": [
+        "6db6d6e8-2228-4a23-98b3-6ba4395a3aa7",
+        "79a690df-f617-4a68-8e44-e74ea31da505",
+        "5de28fa2-60ed-40e3-8353-9339d6b9069e"
+      ],
+      "settings": {
+        "title": "",
+        "show_border": false
+      }
+    },
+    "16536342237bc47852": {
+      "type": "new-newsletter",
+      "settings": {
+        "section_title": "Subscribe",
+        "subheading": "",
+        "form_code": "Wx6u3U"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165243630586ebb9ce",
+    "1652438284b49226aa",
+    "16524431368bfa07be",
+    "16524402985c9d0f2b",
+    "16524408859f8c6178",
+    "16536342237bc47852"
+  ]
+}

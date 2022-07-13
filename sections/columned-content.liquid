@@ -1,0 +1,87 @@
+
+<section class="container">
+  <div class="row pvs">
+  {%- if section.settings.title != blank -%}
+    <div class="col-xs-12">
+      <h3 class="text-align--center" style="color:{{ section.settings.title_color }}">{{ section.settings.title | escape }}</h3>
+    </div>
+  {%- endif -%}
+
+  {%- assign columns = 'col-xs-4 col-sm-4' -%}
+
+  {% for block in section.blocks %}
+    <div class="{{ columns }}">
+      <div class="columned-content__column">
+        {% if block.settings.image != blank %}
+          {{ block.settings.image | img_url: '500x500' | img_tag }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+        <h4>{{ block.settings.title }}</h4>
+        <p>{{ block.settings.content }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Columned content",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Heading color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image or icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Column title"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Columned content",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+    }]
+  }
+{% endschema %}

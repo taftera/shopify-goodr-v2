@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "578841be-f00a-42b1-a83d-0c2b5a4eda8a": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "DR. RAY, STING ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/sting_1600_400_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "7fc6e329-8b8f-4230-9af9-abb9e5d70e73": {
+          "type": "text",
+          "settings": {
+            "title": "An Editorial by Dr. Ray, Sting",
+            "text": "<p>\n I graduated from the University of Oregon with a BS in Marine Biology. I earned an MS and PhD in Ocean Biosciences at the Scripps Institution of Oceanography in San Diego. But now, as a Marine Biologist at the Marine Mammals of Massachusetts, my colleagues constantly chirp me with stingray jokes, and I can’t f***ing take it anymore.\n<br><br>\nThe bullying started my first week. On Fridays, we get free lunch. The HR person, Lydia, bought pizza for everyone except me. For me, she brought a plate of worms, snails, and shrimp. I said, “What’s this?” She said, “It’s what stingrays eat!” Everyone laughed. I said, “No thanks, I’ll have pizza.” She said, “No, you won’t. Eat this and like it, fish-boy.” Then she slammed her fist on the table. Everyone glared at me. I was flustered. I didn’t know what to do. So I ate it. All of it. The worms. Snails. Shrimp, normally I love, but not mixed with worms and snails! Every Friday Lydia buys me this disgusting meal and I choke it down. I hate it. It’s ruined the taste of shrimp forever. Now, when I eat shrimp on its own, I also taste the worms and snails. After every Friday lunch, I try fruitlessly to expunge that nasty taste from my mouth, brushing my teeth so hard that my gums bleed.\n<br><br>\nThen came the pancakes. I didn’t even get it at first. I’d open my desk drawer – pancakes. My office door – pancakes. My car door, pancakes! Then I’d go home and open my apartment door, my fridge, crawl into bed – pancakes, pancakes, pancakes!!! How are they getting into my car and home?!?!!! And why pancakes?!?! I finally figured out the pancakes were referring to the shape of the stingray. Stingrays have flattened bodies and are nicknamed the “sea pancake.” But COME ON. EVERY F***ING CHRISTMAS, the other employees get sweet gifts, like generous gift cards and at-home gym equipment and new video game consoles and tortilla blankets and space heaters and liquor and what do I get? PANCAKES!!!!  It’s not funny!!! It’s NEVER been funny!!! I’M A DOCTOR!!!!!!\n<br><br>\nBut the last straw? The pee-sentation. The f***ing pee-sentation. We had a mandatory all-company meeting, right? In person. Every employee filed into the auditorium. Then  the Founding Director of the Marine Mammals of Massachusetts, Victoria, walks out, and gives a presentation about ME! What to do if I STING someone with my TAIL!!!. I shouted, “I DON’T HAVE A F***ING TAIL!!!” She replied, “YES, YOU DO, FISH-BOY!” Then these actors came out and performed a scene where one of them was me and stung the other one with his tail and they cried out in pain and a third actor came out and peed on them and then the crowd caught mass hysteria and carried me down to the stage and made me eat a plate of worms, snails and shrimp and threw pancakes at me and peed on me and oh, it was horrible! It was so, so horrible! I thought, I spent 12 years in academia for this?!?!?!\n<br><br>\nThere was one good thing, though. Before they peed on me, they gave me a REAL gift. Not pancakes for once! A pair of fun, fashionable, functional, ‘ffordable Dr. Ray, Sting PHG glasses.They didn’t slip or bounce while I wiggled and cried on the floor, trying to avoid the streams of urine bursting like water from fire hoses. Anyway, I’ll cut to the point: I’m giving you ONE MORE CHANCE, Marine Mammals of Massachusetts. You have ONE MORE CHANCE to treat me with respect and not childishly mock me because of my name! I didn’t choose to be named Dr. Ray, Sting! It didn’t cause me to pursue a career as a marine biologist! It’s just a name! So stop with the f***ing stingray jokes. Thank you.\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "a3d050ef-4114-45b8-bd41-1437833d2812": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sting_1600_1067_bleed.jpg"
+          }
+        },
+        "b0667c42-494a-4239-88b6-6e30afeec1a5": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "d617b264-3148-42bf-ad90-30f2328da8f2": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE TO EARN YOUR PHG",
+            "content": "<p>LOOKING SCHOLARLY ALREADY!!! <\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "578841be-f00a-42b1-a83d-0c2b5a4eda8a",
+        "7fc6e329-8b8f-4230-9af9-abb9e5d70e73",
+        "a3d050ef-4114-45b8-bd41-1437833d2812",
+        "b0667c42-494a-4239-88b6-6e30afeec1a5",
+        "d617b264-3148-42bf-ad90-30f2328da8f2"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

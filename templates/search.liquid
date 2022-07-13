@@ -1,0 +1,94 @@
+
+{% render 'nosto-element', id:'searchpage-nosto-1' %}
+
+{% include 'nosto-element' with 'searchpage-nosto-1' %}
+{% paginate search.results by 36 %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="page__title">
+        {% if search.performed %}
+          <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+            {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+        {% else %}
+          {{ 'general.search.title' | t }}
+        {% endif %}
+      </h1>
+    </div>
+
+    <div class="col-xs-12 pbm">
+      <form action="/search" method="get" role="search" class="wide-search__container">
+        <label for="Search" class="label-hidden">
+          {{ 'general.search.placeholder' | t }}
+        </label>
+        <input type="search"
+               name="q"
+               id="Search"
+               class="wide-search__text"
+               value="{{ search.terms | escape }}"
+               placeholder="{{ 'general.search.placeholder' | t }}">
+        <button type="submit" class="wide-search__button">
+          {% include 'icon-search' %}
+          <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+{% if search.performed %}
+  <div class="row">
+      {% for item in search.results %}{% include 'easylockdown_filter_search' with item %}
+        {% include 'bold-product' with item, hide_action: 'skip' %}
+        <div class="col-xs-6 col-md-4 col-lg-3">
+          {% assign featured_image = item.image | default: item.featured_image %}
+          {% if featured_image != blank %}
+            <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+              {{ featured_image | img_url: '600x600', crop: 'center' | img_tag: featured_image.alt }}
+            </a>
+          {% endif %}
+
+          <h5>{{ item.title | link_to: item.url }}</h5>
+
+          {% if item.object_type == 'product' %}
+            <p>
+              {% if item.compare_at_price > item.price %}
+                {% if item.price_varies %}
+                  {% assign sale_price = item.price | money %}
+                  {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                {% else %}
+                  {{ 'products.product.on_sale' | t }}
+                  <span itemprop="price">{{ item.price | money }}</span>
+                {% endif %}
+                <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                <s>{{ item.compare_at_price | money }}</s>
+              {% else %}
+                {% if item.price_varies %}
+                  {% assign price = item.price | money %}
+                  <span itemprop="price">{{ 'products.product.from_text_html' | t: price: price }}</span>
+                {% else %}
+                  <span itemprop="price">{{ item.price | money }}</span>
+                {% endif %}
+              {% endif %}
+              {% unless item.available %}
+              {{ 'products.product.sold_out' | t }}
+              {% endunless %}
+            </p>
+          {% else %}
+            <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+      {% include 'pagination' %}
+    {% endif %}
+  {% endif %}
+
+{% endpaginate %}
+
+{% include 'nosto-element' with 'searchpage-nosto-2' %}
+
+{% render 'nosto-element', id:'searchpage-nosto-2' %}

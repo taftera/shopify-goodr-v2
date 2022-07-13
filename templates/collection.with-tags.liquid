@@ -1,0 +1,69 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% assign tagList = 'ROAD,MOUNTAIN,GRAVEL,TRIATHLON,CX,CITY' | split : ',' | uniq %}
+
+{% for tag in tagList %}
+<div class="container--fluid">
+    <div class="row">
+      	{% assign products_count = 0 %}
+        {% for product in collection.products %}
+            {% if product.tags contains tag %}
+                {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+      	{% if products_count > 0 %}
+      	{% assign tag_code = tag | downcase | replace: ' ', '_' %}
+      	{% capture tag_description %}collections.tag_sort_description.{{ tag_code }}{% endcapture %}
+        {% assign tag_desc = tag_description | t %}
+      	<div class="section-header">
+			<h3>{{ tag }}</h3>
+          	{% if tag_desc contains 'translation missing'  %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ tag_desc }}</div>
+          	{% endif %}
+		</div>
+      	{% endif %}
+    	{% assign show_quick_buy = true %}
+    	{% for product in collection.products %}
+    		{% if product.tags contains tag %}
+      			{% include 'bold-product' with product, hide_action: 'skip' %}
+      			<div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        			{% include 'product-tile' %}
+      			</div>
+			{% endif %}
+    	{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}

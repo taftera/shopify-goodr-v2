@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "4f1e7991-7fab-4a0e-969b-b64d89d72f86": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "ARTIFACTS, NOT ARTIFEELINGS ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/artifacts_1600_400_header_2.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.7
+          }
+        },
+        "161dec2e-c9ee-4a3f-8e72-7834ba281940": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>On Monday, adorable 8-year-old Mallory Patchteller brought homemade “dinosaur bones'' to Fogellson Elementary School for Show & Tell. The precocious boy gathered tree branches, painted them white, and claimed he found them in his backyard. However, third-grade teacher Mr. McManus was not impressed.\n<br><br>\n“Those aren’t real fossils, moron,” said Mr. McManus. “Artifacts, NOT artifeelings!” The class erupted into a chant of “Liar, liar, pants on fire” while tears rolled down Mallory’s face and he peed his cargo shorts. “Yes, liar, liar, pants on fire!” roared Mr. McManus. “Good, children, good! Shame him! SHAME HIM!!! HA HA HA HA HA!!!”\n<br><br>\n“I mean, seriously, what the f*** do you think you’re doing?” continued Mr. McManus, after the chant died down. “Do you think I’m so stupid I’d fall for this pathetic ruse? Like I can’t tell a dinosaur bone from tree branches painted white? That’s a big-ass insult to my intelligence. Just because you’re dumb as a box of butts, MALLORY, doesn’t mean everyone else is. Your name’s stupid, too. Everyone hates it.”\n<br><br>\n“That’s right!” piped third-grader Evelyn Davenport. Then she shot a spitball. The oblong gooey wad of chewed-up notebook paper and saliva struck Mallory in the middle of the forehead, and stuck there, prompting cheers and applause from the rest of the class.\n<br><br>\n“That’s a shoddy paint job at best,” sneered Mr. McManus, as he snapped the branches in half over his knee. “Never stop at one coat, dipsh*t. DO!!! MULTIPLE!!! COATS!!! And at least come up with a good story to sell the lie. I mean, come on. ‘Dinosaur bones’? What KIND of dinosaur bones? SPE-CI-FY, DUMMY! Tyrannosaurus Rex, Brontosaurus, Triceratops, Stegosaurus, Plesiosaurus, Velociraptor – speak up, man!”\n<br><br>\n“C–c–c–comp–comp,” stammered Mallory. “Comp—comp–compsog–comp—c—c—”\n<br><br>\n“Compsognathus, you ignoramus!” yelled Mr. McManus. “Compsognathus! E-NUN-CI-ATE! Man, you suck. I hate you, and your dad is a whore. That’s right, DAD. I’m woke. It’s 2021. Dads can be whores. And they are. Oh, hey! You kids mind if I blaze a cancerstick?” \n<br><br>\n“Noooooo!” the class replied. \n<br><br>\n“Sweeeeet,” said Mr. McManus as he lit a cigarette. “Sweet sweet sweet. Now don’t tell your parents about this, dummies. Or I’ll kill you! Just kidding. Or maybe not. Who cares? I have nothing to live for. Pay attention, kids! When you hit 40, the good times are over. Write that down! Your soul dies between age 35 and age 40. Real talk. No crap.”\n<br><br>\n“C-c-c-can I sit down now, Mr McManus?” asked Mallory meekly, as he tried in vain to hide the pee-stain island on his jean shorts.\n<br><br>\n“Yeah, sure, whatever,” said Mr. McManus. “I’m not your god. Who’s next? Alicia? Oh God, this better not be your grandma’s hemorrhoid cream again.”\n<br>\n<br>\n“It’s not!” chirped Alicia Williams. “It’s tortoise-shell PHG goodr sunglasses called Artifacts, Not Artifeelings! My stepfather’s mistress got them at The goodr Cabana in Abbot Kinney near Venice Beach in Los Angeles!” The class ooohed and ahhhed.\n<br><br>\n“Now THAT’S what the f*** I’m talking about!” cried Mr. McManus. “GREAT job, Alicia. HIGH FIVE!!! You get an A. Mallory, you get an F. Re-examine your life. And stop playing with your wood. HA HA HA HA HA! Get it, kids? We have fun here, don’t we? Now WHO! WANTS! A! CIGARETTE?!?!?”\n<br><br>\nThe goodrTIMES will keep you updated on this story as new information becomes available. \n<\/p>",
+            "show_article_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "4a72ac1e-8597-46a8-aefc-b667876c00e1": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/artifacts_1600_1067_bleed.jpg"
+          }
+        },
+        "f8d0f56f-5394-42a2-a379-f52dda979199": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "8b6c4070-1b79-4728-b6cb-a33edd6dae12": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE TO GET YOUR PHG",
+            "content": "<p>YOU LOOK SCHOLARLY ALREADY!!!<\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "4f1e7991-7fab-4a0e-969b-b64d89d72f86",
+        "161dec2e-c9ee-4a3f-8e72-7834ba281940",
+        "4a72ac1e-8597-46a8-aefc-b667876c00e1",
+        "f8d0f56f-5394-42a2-a379-f52dda979199",
+        "8b6c4070-1b79-4728-b6cb-a33edd6dae12"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

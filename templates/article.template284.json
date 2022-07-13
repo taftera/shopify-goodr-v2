@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "215bb8e2-0a90-49dd-819d-b013a0a1b743": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "CHEESY FLIGHT ATTENDANT ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/cheesy_blog_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "ec4c5297-c817-4539-8cfe-7f3d909dd91e": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Just as you get settled into your cramped airline seat for takeoff it begins…\n<br><br>\n“Gouda day ladies and gentlemen, my name is Brie and I’ll brie serving you today. On behalf and half of Captain Stilton and the entire Crudités, welcome aboard Swiss Airlines flight 666, non-stop service to Colby. At this time, cheese make sure your seat backs and cheese tray tables are in their full upright position and that your seat belt is correctly fastened. All portobello electronic devices must be set to ‘airplane a la mode”. In queso emergency please note that the closest exit may be brie-hind you. If you require anything during your flight, please let us know how we can cheddar serve you.”\n<br><br>\nYou should have known it would be bad when the plane reeked of unctuous cheese. You roll your eyes as you glare at the cheesy flight attendant in her awful macaroni and cheese-colored polyester skirt suit. You didn’t really look at her when you boarded the plane, but now you begin to notice she is very strange looking. Her skin is golden brown and glistening, almost laminated. It has a somewhat fragile, flakey appearance as if she was made of puff pastry. Her facial features look exactly like the shriveled raisins your grandmother would bake into her gingerbread men’s faces. She starts to give you the mega heebie-cheesies. \n<br><br>\nYou start to suspect she may literally be Baked Brie en Croûte. This is insanity. Surely you must be hallucinating from the ripe stench of cheese?! Why does it seem like everything she is saying is some bizarre cheese pun or food reference?! Is this happening because you skipped lunch?! Never in your wildest dreams could you have imagined when you booked a flight on Swiss Air that this would be the un-hole-iest in-flight experience of your life. \n<br><br>\n“Just tell her to shut up!!! No, you’re feta than that!!!” you yell inside your head. “Just close your eyes and try not to think about her deliciously creepy and appetizing face,” you tell yourself. “Who cares what she looks like? It’s nacho business!!! If you can just go to sleep, you’ll be in Colby before you know it and everything will be cheddar.” Oh my God. At that moment you realize you’re starting to do it too!!! You start to wonder if you should check yourself into a pimental institution. ”STOP IT!!!” you scream out loud.\n<br><br>\nYou open your eyes to see her standing right beside you. She is even more of a Muenster up close!!! Her mouth looks like someone gashed a slice into her crisp pastry face. As she opens her mouth to speak to you, molten, greasy brie oozes out, while a delicate flurry of puff pastry crumbs simultaneously dusts your clothes. This melty bitch has cheese Boursin through her veins!!! It was pure gore-gonzola straight out of a horror movie!!! It is terrifying!!! \n<br><br>\n“Well, aren’t you a charcuterie!!! Are you traveling prov-alone? You know, I could grow very fondue you,” greasy globs of molten cheese plop onto your lap. Her cheese puns overflow with Abondance, scalding your skin with every word!!!\n<br><br>\n“I can’t take this any Scamorza!!!” you scream, stabbing her with a wedge of extra sharp cheddar that appears in your hand out of nowhere. The passengers next to you try to restrain your Limb-burgers as she falls into a lifeless congealed blob in the aisle, fig jam oozing out of the wound you just caused…\n<br><br>\n“Cheesus Christ almighty!!!!” Carl the Flamingo bolts awake, drenched in sweat. \n<br><br>\n“Is everything alright, Carl?” a concerned and sleepy female voice responds in the blackness.\n<br><br>\n“I was having the most horrifying bad dream!! Did you know that they say eating cheese before bed gives you nightmares?! That’s the last time I eat Brie en Croûte before bed…”\n<br><br>\n“Are you sure, Babybel?” she replies, her voice now deep and menacing. He feels something hot and greasy drop on his wing as she says it…No, it can’t be!!! He fumbles for the light switch in the darkness, terrified of what he may discover next to him!!!\n<br><br>\nThe light flashes on, his face contorts in horror when he sees her. It’s the cheesy flight attendant from his nightmare!!! Except now her face has been replaced with Casu Martzu, also known as maggot cheese!! Larvae crawling in and out of what’s supposed to be her mouth, nostrils, and eye sockets!!!\n<br><br>\n“Cheesus Christ almighty!!!!” Carl bolts awake, drenched in sweat. He flips the light on and grabs the pen and notepad from the nightstand. “Note to self: make pair of orange Mach G goodrs w\/ blue lenses, name ‘em Cheesy Flight Attendant. Cancel cheese subscription.” \n<br><br>\nToo rattled to sleep, he flips on the Real Housewives of Beverly Hills. “Time for some  Velveeta loca…”\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "fb4e9a06-a870-4505-b2ba-49c39c84ab42": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cheesy_bleed.jpg"
+          }
+        },
+        "482e8f3d-3055-496d-aac4-a2074f150013": {
+          "type": "product",
+          "settings": {
+            "product": "cheesy-flight-attendant",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "53ab4237-deb9-4aa2-a133-b7d938676f5a": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "MORE MACH G GOODNESS",
+            "content": "",
+            "article1": "origin-story\/its-octopuses-not-octopi-origin-story",
+            "article2": "origin-story\/add-the-chrome-package-origin-story",
+            "article3": "goodrtimes\/amelia-earhart-ghosted-me-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "215bb8e2-0a90-49dd-819d-b013a0a1b743",
+        "ec4c5297-c817-4539-8cfe-7f3d909dd91e",
+        "fb4e9a06-a870-4505-b2ba-49c39c84ab42",
+        "482e8f3d-3055-496d-aac4-a2074f150013",
+        "53ab4237-deb9-4aa2-a133-b7d938676f5a"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

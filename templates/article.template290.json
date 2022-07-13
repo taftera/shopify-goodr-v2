@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "1e286957-a7ac-4b61-b2eb-b6dd0f1e4152": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "CARL THE FLAMINGO PLUSH ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/lil_carl_1600_400.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.7
+          }
+        },
+        "3088ff0c-147c-4f5e-a4e8-32e906a08669": {
+          "type": "text",
+          "settings": {
+            "title": "The Carl the Flamingo Riots of 1983, WCARL News",
+            "text": "<p>In February of 1983, all across America, people of drinking age went nuts for the Carl the Flamingo plush toy. Carl was so rare and desirable that riots broke out in several stores across the tri-state area. Lonely adults desperate for an amazing wingman and drinking buddy were ready to drive thousands of miles to purchase one. In addition, people desperate to give the perfect Valentine’s gift were willing to shell out thousands of dollars and\/or sexual favors to obtain one.\n<br>\n<\/p><p>\nAt a Buffoom’s department store in Rolling Hills, California, a riot broke out, with a store manager ripping a mannequin’s leg off to protect himself. “This is sheer insanity!!! I didn’t go to bartending school for twelve years just to lose my life over a f*ckin’ doll!!!” Beverly Schramblin was quoted as saying in the Sea King Daily Coupon Clipper. (The staff here at WCARL News, is still unsure why it took Beverly twelve years to graduate bartending school. He was unavailable for comment.)\n<br><\/p><p>\nArchival video of the event, which we cannot share due to explicit violence and foul language, shows complete pandemonium at Buffoom’s, with Carl the Flamingo plushies being flung about and torn apart like ragdolls by enraged rioters. We don’t care what anyone says, stuffed animals like Carl have feelings and can feel pain.\n<br><\/p><p>\nThe plushies, originally allegedly designed by Quindolyn Rose Regal Roberts, were “hatched” in a magical flamingo nursery, according to product legend, and buyers would \"adopt\" them as an official wingman, an action completed with an official-looking License to Chill ID card that came with the toy.\n<br><\/p><p>\nAt a New York-area Kraybree Toys, WCARL News spoke to grown adults who were insanely desperate for a stuffed flamingo wingman. A handful of them were lucky enough to get to the store in time to score a new best friend at a bargain price. However, hope was dead for the throngs of consumers who were unable to get one. It was only a matter of minutes before the plushies were sold out and these people were doomed to pub-crawl alone for all of eternity.\n<br><\/p><p>\nA man from Plumaquoddy, Michigan, told Channel 6 he was calling his ex-wives in Oklahoma, Kentucky, Illinois, Nevada, South Dakota, Texas, Tennessee, Virginia, Washington, and West Virginia to see if they could get him a doll. His other options were to drive several days to California, or if that failed, he was going to reach out to his retired fifth-grade teacher in Florida to see if she could obtain one. She had always been somewhat of a thug, apparently with ties to the mob.\n<br><\/p><p>\nAt the Fedsco Emporium in Franklin Lakes, New Jersey, the plushies were easily selling for $350, well above the suggested retail price. There was no shortage of eager buyers.\nFedsco Emporium set up a trading post where people who were lucky enough to have scored the plush could double their money if they'd bought the toy at retail price. The store would then shamelessly sell the dolls again for an exorbitant profit. Rumor has it the store manager is now roasting in the Fourth Circle of Hell for greed.\n<br><\/p><p>\n\"By the time I go poking around at a sleazy video dating site, or hole in the wall dive bar, it will cost me $40 in gas and humiliation. I may as well just spend a few extra hundred dollars to get the perfect wingman so I don’t have to die alone. I’m tired of having to put on control-top pantyhose night after night trying to score the perfect man. The Carl the Flamingo plush loves me just the way I am,” reasoned Hope Cranfill, who had just bought the doll for $350 at Fedco Emporium.\n<br><\/p><p>\n<b>UPDATE: <\/b>\nToy fads have come and gone over the years, but none have rivaled the 1983 riots that occurred with the release of the Carl the Flamingo plush toy. For our 2022 rerelease we have plenty of Carls in stock to go around, but you may still want to purchase yours on goodr.com to avoid being clobbered with a mannequin leg in a department store riot. \n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "74c01faf-0151-4f72-bde1-a96a30a93bfb": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plush_blog_banner.jpg"
+          }
+        },
+        "ed2d8057-ad76-44a2-a9ee-6ed93399e161": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "2cdd1d42-eefb-48d0-8088-bcc92e449275": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "more fake news",
+            "content": "",
+            "article1": "goodrtimes\/love-letters-to-carl",
+            "article2": "origin-story\/cheesy-flight-attendant-origin-story",
+            "article3": "origin-story\/add-the-chrome-package-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "1e286957-a7ac-4b61-b2eb-b6dd0f1e4152",
+        "3088ff0c-147c-4f5e-a4e8-32e906a08669",
+        "74c01faf-0151-4f72-bde1-a96a30a93bfb",
+        "ed2d8057-ad76-44a2-a9ee-6ed93399e161",
+        "2cdd1d42-eefb-48d0-8088-bcc92e449275"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

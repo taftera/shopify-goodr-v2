@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "912128cb-c96f-45be-bdea-973bd8b67ca2": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "THE NEW PROSPECTOR ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/prospector_1600_400.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "984d0e10-f3c6-4d4b-99ae-146d0deb978e": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>This is a work of fiction. Names, characters, places, and incidents are either products of the author's imagination or are used fictitiously. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental. It’s called CYA people!!! We don’t want the lizard people coming after us.\n<br><br>\nOur copywriter witnessed these disturbing events at a fellow goodr employee’s retirement party. We saw no need to change Carl the Flamingo’s name since everyone knows he is never innocent.\n<br><br>\n“Hey <s>Tofutti<\/s> Sherry, congratulations on your retirement!!! Uh, that’s an interesting outfit you’re wearing today. Are you doing anything special or just planning to kick back and relax now that you’re officially off the hamster wheel?”\n<br><br>\n“Carl, I am going out of my mind!!! I feel like my neighborhood has become overrun by an alien reptile cult. I swear every night they’re rummaging through the garbage cans out back for expired dairy products because they’re looking to get drunk. \n<br><br>\n“I am growing increasingly weary of my neighbors and local business people. I swear they’re all extraterrestrial vampires looking to absorb my soul. I went to pick up some water pills at the pharmacy the other night. When the pharmacist rang me up, I swear he had a nictitating membrane when he winked at me. It was creepy as sh*t!!”\n<br><br>\nCarl looked around nervously, wondering if anyone else was hearing this. A few people standing nearby seemed to scatter like roaches when Carl tried to give them the “please rescue me or you’re fired!!!” glance. \n<br><br>\n“Oh yeah? I’m sure it was just your imagination <s>Tofutti<\/s> Sherry!! Maybe you were just hallucinating from using the hot glue gun all day?”\n<br><br>\n<s>Tofutti <\/s>Sherry carried on, oblivious, “I think the only solution is for me to start a new life on an off-world colony prospecting for orgone and manufacturing my own orgone blasters. These orgone pucks I’ve been buying in bulk on Amazon just haven’t been cutting it. But, if you want something done right, you have to do it yourself, right?! That’s why I picked up a mining claim from the USDA Forest Service Lunar Division on eBay last week for just $2,500. I am so flippin’ excited!!!”\n<br><br>\n“Uhm, I don’t want to be rude, but what the hell is orgone?” Carl asked.\n<br><br>\n“Oh hey, <s>Tofutti<\/s>Sherry? Your ride is here!!!” Someone from the warehouse interjected before Carl could get a response. \n<br><br>\nAt that moment <s>Tofutti<\/s> Sherry stripped off her hazmat suit, revealing the antique gold miner’s prospecting outfit beneath. She took a mining pick and lantern out of her locker, then ran towards the loading dock where a loud whirring sound and bright lights illuminated the open warehouse door.\n<br><br>\n“What the hell is happening?!” people could be heard shrieking. Concerned, everyone ran towards the loading dock and were shocked to see her board a flying saucer. \n<br><br>\n“It’s been real everyone!!! Thanks so much for everything. Take care of yourselves and beware the lizard people!!!” She yelled as the saucer flew up and away. \n<br><br>\n“Well that was super f*cking weird…” Carl reflected, knocking back a shot of Fireball to settle his nerves.\n<br><br>\nA few weeks later <s>Tofutti<\/s> Sherry sent a few cases of hand-crafted orgone pucks to the goodr Lagoon, via special delivery. Carl had them melted down and added to these stellar black PHG sunnies* with purple lenses. \n<br><br>\n*Further research still needs to be done to determine if they have any EMF reducing properties (and we’re not talking about that band from the 90s.)\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "adccacf3-6e1a-4917-867f-2ca721626d59": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/prospector_1600_1067_bleed.jpg"
+          }
+        },
+        "02e9492f-e342-44de-b146-444816c40e29": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE IN 2022",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "912128cb-c96f-45be-bdea-973bd8b67ca2",
+        "984d0e10-f3c6-4d4b-99ae-146d0deb978e",
+        "adccacf3-6e1a-4917-867f-2ca721626d59",
+        "02e9492f-e342-44de-b146-444816c40e29"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

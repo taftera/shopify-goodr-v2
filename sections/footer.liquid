@@ -1,0 +1,203 @@
+<div class="site-footer-box">
+  	<div class="container">
+  		<div class="row">
+      		<div class="col-xs-12 col-sm-4">
+  				<div class="footer-box-item">
+              		<a href="https://goodr.com/pages/warranty-and-care-tips" class="footer-box-item-inner">
+                	 	<img class="footer-box-item-img" src="{{ 'Footer-Carls-01.png' | file_img_url: 'master' }}"/> 
+            	      	<h3 class="footer-box-item-title">1-Year <br>Warranty</h3>
+        	     	</a>
+    	      	</div>
+	      	</div>
+	      	<div class="col-xs-12 col-sm-4">
+	  			<div class="footer-box-item">
+    	          	<a href="https://goodr.com/pages/return-policy" class="footer-box-item-inner">
+                      	<img class="footer-box-item-img" src="{{ 'Footer-Carls-02.png' | file_img_url: 'master' }}"/>
+                      	<h3 class="footer-box-item-title">30-Day Free<br> Returns</h3>
+                 	</a>
+	          	</div>
+      		</div>
+      		<div class="col-xs-12 col-sm-4 last-item">
+  				<div class="footer-box-item">
+              		<a href="https://goodr.com/blogs/goodrtimes/100-carbon-neutral" class="footer-box-item-inner">
+                      	<img class="footer-box-item-img" src="{{ 'Footer-Carls-03.png' | file_img_url: 'master' }}"/>
+                      	<h3 class="footer-box-item-title">100% Carbon<br> Neutral</h3>
+                  	</a>
+          		</div>
+      		</div>
+		</div>
+	</div>
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+
+        <div class="footer-logo">
+          <a href="/" class="logo-image">
+            {% if section.settings.logo != blank %}
+              {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+              <img src="{{ section.settings.logo | img_url: image_size }}"
+                  srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                  alt="{{ section.settings.logo.alt | default: shop.name }}">
+            {% else %}
+              {{ shop.name }}
+            {% endif %}
+          </a>
+        </div>
+
+        {% if section.settings.footer_content != blank %}
+          <p>{{ section.settings.footer_content }}</p>
+        {% endif %}
+
+        {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+        <ul class="footer-social-icons">
+          {% for social in social_accounts %}
+            {%- assign social_handle = social | handleize -%}
+            {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+            {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+            {% if settings[social_link] != blank %}
+              <li>
+                <a target="_blank" href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+                  {% include social_icon %}
+                  <span class="icon-fallback-text">{{ social }}</span>
+                </a>
+              </li>
+            {% endif %}
+
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% for block in section.blocks %}
+      	{% if block.settings.logo_img != blank %}
+      	<div class="col-xs-12 col-md-3 custom-logo">
+      	{% else %}
+      	<div class="col-xs-6 col-md-3">
+      	{% endif %}
+          <h4>{{ block.settings.footer_title }}</h4>
+          {%- assign footer_linklist = block.settings.footer_linklist -%}
+          {% if linklists[footer_linklist].links.size > 0 %}
+            <ul class="nav-footer">
+              {% for link in linklists[footer_linklist].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              
+              	{% if link.title == "Sitemap" %}
+              		<li><a href="#" data-acsb="trigger">Accessibility </a></li>
+                {% endif %}
+              
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if block.settings.logo_img != blank %}
+          {% if block.settings.logo_url != blank %}<a href="{{ block.settings.logo_url }}" >{% endif %}
+				<img src="{{ block.settings.logo_img | img_url: 'master' }}" class="custom-logo-img" />
+          {% if block.settings.logo_url != blank %}</a>{% endif %}
+          {% endif %}
+        </div>
+      {% endfor %}
+
+
+      <div class="col-xs-12">
+        <small class="copyright">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}.</small>
+
+        {% if section.settings.show_payment_icons %}
+          {% unless shop.enabled_payment_types == empty %}
+            {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,google_pay,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
+
+            <span class="visually-hidden">{{ 'layout.footer.payment_methods' | t }}</span>
+            <ul class="payment-icons">
+              {% for type in shop.enabled_payment_types %}
+                {% if payment_icons_available contains type %}
+                  <li>
+                    {%- assign icon_name = type | prepend: 'icon-' -%}
+                    {% include icon_name %}
+                    <span class="visually-hidden">{{ type | capitalize | replace: '_', ' ' }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endunless %}
+        {% endif %}
+      </div>
+      
+	  {% for block in section.blocks %}
+      	{% if block.settings.logo_img != blank %}
+      	<div class="col-xs-12 custom-logo-mobile">
+          {% if block.settings.logo_url != blank %}<a href="{{ block.settings.logo_url }}" >{% endif %}
+				<img src="{{ block.settings.logo_img | img_url: 'master' }}" class="custom-logo-img" />
+          {% if block.settings.logo_url != blank %}</a>{% endif %}  
+        </div>
+		{% endif %}
+      {% endfor %}
+          
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "max_blocks": 4,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_content",
+        "label": "Content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "Show payment icons",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "footer_title",
+            "label": "Column title"
+          },
+          {
+            "type": "link_list",
+            "id": "footer_linklist",
+            "label": "Footer menu column",
+            "default": "footer"
+          }
+        ]
+      },
+	  {
+        "type": "custom_logo",
+        "name": "Custom logo",
+        "settings": [
+          {
+            "type": "text",
+            "id": "footer_title",
+            "label": "Column title"
+          },
+          {
+            "type": "image_picker",
+            "id": "logo_img",
+            "label": "Custom Logo"
+          },
+		  {
+            "type": "url",
+            "id": "logo_url",
+            "label": "Custom Logo Url"
+          }
+        ]
+      }
+    ]
+  }
+
+{% endschema %}

@@ -1,0 +1,116 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "9ce3b852-1412-42d8-9f82-a795dcb0f6f8": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GAME goodr x Capcom Cup Recap",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_277_social_asset.jpg",
+            "banner_height": "500px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "6e7c08b8-c3bf-4a86-80fc-183bfb1d786f": {
+          "type": "text",
+          "settings": {
+            "title": "goodr to Sponsor Capcom Pro Tour 021 Season Final!!!",
+            "text": "<p>We don’t know about you, but we’ve been fans of Street Fighter since we were hanging out at the local pizza parlor with our pals after school back in the mid 90s. (We always gravitated towards Chun-Li because it was all about girl power in the 90s. We were obsessed with the Spice Girls too but we digress.) So of course we’re SUPER stoked that GAME goodr was a proud sponsor of The Capcom Pro Tour (CPT) 021 Season Final!!! We’ve been training for the last 35 years, practicing our Ryu-kicks, E. Honda Hundred Hand Slaps, Guile Sonic Booms, and Balrog Stomps to get to this moment. Carl the Flamingo has been actively practicing in the hopes to compete, but he’ll most likely get thrown out for drunken, unsportsmanlike behavior. We still love that adorable bird, even if he is a degenerate. \n<br><br>\nWe’re excited to celebrate the gamers of The CPT 021 Season Final. We know gamers are a well-rounded group of badass individuals with a wide range of interests. GAME goodr knows that gamers go outside too!!! GAME goodrs won’t slip or bounce while you’re doling out roundhouse kicks, spinning bird kicks, and backhand punches both virtually or if you’re shadowboxing them in real life. These stylish, comfortable colorways include polarized sunglasses and “Blue Mirage” blue light blocking glasses. Some scientists claim blue light is bad for you. We’re not sure we believe them, since they also told us to limit our sugar and alcohol intake. Psh. We made these blue light blocking glasses just in case, but you’ll have to pry this candy bar and can of beer out of our cold dead hands.<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "70721d51-d1f6-4a49-aa1b-d7ff1f9fe832": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_407_social_assetyyy.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "7aed7cb7-de3b-4c4d-9dd4-3fb693dd07fb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_398_social_asset.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "aa067911-c338-42a6-93dd-c2ccdda4d907": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>goodr makes fun, affordable sunglasses for runners, cyclists, weightlifters, golfers, and gamers. The brand won Runner’s World Gear of the Year three times, PGA Buyer’s Choice, Men’s Health Best Buy, Rolling Stone’s Favorite Sunglasses For Athletes, GQ’s Best Sunglasses of 2020, and Inc. Magazine’s Best Places To Work. Most recently, they were featured in Oprah Daily’s Summer Quarterly edition for must-have gear. \n<br><br>\nIn celebration of this partnership, Carl the Flamingo said, “SQUAAAAWK! SQUAWK!!! HADOUKEN!!!“ This roughly translates to: “Everyone knows that Chun-Li stole that spinning bird kick from me after she saw me trying to defend my honor over the last shrimp cocktail at an Atlantic City casino in 1986. HADOUKEN!!!” \n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "3d415e96-dc24-4b65-9b70-8b77cef5fb82": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_016_social_asset.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "c5d73e6c-8856-4d41-8001-d9a35f9f3f7a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_376_social_asset.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "53cbed11-799f-4e94-a88c-ce4dbdf76c42": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>About The Capcom Pro Tour:\nThe CAPCOM PRO TOUR (CPT) is the premier league destination for competitive fighting games. Featuring the latest flagship title of the legendary Street Fighter series, the CPT brings together players and spectators from all over the world to share their love of gaming. With thirty-two online events open to players world-wide, the CPT showcases the very best that competitive gaming has to offer. @CapcomFighters\n<br><br>\nAbout goodr:\nOur Mission: We are recklessly committed to fun and blah blah blah...sunglasses. Badass performance sunnies that speak to the 4 Fs: Fun, Fashionable, Functional, and ‘Ffordable. No Slip. No Bounce. All Polarized. All Fun. @goodr | goodr.com <\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "ee458881-661b-457f-b021-45e3805a7269": {
+          "type": "IG_Block",
+          "settings": {
+            "insta_title": "FOLLOW @GAMEGOODR",
+            "insta_subtitle": "",
+            "insta_button_text": "Follow",
+            "insta_button_link": "https:\/\/instagram.com.gamegoodr",
+            "instagram_img_1": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_295_social_asset.jpg",
+            "instagram_link_1": "",
+            "instagram_img_2": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_306_social_asset.jpg",
+            "instagram_link_2": "",
+            "instagram_img_3": "shopify:\/\/shop_images\/CapCom_2022_Event_Coverage__BTS_145_social_asset.jpg",
+            "instagram_link_3": "",
+            "instagram_link_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "9ce3b852-1412-42d8-9f82-a795dcb0f6f8",
+        "6e7c08b8-c3bf-4a86-80fc-183bfb1d786f",
+        "70721d51-d1f6-4a49-aa1b-d7ff1f9fe832",
+        "7aed7cb7-de3b-4c4d-9dd4-3fb693dd07fb",
+        "aa067911-c338-42a6-93dd-c2ccdda4d907",
+        "3d415e96-dc24-4b65-9b70-8b77cef5fb82",
+        "c5d73e6c-8856-4d41-8001-d9a35f9f3f7a",
+        "53cbed11-799f-4e94-a88c-ce4dbdf76c42",
+        "ee458881-661b-457f-b021-45e3805a7269"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

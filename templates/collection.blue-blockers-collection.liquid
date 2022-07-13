@@ -1,0 +1,115 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 90 %}
+
+  {% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+  {% else %}
+    {% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+  {% endif %}
+   <header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    <p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+</div>
+</div>
+  </header>
+
+  <div class="filter-container">
+    {% include 'filter-menu' %}
+  </div>
+
+  <div class="container--fluid">
+    <div class="row">
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}{% include 'easylockdown_filter_collection' with product %}
+      
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'  or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+
+    {% else %}
+      {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+        {% for i in (1..8) %}
+          <a href="#">
+            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+          </a>
+
+          <p>
+            <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
+          </p>
+
+          <p>
+            {{ 1999 | money }}
+          </p>
+        {% endfor %}
+      {% else %}
+        <p>{{ 'collections.general.no_matches' | t }}</p>
+      {% endif %}
+
+    {% endfor %}
+    </div>
+    
+  </div>
+
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Get your blue blockers here! Yes, you heard correctly! goodr sunglasses now sells blue blocker sunglasses. The new line, launched as a part of our new vertical GAME goodr, features five shades with Blue Mirage err... blue light blocking technology. Allegedly, blue light is bad for your eyes, your sleep, your digestive tract (we may have made that up), and a plethora of other things that have yet to be discovered. And allegedly, these shades will solve all your problems and help you live forever. Step right up, folks! Give ‘em a try! Can you afford not to?!?!?! Wait, that’s a silly question because the price of these range from $25 to $35. We’ve made this miracle blue blocking eyewear technology as affordable as it gets!</p>
+                  	<img src="{{ 'Blue-Blockers-1.jpg' | file_img_url: 'master' }}" alt="Blue-Blockers-1" />
+                  	<h3>ARE ALL BLUE BLOCKER SUNGLASSES THE SAME?</h3>
+					<p>The answer is a resounding: NO! Not only do we believe a pair of our goodr blue light blocking sunglasses are the best blue light glasses of 2020. They’re spectacular for gaming. Nintendo, Playstation, iPhone, computer, heck maybe you’re still playing Snake on one of those old Nokia bricks… we don’t care what you’re gaming on or where, if there is a screen, you’re going to want these blue blocker glasses to protect your eyes and filter out the stuff you don't want with their fancy lenses. If the last 182 words didn’t convince you, we’re pretty sure that this breakdown on what the F blue light blocking glasses are will take you home.</p>
+                  	<img src="{{ 'Blue-Blockers-2.jpg' | file_img_url: 'master' }}" alt="Blue-Blockers-2" />
+                  	<h3>IS STARING AT A SCREEN ALL DAY BAD?</h3>
+					<p>We’re going to answer this question with a question… Do you think staring at a screen all day is bad?! Is there anything natural about staring at a screen all day? No. So, it probably is not the greatest thing for you. Our glowing screens of death that we use for hours a day x 365 days a year are causing digital eye strain and blue light exposure. Fact. These are the two areas that doctors and researchers are directing their attention to. The American Optometric Association calls it “Computer Vision Syndrome.” Ever feel blurry vision, dry eyes, headache, or neck pain after 8 hours full of Zoom meetings or an all-nighter trying to beat the latest version of Grand Theft Auto? Yep, this group of eye issues could be from prolonged computer, tablet, e-reader, and cell phone use.</p>
+					<p>The increased amount of screen-gazing, America’s new form of stargazing (sadly… please, we’re begging you, don’t stop stargazing!) also exposes us to dreaded blue light waves. Nope, not Bud Light, b-l-u-e light. The scientists can’t get on the same page with how blue light exposure affects your eyes, but it’s been said to cause multiple issues. Primarily, researchers and doctors can agree that it wreaks havoc on your circadian rhythm.</p>
+					<p>This is how GAME goodr likes to think of it: When you’re deep into your game, and you have the option to hit “save,” do you? Heck yes you do! Because even though you’re a baller gamer, it’s better to be safe than sorry, right? You could die a bloody death around the next turn you take, but at least you will be able to go back to the spot you hit save at. The same applies to blue blockers. If your eyes are important to you, then you should be doing your best to keep them safe. Hit save people!</p>
+                  	<img src="{{ 'Blue-Blockers-3.jpg' | file_img_url: 'master' }}" alt="Blue-Blockers-3" />
+                  	<h3>SOOO… WTF IS BLUE LIGHT ANYWAYS?</h3>
+					<p>Remember ROYGBIV? Yeah… blue light is the B in that very long acronym. Come on, people, 7th-grade science class. Get with the program. Humans see the rainbow (and if you’re eating Skittles right now, you might even be able to taste it too). The spectrum of visible light goes from red to violet. The blue light is said to generate an awake and upbeat feeling. AKA not ideal for right before bed… hence why you really should be wearing blue blocking glasses if you’re tryin’ ta Netflix n’ chill.</p>
+                  	<h3>WHAT GIVES OFF BLUE LIGHT?</h3>
+					<p>The answer to this question will either make you go, “duh,” or “shit, that’s cray.” All visible light sources give off blue light waves! The sun, touchscreens, even a basic ass light bulb. This means that  we’re hit with plenty of blue daily, but once the moon rises, we’re continuing to be exposed thanks to all of the artificial sources surrounding us.</p>
+                  	<img src="{{ 'Blue-Blockers-4.jpg' | file_img_url: 'master' }}" alt="Blue-Blockers-4" />	
+                  	<h3>IS BLUE LIGHT GOING TO KILL ME?</h3>
+					<p>YES. BUY THESE BLUE LIGHT GLASSES. Just kidding, the answer to that is definitely “no.” We think the question you might be trying to ask is if blue light is harmful? Let’s chat with an IRL scientist… Dr. Raj Maturi, spokesperson for the American Academy of Ophthalmology, would say, pffft, probs not. His logic: "During the day, you get 10 times as much blue light from the sun as you do from your computer screen. Our bodies have evolved to deal with this light." This is true. The American Academy of Ophthalmology will stand on their soapbox and tell you that we are exposed to blue light all day errr day, there is no evidence that blue light specifically from screens causes extra damage.</p>
+					<p>However, this “digital eye strain” conundrum is real. And whether you’re a hardcore gamer, a casual gamer, a student, some kind of professional sitting in front of your laptop daily, or just plain old addicted to your cellphone (:::cough::: 93% of the world [that’s a goodr stat, not an actual stat, FYI]), you can attest to feeling like your eyes have been werked (and not in a fun way). This is why, Prevent Blindness, a nonprofit dedicated to mitigating vision loss, suggests that blue light can contribute to eye strain. If your eyes are super strained, you’re more likely to get headaches, and you’re going to feel like garbage. So, what we're saying is that computer glasses are an intelligent buy, okay?</p>
+					<p>The American Optometric Association has research out that indicates increased amounts of exposure to blue light can actually damage your retina. This is the innermost layer of your eye that helps signal to your brain what you are seeing. Probably not a component you want to tamper with.</p>
+					<p>It’s truly a big IDK. However, wear blue blockers. It's one way to lessen the risk and make your eyes feel better. Who doesn’t like happy eyes!?? Another bonus is they’re stylish AF. You’ll feel cutting edge wearing goodr’s Blue Mirage line of blue light glasses, coming in various styles.</p>
+                  	<img src="{{ 'Blue-Blockers-5.jpg' | file_img_url: 'master' }}" alt="Blue-Blockers-5" />
+                  	<h3>WHAT DO BLUE BLOCKER SUNGLASSES DO?</h3>
+					<p>Oh yes, important question! Blue blocking glasses do exactly what they sound like they do. They use filters in the lenses to block the blue light from getting through. They even prevent those pesky UVA and UVB rays from penetrating your peepers. That’s a known win. Using blue light blocking glasses at night while screen-gazing is especially beneficial because, like we mentioned earlier, the blue light aids in staying awake, as it is a high-energy light, and when you’re trying to wind down, you’re not trying to screw with your circadian rhythm. It’s an easy accessory to pop on before starting another round of Mario Kart. They give you protection with style, and you should be thankful.</p>
+                  	<h3>SHOULD I BE WEARING BLUE LIGHT GLASSES?</h3>
+                  	<p>Let’s get into the circadian rhythm thing more… the reason blue light impacts your sleep is because it affects when your body is creating melatonin. Melatonin is a hormone that makes you tired and regulates the sleep and wake cycle. So if you are struggling to fall asleep, rocking a pair of blue blockers is a smart move. Carl, our CEO Flamingo, wanted to pass down a pro tip to everyone: The 20-20-20 rule. Every 20 minutes, stop what you’re doing and stare at something 20 feet away for 20 seconds. (He advises not to stare at people, this can lead to awkward interactions and misinterpretations…) The purpose? The 20-20-20 rule allows your eye muscles to chill out for a second, helping reduce eye strain. We don’t realize how focused we get on our screens when we’re in the zone.</p>
+                  	<img src="{{ 'Blue-Blockers-6.jpg' | file_img_url: 'master' }}" alt="Blue-Blockers-6" />
+                  	<p>We’re not sure if we actually answered any of your questions or concerns. Could blue blocker shades have a placebo effect? Quite possibly. Could these computer glasses be saving you from going blind? Well… that’s extreme, but we don’t know. There is evidence out there that says they certainly could be helping. And if they’re helping, don’t you think they’re worth trying out? At the very least, you'd be receiving quality frames with style and blue blocking lens. Oh, and they're durable. So, it's a win-win, honestly.</p>
+                  	<h3>WHERE TO BUY BLUE BLOCKER SUNGLASSES?</h3>
+                  	<p>Check out goodr’s latest line of five Blue Mirage beauties, which we think are the BEST blue blocker sunglasses around. Talk about quality! We hope they solve all of your problems, but at the end of the day, they might just be really flocking cool glasses in really flocking awesome frames. Either way, you can’t go wrong with the best blue light glasses around.</p>
+                  	<p>Gamers go outside too! At goodr, we saw the gaming community that was being underserved by sunglasses and blue-light blockers. The glasses were expensive, ugly, uncomfortable, and didn’t meet our four Fs. We wanted to bring fun, functional, fashionable, ‘ffordable blue blocker glasses to the gaming community, so we launched GAME goodr. Our colorways include no-slip no-bounce polarized sunglasses for gamers who love going outside, plus Blue Mirage best blue light glasses (blue-light blockers) for ardent screen gazers.</p>
+                  	<p>You might be wondering: “What are blue light blockers? Are blue blockers bad for you? Why block blue light? Did it say mean things to you on Twitter?!?!” No.</p>
+                  	<p>In the visible light spectrum, blue light has the shortest wavelength, and the highest energy. Therefore, it has the most potential to harm your eyes. Meanwhile, white light is a combination of all the visible wavelengths, and red light has the longest wavelengths and lowest energy. Pretty surprising, right? Because red light FEELS harsher than blue light? Remember that short-lived 90s Nintendo system, the Virtual Boy? It was, like, all red light, and people hated it! One of Nintendo’s rare failures. HA. But we digress.</p>
+                  	<p>Some blue light exposure is beneficial. Experts say this boosts alertness, elevates mood, and helps memory. (Wow, I can remember how to do algebra!) However, long-term exposure to blue light, especially from artificial sources like computer screens, phone screens, fluorescent lights, and LED lights, might be harmful. Other experts with mustaches say this contributes to digital eye strain and increases the risk of macular degeneration. (BTW, If Nicki Minaj’s cousin’s friend is reading this, blue light does NOT cause testicular swelling. Hope you feel better, bro.)</p>
+                  	<p>So, some scientists say, “Blue light is bad.” Some scientists say, “Blue light isn’t bad.” Other scientists say, “Hey! How’d you get in the operating room? SECURITY!!!!” That’s why we call our blue-light blocking technology ‘Blue Mirage.’ It’s also why we named one of our pairs Modern Day Snake Oil. HA. Look, we can’t guarantee blocking blue light will solve all your problems. But the option is there for those who want it. It’s like when you’re gaming and pass by a save point. Some of us always save, just to be safe. (And avoid a rage quit.)</p>
+                  	<p>Let’s get into the nitty-gritty (ooooh, “Nitty Gritty,” good stripper name): There haven’t been enough studies or a long enough period in time where conclusive evidence links blue light to eye strain, headaches, and fatigue. Blue Mirage goodrs are not polarized, but they do protect against UV400. Blue Light Blocking refers to 380nm through 500nm wavelengths. Testing shows our Blue Mirage blocks 25%(±5) of that wavelength spectrum. (BTW, nm means nanometers, which is 0.000000001 of a meter. So, if you want to insult somebody, tell them their brain or reproductive organs are blah blah blah nanometers long. Ho, ho!)</p>
+                  	<p>Some people like blue light blockers because of the connection between blue light and sleep. As we all know, a good night’s sleep is paramount to good health. Sleep deprivation has been linked to a variety of total bummers, like high blood pressure, diabetes, heart attack, heart failure, stroke, obesity, depression, impairment in immunity, and lower sex drive. And you guessed it --  blue light from artificial sources is linked to sleep problems. So, protect your eyes, people.</p>
+                  	<p>Circadian rhythms are a natural process that regulates the sleep–wake cycle and repeats every 24 hours. It’s always running in the background, like Facebook, except instead of spying on your conversations to spam you with targeted ads, it’s carrying out essential functions and processes. The external environment sends signals to the circadian rhythm to prime the body for being awake and going to sleep. Large amounts of blue light in the evening may disrupt your internal clock, making your body think it should be awake when it should be asleep. (“HEY! IT’S JUST A PRANK, BRO!”)</p>
+                  	<p>Let’s once again get into the nitty-gritty (ooooh, “Nitty Gritty,” good rap name): Blue light is effective at suppressing the production of melatonin, the hormone that tells your body to sleep. So, if you’re blocking blue light, your pineal gland (HAHA, “PINEAL”) will secrete (EWWWW, “SECRETE”) melatonin. Allegedly. Maybe. Possibly. Look, we don’t f***ing know. We have blue-light blockers for those that want them. Be a good little customer and shop the blue light blocker glasses because we said so. And leave us some good reviews while you're at it. The end.</p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,67 @@
+<style>
+.value-prop-image {
+ 	text-align: center; 
+}
+.value-prop-image.mobile-show {
+    display: none !important;
+}
+  
+@media screen and (max-width: 767px){
+  	.value-prop-image.mobile-show {
+    	display: block !important;
+	}
+  	.value-prop-image.mobile-hide {
+    	display: none !important;
+	}
+}
+</style>  
+<section class="value-prop-section">
+	<div class="container">
+  		<div class="row middle-xs">
+          	{% capture image_desktop_layout %}
+       			{% if section.settings.image_desktop != blank %}
+         			{{ section.settings.image_desktop | img_url: 'master' | img_tag }}
+       			{% else %}
+         			{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        		{% endif %}
+			{% endcapture %}
+            {% capture image_mobile_layout %}
+       			{% if section.settings.image_mobile != blank %}
+         			{{ section.settings.image_mobile | img_url: 'master' | img_tag }}
+       			{% else %}
+         			{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        		{% endif %}
+            {% endcapture %}
+   			<div class="col-xs-12 value-prop-image mobile-hide pvs">
+              	{{ image_desktop_layout }}
+      		</div>
+          	<div class="col-xs-12 value-prop-image mobile-show pvs">
+              	{{ image_mobile_layout }}
+      		</div>
+  		</div>
+	</div>  	
+</section>
+
+{% schema %}
+  {
+    "name": "Value Prop Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_desktop",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Mobile Image "
+      }
+    ],
+    "presets": [
+      {
+        "name": "Value Prop Section",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

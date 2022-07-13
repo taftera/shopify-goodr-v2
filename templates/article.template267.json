@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "def4f675-ea28-4f78-96a8-a76340d2353a": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "Santa Isn't Real Origin Story",
+            "text": "A Story About Christmas Sunglasses",
+            "image": "shopify:\/\/shop_images\/goodr_Holiday_2021_Santa_Isn_t_Real_product_RESIZE_e0a1588b-d242-4f0e-9a88-1b99e616b860.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "7f31c03e-3314-4e23-bc8a-cc024d3472ee": {
+          "type": "text",
+          "settings": {
+            "title": "SANTA ISN'T REAL!",
+            "text": "<p>...OR IS HE?!<\/p>\n<p>\nWe recently asked our customers if they had personal proof that Santa exists. These were some of the more convincing responses we received.\n<\/p>\n<p>“Back in the 80s I was working at a convenience store kind of on the outskirts of town, the graveyard shift. It was a typical Christmas Eve. The occasional reveler stopping in to grab a case of beer, cigarettes, eggnog, maybe an overworked parent grabbing some last minute cheap toys and candy for their kid’s stocking. You know, just kinda slow, dead. I was in the store by myself, restocking the pastry case, when the windows started to rattle, there was a sudden clopping sound on the roof, followed by a loud thud, and some large footsteps. I was scared shitless, but figured it was probably just one of my no goodnik friends trying to prank me. I stepped outside and tried to see if I could spot anything on the roof. All I could see was darkness, the snowflakes swirled down stinging my eyes. ‘Cletus, is that you?!’ I hollered, ‘If that’s you I’m gonna kick your freakin’ ass!’ Nothing. I was freezing my butt off and went back inside. Imagine my surprise when I walk in and see a guy dressed like Santa running out the back door. I started to yell for him to stop, thinking it was some smartass burglar, but then I saw a beautifully wrapped gift sitting on the counter with a tag that said ‘To Jubilation with love, Santa’. I rushed to open it. Inside I found the cherry red latex gimp suit and matching ball gag I had been admiring for months in the back of my Soldiers of Fortune magazine. I was too paranoid to buy it for myself for fear that the government might be tracking my purchases. NO ONE knew I wanted it. Bless you Santa, from one red suit aficionado to another!!!” - Jubilation Munson, 63, Metairie, LA <\/p>\n<p>“It was Christmas Eve, my brother and I had been sent to bed early that night. Our annoying stepdad chided us that Santa didn’t visit children who didn’t do as they were told. I could hear my brother snoring gently on the other side of the room, fast asleep. I tossed and turned for hours, I was so anxious and excited to see if Santa would bring me what I wanted!! See, mom had taken us to Maple Lane Mall to visit him and take pictures just a few weeks prior and I gave him explicit details about exactly what I wanted. It had to be something that would be very difficult for my average suburban parents to procure. I was determined to prove to my friends once and for all that Santa was real!!! I must have finally fallen asleep because a few hours later I was awakened by the sounds of glass breaking and my mother shrieking downstairs. My stepdad was yelling, ‘GODDAMNIT HELEN, DID YOU KNOW ABOUT THIS?!’ She denied it over and over, saying she had no idea how it happened and that she would fix it...I stumbled out of my room and peered down through the banister. There he was!!! The flamingo I had asked for, in all of his pink-feathered, drunken glory!!! ‘DAMMIT HELEN! He’s gotten into the liquor cabinet!! That was a bottle of 40 year old single malt scotch you goddamn drunk,’ he snarled, shaking the empty bottle at my feathered friend. ‘Oh Jesus Helen, he’s vomited shrimp cocktail all over the divan!!!’ Mom sobbed into her prized dendrobium anosmum, it’s sad purple flowers wilted under the weight of flamingo vomit. ‘That’ll teach you to leave dad for a capoeira instructor’ I thought, very pleased with myself. BEST. CHRISTMAS. EVER.”- Kyle McShane, 37, Omaha, NE<\/p>\n<p>“This didn’t happen to me, but to my grandfather who was a pilot in the navy for many years. One December back in the early 60s he was doing a test flight off the coast of Florida when suddenly his plane started to lose power. The plane began spiraling towards the Atlantic Ocean below. He tried desperately to gain control of the aircraft but the equipment wasn’t responding. He was trying not to panic when he was suddenly blinded by a red light so bright that he had to shield his eyes. At that moment the plane seemed to magically stop its death spiral, suddenly steadying itself. He looked out the cockpit window to see Santa flying parallel to the plane. He was wearing a Hawaiian shirt and sunglasses. The sleigh was not being pulled by reindeer, but by 8 pink flamingos!!! He said Santa’s arm was outstretched, a beam of red light shooting out of his palm like a magical laser beam that was encircling the whole plane like a whip guiding it to safety. My grandfather lost consciousness, most likely from shock, but came to a few hours later in the Naval hospital. He tried recounting the events to the Naval officials and hospital doctors to no avail. His buddies in the navy ended up nicknaming him ‘Lieutenant Commander Fruitcake’ after the reviled Christmas treat and well...because he’s nuts.” -  Lieutenant Jonas “Schmirnoff Iceman Cometh” Jacobson, 50<\/p>\n<p>We tried convincing Carl the Flamingo that Santa IS real with these and other stories we received from our customers but he wouldn’t budge on the issue. He is sooo freaking stubborn sometimes!!!\n\nThis all started last Christmas when Carl went to see Santa at the mall. He told Santa that HE wanted to be the first CEO to travel to outer space and that he wanted his very own spaceship for Christmas. He was crestfallen when he opened his gift from Santa on Christmas morning and discovered that he received a toy rocket ship instead of a real one. \n\nWe told Carl that a real spaceship was too big of an ask on such short notice, even for Santa, but Carl said that was no excuse. He decided to get back at Santa by creating these NEW red and green patterned Christmas sunglasses and naming them Santa Isn’t Real. \n\n(If it makes you feel any better, we’re pretty sure Carl’s getting coal in his stocking this year. We hope you’ll snag a pair of these festive sunnies and wear them in good cheer in spite of our flamingo CEO’s grinchy ‘tude.)<\/p>",
+            "show_article_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "5a1b32c3-c49b-4a2f-a602-dd686ff2edb2": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": "santa-isnt-real"
+          }
+        },
+        "98d44727-fa37-4095-907c-0d393518b839": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Holiday_2021_Santa_Isn_t_Real_product_RESIZE.jpg"
+          }
+        },
+        "29a087d9-b790-44d4-b83c-a6c0bf77254d": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "CHECK OUT MORE GOODRTIMES",
+            "content": "",
+            "article1": "goodrtimes\/antartica-2021-origin-story",
+            "article2": "goodrtimes\/oy-to-the-world-origin-story",
+            "article3": "goodrtimes\/lost-in-transition-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "def4f675-ea28-4f78-96a8-a76340d2353a",
+        "7f31c03e-3314-4e23-bc8a-cc024d3472ee",
+        "5a1b32c3-c49b-4a2f-a602-dd686ff2edb2",
+        "98d44727-fa37-4095-907c-0d393518b839",
+        "29a087d9-b790-44d4-b83c-a6c0bf77254d"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

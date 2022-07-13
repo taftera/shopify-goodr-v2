@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "be1ae911-a281-4ed6-a988-7a5d458f9a73": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "LOVE LETTERS TO CARL",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/goodr_Valentines_Day_2022_Two_Tats_Make_A_Whole_product_007.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "3aa6d44c-6bbd-4bc9-be9e-c64e8cee6607": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<style type=\"text\/css\">\n<!--\n .tab { margin-left: 40px; }\n-->\n<\/style><p>What can we say? Love is in the air at the goodr Lagoon. These are just a couple of the bizarre love letters that Carl the Flamingo has received at goodr headquarters. (Hey, he told us we have 100% permission to read his mail!!! Please just don’t tell him we published these on the interwebs.) \n<br><br>\n<\/p><p class=\"tab\">\n1. Sticky letter received from “Mitts,” an inmate at Appachobie Federal Correctional Facility:\n<br><br>\n<i>Dearest Carl,\n<br><br>\nAs I lay here awake in my cell, I can’t help but think about the good times we’ve never had. I buy seven honey buns from the commissary every week and take one out of my secret hiding place every night when my roommate goes to sleep. Each night I make out with one honey bun, imagining that it’s you, until it has dissolved into a mushy sweet slurry which I then smear on the wall next to my bed. I hope to one day make out with your actual face until it dissolves into a mushy sticky sweet slurry which I can smear on the wall next to my bed. God I love you.\n<br><br>\nYour personal beefcake,\n“Mitts”<\/i>\n<br><br>\n\n2. Pink stationary, reeked like Love’s Baby Soft, sealed with a lipstick kiss, photo enclosed of a heart-shaped tramp stamp of a portrait of Carl. Received from Turlana Quackenbush, Carl’s on-again-off-again-but-mostly-off-again fiance:\n<br><br>\n<i>Hey sugar boobs!!!\n<br><br>\nLong time no see!!! I haven’t seen or heard from you in a few months and was just wondering what you’ve been up to. Did you change your phone number? I stopped by your house but the gate code had been changed. So weird! Hahahahahaha When did you decide to get a Doberman?! And all those cameras?! Did you see me waving, baby?! \n<br><br>\nAnyhow, I was just missing you. I have enclosed a photo of my new tattoo. I hope it proves to you just how devoted I am to our relationship.\n<br><br>\nWith undying love and devotion,\nTurlana, YOUR FREAKIN’ FIANCE OR DID YOU FORGET AGAIN?!<\/i>\n<br><br>\n3. Nondescript letter… This one was weird because it wasn’t postmarked or signed, which makes us suspect it is an inside job. We’re going to be giving the stink eye to everyone who works here that has a beard…\n<br><br>\n<i>Dear Carl,\n<br><br>\nYour feet are webbed, your ankles are weird.\nI want to rub them both on my beard.\n<br><br>\nIt’s no secret,\nYour secret admirer<\/i>\n<br><br> <\/p>\nAll of this romance really got Carl’s motor running this Valentine’s season. Whether you’re single and ready to mingle, or are locked down harder than Carl’s house post-Turlana, we’ve got romantical Valentine’s sunnies for you. Be sure to check out our pink tattoo-inspired Two Tats Make a Whole sunnies and broody black Feeling Myself, Literally sunnies. Love is the reason for the season!!! Awww. *gag*",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "98c58a90-66c4-4451-9a4a-22d1f557599e": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0122_Singles_Feeling_Myself_Literally_ProductPageAssets_LIFESTYLE_IMAGE.jpg"
+          }
+        },
+        "44c22899-292d-4d3e-823d-4aa7246e3c2a": {
+          "type": "product",
+          "settings": {
+            "product": "feeling-myself-literally",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "da4888a4-37e7-43ae-8b35-3dbe8077eff6": {
+          "type": "product",
+          "settings": {
+            "product": "two-tats-make-a-whole",
+            "content": "",
+            "image_aligment": "right"
+          }
+        },
+        "68abf2f4-da50-498c-911c-16fcf8274552": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "GIVE THESE SOME LOVE",
+            "content": "",
+            "article1": "goodrtimes\/nft-x-game-goodr",
+            "article2": "origin-story\/its-octopuses-not-octopi-origin-story",
+            "article3": "goodrtimes\/goodr-x-reebok"
+          }
+        }
+      },
+      "block_order": [
+        "be1ae911-a281-4ed6-a988-7a5d458f9a73",
+        "3aa6d44c-6bbd-4bc9-be9e-c64e8cee6607",
+        "98c58a90-66c4-4451-9a4a-22d1f557599e",
+        "44c22899-292d-4d3e-823d-4aa7246e3c2a",
+        "da4888a4-37e7-43ae-8b35-3dbe8077eff6",
+        "68abf2f4-da50-498c-911c-16fcf8274552"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: monogram;
+    src: url('https://cdn.shopify.com/s/files/1/0084/1616/5946/t/45/assets/monogram.ttf');
+    font-weight: 800;
+    font-weight: bold;
+}
+
+#phaser-game > canvas{
+    padding: 0;
+    margin: auto;
+    display: block;
+    max-width: 800px!important;
+    max-height: 600px!important;
+}
+
+/*
+@media only screen and (max-width: 320px) {
+    #phaser-game > canvas{
+        width: 320px!important;
+        height: 240px!important;
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    #phaser-game > canvas{
+        width: 414px!important;
+        height: 310px!important;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    #phaser-game > canvas{
+        width: 380px!important;
+        height: 300px!important;
+    }
+}
+
+@media only screen and (min-width: 410px) {
+    #phaser-game > canvas{
+        width: 414px!important;
+        height: 310px!important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+     #phaser-game > canvas{
+        width: 736px!important;
+        height: 552px!important;
+    }   
+}
+
+@media only screen and (min-width: 992px) {
+    #phaser-game > canvas{
+        width: 800px!important;
+        height: 600px!important;
+    }
+}
+*/

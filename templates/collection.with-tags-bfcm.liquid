@@ -1,0 +1,76 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+  {% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+  {% else %}
+    {% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+  {% endif %}
+   <header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    <p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+</div>
+</div>
+  </header>
+
+  <div class="filter-container">
+    {% include 'filter-menu' %}
+  </div>
+
+{% assign tagList = 'Friday6,ReebokKit,FlamingoFavorites,goodrswag,mysterygift' | split : ',' | uniq %}
+
+{% for tag in tagList %}
+<div class="container--fluid">
+    <div class="row">
+      	{% assign products_count = 0 %}
+        {% for product in collection.products %}
+            {% if product.tags contains tag %}
+                {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+      	{% if products_count > 0 %}
+      	<div class="section-header">
+          	{% assign handle = tag %}
+			{% case handle %}
+	  			{% when 'Friday6' %}
+    	 			<h3>BLACKOUT FRIDAY 6-PACKS</h3>
+          			<div class="category-sort-description">Shop our themed 6-packs of sunglasses with microfibre bag-tags perfect for gifting!</div>
+  				{% when 'ReebokKit' %}
+     				<h3>REEBOK KITS</h3>
+          			<div class="category-sort-description">The perfect package for the Runner or Crossfit enthusiast or Professional Tag player.</div>
+				{% when 'FlamingoFavorites' %}
+     				<h3>FLAMINGO FAVORITES</h3>
+          			<div class="category-sort-description">Wondering what the flock to buy? Here are some of our favorites.</div>
+          		{% when 'goodrswag' %}
+     				<h3>GOODR SWAG</h3>
+          			<div class="category-sort-description">Wrap yourself and everyone you know, head to toe, in goodr gear.</div>
+          		{% when 'mysterygift' %}
+     				<h3>MYSTERY GIFT</h3>
+                    <div class="category-sort-description">Still not sure what to buy? Let fate choose in this game of chance with 12 prizes!</div>
+  				{% else %}
+     				<h3>{{ tag }}</h3>
+			{% endcase %}
+		</div>
+      	{% endif %}
+    	{% assign show_quick_buy = true %}
+    	{% for product in collection.products %}
+    		{% if product.tags contains tag %}
+      			{% include 'bold-product' with product, hide_action: 'skip' %}
+      			<div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or  product.tags contains 'WW84' %}sold-out{% endunless %}{% endunless  %}">
+        			{% include 'product-tile' %}
+      			</div>
+			{% endif %}
+    	{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}

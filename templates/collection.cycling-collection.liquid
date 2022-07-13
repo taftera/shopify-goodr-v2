@@ -1,0 +1,187 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 90 %}
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+{% assign collectionMobileBanner = collection.metafields.global.header_mobile_image %}
+{% assign collectionHeaderHorizontalAlign = collection.metafields.global.header_horizontal_align | downcase | remove:" " %}
+{% assign collectionHeaderVerticalAlign = collection.metafields.global.header_vertical_align | downcase | remove:" " %}
+{% assign collectionHeaderContentWidth = collection.metafields.global.header_content_width | downcase | remove:" " %}
+{% assign collectionHeaderGradientWidth = collection.metafields.global.header_gradient_width | downcase | remove:" " %}
+{% assign collectionMobileDescText = collection.metafields.global.mobile_description_text %}
+{% assign collectionMobileHeaderHorizontalAlign = collection.metafields.global.mobile_header_horizontal_align | downcase | remove:" " %}
+{% assign collectionMobileHeaderVerticalAlign = collection.metafields.global.mobile_header_vertical_align | downcase | remove:" " %}
+
+
+<header role="banner" class="hero-banner new-header horizontal-align--{{ collectionHeaderHorizontalAlign }} mobile-horizontal-align--{{ collectionMobileHeaderHorizontalAlign }} vertical-align--{{ collectionHeaderVerticalAlign }} mobile-vertical-align--{{ collectionMobileHeaderVerticalAlign }}">
+  	<img class="desktop-img" src="{{ collectionBanner }}" alt="Desktop Header Img" />
+  	<img class="mobile-img"  src="{{ collectionMobileBanner }}" alt="Mobile Header Img" />
+  	<div class="banner-content" style="max-width: {{ collectionHeaderContentWidth }};">
+    	<h1 class="h1 collection__title">{{ collection.title }}</h1>
+    	<div class="content">
+			<p class="text-color--white collection__description collection__description_desktop">{{ collection.description }}</p>
+          	<p class="text-color--white collection__description collection__description_mobile">{% if collectionMobileDescText != blank %} {{ collectionMobileDescText }} {% else %} {{ collection.description }} {% endif %}</p>
+		</div>
+	</div>
+  	<div class="new-header-overlay" style="max-width: {{ collectionHeaderGradientWidth }};"></div>
+</header>
+
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Are you looking for the best cycling sunglasses? The most popular cycling sunglasses? Just a pair of cycling sunglasses? Look no further — this is the popular crowd. Why settle for just a single pair of cycling sunglasses when you could get a bunch of cycling glasses at an extremely affordable price? UV protection? You bet. Polarized? OMG totes. No bounce and no slip? Most definitely. So what more could you ask for in a pair of cycling glasses? If it seems like we’re just randomly injecting the phrase “cycling sunglasses” or “best cycling sunglasses” or even “UV protection” into the description here for SEO purposes, then perhaps you’re a bit smarter than we initially anticipated, we’re just trying to get our stuff to the top of the Google search results. Is that so bad? We’ve asked you an awful lot of questions about cycling sunglasses at this point, it’d probably be nice to get to know a little more about you and what makes you tick. What’s your favorite food? Is it pizza? Seems like cycling and pizza go hand in hand if you ask us. So, check out the popular crowd because cycling sunglasses, uv protection, best cycling sunglasses, polarized cycling glasses, and cycling.</p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% assign tagList = 'ROAD,MOUNTAIN,GRAVEL,TRIATHLON,ASS,CX,CITY' | split : ',' | uniq %}
+
+{% for tag in tagList %}
+<div class="container--fluid">
+    <div class="row">
+      	{% assign products_count = 0 %}
+        {% for product in collection.products %}
+            {% if product.tags contains tag %}
+                {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+      	{% if products_count > 0 %}
+      	{% assign tag_code = tag | downcase | replace: ' ', '_' %}
+      	{% capture tag_description %}collections.tag_sort_description.{{ tag_code }}{% endcapture %}
+        {% assign tag_desc = tag_description | t %}
+      	<div class="section-header">
+			<h3>{{ tag }}</h3>
+          	{% if tag_desc contains 'translation missing'  %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ tag_desc }}</div>
+          	{% endif %}
+		</div>
+      	{% endif %}
+    	{% assign show_quick_buy = true %}
+    	{% for product in collection.products %}
+    		{% if product.tags contains tag %}
+      			{% include 'bold-product' with product, hide_action: 'skip' %}
+      			<div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or  product.tags contains 'WW84' %}sold-out{% endunless %}{% endunless  %}">
+        			{% include 'product-tile' %}
+      			</div>
+			{% endif %}
+    	{% endfor %}
+      
+      
+    {% if tag == "ROAD" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>It may come as a ginormous surprise that road cycling accessories such as sunglasses are not all about fashion. Envision your car windshield painted with bug splatter after a long road trip, the sound of rocks spraying your whip when a large truck goes by… scary! Cycling sunglasses protect your peepers from such disasters. If this functionality factor isn't enough to convince you to buy a pair, then think about how much fun you could have coordinating every color of goodr's no slip, no bounce, all polarized performance sunnies with your numerous kits. Bonus: They're only $25 and $35. So you can blow your dough on flashy high end overly priced spandex suits and carbon Zipp wheels, while still having the best sunglasses collection on your Sunday group ride. Why else are cyclist raving about goodr's performance shades? We'll tell you: With a massive assortment of lens options, you can have the perfect pair for all lighting situations. Got an early morning bike commute? Grab some clear or low light lenses. Sunny AF? We gotchu covered with shades like A Ginger's Soul and Operation Blackout. We probably should not have saved this for last, but we're also extra proud to inform you that goodr's MACH Gs, an aviator style frame were voted Gear of Year in 2020 by Bicycling Magazine. So yeah, we're basically the shizz.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if tag == "MOUNTAIN" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>So you need some cycling sunglasses specifically for your weekend rides in the mountains. The best cycling sunglasses combine fashion, performance, and durability. goodr delivers the goods on all 3 of these. Pick your lenses based on the weather: low light for those sunny scorchers, and gradient for when the clouds are making it feel like you’re taking on the Alps in February. (side note: we don’t recommend THAT). The best cycling sunglasses don’t compromise on any those 3. And when they start at just $25, your trips to take on the mountain climbs just got a little less expensive, too.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if tag == "GRAVEL" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>Gravel is having its moment in the cycling SUNglasses -- hahaha see what we did there?! We made a play on words about our cycling SUNglasses having a moment in the SUN. You may just be getting into gravel and wondering what the best cycling sunglasses are for such an endeavour, so we did all the heavy lifting for you and put together this nifty little collection of cycling glasses that are great for gravel cycling just for you! This collection of cycling sunglasses is ideal for gravel riding. You got your UV protection, your polarization, and, of course, no bounce/no slip -- perfect for keeping you riding and looking stylish. Plus if you get’em too dirty or too beat-up, they’re so affordable you just snag another pair! How many other cycling sunglasses can you say that about? Go on. We’ll wait. Bottom line if you’re into cycling, cycling sunglasses, and particularly gravel, you’ve come to the right place. Now, back to that sweet joke we opened with -- remember when we said gravel was having its moment in the cycling SUNglasses? Again, it’s funny because SUN and SUNglasses, it’s a play on words. Kind of surprised at just how niche cycling sunglasses humor is. Should we explain that again or…</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+    {% if tag == "TRIATHLON" %}
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+      	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          			<div class="collection-paragraph">
+              			<p>We know triathletes love gear. You can’t deny it. Don't try to hide it. So when the best cycling sunglasses ever invented are priced at $25 and $35 you might as well own every single pair of them. Want a different frame style for your swim, bike, and run? Well, we probs wouldn’t advise swimming in these sunnies, pretty sure that's what goggles are for, but you know what the goodr BIKE campaign saying is? “You Ride You.” So yeah, buy a pair to match your Speedo. If anything, do it for that pre-race IG photo. Might we suggest putting on a pair of our Bicycling Magazine Gear of the Year MACH G glasses for your ride? We can't guarantee they'll increase your MPH, but you'll look fast as heck. And grab a pair of goodr's OG classic shades for the run. As a result, you'll feel like a new person at each transition. We can't give you fresh legs, but we can provide fresh shades. The best part is, these sunglasses don’t slip or bounce, no matter how sloppy your form gets in the end. Additionally, all of our lenses are polarized. In other words, goodr sunglasses have everything you need to crush your first sprint, 70.3, or full Ironman. Send it.</p>
+          			</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	{% endif %}
+      
+	</div>
+</div>
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Cycling is one of those sports that is somehow specific but also covers literally the most broad and diverse array of groups.</p>
+					<p>Are you one of those road cyclists who match your cycling sunglasses with your many kits, practicing your drafting technique behind the freight trucks on the long open road?</p>
+					<p>Are you a gravel fiend, eating up the pebbles and rocks like their candy, always having an extra set of dentures and lenses in your cycle pack for the inevitable crash and cracks?</p>
+					<p>Are you the daily commuter who takes off in the wee hours of the morning, the steam curling from your nostrils up into your shades as you simultaneously thank the anti-fog gods while cursing that driver to hell when they clearly didn’t look before turning right?</p>
+					<p>Are you the gadget guru who always stocks up on the latest gear, tracking every acceleration, foot of incline, heart beat, wheel rotation, gear shift, pedal angle, centimeter of sweat shed, and slow poke you pass? Basically, you're impossible to buy gifts for because you always just go out and get the better version for yourself?</p>
+					<p>Are you one of those riders who shine brighter than the sun in your neon kit, light up wheels, party ride accessories where the fit of your shades, the nose piece, ear grips, and lens gradient are all important, as long as each piece is a different color of neon. Really you can’t have enough neon.</p>
+					<p>Are you one of those spunky and slightly cult-ish Peloton enthusiasts crushing your class PR to get to the top of the list and screaming right back at the instructor because clearly Cheryl is cheating with her resistance, again, as you blink the stinging sweat from your strained eyeballs staring at the screen?</p>
+					<p>Are you one of those joy riders who stick playing cards and beads in your spokes for that sweet sweet clatter and thread lights along the tires for that enviable multi-colored glow and glittering shiny streamers flowing from your handlebars and that old fashioned horn with the rubber bulbous ball that's oh so fun to squeeze as you alert your gang of pals to the ice cream truck's whereabouts?</p>
+					<p>Whoever you are, you ride you. Whatever group(s) you fit in to, you ride you. Because all cyclists are ultimately the same as they share their love of two wheels (or four if you’re in training, which, no judgement because you gotta start somewhere and we’ve all been nearly run over by those 4 year old speed demons). You also all have eyes. Probably. And if you do, you probably enjoy protecting those squints that have taken you from road, to track, to gravel, to mountain trails and back again safely and successfully allowing you to dodge cars and squirrels alike.</p>
+					<p>So what are the best protective specs in a pair of cycling sunglasses? Let’s think about those pain points that all cyclists feel whether you’re a city street rider or a mountain adventurer and you want to protect your eyes from the sun (or the bright screen if you ride you indoors).</p>
+					<p>You know that feeling that you get from some glasses like your head is being squeezed in a vice and your eyes start popping like a cartoon and you get those sexy indentations along the side of your face because the arms of your sunglasses were hugging your face just a little bit too tight like the embrace from Thor when he's missed you oh so much while on his quick return to Asgard? We've product tested for JUST that. Not only is the non-slip silicone coating on our frames and arms soft as butter (though not as greasy, obviously, because they're non-slip...) Ok this analogy isn't working. Let's go with soft as... a feather pillow? But these cycling sunglasses wobble around and get so lumpy you need to punch them back into shape. Soft as... a baby's bum. Too creepy? Whatever, you get it. The coating is soft, so it doesn't hurt as the shades hug your head but they also won't bounce no matter how crunchy the gravel path is or slip as you whip your hair back and forth, whip your hair back and forth, and also safely look left and right for traffic. BUT we also have our BFG frames that are sized for larger pumpkin heads to prevent the canyons developing along your overly developed temples. Just as stylish, just as polarized and protected, just bigger. And as we all know, the bigger your sunglasses... wink wink... the fewer options you have to choose from because most companies only make their shades in one size. Not goodr! We love you and your big grand noggin.</p>
+					<p>How about eye strain and the danger of UV rays? POW! PEW! ZAP! That's the sound of us destroying those pain points, by the way... not the sun's unforgiving flaming arrows piercing through your crappy non-UV protected lenses and frying your retinas. ALL of our shades are all polarized for your peepers' protection. And for those of you who ride indoors with the evil bright screens, check out our clear lenses that are equipped with Blue Mirage technology designed to block blue light and help you read those rankings accurately so you can put on a burst of speed to blast ahead of freaking Cheryl. The cheater.</p>
+					<p>Think wearing sunglasses makes you blind on a bike with intensely dark lenses that blackout your vision and immediately trick your brain into thinking you're actually in your cozy bed with the blackout curtains cocooning you in soft darkness so you sleepily veer off the bike path and hikers find you hours later napping away in a thicket of blackberry bushes? Our rose and copper colored lenses are specifically designed to maintain visibility when the dark shades aren't needed. But not to worry! They don't just look sweet as hell and turn you into a freaking rockstar a la Elton John or Bono, they still protect from UV rays and increase the HD contrast performance of your vision so you can pinpoint and detect obstacles and gradation in the path ahead and accurately determine the distance from you and that suicidal squirrel that just can't decide if it wants to cross the road or not. JUST CROSS DAMNIT. GO JOIN YOUR SQUIRRELLY FAMILY ON THE OTHER SIDE OF THE ROAD. NO NO NO DON'T CHANGE DIRECTION IDIOT! Phew, that was close. AAAAH POTHOLE! Good thing you have those high contrast, polarized, low light lenses in your goodr glasses so you could efficiently swerve around both squirrel and giant crater.</p>
+					<p>Let's not forget about how horribly disgusting most cycling sunglasses look. And by disgusting we mean nasty, awful, a**hole-y, jerk road hog-y disgusting. Most performance sunglasses, especially for cyclists, look like the Terminator met an astronaut and had a weird, tense, and not whole-y healthy relationship, but they thought they could make it work and so they had a baby and that baby grew up to be a motorcycle helmet visor that loved to go out and play with the other performance protective eyewear, but felt self conscious that there wasn't a proper place for a nose grip like all of its friends so it decided to cut one itself, even though everyone always told it, DON'T CUT YOUR OWN NOSE PIECE PLACEMENT because it never looks good, you have to go to a professional, but it went ahead and did it itself, and it was not a symmetrical, flattering cut, as expected, and it felt even more self conscious. The Terminator told it the nose piece would grow back normally, but it never really did, and so it paid an absurd amount of money to get a professional to finally fix it, but since they were fixing the nose piece placement instead of cutting one from a blank slate, it still wasn't quite right or flattering for the shape. And then a road cyclist found the weird hybrid glasses/visor protective eyewear, paid $350, and put them on their face and called them performance cycling sunglasses. With goodr sunglasses, we have flattering frames that fit every size and shape of face. Though we wish that now grown-up motorcycle helmet visor all the best in its future ventures.</p>
+					<p>Basically, you don't have to spend more moolah, dough, bitcoin, dogecoin, or kizzitycash to get the protection you need from your cycling sunglasses. With goodr you get all the polarization (read as: UV rays radiation eradicator, blinding brightness battler, searing sun squasher, glare gobbling Godzilla); high definition contrast (read as: you know how you've always wanted to see every color variation in the scientific spectrum and detail in the pavement down to the tiniest pebble and little lost ant in the concrete jungle struggling to pick up that tiny pebble to take back to his urban ant hole, but not because he's being stupid thinking it's a piece of food, because he and his millions of ant family members are building a statue meant to celebrate Woody Allen for accurately voicing the neurotic "Z" from the movie "Antz." But soon there will be all out ant warfare with the ant hill around the block next to the car dealership who worship Dave Foley for his ant portrayal in the far superior "A Bug's Life." Well, now with goodr's best cycling sunglasses you can see those details on your way to work); and non-slip, no bounce comfort (read as: even while you're biking along, feeling yourself in your brand new neon kit, new road shoes with the triangular, three-bolt cleat mount pattern that clips in to the latest competitive road-pedal system, and you catch a glimpse of your sexy self in your handlebar mirror - that's really just meant for seeing traffic coming up alongside you to stay safe while turning, but you ride you - and just get so distracted that you accidentally swerve down the hundreds of outdoor pedestrian steps that are normally reserved for those punk skateboarders who have no regard for their limbs or mortality, and you bounce and boing and clatter and hold on for dear life on your way down, praying you won't pop a wheel tire or irreparably damage your groin, be assured in the fact that your glasses will remain firmly but comfortably on your face); without the expensive performance cycle gear price tag. All thanks to goodr.</p>
+					<p>Don't know how to thank us? We've even got you covered there. Follow this simple script.</p>
+					<p>You: "WOW! These cycling sunglasses have changed my life! Thank you, goodr!"</p>
+					<p>Us: "No problem! We genuinely enjoyed designing, testing, making, and naming those so that they'd make you chuckle, make others jealous of their stylish color and pattern, and perfectly fit in with your cycle lifestyle!"</p>
+					<p>You: "BY GEORGE! And those lenses! So performative! I've literally never biked in a straighter line, except when I want to turn, in my life."</p>
+					<p>Us: "That's kind of a weird comment, but we're sure glad you like how our lenses work! We designed them to perform similar to those super expensive performance sunnies you get at specialty stores for hundreds of dollars but with a lower, more attainable price point because in all honesty, it doesn't cost that much to put a polarizing protective layer on sunglass lenses."</p>
+					<p>You: "UNBELIEVABLE! I didn't know that! Yeah, that was the next thing I was going to exclaim about! That price point! So affordable at only $25 and $35 depending on the frame style. I could literally buy 20 pairs without breaking the bank and have extras for every outfit and kit and member of my extended family!"</p>
+					<p>Us: "Yep. You got it! That's the point! Affordable athletic sunglasses for anyone."</p>
+					<p>You: "HOLY SWEET SHADES, BATMAN! AND I don't have to pay for standard shipping in the United States if I get more than $50 worth of products?! That's not only incredibly generous, but also EASILY met in the checkout cart because I just can't decide which colors and patterns and frames to get, so I think I'm just going to get ALL of them and then swap them out for each ride. Maybe even have a basket for each type that I prefer for when I go road cycling, mountain biking, gravel riding, trail blazing, triathlon training, and just commuting to work! What do you think about that idea, goodr?!?!?!?!"</p>
+					<p>Us: "Yeah. That sounds good. Very organized. Is there something you wanted to tell us, though? Because we kind of have to get back to work to make more fun, fashionable, functional, and 'ffordable sunglasses for everyone..."</p>
+					<p>You: "HAHAHAHAHA THAT'S YOUR BRAND MOTTO IT'S SO GREAT! What I wanted to say, was thank you. Thank you, goodr. For being the athletic eyewear brand we all wanted and needed."</p>
+					<p>Fin.</p>
+          		</div>
+			</div>
+		</div>
+	</div>
+</div>

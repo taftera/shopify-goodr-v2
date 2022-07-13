@@ -1,0 +1,29 @@
+{% include 'personify' %}
+{% include 'personify-content' %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="page__title">{{ page.title }}</h1>
+    </div>
+    
+  		{{ 'game-custom.css' | asset_url | stylesheet_tag}}		
+        {% comment %}{{ 'phaser.min.js' | asset_url | script_tag }}{% endcomment %}        
+        <script src="//goodr.s3-us-west-1.amazonaws.com/game/phaser.min.js?v=" type="text/javascript"></script>
+		<script type="module" src="{{'main.js' | asset_url}}"></script>
+        <div style="font-family: monogram; position: absolute; left: -1000px; visibility: hidden;"></div>
+        <div id="phaser-game"></div>                      	
+		
+    	<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      		<div class="rte">	
+    			<div style="margin-top: 50px;margin-bottom: 50px;">
+         			{{ page.content }}
+      			</div>
+        	</div>
+    	</div>        
+  </div>
+</div>
+<script>
+$(function(){
+   document.getElementsByClassName('rte')[0].prepend(document.getElementById('phaser-game'));
+});
+</script>

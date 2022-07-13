@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "a055fd4f-0b55-4825-8ba0-0ec8ab725ef7": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GOODR SIZING",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Sizing_header_test.jpg",
+            "banner_height": "400px",
+            "align_text": "right",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "813f8ade-d56a-48a1-834e-6a61b42d190d": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>\nThe measurements on the size chart are body measurements. Find your correct size in the chart below. <\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "7a05b0ae-cddd-49fa-b1c5-000f7fd90540": {
+          "type": "function_block",
+          "settings": {
+            "title": "LOOK GOOD, BIKE GOODR.",
+            "image_aligment": "right",
+            "tab_title_1": "1 Tab Title",
+            "tab_text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit.",
+            "tab_title_2": "2 Tab Title",
+            "tab_text_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit.",
+            "tab_title_3": "3 Tab Title",
+            "tab_text_3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit.",
+            "tab_title_4": "4 Tab Title",
+            "tab_text_4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit.",
+            "tab_title_5": "5 Tab Title",
+            "tab_text_5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros ex, convallis quis gravida eu, fringilla sit amet elit.",
+            "tab_title_6": "",
+            "tab_text_6": "",
+            "tab_title_7": "",
+            "tab_text_7": "",
+            "tab_title_8": "",
+            "tab_text_8": ""
+          }
+        },
+        "6fbca979-17b6-4cb7-a2c3-2ea77d04ff4a": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<table>\n<tr>\n<td><\/td>\n<td>SIZE<\/td>\n<td>LENGTH (inches)<\/td>\n<td>CHEST WIDTH (inches)<\/td>\n<\/tr>\n<tr>\n<th>Men's T-Shirt<\/th>  \n<td><\/td>\n  <td><\/td>\n  <td><\/td>\n  <td><\/td>\n<\/tr>\n<tr>\n<td><\/td>\n<td>XS<\/td>\n<td>27<\/td>\n<td>17.5<\/td>\n<\/tr>\n<tr>\n<td><\/td>\n<td>S<\/td>\n<\/tr>\n<tr> \n<td>test<\/td>\n<td> test 2<\/td>\n<\/tr>\n<\/table>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "a055fd4f-0b55-4825-8ba0-0ec8ab725ef7",
+        "813f8ade-d56a-48a1-834e-6a61b42d190d",
+        "7a05b0ae-cddd-49fa-b1c5-000f7fd90540",
+        "6fbca979-17b6-4cb7-a2c3-2ea77d04ff4a"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

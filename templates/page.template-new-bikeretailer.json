@@ -1,0 +1,225 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "25d01a21-5fe4-4caa-bef2-6519a148dbfe": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "HERE TO RSVP TO THE BIKE GOODR PARTY?!",
+            "text": "Because if you aren't <s>partying<\/s> riding with Carl the Flamingo, you're missing out.",
+            "image": "shopify:\/\/shop_images\/goodr_Cockpit_Optics_Buzzed_On_The_Tower_BIKE_Lifestyle_008.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "9428a4d6-62a6-421b-87a9-da8965bfae44": {
+          "type": "text",
+          "settings": {
+            "title": "You have come to the right place.",
+            "text": "<p>Whether it’s our straightforward buy-in, pain free ordering, free POP retail stand, or our No Slip No Bounce tech, we are here to make this shit as easy and fun as possible.<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "9168df68-c0cc-44f1-9f3f-fbebd6c971cb": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Cockpit_Optics_Three_Shot_lifestyle_001.jpg"
+          }
+        },
+        "3db823df-556a-48a8-b1a3-4cbb7a51cd1e": {
+          "type": "text",
+          "settings": {
+            "title": "WANT TO SEE MORE GREEN?",
+            "text": "",
+            "show_page_content": false,
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "d6074a76-0ab3-414f-a539-6188b13c7719": {
+          "type": "awards_press_block",
+          "settings": {
+            "show_awards_1": true,
+            "awards_icon_1": "shopify:\/\/shop_images\/easy_retailerjpg-1550000671451.jpg",
+            "awards_text_1": "<h5>Hitting minimums and filling out all sorts of paperwork sucks. At goodr we offer low minimums (24 units) which makes getting on board easy peasy.<\/h5>",
+            "awards_url_1": "",
+            "show_awards_2": true,
+            "awards_icon_2": "shopify:\/\/shop_images\/pain_free_orderingjpg-1550000713163.jpg",
+            "awards_text_2": "<h5>We get that ordering can be a real pain in the @$$. Which is why we have our own online B2B portal making ordering and shipping, pain free.<\/h5>",
+            "awards_url_2": "",
+            "show_awards_3": true,
+            "awards_icon_3": "shopify:\/\/shop_images\/retail_stand_retailerjpg-1550000741163.jpg",
+            "awards_text_3": "<h5>Making sure our shades stand out in your store is key for both of us. That's why every first order comes with a free retail POP stand that holds six different shades.<\/h5>",
+            "awards_url_3": "",
+            "show_awards_4": false,
+            "awards_text_4": "Awards Text",
+            "awards_url_4": ""
+          }
+        },
+        "06d0a5f7-682f-4e9d-8dc4-b56888e16176": {
+          "type": "html",
+          "settings": {
+            "code": "<div data-tf-widget=\"ftPoSX\" data-tf-iframe-props=\"title=Retailer Registration\" data-tf-hidden=\"utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx\" style=\"width:100%;height:400px;\"><\/div><script src=\"\/\/embed.typeform.com\/next\/embed.js\"><\/script>",
+            "width": "100%"
+          }
+        },
+        "dfb391c1-e25d-4485-9559-7a127174bc6c": {
+          "type": "text",
+          "settings": {
+            "title": "STILL NEED CONVINCING?",
+            "text": "<p>By joining BIKE goodr as a retailer, you get the privilege of selling these fun, functional, fashionable, and ffordable (we wanted it to be the \"four F's\" and when your CEO is a flamingo speaking through a beak, anything goes) sunglasses in your store. They're pretty snazzy looking if you ask us.<\/p>",
+            "show_page_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "aad12e7c-6a6d-45d5-9fce-4fb449b27e7d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GOTY_Mach_G_Ads-08.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "a18e06d6-2290-449d-8e07-38a5d15a7893": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GOTY_Mach_G_Ads-09.jpg",
+            "width": "50%",
+            "align_image": "center"
+          }
+        },
+        "f2679a9a-484c-453e-9955-232fb3b11de0": {
+          "type": "text",
+          "settings": {
+            "title": "Our Sunglasses won multiple awards, including 2020 Bicycling Gear of the Year",
+            "text": "<p>The polarized sunglasses retail for $35 and contain all of the no-slip no-bounce performance that made goodr a two-time Runner’s World Gear of the Year-winning brand. <\/p>",
+            "show_page_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "70422f86-9739-4190-a389-d7c7a492c7e5": {
+          "type": "video",
+          "settings": {
+            "title": "",
+            "cotent": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Qj-BsV4jfHE",
+            "video_background": "shopify:\/\/shop_images\/OnePercentForThePlanet_Lifestyle_020_1.jpg",
+            "text": "",
+            "align_text": "left",
+            "width": "100%"
+          }
+        },
+        "ae9b967a-ea51-462b-a85c-3e25c338cf35": {
+          "type": "video",
+          "settings": {
+            "title": "",
+            "cotent": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=rN7lOBnVFJs",
+            "video_background": "shopify:\/\/shop_images\/goodr_Bodhis-Ultimate-Ride_Bike-Lifestyle-005.jpg",
+            "text": "",
+            "align_text": "left",
+            "width": "100%"
+          }
+        },
+        "bf525215-b660-44a9-8367-6c657f332f4d": {
+          "type": "performance_block",
+          "settings": {
+            "title": "",
+            "text": "",
+            "show_beasting": false,
+            "show_biking": true,
+            "show_running": false,
+            "show_golf": false,
+            "show_game": false,
+            "show_beasting1": true,
+            "show_biking1": false,
+            "show_running1": true,
+            "show_golf1": true,
+            "show_game1": false
+          }
+        },
+        "41f7aeae-b353-4c9e-84bc-a5f929ed9b4f": {
+          "type": "function_block",
+          "settings": {
+            "title": "LOOK GOOD, BIKE GOODR.",
+            "image": "shopify:\/\/shop_images\/goodr_Race_Du_Jour_22_You_Ride_You_Crew_BIKE_Lifestyle_006_full_res.jpg",
+            "image_aligment": "right",
+            "tab_title_1": "1 NO SLIP",
+            "tab_text_1": "We use special grip coating and silicone nose inserts to construct our frame to help eliminate slippage when sweating.",
+            "tab_title_2": "2 NO BOUNCE",
+            "tab_text_2": "Our frame is flight-weight to prevent bouncing when running, biking, beasting, or exceeding speeds of Mach 5.*\n*Not tested at hypersonic speed, but…we’re pretty sure.",
+            "tab_title_3": "3 ALL POLARIZED",
+            "tab_text_3": "The speed of light got nothing on you. These glare-reducing, polarized lenses with UV400 protection blocks 100% of those harmful UVA and UVB rays.",
+            "tab_title_4": "4 ALL SPEED",
+            "tab_text_4": "An all new shape built to give you the ultimate speed advantage whether you're crushing beers or crushing your competition.",
+            "tab_title_5": "",
+            "tab_text_5": "",
+            "tab_title_6": "",
+            "tab_text_6": "",
+            "tab_title_7": "",
+            "tab_text_7": "",
+            "tab_title_8": "",
+            "tab_text_8": ""
+          }
+        },
+        "fe414c45-9e4e-442b-837f-061553f30e5e": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<center><a href=\"https:\/\/goodr.com\/collections\/cycling-sunglasses\" target=\"_blank\" class=\"button\" button--small=\"\">View the CYCLING line<\/a><\/center><p><\/p>",
+            "show_page_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "ca27570f-6ae0-4e8a-bc8d-2ef25056f206": {
+          "type": "text",
+          "settings": {
+            "title": "ABOUT GOODR",
+            "text": "<p>We exist to give you permission to be unabashedly yourself… unless you’re an asshole. We make badass $25 and $35 sunglasses that speak to the four F’s: Fun, Fashionable, Functional and Ffordable. They don’t slip or bounce while running, beasting, biking, golfing or gaming… but if you’re an asshole they might burst into flames so watch out.<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "82f00868-e635-4c4a-9284-958fcc5857b6": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Mach_G_Circle_G_Inline_Model_Update_2022_Thanks_They_re_Vintage_BIKE_Lifestyle_007.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "25d01a21-5fe4-4caa-bef2-6519a148dbfe",
+        "9428a4d6-62a6-421b-87a9-da8965bfae44",
+        "9168df68-c0cc-44f1-9f3f-fbebd6c971cb",
+        "3db823df-556a-48a8-b1a3-4cbb7a51cd1e",
+        "d6074a76-0ab3-414f-a539-6188b13c7719",
+        "06d0a5f7-682f-4e9d-8dc4-b56888e16176",
+        "dfb391c1-e25d-4485-9559-7a127174bc6c",
+        "aad12e7c-6a6d-45d5-9fce-4fb449b27e7d",
+        "a18e06d6-2290-449d-8e07-38a5d15a7893",
+        "f2679a9a-484c-453e-9955-232fb3b11de0",
+        "70422f86-9739-4190-a389-d7c7a492c7e5",
+        "ae9b967a-ea51-462b-a85c-3e25c338cf35",
+        "bf525215-b660-44a9-8367-6c657f332f4d",
+        "41f7aeae-b353-4c9e-84bc-a5f929ed9b4f",
+        "fe414c45-9e4e-442b-837f-061553f30e5e",
+        "ca27570f-6ae0-4e8a-bc8d-2ef25056f206",
+        "82f00868-e635-4c4a-9284-958fcc5857b6"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,29 @@
+{%- liquid layout none -%}
+
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign page_url = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |   replace:'\/','/' |    replace:'%20',' ' |    replace:'\u0026','&'  -%}
+{%- assign lottery_code = '' -%}
+{%- for i in (1..1) -%}
+	{%- unless page_url contains "?" -%}{% break %}{%- endunless -%}
+	{%- assign query_string = page_url | split:'?' | last -%}
+	{%- assign qry_parts= query_string | split:'&' -%}
+	{%- for part in qry_parts -%}
+		{%- assign key_and_value = part | split:'=' -%}
+		{%- if key_and_value.size > 1 -%}
+			{%- if key_and_value[0] == 'lottery_ID' -%}
+				{%- assign lottery_code = key_and_value[1] -%}
+			{%- endif -%}
+		{%- endif -%}
+	{%- endfor -%}
+{%- endfor -%}
+{%- if lottery_code == "1234567" -%}
+	<div class="lotter-result-box">
+      	<h3>HOLY SHIT....YOU WON!!</h3>
+      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin risus. Vivamus rhoncus ligula ut ipsum accumsan auctor. Nunc suscipit, metus eget malesuada sagittis, ligula nisi varius turpis, tincidunt sodales lacus augue non diam.</p>
+	</div>
+{%- else -%}
+	<div class="lotter-result-box">
+      	<h3>Yo, 😞....we still love you...</h3>
+      	<p>that car probably would have broken down in a week...</p>
+	</div>
+{%- endif -%}

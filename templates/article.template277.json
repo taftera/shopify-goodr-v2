@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "f9c6162e-636f-46a9-b940-0724878266eb": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "FOSSIL FINDING FOCAL ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/fossil_1600_1067_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "bd21d412-1cec-46eb-b32d-ca880c8b7611": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>In the mood for an adventure? Why not go on a fossil finding expedition?! Fossil finding is like getting in nature’s time machine to travel back thousands of years without the exorbitant cost!!! And the best part is, you don’t have to worry about causing a rip in the space-time continuum. (If we’ve said it once, we’ve said it a thousand times: time travel causes a whole mess of problems NO one wants to deal with. We know from personal experience.)\n<br><br>\nYou don't have to be a professional paleontologist to rustle up ancient remains. However, many first-time fossil hunters neglect things like safety and equipment. We collected these useful tips to help you get started:\n<br><br>\n<\/p><p style=\"margin-left:10%; margin-right:10%;\">1. Most fossils like to hang out in sedimentary rock. We’re not talking about your uncle Shale who never leaves his recliner. (Not because he can’t but because he doesn’t want to. We’re pretty sure the skin on his thighs and buttocks has fused with that velour upholstery by now. Can land-locked creatures get barnacles?) He’s what’s known as a sedentary rock. Make sure his scratchin’ stick is within reach before you leave for your fossil-finding adventure. You’ll be gone awhile.\n<br><br>\n2. Never go fossil hunting alone. Trust us, you’ll want someone there in case you fall into a ravine or need someone to pout to about how you haven’t found anything. Has anyone ever told you that patience is a virtue? This isn’t TJ Maxx where you can just walk into a magical store and fulfill all of your wildest fantasies by the cartload, you little consumeroid freak.\n<br><br>\n3. Make sure you bring plenty of hydration, like wine coolers. Oh yeah, and toilet paper. Maybe some snacks. Don’t drink from that stagnant, fetid pool unless you want incurable diarrhea forever.\n<br><br>\n4. Be sure to wear the proper gear and attire. (Might we suggest these fabulous green Fossil Finding Focals shades in our latest PHG frame style?) Oh yeah, and proper shoes with traction, etc. See above about falling into a ravine.\n<br><br>\n5. Keep a field journal to record all of your adventures!!! Be sure to use waterproof ink so that your recordings can’t be erased or changed. Also, we hear that urine can stand in for invisible ink. So like, if you find buried pirate treasure or something like that you can secretly record its location with your urine and come back later so you don’t have to split the spoils with your fossil-finding partner. That’s a real dick move BTW, we can’t believe you suggested it.\n<br><br>\nNever climb into dangerous, unfamiliar crevices (this is a good general life rule) or try to cuddle potentially poisonous animals. Make your fossil-finding companion do it first. We kid, we kid. You don’t want that on your conscience. But yeah, that cute widdle baby rattler doesn’t want to take duck face kissy pics for your insta-profile. \n<br><br>\n6. Be safe, have fun. Wear protection. (We’re talking about sunscreen and bug repellent you perv.)\n<\/p>",
+            "show_article_content": false,
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "f3f7b715-0b7b-49de-8768-85249b180658": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fossil_1600_1067_bleed.jpg"
+          }
+        },
+        "f3c35c4b-72a1-46f5-ad70-07008bc9ae37": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "de887bdf-20a0-418d-b9f8-91dc262cb268": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE TO EARN YOUR PHG",
+            "content": "<p>LOOKING SCHOLARLY ALREADY!!!<\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "f9c6162e-636f-46a9-b940-0724878266eb",
+        "bd21d412-1cec-46eb-b32d-ca880c8b7611",
+        "f3f7b715-0b7b-49de-8768-85249b180658",
+        "f3c35c4b-72a1-46f5-ad70-07008bc9ae37",
+        "de887bdf-20a0-418d-b9f8-91dc262cb268"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

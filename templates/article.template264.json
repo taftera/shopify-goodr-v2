@@ -1,0 +1,169 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "42275dd3-58ca-43cd-a239-8b565753e4c1": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "Dream Team x BEAST goodr",
+            "text": "The Dream Team at the Big Dance",
+            "image": "shopify:\/\/shop_images\/Header_OCR_GT.png",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "3978669b-aedf-4d55-8e97-5535e8b0f689": {
+          "type": "intro",
+          "settings": {
+            "title": "HAVE YOU EVER LOOKED AROUND...",
+            "text": "<p>...and thought “there’s too many dudes on the dance floor?” Well, a similar thing happened to me in obstacle course racing.<\/p>\n<p>Hi, I’m Nicole Mericle! I’m a professional obstacle course racer and I noticed something alarming a couple years ago. There’s way more men in OCR, like about 70% of participants. As we get into competitive and elite races, we see even fewer female participants. Which has me wondering, WHERE MY GIRLS AT? <\/p>\n<p>Well, I asked them (the girls) and many pointed to a lack of confidence and fear of failure as barriers to entry. It’s true, OCR can be very challenging with multiple skill sets to master including running, strength, and ninja warrior-like obstacles. I know first hand how confusing it can be, and I was starting out with a background as a collegiate runner and seasoned rock climber. <\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "7974adf6-9a7c-4c42-bebf-facd8541c216": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "content": "<p>I’m no psychologist, but I can tell you one thing. Men are just more confident when it comes to stepping out of their comfort zone and trying something new. If I could bottle it up and hand it out I would, but I haven’t figured that out yet. Instead, I founded the Dream Team to equip and inspire women in OCR. \nThe Dream Team includes 5 up and coming female athletes who aspire to compete against the best in OCR. <\/p>They each receive a stipend and a bunch of gear for training and for looking cool, obviously Goodr shades included. Additionally, I am joined by a badass group of women experts including registered dieticians Kylee Vanhorn and Corinna Coffin, mental performance coach Addie Bracy, clinical psychologist Dr. Lara Pence, and coaches Nell Rojas and Grit Coaching’s Jess O’Connell and Faye Stenning. Together, we’ve tried to throw everything at this group that they could possibly need as athletes.",
+            "image": "shopify:\/\/shop_images\/C58DD4AA-82DD-4DF5-B5B2-5162621347EC.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "88b333f0-7435-4d9b-ba31-c6a3eee6e190": {
+          "type": "intro",
+          "settings": {
+            "title": "LET'S MEET THE TEAM",
+            "text": "",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "c0043ad8-5fd6-4694-83b4-670331532e74": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "LILLIE ELKIN",
+            "content": "<p>Age 21, lives in Montana <\/p>\n<p><a href=\"https:\/\/www.instagram.com\/lillieelkin_spartanocr\/\"><span style=\"font-weight: 300;\">@lillieelkin_spartanocr <\/span><\/a><\/p>\n2018 and ‘19 Spartan Race Age Group World Champion \nLillie is the youngest athlete on the team, but not the least experienced. She started out in age group before stepping into the elite field where she promptly placed in the top 5 at one of the most competitive races of the year. <br><br>\n\nUnfortunately, injuries are part of being an athlete, and Lillie has been dealing with an especially annoying one for the better part of a year. \n",
+            "image": "shopify:\/\/shop_images\/Lillie_Elkin_cropped.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "6a3a97c6-d85d-4784-a52a-dc771553cbc8": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "EMMA COOK-CLARKE",
+            "content": "<p>Age 28, lives in Calgary, Alberta, Canada <\/p>\n<p><a href=\"https:\/\/www.instagram.com\/emcookclarke\/\"><span style=\"font-weight: 300;\">@emcookclarke<\/span><\/a><\/p>\nProbably the most active person you don’t know, Emma works as a firefighter and enjoys running, hiking, biking, climbing, skiing, and paddling in her free time.\nShe played competitive Rugby growing up before switching her focus to running. Since then, she’s competed for the University of Calgary in cross country and track and field as well as qualified for the World Mountain Running Championships. Emma accepted a spot on the Dream Team without any experience in OCR.",
+            "image": "shopify:\/\/shop_images\/Emma_Cook-Clarke_2.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "fd55ff8b-8005-445b-8c12-7efa1c07d52b": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "ARIELLE FITZGERALD",
+            "content": "<p>\n<\/p><p>Age 27, lives in Calgary, Alberta, Canada <\/p>\n<p><a href=\"https:\/\/www.instagram.com\/ariellefitz22\/\"><span style=\"font-weight: 300;\">@ariellefitz22<\/span><\/a><\/p>\n<p>Arielle was bound for a Division 1 school to compete in long and triple jump before pivoting to ultra running. <\/p>She holds Guinness World <p>Records for fastest 50k and 100k run on a treadmill and she also represented Canada on the world stage in the 100k. <\/p>Arielle joined the Dream Team with some success in OCR, but with obstacle deficits to work on.",
+            "image": "shopify:\/\/shop_images\/Arielle_Fitzgerald_cropped_e3fc3bfb-ed69-4226-b5de-471573a53a62.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "d49e1ca9-7a72-4e36-86ce-fc34d573259b": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "MORGAN SCHULZ",
+            "content": "<p>Age 23, lives in Chicago, IL<\/p> \n<p><a href=\"https:\/\/www.instagram.com\/morgan.schulz\/\"><span style=\"font-weight: 300;\">@morgan.schulz<\/span><\/a><\/p>\n<p>Morgan ran cross country and track at the University of Illinois at Urbana-Champaign, where she specialized in the 600m and 800m. <\/p>After graduation, Morgan started <p>training at a CrossFit gym, then stumbled upon Spartan Race in the summer of 2019. She has ambitions of reaching the podium at the Hyrox World Championships and winning a Spartan Race of every distance (Stadium, 5k, 10k, Half Marathon, and Ultra Marathon) in the same year. <\/p>Morgan is currently navigating a demanding graduate program and recovering from a stress fracture.",
+            "image": "shopify:\/\/shop_images\/Morgan_Schulz.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "c4298651-dc12-4d67-8649-d6ce53c43235": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "ANNIE DUBE",
+            "content": "<p>Age 29, lives in Redondo Beach, CA <\/p>\n<p><a href=\"https:\/\/www.instagram.com\/mountaingoatgirl\/\"><span style=\"font-weight: 300;\">@mountaingoatgirl<\/span><\/a><\/p>\n<p>Annie recently quit her corporate job and moved out west to pursue running, rock climbing and being really, really good at OCR. <\/p>Annie has a love-hate relationship with the spear throw, but mostly hate.",
+            "image": "shopify:\/\/shop_images\/OCR_blog_image.png",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "81498bc9-3b3b-4d47-a1a7-8204058a7591": {
+          "type": "intro",
+          "settings": {
+            "title": "TAHOE RACE RECAP",
+            "text": "<p>\n<\/p><p>The Dream Team had 3 athletes competing at the Spartan Race North American Championships in Palisades Tahoe. The event has historically seen freezing temperatures and snow, augmenting the freezing swim at the top of the mountain. This year, the swim was unexpectedly removed at the last second and the temperature ironically rose into a pleasant 70 degrees: perfect crop top and Goodr sunnies weather! <\/p>\n<p>To give you a little background, Annie has been having a breakout season and came into this race as one of the favorites. With only two Spartan Races under her belt, Emma was still considered a relatively unknown newcomer. Arielle would be training through this race, with her sights set on World’s Toughest Mudder, a 24 hour obstacle course race later in the year. One\nthing was for sure, there would be no DNFs due to hypothermia, as Annie and Arielle fell victim to in 2019. <\/p>\n<p>The gun went off and Emma shot to the front, ascending the mountain like the trail running champion she is. Arielle started off conservatively, waiting to open up on the downhill and flat running sections. Emma reached the peak with about a 1 minute lead over second place Annie, but it would be a short-lived advantage as Emma subsequently failed her spear throw. Annie nailed hers. The two traversed the obstacle gauntlet together. Emma lacked the grace and speed on obstacles that Annie has perfected through specific training, rock climbing, and race experience. Even so, both made it through the challenging upper body obstacles including monkey bars, twister, beater, and tyrolean traverse. A few minutes back, Arielle finished her set of 30 burpees-the penalty for a failed spear throw. As she crested the mountain I yelled to her “You have a lot of race left, but it’s time to start picking people off.”<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "67b44841-6d09-49cc-bde3-3886a5109932": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OCR_blog_image2.png",
+            "width": "100%",
+            "align_image": "center"
+          }
+        },
+        "15320b36-0d5c-4ae1-b9b8-da2b94cf2661": {
+          "type": "intro",
+          "settings": {
+            "title": "ULTIMATELY SHE WOULD PASS ABOUT 5 RUNNERS",
+            "text": "<p>...over the next hour to move into 5th place. Emma barreled down the mountain, but Annie, a competent trail runner herself, kept her in eyesight. They reached the bottom of the mountain just 20 seconds apart and close enough to cheer each other on. Even though Emma and Annie just met a couple months ago, they’ve become quick friends. With one more climb and a bunch of obstacles to go, Emma tried to maintain her lead without pushing too hard. She was in unknown territory with this distance of obstacle course race. Annie pressed on, momentarily narrowing the gap before her competitor and teammate picked up the pace. <\/p>\n<p>Emma proved to pace well and still had strength left to conquer the tire flip as well as the dreaded Olympus (climbing-esque wall) obstacle. Emma crossed the line with a strong kick, but was obviously spent. About a minute later Annie crossed the line with a big smile on her face. Meanwhile, Arielle was in a fight of her own to hold off a fast approaching competitor. She’s struggled on obstacles in the past and failed Olympus as recently as 2 months ago. The athlete on her heels was strong and would get through the obstacle with ease. Arielle knew she had to complete everything in order to hold onto 5th place. She took a deep breath, implemented a technique we went over the day before and rang the bell, victorious. Arielle finished 5th in one of the most competitive races of the year. 1st, 2nd, 5th. The team ran well and there were many margaritas in celebration!\n<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "229582b9-db2b-4033-8739-fd2cd2617b87": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OCR_blog_bleedimage.png"
+          }
+        },
+        "5d434921-25e5-4dba-bf08-8f9aedaa5467": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/goodr-x-denver-zoo",
+            "article2": "goodrtimes\/s03e17",
+            "article3": "goodrtimes\/goodr-x-reebok"
+          }
+        }
+      },
+      "block_order": [
+        "42275dd3-58ca-43cd-a239-8b565753e4c1",
+        "3978669b-aedf-4d55-8e97-5535e8b0f689",
+        "7974adf6-9a7c-4c42-bebf-facd8541c216",
+        "88b333f0-7435-4d9b-ba31-c6a3eee6e190",
+        "c0043ad8-5fd6-4694-83b4-670331532e74",
+        "6a3a97c6-d85d-4784-a52a-dc771553cbc8",
+        "fd55ff8b-8005-445b-8c12-7efa1c07d52b",
+        "d49e1ca9-7a72-4e36-86ce-fc34d573259b",
+        "c4298651-dc12-4d67-8649-d6ce53c43235",
+        "81498bc9-3b3b-4d47-a1a7-8204058a7591",
+        "67b44841-6d09-49cc-bde3-3886a5109932",
+        "15320b36-0d5c-4ae1-b9b8-da2b94cf2661",
+        "229582b9-db2b-4033-8739-fd2cd2617b87",
+        "5d434921-25e5-4dba-bf08-8f9aedaa5467"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

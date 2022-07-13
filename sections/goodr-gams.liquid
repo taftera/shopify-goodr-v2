@@ -1,0 +1,42 @@
+<div class="row center-xs pbm">
+{% for block in section.blocks %}
+  {%- assign pageHandle = block.settings.mile_link -%}
+
+    <div class="col-xs-12 col-sm-6">
+      <a href="/pages/{{ pageHandle }}" class="mile__link">
+        {{ block.settings.mile_image | img_url: '600x600', crop: 'center' | img_tag }}
+        <h2 class="h3style">{{ pages[pageHandle].title }}</h2>
+      </a>
+    </div>
+
+{% endfor %}
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "G.A.M.S",
+    "settings": [
+
+    ],
+    "blocks": [
+      {
+        "type": "mile",
+        "name": "Mile",
+        "settings": [
+          {
+            "label": "Link",
+            "id": "mile_link",
+            "type": "page"
+          },
+          {
+            "label": "Mile image",
+            "id": "mile_image",
+            "type": "image_picker"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

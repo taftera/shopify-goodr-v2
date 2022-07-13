@@ -1,0 +1,70 @@
+<div class="product-tile ">
+  {% if product.featured_image != blank %}
+  	<div class="product-tile_image-wrapper">
+      {% if product.images.size > 2 %}
+      <a class="product-tile__image hover-effect" href="{{ product.url | within: collection }}" style="background-image:url({{ product.images[2].src | img_url: '600x' }})">
+      {% else %}
+      <a class="product-tile__image" href="{{ product.url | within: collection }}" >
+      {% endif %}
+        {{ product.images[3].src | img_url: '600x' | img_tag: product.images[3].src.alt }}
+      </a>
+      {% for tag in product.tags %} 
+        {% if tag == 'Polarized' %} 
+        <h6 class="product-tile__flag">{{ tag }}</h6>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+      
+
+  <p class="product-tile__type">
+    {{ product.type }}
+  </p>
+  <p class="product-tile__title">
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+  </p>
+  <p class="product-tile__price">
+    {% if product.compare_at_price > product.price %}
+
+      {% if product.price_varies %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        {% if product.tags contains 'Final Sale' %}
+    		FINAL SALE
+    	{% else %}
+    		{{ 'products.product.on_sale' | t }}
+    	{% endif %}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% else %}
+
+      {% if product.price_varies %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+    	{% comment %}
+    	  The following if statement hides the price on sold out items 
+    	  - per request for marathon collections 
+    	{% endcomment %}
+        {% if product.available %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+
+    {% endif %}
+
+    {% if product.compare_at_price > product.price %}
+      <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+      <s>{{ product.compare_at_price | money }}</s>
+    {% endif %}
+
+    {% unless product.available %}
+      {{ 'products.product.sold_out' | t }}
+    {% endunless %}
+  </p>
+  {% if product.variants.size == 1 and product.available and show_quick_buy == true %}
+    <a class="js-quick-buy button button--small button--full" data-product-id="{{ product.variants[0].id }}" data-product-quantity="{{ product.variants[0].inventory_quantity }}">{{ 'products.product.add_to_cart' | t }}</a>
+  {% endif %}
+</div>

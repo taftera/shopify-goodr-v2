@@ -1,0 +1,153 @@
+<section class="containter--full image-slider-section section-{{ section.id}}">
+	{% if section.settings.image_large != blank %}
+		<div class="image-slide image-slide-desktop-large">
+			<a {% if section.settings.url_large != blank %} href="{{ section.settings.url_large }}" {% endif %}>
+				<img src="{{ section.settings.image_large | img_url: "master" }}"
+					srcset="{{ section.settings.image_large | img_url: "master" }} 1x, {{ section.settings.image_large | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+			</a>
+		</div>
+	{% endif %}
+  	{% if section.settings.image_small != blank %}
+		<div class="image-slide image-slide-desktop-small">
+			<a {% if section.settings.url_small != blank %} href="{{ section.settings.url_small }}" {% endif %}>
+				<img src="{{ section.settings.image_small | img_url: "master" }}"
+					srcset="{{ section.settings.image_small | img_url: "master" }} 1x, {{ section.settings.image_small | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+			</a>
+		</div>
+	{% endif %}
+  	{% if section.settings.image_tablet != blank %}
+		<div class="image-slide image-slide-desktop-tablet">
+			<a {% if section.settings.url_tablet != blank %} href="{{ section.settings.url_tablet }}" {% endif %}>
+				<img src="{{ section.settings.image_tablet | img_url: "master" }}"
+					srcset="{{ section.settings.image_tablet | img_url: "master" }} 1x, {{ section.settings.image_tablet | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+			</a>
+		</div>
+	{% endif %}
+  	{% if section.settings.image_mobile != blank %}
+		<div class="image-slide image-slide-desktop-mobile">
+			<a {% if section.settings.url_mobile != blank %} href="{{ section.settings.url_mobile }}" {% endif %}>
+				<img src="{{ section.settings.image_mobile | img_url: "master" }}"
+					srcset="{{ section.settings.image_mobile | img_url: "master" }} 1x, {{ section.settings.image_mobile | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+			</a>
+		</div>
+	{% endif %}
+</section>
+
+<style>
+.section-{{ section.id}} .image-slide img {
+  	width: 100%;
+}
+.section-{{ section.id}} .image-slide-desktop-small,
+.section-{{ section.id}} .image-slide-desktop-tablet,
+.section-{{ section.id}} .image-slide-desktop-mobile {
+    display: none;
+}
+  
+@media screen and (max-width: 1400px) {
+.section-{{ section.id}} .image-slide-desktop-small {
+    display: block;
+}
+.section-{{ section.id}} .image-slide-desktop-large,
+.section-{{ section.id}} .image-slide-desktop-tablet,
+.section-{{ section.id}} .image-slide-desktop-mobile {
+    display: none;
+}
+}
+  
+@media screen and (max-width: 1024px) {
+.section-{{ section.id}} .image-slide-desktop-tablet {
+    display: block;
+}
+.section-{{ section.id}} .image-slide-desktop-large,
+.section-{{ section.id}} .image-slide-desktop-small,
+.section-{{ section.id}} .image-slide-desktop-mobile {
+    display: none;
+}
+}
+  
+@media screen and (max-width: 767px) {
+.section-{{ section.id}} .image-slide-desktop-mobile {
+    display: block;
+}
+.section-{{ section.id}} .image-slide-desktop-large,
+.section-{{ section.id}} .image-slide-desktop-small,
+.section-{{ section.id}} .image-slide-desktop-tablet {
+    display: none;
+}
+}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Image Slider Section",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Desktop Large (1401px - Above)"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_large",
+			"label": "Desktop Large Image"
+		},
+		{
+			"type": "url",
+			"id": "url_large",
+			"label": "URL"
+		},
+		{
+			"type": "header",
+			"content": "Desktop Small (1025px - 1400px)"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_small",
+			"label": "Desktop Small Image"
+		},
+		{
+			"type": "url",
+			"id": "url_small",
+			"label": "URL"
+		},
+		{
+			"type": "header",
+			"content": "Tablet (768px - 1024px)"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_tablet",
+			"label": "Tablet Image"
+		},
+		{
+			"type": "url",
+			"id": "url_tablet",
+			"label": "URL"
+		},
+		{
+			"type": "header",
+			"content": "Mobile (below - 767px)"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_mobile",
+			"label": "Mobile Image"
+		},
+		{
+			"type": "url",
+			"id": "url_mobile",
+			"label": "URL"
+		}
+	],
+    "presets": [
+		{
+			"name": "Image Slider Section",
+			"category": "Promotional"
+		}
+	]
+  }
+{% endschema %}

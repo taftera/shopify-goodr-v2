@@ -1,0 +1,19 @@
+<!-- Personify Checkout Code -->
+{% if checkout.page == "thank_you" %}
+<script>
+  //Prep Data
+  
+  var apiJSON = "{\n  \"sessionid\": \""+getPersonifyCookie("PERSONIFY")+"\",\n  \"shopperid\": \""+getPersonifyShopperId()+"\",\n  \"pagesize\": 0,\n \"orderid\": \""+ {{checkout.order_id}} + "\",\n  \"basket\": [";
+  
+  
+  {% for line_item in checkout.line_items %}
+    apiJSON += "\n    {\n      \"productid\": \"{{ line_item.product_id }}\",\n      \"quantity\": " + parseFloat(Math.round({{ line_item.quantity }} * 100) / 100).toFixed(2) + ",\n      \"unitprice\": " + parseFloat(Math.round({{ line_item.final_price }}) / 100).toFixed(2) + "\n    },";
+  {% endfor %}	
+  apiJSON += "]\n}\n";
+ 
+  apiJSON = apiJSON.replace("},]","}]");
+  
+  //Call API
+  callAPI(apiJSON, "checkout", false, null);
+</script>
+{% endif %}

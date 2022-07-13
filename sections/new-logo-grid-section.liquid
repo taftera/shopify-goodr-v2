@@ -1,0 +1,92 @@
+<section id="section-{{ section.id }}" class="logo-grid-section">
+  	<div class="container">
+		<div class="row">
+          	<div class="col-xs-12 col-md-12">
+              	{%- if section.settings.title != blank -%}
+              	<h2 class="h3 section__heading text-align--center"><span>{{ section.settings.title }}</span></h2>
+              	{%- endif -%}
+              	<div class="logo-box-container">
+					<div class="row middle-xs">
+						{%- for block in section.blocks -%}
+							{%- if block.settings.icon != blank -%}
+                      		<div class="col-xs-6 col-sm-3 col-md-2">
+								<div class="icon-box">
+									{%- if block.settings.icon_url != blank -%}<a href="{{ block.settings.icon_url }}" >{%- endif -%}
+										<img
+            								src="{{ block.settings.icon | img_url: 'master' }}"
+            								alt="{{ block.settings.icon.alt | escape }}"
+          								>
+									{%- if block.settings.icon_url != blank -%}</a>{%- endif -%}
+								</div>
+                      		</div>
+							{%- endif -%}
+						{%- endfor -%}
+					</div>
+				</div>
+          	</div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+  {
+    "name": "New Logo Grid",
+	"class": "new-logo-grid-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+	],
+	"blocks": [
+      {
+        "type": "logo_icon",
+        "name": "Logo Icon",
+        "settings": [
+		  {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+		  {
+            "type": "url",
+            "id": "icon_url",
+            "label": "Icon Url"
+          }
+        ]
+      }
+	],
+    "presets": [
+      {
+        "name": "New Logo Grid"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.logo-grid-section {
+    padding: 40px 0px;
+}
+.logo-box-container .row {
+    justify-content: center;
+}
+.logo-box-container .icon-box {
+    text-align: center;
+    padding: 15px 0px;
+}
+.logo-box-container {
+    text-align: center;
+    padding-top: 30px;
+}
+  
+@media screen and (max-width: 767px){
+.logo-grid-section {
+    padding: 30px 0px;
+}
+.logo-box-container {
+    padding-top: 20px;
+}
+}
+</style>

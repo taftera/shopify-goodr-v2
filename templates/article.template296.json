@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "d64793c3-6e56-4e5b-a01b-0471f84b5c3d": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "WHY WE EXIST",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Sunny_Couture_Run_Ready_Funfetti_25.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "084a78ed-8bf7-4e1e-b7a7-500cf71d3d6d": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>When goodr originally set out, our Mission Statement was “We’re recklessly committed to fun, blah blah blah, sunglasses.” Our CEO, Carl the Flamingo, allegedly mumbled that out loud during a hallucinatory fever dream after eating rancid shellfish. (Surprisingly, these same circumstances have produced some of his greatest ideas.) \n<br><br>\nJust kidding, supposedly our human founders (Stephen, Keri, and Ben) actually came up with it. It served us well for a while, but as we’ve evolved as a company we’ve really dialed into our core values: FUN and AUTHENTICITY. It became clear that being “recklessly committed to fun,” obviously spoke more to our core value of FUN!!! (DUH.)\n<br><br>\nWe needed a Mission Statement that was bigger, bolder… Something that captured exactly why we’re here!!! \n<br><br>\nInspired, we put on our thinking caps to come up with a new company-wide Mission Statement. (Not gonna lie, they may or may not have been those construction-y-looking boozing helmets.) \n<br><br>\nAs a brand and community, something that has always been important to us is to create an inclusive space where EVERYONE* feels welcome, regardless of age, gender, race, species, fitness level, abilities, etc. It’s why we use a diverse range of people to model our sunnies. (Like a Sasquatch, because Sasquatches deserve love and representation too.) It’s why we celebrate everyone from the casual living room treadmill runner to Iron Man athletes, and everyone in-between. It’s why we embrace wild and wacky content that serves up the giggles. \n<br><br>\nWe are all about giving people permission to be themselves. We want to empower people to embrace what makes them uniquely them! And so, our Mission Statement was born:\n<br><br>\n“We exist to give you permission to be unabashedly yourself, unless you’re an asshole.”\n<br><br>\nStaying true to our core value of AUTHENTICITY, we had to add the “...unless you’re an asshole,” part because it’s authentic to who we are. And let’s get real, assholes should not be encouraged anywhere, except maybe a proctologist’s office.\n<br><br>\nWe hope you will always remember that you have the power to be unabashedly yourself. You are welcome here.* \n<br><br>\n*…unless you’re an asshole. In that case, seek therapy.\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "b796b741-4daa-4722-ab9f-3ca2eb5e1a9e": {
+          "type": "bleed_image",
+          "settings": {
+          }
+        },
+        "f754171a-069c-40f1-aac7-db17779a7a2d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhyWeExist_IGFeedPosts_HumanRights_1.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "9533ca4f-66e3-4ec0-bb4c-7651993377b7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhyWeExist_IGFeedPosts_AnimalRights_1.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        }
+      },
+      "block_order": [
+        "d64793c3-6e56-4e5b-a01b-0471f84b5c3d",
+        "084a78ed-8bf7-4e1e-b7a7-500cf71d3d6d",
+        "b796b741-4daa-4722-ab9f-3ca2eb5e1a9e",
+        "f754171a-069c-40f1-aac7-db17779a7a2d",
+        "9533ca4f-66e3-4ec0-bb4c-7651993377b7"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

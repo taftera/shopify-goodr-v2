@@ -1,0 +1,720 @@
+{% include 'personify' %}
+{% include 'personify-blog' %}
+{% paginate blog.articles by 500 %}
+
+{%- assign blog_title = blog.title -%}
+{%- assign main_blog = "" -%}
+{%- assign sub_blog_1 = "" -%}
+{%- assign sub_blog_2 = "" -%}
+{%- assign pelican_blog1 = "" -%}
+{%- assign pelican_blog2 = "" -%}
+{%- assign pelican_blog3 = "" -%}
+{%- assign pelican_blog4 = "" -%}
+{%- assign pelican_blog5 = "" -%}
+
+<div class='container goodertimes-blogs'>
+	<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12"><h1 class="blog-title"><a href="https://goodr.com/blogs/goodrtimes"><img width="200" alt="goodrTIMES" src="{{ 'Goodr-Times-Logo-13.png' | file_img_url: 'master' }}" /></a></h1></div>
+	</div>
+  {% if linklists.goodr-times-menu.links != blank %}
+  	<ul class="nav-goodertimes mobile-hide">
+		{% for childlink in linklists.goodr-times-menu.links %}
+            <li class="nav-item">
+                <a class="nav-link--child" href="{{ childlink.url }}">
+                	{{ childlink.title }}
+                  {% if childlink.links != blank %}
+                  	<span class="sub-nav__toggle"></span>
+                  {% endif %}
+				</a>
+				{% if childlink.links != blank %}
+                  	<ul class="menu-child">
+                    	{% for grandchildlink in childlink.links %}
+                      		<li>
+                        		<a class="nav-link--grandchild" href="{{ grandchildlink.url }}">
+                        			{{ grandchildlink.title }}
+                        		</a>
+                      		</li>
+                    	{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+		{% endfor %}
+    </ul>
+	<nav role="navigation" class="goodertimes-navigation" style="display:none;">
+    	<ul class="nav-mobile">
+			{% for childlink in linklists.goodr-times-menu.links %}
+            	<li>
+                	<a class="nav-link--child" href="{{ childlink.url }}">
+                    	{{ childlink.title }}
+                  	</a>
+                  	{% if childlink.links != blank %}
+                  		<span class="js-subnav-toggle sub-nav__toggle" data-target="menu-{{ childlink.handle }}">Open subnav</span>
+                  		<ul id="menu-{{ childlink.handle }}">
+                    		{% for grandchildlink in childlink.links %}
+                      			<li>
+                        			<a class="nav-link--grandchild" href="{{ grandchildlink.url }}">
+                          				{{ grandchildlink.title }}
+                        			</a>
+                      			</li>
+                    		{% endfor %}
+                  		</ul>
+                  	{% endif %}
+                </li>
+			{% endfor %}
+    	</ul>
+	</nav>
+  {% endif %}
+  
+  {% assign blog_handles = "goodrtimes" | split: "," %}
+  {% for handle in blog_handles %}
+  	{% for article in blogs[handle].articles %}
+		{% if article.tags contains 'MAIN' %}
+  			
+  			{% capture main_blog %}
+  			<div class="blog-box">
+  				{% if article.image %}
+      				<a href="{{ article.url }}">
+        				{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      				</a>
+    			{% endif %}
+              	<h2 class="article-title"><a href="{{ article.url }}">{{article.title}}</a></h2>
+    			<h3 class="article-subtitle">
+      				{% if article.excerpt.size > 0 %}
+        				{{ article.excerpt | strip_html | truncatewords: 30 }}
+      				{% else %}
+          				{{ article.content | strip_html | truncatewords: 30 }}
+      				{% endif %}
+    			</h3>
+                <a href="{{ article.url }}" class="read-more">Read More ></a>
+  			</div>
+  			{% endcapture %}
+   			{%- assign main_blog = main_blog -%}
+  
+		{% endif %}
+		{% if article.tags contains 'FEATURED 1' %}
+  			
+  			{% capture sub_blog_1 %}
+  			<div class="col-xs-12 col-sm-6 s_blog">
+  				{% if article.image %}
+      				<a href="{{ article.url }}">
+        				{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      				</a>
+    			{% endif %}
+              	<h4 class="article-subtitle"><a href="{{ article.url }}">{{article.title}}</a></h4>
+              	<a href="{{ article.url }}" class="read-more">Read More ></a>
+  			</div>
+  			{% endcapture %}
+    		{%- assign sub_blog_1 = sub_blog_1 -%}
+  
+		{% endif %}
+		{% if article.tags contains 'FEATURED 2' %}
+  
+  			{% capture sub_blog_2 %}
+  			<div class="col-xs-12 col-sm-6 s_blog">
+  				{% if article.image %}
+      				<a href="{{ article.url }}">
+        				{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      				</a>
+    			{% endif %}
+                <h4 class="article-subtitle"><a href="{{ article.url }}">{{article.title}}</a></h4>
+              	<a href="{{ article.url }}" class="read-more">Read More ></a>
+  			</div>
+  			{% endcapture %}
+    		{%- assign sub_blog_2 = sub_blog_2 -%}
+  
+		{% endif %}
+		{% if article.tags contains 'CC1' %}
+  			
+  			{% capture pelican_blog1 %}
+  			<div class="pelican-item">
+              	<div class="pelican-img">
+  					{% if article.image %}
+      					<a href="{{ article.url }}">
+        					{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      					</a>
+    				{% endif %}
+              	</div>
+              	<div class="pelican-title">
+                  	<h4><a href="{{ article.url }}">{{article.title}}</a></h4>
+				</div>
+  			</div>
+  			{% endcapture %}
+    		{%- assign pelican_blog1 = pelican_blog1 -%}
+  
+		{% endif %}
+        {% if article.tags contains 'CC2' %}
+  			
+  			{% capture pelican_blog2 %}
+  			<div class="pelican-item">
+              	<div class="pelican-img">
+  					{% if article.image %}
+      					<a href="{{ article.url }}">
+        					{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      					</a>
+    				{% endif %}
+              	</div>
+              	<div class="pelican-title">
+                  	<h4><a href="{{ article.url }}">{{article.title}}</a></h4>
+				</div>
+  			</div>
+  			{% endcapture %}
+    		{%- assign pelican_blog2 = pelican_blog2 -%}
+  
+		{% endif %}
+        {% if article.tags contains 'CC3' %}
+  			
+  			{% capture pelican_blog3 %}
+  			<div class="pelican-item">
+              	<div class="pelican-img">
+  					{% if article.image %}
+      					<a href="{{ article.url }}">
+        					{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      					</a>
+    				{% endif %}
+              	</div>
+              	<div class="pelican-title">
+                  	<h4><a href="{{ article.url }}">{{article.title}}</a></h4>
+				</div>
+  			</div>
+  			{% endcapture %}
+    		{%- assign pelican_blog3 = pelican_blog3 -%}
+  
+		{% endif %}
+  		{% if article.tags contains 'CC4' %}
+  			
+  			{% capture pelican_blog4 %}
+  			<div class="pelican-item">
+              	<div class="pelican-img">
+  					{% if article.image %}
+      					<a href="{{ article.url }}">
+        					{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      					</a>
+    				{% endif %}
+              	</div>
+              	<div class="pelican-title">
+                  	<h4><a href="{{ article.url }}">{{article.title}}</a></h4>
+				</div>
+  			</div>
+  			{% endcapture %}
+    		{%- assign pelican_blog4 = pelican_blog4 -%}
+  
+		{% endif %}
+  		{% if article.tags contains 'CC5' %}
+  			
+  			{% capture pelican_blog5 %}
+  			<div class="pelican-item">
+              	<div class="pelican-img">
+  					{% if article.image %}
+      					<a href="{{ article.url }}">
+        					{{ article | img_url: '1024x1024' | img_tag: article.title }}
+      					</a>
+    				{% endif %}
+              	</div>
+              	<div class="pelican-title">
+                  	<h4><a href="{{ article.url }}">{{article.title}}</a></h4>
+				</div>
+  			</div>
+  			{% endcapture %}
+    		{%- assign pelican_blog5 = pelican_blog5 -%}
+  
+		{% endif %}
+	{% endfor %}
+  {% endfor %}
+  
+  	<div class="main-blog-box">
+  		<div class="row">
+          	<div class="col-xs-12 col-sm-12 col-md-8">
+              	{% if main_blog != "" AND main_blog != nil %}
+  						{{ main_blog }}
+  				{% else %}
+              		<div class="blog-box">
+                      	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                      	<h2 class="article-title"><a href="#">H2 Headline Pulled in form lead article</a></h2>
+              			<h3 class="article-subtitle">H3 subheadline Written manually by author</h3>
+                      	<a href="#" class="read-more">Read More ></a>
+              		</div>
+              	{% endif %}
+          	</div>
+          	<div class="col-xs-12 col-sm-12 col-md-4">
+              	<h2 class="section-title">Carl's Collection</h2>
+              	<div class="pelican-container">
+                  	{% if pelican_blog1 != "" AND pelican_blog1 != nil %}
+  						{{ pelican_blog1 }}
+  						{{ pelican_blog2 }}
+                  		{{ pelican_blog3 }}
+                  		{{ pelican_blog4 }}
+                  		{{ pelican_blog5 }}
+  					{% else %}
+                  		<div class="pelican-item">
+                      		<div class="pelican-img">
+                              	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                      		</div>
+                      		<div class="pelican-title">
+                              	<h4><a href="#">H4 subheadline Written manually by author</a></h4>
+                      		</div>
+                  		</div>
+                  		<div class="pelican-item">
+                      		<div class="pelican-img">
+                              	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                      		</div>
+                      		<div class="pelican-title">
+                              	<h4><a href="#">H4 subheadline Written manually by author</a></h4>
+                      		</div>
+                  		</div>
+                  		<div class="pelican-item">
+                      		<div class="pelican-img">
+                              	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                      		</div>
+                      		<div class="pelican-title">
+                              	<h4><a href="#">H4 subheadline Written manually by author</a></h4>
+                      		</div>
+                  		</div>
+                  		<div class="pelican-item">
+                      		<div class="pelican-img">
+                              	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                      		</div>
+                      		<div class="pelican-title">
+                              	<h4><a href="#">H4 subheadline Written manually by author</a></h4>
+                      		</div>
+                  		</div>
+                  		<div class="pelican-item">
+                      		<div class="pelican-img">
+                              	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                      		</div>
+                      		<div class="pelican-title">
+                              	<h4><a href="#">H4 subheadline Written manually by author</a></h4>
+                      		</div>
+                  		</div>
+                  	{% endif %}
+              	</div>
+          	</div>
+		</div>
+  	</div>
+  	<div class="sub-blog-box">
+  		<div class="row">
+          	<div class="col-xs-12 col-sm-12 col-md-8">
+              	<div class="row">
+              		{% if sub_blog_1 != "" AND sub_blog_1 != nil %}
+  						{{ sub_blog_1 }}
+  					{% else %}
+              			<div class="col-xs-12 col-sm-6 s_blog">
+                          	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                          	<h4 class="article-subtitle"><a href="#">H4 subheadline Written manually by author</a></h4>
+                          	<a href="#" class="read-more">Read More ></a>
+                  		</div>
+              		{% endif %}
+                  	{% if sub_blog_2 != "" AND sub_blog_2 != nil %}
+  						{{ sub_blog_2 }}
+  					{% else %}
+              			<div class="col-xs-12 col-sm-6 s_blog">
+                          	<a href="#"><img src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/saucony_header.jpg" alt="Article Images"></a>
+                          	<h4 class="article-subtitle"><a href="#">H4 subheadline Written manually by author</a></h4>
+                          	<a href="#" class="read-more">Read More ></a>
+                  		</div>
+              		{% endif %}
+                </div>
+          	</div>
+          	<div class="col-xs-12 col-sm-12 col-md-4">
+				<div class="cta-box">
+					<div class="cta-box-inner" >
+						<h2 class="cta-title">JOIN THE PARTY</h2>
+						<p class='cta-text'>We deliver fun straight to your inbox</p>
+						<div class="klaviyo-form-JtXXHb"></div>
+                	</div>
+				</div>
+          	</div>
+		</div>
+  	</div>
+</div>
+
+
+{% comment %}
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+{% endcomment %}
+
+{% endpaginate %}
+
+
+<style>
+.goodertimes-blogs a {
+  	text-decoration: none;
+  	color: #10435e;
+}
+.main-blog-box {
+    padding-bottom: 10px;
+}
+.sub-blog-box .s_blog {
+    margin-bottom: 20px;
+}
+.goodertimes-blogs a:hover {
+  	color: #4ec0b2;
+}
+.blog-title {
+    color: #10435e;
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+    text-transform: uppercase;
+    text-align: center;
+  	margin: 20px 0px;
+  	font-size: 38px;
+}
+.menu-box {
+    border: 1px solid #10435e;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+}
+.menu-box .menu-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    color: #10435e;
+    font-size: 18px;
+}
+.article-title {
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+    color: #10435e;
+    margin: 0;
+    padding: 15px 0 5px;
+  	font-size: 32px;
+  	text-transform: uppercase;
+}
+.read-more {
+    text-decoration: underline !important;
+  	font-weight: bold;
+}
+h3.article-subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: "brandon-grotesque",sans-serif;
+    margin: 0;
+    padding-bottom: 10px;
+  	text-transform: none;
+	letter-spacing: 0px;
+}
+h4.article-subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    margin: 0;
+    padding-bottom: 10px;
+  	text-transform: uppercase;
+	letter-spacing: 0px;
+  	padding-top: 10px;
+}
+.section-title {
+  	color: #10435e;
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+    text-transform: uppercase;
+  	font-size: 30px;
+  	margin-bottom: 10px;
+}
+.pelican-container {
+    display: inline-block;
+    width: 100%;
+}
+.pelican-container .pelican-item {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+.pelican-container .pelican-item .pelican-img {
+    width: 40%;
+    padding-right: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.pelican-container .pelican-item .pelican-title {
+    width: 60%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.pelican-title h4 {
+	font-size: 18px;
+	font-weight: normal;
+	font-family: "futura-pt-bold","futura",sans-serif;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+}
+.main-blog-box .blog-box {
+    padding-bottom: 20px;
+}
+.sub-blog-box {
+    padding-bottom: 30px;
+}
+.cta-box {
+    background: #11455f;
+    padding: 15px;
+    text-align: center;
+  	margin-bottom: 30px;
+}
+.cta-box-inner {
+    padding: 15px 15px 10px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+.cta-title {
+    color: #fff;
+    text-shadow: none;
+    -webkit-text-stroke: unset;
+    text-transform: uppercase;
+  	font-size: 26px;
+  	position: relative;
+  	font-family: "futura-pt-bold";
+  	display: inline-block;
+	padding: 20px 40px 20px;
+}
+.cta-box .ql-editor p {
+    color: #fff !important;
+    font-family: "futura-pt-bold" !important;
+}
+.cta-box .ql-editor p .ql-font-helvetica {
+  	font-family: "futura-pt-bold" !important;
+}
+.cta-title:after {
+    content: "";
+  	background-image: url({{ 'balloons-right.png' | file_img_url: 'master' }});
+  	display: inline-block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	width: 32px;
+	height: 75px;
+	position: absolute;
+  	right: 0;
+  	top: 0;
+}
+.cta-title:before {
+    content: "";
+  	background-image: url({{ 'balloons-left.png' | file_img_url: 'master' }});
+  	display: inline-block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	width: 32px;
+	height: 75px;
+	position: absolute;
+  	left: 0;
+  	top: 0;
+}
+.cta-box input[type="email"] {
+    width: 100%;
+    font-family: "futura-pt" !important;
+    text-align: center !important;
+    color: #10435e !important;
+  	font-size: 16px !important;
+	padding: 0 10px !important;
+    border-radius: 0px !important;
+  	border-color: #e86384;
+}
+.cta-box input[type="email"]:focus {
+  	border-color: #e86384 !important;
+}
+.cta-box input[type="email"]:hover {
+  	border-color: #e86384 !important;
+}
+.cta-box input[type="email"]::-webkit-input-placeholder {
+  	font-size: 14px !important;
+}
+.cta-box input[type="email"]::-moz-placeholder {
+  	font-size: 14px !important;
+}
+.cta-box input[type="email"]:-ms-input-placeholder {
+	font-size: 14px !important;
+}
+.cta-box input[type="email"]:-moz-placeholder {
+  	font-size: 14px !important;
+}
+.cta-box button {
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+    font-family: "futura-pt-bold" !important;
+  	padding: 12px 0px !important;
+  	border: 1px solid rgb(78, 192, 178) !important;
+}
+.cta-box button:hover {
+    background: #e86384 !important;
+  	border-color: #e86384 !important;
+}
+.cta-box .cta-text {
+    color: #fff;
+	max-width: 460px;
+	margin: 0 auto;
+}
+.cta-box .kwGIvD.kwGIvD {
+    padding-bottom: 0px;
+}
+  
+
+.goodertimes-navigation .nav-mobile li {
+    position: relative;
+    border-bottom: 1px solid #161d25;
+}
+.goodertimes-navigation .nav-mobile ul {
+    display: none;
+    border: 0;
+  	margin-bottom: 10px;
+}
+.goodertimes-navigation .nav-mobile ul li {
+    border: 0;
+}
+.goodertimes-navigation .nav-link--child {
+    padding: 0.75rem 0;
+	margin: 0;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: "futura-pt-bold","futura",sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	position: relative;
+}  
+.nav-goodertimes {
+    border: 1px solid #10435e;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    width: 100%;
+}
+.nav-goodertimes .nav-item {
+    width: 100%;
+  	position: relative;
+}
+.nav-goodertimes ul {
+    border: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: left;
+    background: #ffffff;
+    padding: 10px 0px;
+  	border-top: 1px solid #10435e;
+  	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+  	display: none;
+  	z-index: 2;
+}
+.nav-goodertimes .nav-item .nav-link--child {
+    padding: 0;
+    font-size: 18px;
+  	line-height: 24px;
+  	padding: 10px 0px;
+}
+.nav-goodertimes .nav-item .sub-nav__toggle {
+    height: 24px;
+    width: 20px;
+  	position: relative;
+  	display: inline-block;
+}
+.nav-goodertimes .nav-item .sub-nav__toggle:after {
+    height: 24px;
+    width: 20px;
+  	position: relative;
+  	display: inline-block;
+  	line-height: 24px;
+}
+.nav-goodertimes .nav-link--grandchild {
+    padding: 0.30rem 0.9375rem;
+  	margin-left: 0;
+	text-decoration: none;
+	font-size: 0.875rem;
+	font-family: "brandon-grotesque",sans-serif;
+	display: block;
+	position: relative;
+  	line-height: 18px;
+}
+.nav-goodertimes .nav-item .nav-link--child:hover .sub-nav__toggle:after {
+    color: #4ec0b2;
+}
+.nav-goodertimes .nav-item:hover .menu-child {
+    display: block;
+}
+.nav-goodertimes .nav-link--grandchild span {
+    font-weight: bold;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    display: block;
+  	padding-top: 15px;
+}
+.nav-goodertimes ul.menu-child li:first-child .nav-link--grandchild span {
+    padding-top: 0px;
+}
+.nav-goodertimes .nav-link--grandchild:hover span {
+    color: #10435e;
+}
+.nav-goodertimes .nav-link--grandchild[href="#"] {
+    pointer-events: none;
+    cursor: default;
+  	padding-top: 0px;
+  	padding-bottom: 0px;
+}
+
+.goodertimes-navigation .nav-mobile .nav-link--grandchild[href="#"] {
+    pointer-events: none;
+    cursor: default;
+  	padding: 0px;
+}
+.goodertimes-navigation .nav-mobile ul li:first-child .nav-link--grandchild span {
+    padding-top: 0px;
+}
+.goodertimes-navigation .nav-mobile .nav-link--grandchild:hover span {
+    color: #10435e;
+}
+.goodertimes-navigation .nav-mobile .nav-link--grandchild span {
+    font-weight: bold;
+    font-family: "futura-pt-bold","futura",sans-serif;
+    display: block;
+  	padding-top: 15px;
+}
+.goodertimes-navigation .nav-mobile .nav-link--grandchild {
+    padding: 0.30rem 0;
+  	line-height: 18px;
+}
+  
+  
+@media only screen and (max-width: 991px){
+ 	.nav-goodertimes .nav-item .nav-link--child {
+    	font-size: 16px;
+    }
+  	.nav-goodertimes .nav-item .sub-nav__toggle:after {
+  		line-height: 21px;
+	}
+  	.nav-goodertimes .nav-link--grandchild {
+		font-size: 15px;
+  		line-height: 17px;
+	}
+}
+  
+@media only screen and (max-width: 767px){
+ 	.goodertimes-navigation {
+     	display: block !important;
+      	margin-bottom: 30px;
+    }
+  	.mobile-hide {
+     	display: none !important; 
+    }
+  	.main-blog-box {
+    	padding-bottom: 10px;
+	}
+  	.blog-title {
+    	font-size: 32px;
+	}
+  	.article-title {
+    	font-size: 26px;
+	}
+  	.section-title {
+		font-size: 26px;
+  	}
+}
+@media only screen and (max-width: 480px){
+  	.cta-title {
+    	font-size: 22px;
+    }
+}
+</style>

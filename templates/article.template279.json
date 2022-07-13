@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "d12b218e-5fcf-4957-9a13-43f0734eb3f1": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "PROFESSOR 00G ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/professor_1600_400_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "7e637816-85ea-4ec5-9f7c-8f649389f3d3": {
+          "type": "text",
+          "settings": {
+            "title": "CARL’S PROPOSAL FOR HIS OWN SUPER-SPY FILM FRANCHISE",
+            "text": "<p>“After fleeing questionable-fashion-peddling twin assassins Gary Kate and Smashley in the Mall of America, mortally wounded British agent OO Face, dressed as a provocative circus clown and carrying a counterfeit rhinestoned Fabergé flamingo egg, crashes into the Hot Dog On A Stick and drowns in a vat of cherry lemonade. \n<br><br>\nThe Secret Intelligence Service immediately suspects Russian involvement and, after the genuine diamond studded Fabergé flamingo egg is to be auctioned, sends Professor 00G (Carl the Flamingo) to identify the seller. At the auction, Professor 00G swaps the fake egg for the real one and subsequently engages in a bidding war with defamed beauty queen and double agent, Turlana Quackenbush, forcing Quackenbush to pay over $1000 in Olive Garden gift cards for the counterfeit egg. \n<br><br>\nQuackenbush is so impressed by 00G’s bidding prowess, she invites him to her McMansion, where he defeats her at a game of goodr’s Tropic Dash using her own rigged keyboard. Later, Quackenbush’s associate, Carl the Flamingo, seduces 00G, when 00G notices his blue-ringed octopus tattoo. 00G permits Carl the Flamingo to steal the real Fabergé egg, which is fitted with a listening and tracking device. After 00G escapes, he listens in on the bug and discovers that Quackenbush works with Katerina “Keri” Blunt, a Russian general seeking to expand domination to Western Europe via her regime of ribbon dancing and American fast food mascot impressions.\n<br><br>\n00G infiltrates the local country club and meets its owner, Octopussies, a wealthy businesswoman, smuggler, and Quackenbush's associate. She also leads the Octopus cult, of which Carl the Flamingo is a member. Octopussies has a personal connection with 00G: he once stopped her from coming out of an airport bathroom when she had tucked the back of her dress into her pantyhose, preventing public humiliation. \n<br><br>\n00G discovers that Ms. Blunt has been supplying Quackenbush with priceless Russian treasures, replacing them with replicas while Quackenbush has been smuggling the genuine objects into the West via Octopussies’ circus troupe. Ms. Blunt is planning to meet Quackenbush at the local mall parking lot where the circus is scheduled to perform. Quackenbush's mercenaries break into the country club to kill 00G, but 00G and Octopussies thwart them with their impeccable jiu jitsu skills…” Carl pauses when he sees the disgusted look on Schpeilberg’s face.\n<br><br>\n“OK, just STOP. This f*cking sucks!!! How is Professor 00G Carl the Flamingo, but at the same time also manages to be seduced by Carl the Flamingo, who also steals the egg but is also being pursued by Professor 00G (Carl the Flamingo) for stealing the egg?! And who gives a crap about counterfeit Fabergé eggs anymore? They’re being mass-produced by Franklin Mint!! And what respectable auction house accepts Olive Garden gift cards as payment?! And if I have to hear the name Quackenbush one more time I am going to stick this knife in my ears!!! It is painfully obvious that you just tried to rip off the plot of Octopussy. Do me a favor and don’t quit your day job. Cheesus, can’t I ever just enjoy my lunch in peace without some nobody trying to pitch me some piece of crap movie idea?! SECURITY!!!”\n<br><br>\nCarl was thrown out of the restaurant onto the sidewalk of Rodeo Drive, where he shook his fist and vowed he would get revenge somehow. He may not have been able to get a film deal for Octopussies, but he was at least able to channel Professor 00G’s immaculate fashion sense into these slick black Professor 00G sunnies in our exciting NEW PHG frame style!!! And whether you like your martini shaken or stirred, these no bounce, no-slip, all grip sunnies will stay put!!!\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "62bade0e-d179-485f-aa32-201109b2fec1": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/professor_1600_1067_bleed.jpg"
+          }
+        },
+        "e5f6eb9d-7f58-4cbb-8575-5e5677c5503a": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "image_aligment": "left"
+          }
+        },
+        "a58290fd-9fd2-4840-8cb9-94f460e38dce": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE TO EARN YOUR PHG",
+            "content": "<p>LOOKING SCHOLARLY ALREADY!!!<\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        }
+      },
+      "block_order": [
+        "d12b218e-5fcf-4957-9a13-43f0734eb3f1",
+        "7e637816-85ea-4ec5-9f7c-8f649389f3d3",
+        "62bade0e-d179-485f-aa32-201109b2fec1",
+        "e5f6eb9d-7f58-4cbb-8575-5e5677c5503a",
+        "a58290fd-9fd2-4840-8cb9-94f460e38dce"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

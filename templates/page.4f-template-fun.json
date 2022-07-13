@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "165243630586ebb9ce": {
+      "type": "new-header-banner-2-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Fun_headers_2.jpg",
+        "title": "$25 ACTIVE SUNGLASSES FOR ANYONE",
+        "heading_align": "left",
+        "bg_image": "shopify:\/\/shop_images\/Fun_headers_palm_1.jpg",
+        "heading_color": "#ffffff",
+        "heading_overlay": true,
+        "heading_overlay_color": "#4ec0b2",
+        "image_align": "right",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_size_d": 82,
+        "heading_size_m": 42
+      }
+    },
+    "1652438284b49226aa": {
+      "type": "new-header-banner-2-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Fun_headers_3.jpg",
+        "title": "YOU'RE THE LIFE OF THE PARTY WHETHER THERE'S A PARTY OR NOT",
+        "heading_align": "left",
+        "bg_image": "shopify:\/\/shop_images\/Fun_headers_palm_1.jpg",
+        "heading_color": "#ffffff",
+        "heading_overlay": false,
+        "heading_overlay_color": "#e86384",
+        "image_align": "left",
+        "background_color": "rgba(0,0,0,0)",
+        "heading_size_d": 42,
+        "heading_size_m": 32
+      }
+    },
+    "16524431368bfa07be": {
+      "type": "new-featured-collection",
+      "settings": {
+        "title": "FUN FRAMES",
+        "collection": "fun"
+      }
+    },
+    "16524402985c9d0f2b": {
+      "type": "new-review-grid-section",
+      "blocks": {
+        "3e4d8498-4fa8-4f81-beb1-7172ffb9f3c1": {
+          "type": "review_item",
+          "settings": {
+            "title": "Cool Cop <br>Look",
+            "content": "<p>I loved these even though my wife says I look like a cop, although that might be the mustache. They stay on when running or chilling in the pool, the coverage if great for heavy sun days and priced just right. Just buy em.<\/p>",
+            "author_name": "Mark Z.",
+            "show_star": true
+          }
+        },
+        "a55a23c1-9bca-4a14-a2ea-6d4ed8991ba8": {
+          "type": "review_item",
+          "settings": {
+            "title": "Addictive!",
+            "content": "<p>As with all my goodr glasses, these are amazing, fun and do a great job of protecting my eyes from the sun. My only complaint is goodrs are addictive, once you own a pair, you will want more because they’re awesome!<\/p>",
+            "author_name": "Jennifer T.",
+            "show_star": true
+          }
+        },
+        "92c4c1ba-225d-4748-897b-8a80c63bc72e": {
+          "type": "review_item",
+          "settings": {
+            "title": "As Promised!",
+            "content": "<p>Mailman brought them and I headed off for my first run with them. As promised, no slip, no bounce, all polarized, and not a single leopard attacked me. But there was that bump in the sidewalk, but I'll heal soon - in my Goodr's.<\/p>",
+            "author_name": "Steve G.",
+            "show_star": true
+          }
+        },
+        "79cd9922-ad4d-482f-bea8-228c06da3240": {
+          "type": "review_item",
+          "settings": {
+            "title": "These glasses are <br>the perfect",
+            "content": "<p>These glasses are the perfect summer shades, love wearing them when I’m feeling a little wacky!<\/p>",
+            "author_name": "Marcela S.",
+            "show_star": true
+          }
+        }
+      },
+      "block_order": [
+        "3e4d8498-4fa8-4f81-beb1-7172ffb9f3c1",
+        "a55a23c1-9bca-4a14-a2ea-6d4ed8991ba8",
+        "92c4c1ba-225d-4748-897b-8a80c63bc72e",
+        "79cd9922-ad4d-482f-bea8-228c06da3240"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16524408859f8c6178": {
+      "type": "new-icon-box-section",
+      "blocks": {
+        "79a690df-f617-4a68-8e44-e74ea31da505": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFashionable.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFashionable.jpg",
+            "icon_url": "shopify:\/\/pages\/fashionable"
+          }
+        },
+        "5de28fa2-60ed-40e3-8353-9339d6b9069e": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFunctional.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFunctional.jpg",
+            "icon_url": "shopify:\/\/pages\/functional"
+          }
+        },
+        "6db6d6e8-2228-4a23-98b3-6ba4395a3aa7": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFfordable.jpg",
+            "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFfordable.jpg",
+            "icon_url": "shopify:\/\/pages\/ffordable"
+          }
+        }
+      },
+      "block_order": [
+        "79a690df-f617-4a68-8e44-e74ea31da505",
+        "5de28fa2-60ed-40e3-8353-9339d6b9069e",
+        "6db6d6e8-2228-4a23-98b3-6ba4395a3aa7"
+      ],
+      "settings": {
+        "title": "",
+        "show_border": false
+      }
+    },
+    "16536340888e474780": {
+      "type": "new-newsletter",
+      "settings": {
+        "section_title": "Subscribe",
+        "subheading": "",
+        "form_code": "XjWMuH"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165243630586ebb9ce",
+    "1652438284b49226aa",
+    "16524431368bfa07be",
+    "16524402985c9d0f2b",
+    "16524408859f8c6178",
+    "16536340888e474780"
+  ]
+}

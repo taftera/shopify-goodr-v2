@@ -1,0 +1,26 @@
+<!-- Sub Footer Color Section  -->
+<style>
+{%- if section.settings.footer_color != 'rgba(0,0,0,0)' -%}
+#shopify-section-footer .site-footer-box {
+  	background: {{ section.settings.footer_color }};
+}  
+{%- endif -%}  
+</style>
+
+{% schema %}
+{
+    "name": "Sub Footer Color Section",
+	"settings": [
+		{
+			"type": "color",
+            "id": "footer_color",
+            "label": "Sub footer Color"
+		}
+	],
+    "presets": [
+      {
+        "name": "Sub Footer Color Section"
+      }
+    ]
+  }
+{% endschema %}

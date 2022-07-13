@@ -1,0 +1,107 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "35d4b1c2-cc78-4e78-afca-83fae8540ecd": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "Angel City Elite x RUN goodr",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/IMG_5037_1.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "5fb5d363-7f0b-46b8-96d0-c3ec866059d0": {
+          "type": "text",
+          "settings": {
+            "title": "MEET THE WOMEN OF ANGEL CITY ELITE",
+            "text": "<p>This month we're sponsoring the badass women at @angelcity_elite (Shhh, don't tell them we vacay in devil cities). Their mission is to bridge the disparity gap of BIPOC representation in the running community, raise awareness, empower, educate, and inspire by creating a supportive platform and establishing partnerships in LA and surrounding communities. Since goodr's mission is to give you permission to be unabashedly yourself...unless you're an asshole, this is a match made in heaven! (Shhh, don't tell them we party in hell.) Keep crushing it, Angel City Elite athletes!<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "45a7b2df-866a-4dac-9068-6a6110108ac6": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Andrea Guerra Cisneros",
+            "content": "<p><b>Favorite Race Distance:<\/b> Half Marathon.<\/p>\n<p><b>Most Beloved Pair Of goodrs:<\/b> Fade-Er-Ade Shades<\/p>\n<p><b>Best Post-Race Food: <\/b> A good burger with a side of sweet potato fries and a cold beer 🍺 <\/p>\n<p><b>Why Do You Think Running Is Fun? <\/b>Running is straight up good vibes. It can turn a crappy day into a good one. It’s also fun when you’re in a new place and you can go out for a run and explore that new place.<\/p>\n<p><b>Most Embarrassing Moment During a Run: <\/b> Getting chased by a dog and falling over in front of a bunch of people at the park 🤦🏽‍♀️<\/p>\n<p><b> Inspire Us To Run Right Now: <\/b> Log off and Go Get your miles in. Come back and drink that beer you were eagerly waiting for. You deserve it. <\/p>",
+            "image": "shopify:\/\/shop_images\/Andrea_AngelCity.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "24f99cb6-eafd-429f-8ba3-63725e641a77": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Grace Gonzales",
+            "content": "<p><b>Favorite Race Distance: <\/b> \nMarathon <\/p>\n<p><b>Most Beloved Pair of goodrs: <\/b> The pair of the season is...Fade-er-ade Shades!\n<\/p><p><b>Best Post-Race Food: <\/b> Gourmet Burger, Fries, & Fruit <\/p>\n<p><b>Why Do You Think Running Is Fun? <\/b> Running is a package deal: nature\/outdoors, physically active, sync up mind-body-spirit and discover more than you know...about yourself and the world around you. <\/p>\n<p><b>Most Embarrassing Moment During a Run: <\/b> By now it isn’t so embarrassing, but let’s just say bathroom interruptions are always funny to navigate. <\/p>\n<p><b> Inspire Us To Run Right Now:  <\/b> The accomplishment feeling after a run\/training week\/training cycle is in your control right now. What are you waiting for? LFG! <\/p>",
+            "image": "shopify:\/\/shop_images\/GG.Nine_Dollar_Pour_Over.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "f52375d7-b037-4a23-9569-bc4e3f010991": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Grace Graham-Zamudio",
+            "content": "<p><b>Favorite Race Distance: <\/b> 10k<\/p>\n<p><b> Most Beloved Pair of goodrs:  <\/b> Fade-er-ade-shades because I can’t not smile when I see them.<\/p>\n<p><b> Best Post-Race Food: <\/b> A big breakfast with the works- eggs, bacon, hash browns, sourdough toast. <\/p>\n<p><b> Why Do You Think Running Is Fun? <\/b> Running is such a freeing and rewarding experience. I love the journey of working towards a personal goal. You get to meet a lot of awesome people and discover a lot about your own inner strength! <\/p>\n<p><b>Most Embarrassing Moment During a Run: <\/b> In one of my first runs with a local running group I ran into a fire hydrant really really hard during the first quarter mile. I pretended I was *OK* and tried to continue with my long run- I made it through 3 miles before having to stop and bum a ride back to my car. <\/p>\n<p><b>Inspire Us To Run Right Now: <\/b> Tag! You’re it! But in all seriousness, have fun with running! 9.99 times out of 10 you won’t regret having done it. <\/p>",
+            "image": "shopify:\/\/shop_images\/GraceZ.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "33c4c5ff-b6f8-4c60-bda2-53b2c551cba9": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Sabrina Delacruz",
+            "content": "<p><b>Favorite Race Distance: <\/b>Half Marathon.<\/p>\n<p><b> Most Beloved Pair of goodrs:  <\/b> Nine Dollar Four Over, I can use these pairs on every day runs and an everyday use.  Looks great in all that I wear.  <\/p>\n<p><b>Best Post-Race Food: <\/b> Pizza with lots of tapatio and a fresh lemonade drink. <\/p>\n<p><b> Why Do You Think Running Is Fun? <\/b> It is fun because of the people I meet. I get to meet up with people that are like minded individuals, competing at races, running personal bests, and meeting life long friends.<\/p>\n<p><b>Most Embarrassing Moment During a Run: <\/b> I was running with my sister and all of a sudden a bee stung me near my right eye. I shouted, “a bee stung me!” My sister looked at my eye and said, “your eye is swollen.” She yelled out, “call 911”  so others nearby can hear. The fire department ended up showing up. They told me to open my eyes so they could see if anything was wrong. I was scared but I slowly opened my eyes and saw about 10 firefighters staring at me.. Turns out nothing was wrong with my eye. I felt incredibly embarrassed! lol\n<\/p><p><b>Inspire Us To Run Right Now: <\/b>Be unreasonable. No one ever accomplished anything by being reasonable. Get out there and get your miles in no matter what excuse your mind comes up with. “It’s too cold”, “It’s too early”, “I don't have time”, “I’m too tired”. Any reasonable person would just give in to these excuses and skip their runs. Let’s be unreasonable and run anyway.<\/p>",
+            "image": "shopify:\/\/shop_images\/Sabrina_AngelCity_2022182c-dfb3-4ac6-8806-5fd0e611ec0b.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "d085d5be-718c-4ff5-b0d4-754b4fe2d59c": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5059.jpg"
+          }
+        },
+        "2c3d6d91-8174-4f62-b9c3-7197451c77fd": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "GIMME MORE GOODRTIMES",
+            "content": "",
+            "article1": "goodrtimes\/golden-shades-winner-exclusive-interview",
+            "article2": "goodrtimes\/beast-goodr-dream-team",
+            "article3": "goodrtimes\/goodr-x-reebok"
+          }
+        }
+      },
+      "block_order": [
+        "35d4b1c2-cc78-4e78-afca-83fae8540ecd",
+        "5fb5d363-7f0b-46b8-96d0-c3ec866059d0",
+        "45a7b2df-866a-4dac-9068-6a6110108ac6",
+        "24f99cb6-eafd-429f-8ba3-63725e641a77",
+        "f52375d7-b037-4a23-9569-bc4e3f010991",
+        "33c4c5ff-b6f8-4c60-bda2-53b2c551cba9",
+        "d085d5be-718c-4ff5-b0d4-754b4fe2d59c",
+        "2c3d6d91-8174-4f62-b9c3-7197451c77fd"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

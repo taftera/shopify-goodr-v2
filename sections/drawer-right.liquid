@@ -1,0 +1,176 @@
+<div class="drawer drawer--right drawer-cart">
+  <a class="drawer-close--right" title="Close cart">{% include 'icon-close' %}</a>
+
+  <a class="text--uppercase cart_label">{{ 'cart.general.title' | t }}</a>
+
+  {% if settings.progress_bar_enabled %}
+
+    <div class="progressbar__container">
+      <div class="progressbar__bar" data-progress-bar></div>
+      <p class="progressbar__text" data-progress-text>
+        <span data-progress-marker data-goal="{{ settings.free_shipping_goal }}">
+          Add $<span data-progress-money>{{ settings.free_shipping_goal | money_without_currency }}</span> for Free Shipping
+        </span>
+        <span data-progress-success>
+          {{ settings.free_shipping_success_text }}
+        </span>
+        {% if settings.second_goal_enabled %}
+          <span data-progress-marker data-goal="{{ settings.free_swag_goal }}">
+            Add $<span data-progress-money>{{ settings.free_swag_goal | money_without_currency }}</span> for a free Scumbag Scarf.
+          </span>
+          <span data-progress-success>
+            {{ settings.free_swag_success }}
+          </span>
+        {% endif %}
+        {% if settings.second_goal1_enabled %}
+          <span data-progress-marker data-goal="{{ settings.free_swag1_goal }}">
+            Add $<span data-progress-money>{{ settings.free_swag1_goal | money_without_currency }}</span> for a FREE STRESS CARL.
+          </span>
+          <span data-progress-success>
+            {{ settings.free_swag1_success }}
+          </span>
+        {% endif %}
+        {% if settings.second_goal2_enabled %}
+          <span data-progress-marker data-goal="{{ settings.free_swag2_goal }}">
+            Add $<span data-progress-money>{{ settings.free_swag2_goal | money_without_currency }}</span> for a free goodr hat.
+          </span>
+          <span data-progress-success>
+            {{ settings.free_swag2_success }}
+          </span>
+        {% endif %}
+        {% if settings.second_goal3_enabled %}
+          <span data-progress-marker data-goal="{{ settings.free_swag3_goal }}">
+            Add $<span data-progress-money>{{ settings.free_swag3_goal | money_without_currency }}</span> for a free cooler.
+          </span>
+          <span data-progress-success>
+            {{ settings.free_swag3_success }}
+          </span>
+        {% endif %}
+      </p>
+
+
+
+    </div>
+
+    <input type="hidden" id="cart-total" value="{{ cart.total_price }}" />
+
+  {% endif %}
+
+  <form action="/cart" method="post" class="drawer-cart" novalidate>
+
+        <div class="drawer-cart__items">
+        {% for item in cart.items %}
+          {% include 'bold-cart-item' with item %}
+          <div class="row middle-xs drawer-cart__item" id="item-{{ forloop.index }}">
+
+            <div class="col-xs-4" data-label="{{ 'customer.order.product' | t }}">
+
+              {% if item.image != blank %}
+                <a href="{{ item.url | within: collections.all }}">
+                  {{ item | img_url: '240x240' | img_tag: item.title }}
+                </a>
+              {% endif %}
+
+            </div>
+            <div class="col-xs-8">
+              <a class="drawer-cart__title" href="{{ item.url }}">{{ item.product.title }}</a>
+
+              {% unless item.product.has_only_default_variant %}
+                <p>{{ item.variant.title }}</p>
+              {% endunless %}
+			  {%- assign property_size = item.properties | size -%}
+              {% assign offer_product = false %}
+              
+                    {% if property_size > 0 %}
+                      {% for p in item.properties %}
+                        {% unless p.last == blank %}
+              				{% if p.first == "Offer" %}{% assign offer_product = true %}{% endif %}
+              				{% if p.first == "Gift-Offer" %}{% if settings.free_gift_amount_enable or settings.free_gift_amount_enable_2  or settings.free_gift_amount_enable_3 or settings.free_gift_amount_enable_4   or settings.free_gift_amount_enable_5  %}{% assign offer_product = true %}{% else %}{% break %}{% endif %}{% endif %}
+              			<p><b>{{ p.first }}:</b>
+                        {% if p.last contains '/uploads/' %}
+                          <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                        {% else %}
+                          {{ p.last }}</p>
+                        {% endif %}
+
+                        {% endunless %}
+                      {% endfor %}
+                    {% endif %}
+              
+              
+              <p class="drawer-cart__price">{% if item.original_line_price != item.line_price %}
+                <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
+                {{ item.price | money }}
+                <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
+                <s>{{ item.original_price | money }}</s>
+              {% else %}
+                {{ item.price | money }}
+              {% endif %}
+              </p>
+
+              <div class="row middle-xs">
+                <div class="col-xs-8" data-label="{{ 'cart.label.price' | t }}">
+                  <label for="updates_{{ item.key }}" class="visually-hidden">{{ 'products.product.quantity' | t }}</label>
+                  
+                  
+                  {% if offer_product == false %}
+                  <div class="quantity-selector">
+                    {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+                    <span class="quantity__button js-quantity-button" data-action="decrease-quantity">-</span>
+                    <input type="text"
+                           class="quantity__input"
+                           name="updates[]"
+                           id="updates_{{ item.key }}"
+                           value="{{ item.quantity }}"
+                           data-updates="{{ forloop.index }}"
+                           min="0"
+                           aria-label="{{ 'cart.general.item_quantity' | t }}"
+                           {{ bold_qty_attr }}>
+                    <span class="quantity__button js-quantity-button" data-action="increase-quantity">+</span>
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-xs-4">
+                  {% if offer_product == false %}
+                  <a class="remove js-remove-item" data-item-id="{{ item.variant_id }}" data-item-index="{{ forloop.index }}" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                    {{ 'cart.general.remove' | t }}
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+
+    <p><small>{{ 'cart.general.shipping_at_checkout' | t }}</small></p>
+    
+<!--    <p><small><a href="https://goodr.com/pages/december-2020-holiday-shipping-notification">Holiday 2020 shipping deadlines</a></small></p>
+-->
+    
+    <p class="text-align--center">
+      {% if section.settings.cart_button_enabled %}
+      <a href="/cart" class="button button--full">View Cart</a><br>
+      {% endif %}
+      <input class="drawer-cart__checkout button button--full" type="submit" name="checkout" value="
+      {{ 'cart.general.checkout' | t }} {{ cart.total_price | money }}">
+    </p>
+  </form>
+
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Cart Drawer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_button_enabled",
+        "label": "Show View Cart button",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}

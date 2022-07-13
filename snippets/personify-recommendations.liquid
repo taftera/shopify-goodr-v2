@@ -1,0 +1,56 @@
+{% include 'personify' %}
+<script>
+
+var recsCode = "<div class=\"col-xs-6 col-md-3\"><div class=\"product-tile \"><div class=\"product-tile_image-wrapper\"><a class=\"product-tile__image hover-effect\" href=\"PRODUCT_LINK\" style=\"background-image:url(PRODUCT_IMAGE)\"><img src=\"PRODUCT_IMAGE\" alt=\"PRODUCT_NAME\"></a></div><p class=\"product-tile__title\"><a href=\"PRODUCT_LINK\" product-code=\"PRODUCT_CODE\">PRODUCT_NAME</a></p></div></div>";
+var recsHeader = "<div class=\"container--fluid\"><aside class=\"row center-xs\"><div class=\"col-xs-12\"><h2 class=\"text-align__center\">YOU'LL ALSO LOVE THESE</h2></div>";
+var recsFooter = "</aside></div>";
+var recsQty = 4;
+
+function showRecs(recs, endpointName, element)
+{
+
+
+  var recsHTML = recsHeader;
+
+  var recsShown = 0;
+
+  for (var r in recs)
+  {
+    if (recsShown < recsQty && 'link' in recs[r] && recs[r]['link'] != '' && 'image' in recs[r] && recs[r]['image'] != '' && 'name' in recs[r] && recs[r]['name'] != '')
+    {
+	recsHTML += recsCode.replace(/PRODUCT_CODE/gi, recs[r]['productcode']).replace(/PRODUCT_LINK/gi, recs[r]['link']).replace(/PRODUCT_IMAGE/gi, recs[r]['image'].replace(/.jpg/gi, "_600x600.jpg")).replace(/PRODUCT_NAME/gi, recs[r]['name']);
+      recsShown += 1;
+    }
+  }
+
+  recsHTML += recsFooter;
+
+  if (recsShown>0) {
+    document.getElementById("personifyxp-recs").innerHTML = recsHTML;
+    trackViewsAndClicks(document.getElementById("personifyxp-recs"), "UNKNOWN", "PRODUCT");
+  }
+
+}
+
+function init()
+{
+	
+  //Prep Data  
+  var apiJSON = JSON.stringify({
+    "pagesize": recsQty+2,
+    "sessionid": getPersonifyCookie("PERSONIFY"),
+    "shopperid": getPersonifyShopperId(),
+	"referrer": personify_referrer,
+    "productcontext": "{{ product.id }}",
+    "exclude": [{"type": "PRODUCT", "id": "{{ product.id }}"}]
+  });
+
+  callAPI(apiJSON, "getrecs", (recsQty > 0), document.getElementById("personifyxp-recs"));
+}
+
+init();
+
+</script>
+
+<div class="nosto_element" id="productpage-nosto-1"></div>
+<div id="personifyxp-recs"></div>

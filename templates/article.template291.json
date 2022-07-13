@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "bf39e3ee-c8b6-42ea-9f72-e6322a04ff0e": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "TOP TEN GREEN SUNGLASSES",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/celtic_1600_400.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "85f87da4-6a21-43ff-99c0-59d04ed33c74": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>\nHello there. We’re hoping and guessing that you arrived here because you were searching for green sunglasses. Were we right? If not, why are you here? (Don’t answer that, no one is actually listening. Or are we…?)\n<br><br>\nThe reason we thought you might be here in search of green sunglasses is because that is the topic of this very important piece of journalism. Green sunglasses. Did we say green sunglasses yet? If not, green sunglasses. \n<br><br>\nWhat some might consider a cheap ploy for search engine optimization, others might consider a delightful article to learn more about all of the green sunglasses goodr has to offer. \n<br><br>\nIn honor of St. Patrick’s Day coming up, we wanted to share with you the many fun, fashionable, functional and ‘ffordable green sunglasses options that we offer for all of your running, beasting, biking, golfing and gaming needs. It’s as if you have landed at the pot of gold at the end of the green sunglasses rainbow. Or the pot of green sunglasses at the end of the regular rainbow, whichever you prefer. \n<br><br>\nIn order of least St. Patricksy to most St. Patricksy, these green sunglasses will help you express your inner leprechaun! (We were told that lists appeal to people who want to buy green sunglasses.) Please, don’t chirp us if you think some of these are actually teal sunglasses or turquoise sunglasses. They’re green enough to not get pinched. Deal with it. \n<br><br>\n10 .<b> RUN READY FUNFETTI<\/b>\nYou got us. These are not green sunglasses, but we needed 10 pairs for our list, and these DO have rainbow reflective lenses, so technically, there is some green in there somewhere…\n<br><br>\n9. <b>I PICKLED THESE MYSELF<\/b>\nSure, these are teal, but teal is blue-green. Just tell the person that pinches you for not wearing green to take up their argument with Martha Stewart. She knows her color wheel and we’re pretty sure she’ll take our side. \n<br><br>\n8. <b>KITTY HAWKERS RAY BLOCKERS<\/b>\nAgain, teal. Though, these are definitely more toward the green end of teal, according to our consultation with our Head of Design.  \n<br><br>\n7. <b>NESSY’S MIDNIGHT ORGY <\/b>\nThis is the last submission in the teal family. Get over it. \n<br><br>\n6. <b>MINT JULEP ELECTROSHOCKS<\/b>\nIf you make your Mint Julep with Irish Whiskey, it’s the perfect St. Paddy’s Day cocktail. (Thinking maybe we should’ve just made this list the top five pairs of green sunglasses…)\n<br><br>\n5. <b>WORKIN’ IT FROM HOME <\/b>\nNot everyone can start the 7:30 am bar crawl required on this raucous holiday, in which case, you can rock our Blue Mirage Technology Runways while you work…with a tall, room temperature Guinness just out of view of your webcam of course. \n<br><br>\n4. <b>BUZZED ON THE TOWER <\/b>\nOur non-peer-reviewed “study” found that green aviators are definitely the fastest green sunglasses we have to offer. \n<br><br>\n3. <b>TALES FROM THE GREENSKEEPER<\/b>\nA brighter green aviator for the most committed Leprechauns and Lords of the Dance. \n<br><br>\n2. <b>MARY QUEEN OF GOLF<\/b> \nYes, we are aware that Mary Queen of Scots was Scottish. Sue us. \n<br><br>\n1. <b>TALK CELTIC TO ME<\/b>\nAnd finally, our greenest sunglasses, limited edition St. Patrick’s Day goodrs – bedecked with tartan and shamrocks. \n<br><br>\nHappy St. Patrick’s Day to all! Or, if you just wanted to find some green sunglasses some other time of year…Happy Some Other Time of Year! \n\n\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "8da8c9a3-2484-42f3-b0c5-3403b4e39477": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/celtic_1067.jpg"
+          }
+        },
+        "4b9699b0-351c-4bab-afcd-d09310d74480": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "e41e0829-30a7-4c5b-8683-8c26d95f9a1c": {
+          "type": "product",
+          "settings": {
+            "product": "tales-from-the-greenkeeper",
+            "content": "",
+            "image_aligment": "right"
+          }
+        },
+        "dea87edc-5a9d-4229-83fd-9140881986d3": {
+          "type": "product",
+          "settings": {
+            "product": "mary-queen-of-golf",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "f969ba56-0bb3-4854-8e67-06aba432a42a": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "DOC SAYS YOU NEED MORE GREENS",
+            "content": "",
+            "article1": "origin-story\/fossil-finding-focals-origin-story",
+            "article2": "goodrtimes\/mint-julep-electroshocks-origin-story",
+            "article3": "goodrtimes\/buzzed-on-the-tower-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "bf39e3ee-c8b6-42ea-9f72-e6322a04ff0e",
+        "85f87da4-6a21-43ff-99c0-59d04ed33c74",
+        "8da8c9a3-2484-42f3-b0c5-3403b4e39477",
+        "4b9699b0-351c-4bab-afcd-d09310d74480",
+        "e41e0829-30a7-4c5b-8683-8c26d95f9a1c",
+        "dea87edc-5a9d-4229-83fd-9140881986d3",
+        "f969ba56-0bb3-4854-8e67-06aba432a42a"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

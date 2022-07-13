@@ -1,0 +1,231 @@
+<div class="lottery-page-section">
+  	<div class="lottery-page-wrapper">
+      	{%- if section.settings.show_comming_soon -%}
+      	<div class="lottery-commnig-soon-box">
+          	{{ page.content }}
+      	</div>
+      	{%- endif -%}
+      	{%- if section.settings.show_lottery -%}
+      	<div class="tab-menu">
+			<ul class="make-tabs">
+        		<li><a href="#tabs-1" class="active">WINNING?</a></li>
+        		<li><a href="#tabs-2" class="">REGISTER</a></li>
+        		<li><a href="#tabs-3" class="">RULES</a></li>
+    		</ul>
+    		<div class="tab-content active" id="tabs-1" style="display: block;">
+              	<div class="rules-box">
+              		<div class="content-item" id="rues-section">
+                  		<div class="text-box">
+        					<h3>Are you down to Party with Carl's Rules?</h3>
+              				<p><a href="#" class="link-to-rules">LINK TO RULES</a></p>
+                      		<p><span class="accept-btn"><a href="#" id="rules-accept" class="button">I accept</a></span>
+                          	<span class="accept-btn"><a href="#" id="rules-not-accept" class="button">I don't accept</a></span></p>
+                  		</div>
+                      	{%- if section.settings.rules_img != blank -%}
+                  		<div class="image-box">
+                			<img src="{{ section.settings.rules_img | img_url: 'master' }}" class="" alt="Carls Rules" />
+                  		</div>
+                      	{%- endif -%}
+              		</div>
+              		<div class="content-item" id="not-accept-section" style="display:none;">
+                  		<div class="text-box">
+        					<h3>Yo....help us help you....</h3>
+              				<p>We don't love legal stuff either...but, we're giving away a freakin' car here....</p>
+                  		</div>
+                      	{%- if section.settings.not_accept_img != blank -%}
+                  		<div class="image-box">
+                			<img src="{{ section.settings.not_accept_img | img_url: 'master' }}" class="" alt="Not Accept Img" />
+	                  	</div>
+                      	{%- endif -%}
+              		</div>
+              		<div class="content-item" id="accept-section" style="display:none;">
+                  		<div class="text-box">
+        					<h3>Enter your PT Raffle Number!*</h3>
+              				<p>7 Digits and no Text</p>
+                      		<div class="lottery-form-box">
+								<div class="field">
+									<input type="number" id="lotter_code" name="lotter_code" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="Type your answer here..." required />
+                                  	<p class="error"></p>
+								</div>
+								<div class="button-box">
+									<button id="check_lottery" class="button" >Ok</button>
+								</div>
+							</div>
+                  		</div>
+                      	{%- if section.settings.accept_img != blank -%}
+                  		<div class="image-box">
+                			<img src="{{ section.settings.accept_img | img_url: 'master' }}" class="" alt="Accept Img" />
+                  		</div>
+                      	{%- endif -%}
+              		</div>
+              	</div>
+    		</div>
+    		<div class="tab-content" id="tabs-2" style="display: none;">
+              	<h3>Title Text</h3>
+              	<p>Sentence text goes here</p>
+    		</div>
+    		<div class="tab-content" id="tabs-3" style="display: none;">
+              	<h3>Title Text</h3>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin risus. Vivamus rhoncus ligula ut ipsum accumsan auctor. Nunc suscipit, metus eget malesuada sagittis, ligula nisi varius turpis, tincidunt sodales lacus augue non diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ipsum ante, semper vel tellus vel, lobortis tincidunt eros. In bibendum ultrices mi id mattis. In vel nunc quam. Suspendisse potenti. Aenean sit amet commodo elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque suscipit lacus libero, feugiat pulvinar mauris iaculis a.</p>
+    		</div>
+		</div>	
+      	{%- endif -%}
+  	</div>
+</div>
+{% schema %}
+  	{
+    	"name": "Lottery Page",
+    	"settings": [
+			{
+            	"type": "header",
+				"content": "Coming soon content"
+          	},
+			{
+            	"type": "checkbox",
+            	"id": "show_comming_soon",
+            	"label": "Enable Coming soon",
+				"default": true,
+				"info": "if Enable show page editor content"
+          	},
+			{
+            	"type": "header",
+				"content": "Lottery tabs content"
+          	},
+			{
+            	"type": "checkbox",
+            	"id": "show_lottery",
+            	"label": "Enable Lottery Tabs",
+				"default": false
+          	},
+			{
+            	"type": "image_picker",
+            	"id": "rules_img",
+            	"label": "Rules image"
+          	},
+			{
+            	"type": "image_picker",
+            	"id": "accept_img",
+            	"label": "Accept image"
+          	},
+			{
+            	"type": "image_picker",
+            	"id": "not_accept_img",
+            	"label": "Not-Accept image"
+          	}
+		]
+  	}
+{% endschema %}
+<style>
+#shopify-section-lottery-page-section {
+    width: 100%;
+    display: block;
+}
+.lottery-page-nosto .section-header {
+    position: relative;
+}
+.lottery-page-section {
+    padding: 30px 0px;
+}
+.lottery-page-section .content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lottery-page-section .content-item .text-box {
+    width: 60%;
+    padding-right: 30px;
+}
+.lottery-page-section .content-item .image-box {
+    width: 40%;
+    text-align: center;
+}
+.lottery-page-section .tab-content {
+    padding: 30px;
+}
+.lottery-page-section .accept-btn {
+    display: block;
+    padding: 5px 0px;
+}
+.lottery-page-section .accept-btn .button {
+    width: 100%;
+    max-width: 190px;
+}
+.lottery-page-section .accept-btn .button:focus {
+    color: #fff;
+}
+.lottery-page-section .accept-btn .button:focus:hover {
+    color: #4ec0b2;
+}
+.lottery-form-box input[type="number"] {
+    width: 100%;
+    max-width: 380px;
+  	margin-bottom: 5px;
+}
+p.error {
+    color: red;
+  	margin-bottom: 15px;
+}
+</style>
+
+<script>
+jQuery( document ).ready(function($) {
+  	var pageUrl = $(location).attr('href');
+  	var isvalid = 0;
+  	$(document).on("keyup", "#lotter_code", function() {
+      	$(".error").html('');
+	});
+  	$(document).on("click", "#check_lottery", function() {
+      	if($("#lotter_code").val().length < 7){
+        	$(".error").html('<p class="error">Please enter 7 digits number</p>');
+        } else {
+          	$(".error").html('');
+          	isvalid = isvalid + 1;
+        }
+		if($('input[name="lotter_code"]').val() != "" && isvalid == 1 ){
+          	var min = 10000000;
+			var max = 90000000;
+			var ts = Math.floor(Math.random() * min) + max;
+          	var code = $('input[name="lotter_code"]').val();
+        	var url = '?view=AjaxCode&sort_by=fake'+ts+'&lottery_ID='+code;
+          	getLotteryCode(url);
+      	} else {
+          	$(".error").html('<p class="error">Please enter 7 digits number</p>');
+      	}
+	});
+  
+  	$(document).on("click", ".link-to-rules", function() {
+      	event.preventDefault();
+		$('ul.make-tabs li a[href="#tabs-3"]').trigger( "click" );
+	});
+  	$(document).on("click", "#rules-not-accept", function() {
+      	event.preventDefault();
+		$("#rues-section").hide();
+      	$("#accept-section").hide();
+      	$("#not-accept-section").show();
+	});
+  	$(document).on("click", "#rules-accept", function() {
+      	event.preventDefault();
+		$("#rues-section").hide();
+      	$("#not-accept-section").hide();
+      	$("#accept-section").show();
+	});
+});
+function getLotteryCode(url){
+	$.ajax({
+		type: 'GET',
+		url: url,
+      	beforeSend: function() {
+          	$("#check_lottery").html('loading..');
+        	$("#check_lottery").prop('disabled', true);
+    	},
+		success: function(response){
+          	$("#check_lottery").html('Check');
+          	$("#check_lottery").prop('disabled', false);
+          	$(".lottery-page-section .rules-box").html(response);
+		},
+		error: function(status){
+			alert(status);
+		}
+	});
+}
+</script>

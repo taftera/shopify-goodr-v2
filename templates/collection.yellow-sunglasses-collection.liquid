@@ -1,0 +1,135 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+					<p>It’s a bright, sunny day out on the trails. I’m feelin’ stylish as hell in my yellow colored sunglasses, ready for anything. So I’m running, and I’m running, and stopping some, to ya know, smell the roses and all of that. My pace picks up, and I finally caught the edge (it definitely wasn’t a boost from my yellow shades), and I think HELL YES, NOTHING could stop me now.</p>
+                  	<p>But suddenly… wait no, this cannot be happening to me, not now! I look down, and I see a yellow river make its way down my thigh, into my shoe. Well, what’s done is done. That’s the name of the game as a runner sometimes. Or a walker. I am not quite sure what I am.</p>
+                  	<p>I would feel completely helpless, but then I see myself in the lenses of my reflective sunglasses. The purpose of these accessories seems elevated. They are not exclusive to being yellow-rimmed sunglasses. They now serve as a reminder that, in fact, it’s quite okay to pee yourself on a run. It’s symbolic, really. These women's sunglasses have validated my lack of control and almost make me feel like they could be a reason for my recently trending confidence in myself. Not just polarized running sunglasses - the true epitome of functionality and practicality, two things I never really can produce results with, but hey, it seems like it makes sense.</p>
+                  	<p>Now that you are feeling overly inspired to dabble with your own pair (or pairs) of sunglasses, you’re probably noodling over where the hell you can find said yellow sunglasses or even cheap sunglasses. Well, we will take decent, but not cheap even though $25 in your mind may be cheap. Mindblowingly cheap and decent, if you will, with excellent shipping. Have no fear whatsoever. We are here to make the delivery of all your sunglasses dreams. On the search for round rad sunglasses? Sweet. Our Circle G hipster sunglasses may be just what your soul needs, and that, my friends, is called Fade-er-Ade Shades, great for men's and women's fashion. Maybe you like clear frame sunglasses more because that’s just how you roll as a customer. Well, how about our blue light blockers Citron+Alt+Delete? They are made for those larger noggins out there, so big-headed friends, you are certainly welcome to shop here. How about square lens sunglasses? Well, you are shit out of luck on that because we don’t have any. That's a party we've yet to have. But we do have our brands featured Mach G aviator-style sunglasses if that will tickle your fancy. We actually did have a pair of yellow plastic sunglasses named “Nature Break. Oui Oui” which reminds me of my recent international lack of pee break 2021 experience. However, these are gone, so you are shit out of luck there too, but we do have our first ever product style, the OGs comin’ in hot called Wakka Wakka Wakka Wakka.</p>
+                  	<p>The name is totally left up for your interpretation on what that name means or is based on if I am being honest here. And don’t even think you could forget about a total staple and showstopper items in the yellow sunglasses collection- Swedish Meatball Hangover. Ya know when you just gorge yourself with too much Italian food, and ya can’t move? I can’t relate on this level since I am a vegetarian, but these yellow framed sunglasses are meant for men's or women's fashion or whatever the hell you are. We don’t care.</p>
+                  	<p>All in all, if you take anything from my dear diary moment is that 1. Yellow-colored sunglasses are the complete shi*t, so your search for new shades is over, and 2. It’s really is okay to pee yourself (it’s just not okay to do the other thing, so seriously, stop being so hardcore out there and pop a squat and figure your life out. It's 2021). Sincerely, your friends at goodr, inc</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

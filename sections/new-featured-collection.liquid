@@ -1,0 +1,87 @@
+<div class="new-featured-collection">
+	<div class="container--fluid">
+      	<div class="row">
+			<div class="col-xs-12 col-sm-12 col-lg-12">
+				{% if section.settings.title != blank %}
+					<h2 class="section__heading featured-collection__title text-align--center"><span>{{ section.settings.title }}</span></h2>
+				{% endif %}
+			</div>
+		</div>
+		<section class="featured-collection-section">
+          	<div class="row">
+				{%- assign collection = collections[section.settings.collection] -%}
+              	{%- if collection != blank -%}
+					{%- for product in collection.products limit: 6 -%}
+              			{%- include 'easylockdown_filter_collection' with product -%}
+						{%- include 'bold-product' with product, hide_action: 'skip' -%}
+						<div class="col-xs-6 col-sm-4 col-lg-4">
+							{%- include 'product-tile-new-featured-collection' -%}
+						</div>
+					{%- endfor -%}
+              			<div class="col-xs-12 col-sm-12 col-lg-12">
+							<div class="rte-setting" style="padding-top: 50px;">
+                              	<center>
+                                  	<a href="{{ collection.url }}" class="button" {% if template.name == "page" and page.template_suffix contains '4f' %} onclick="gtag('event', 'Click', { 'event_category': '4F', 'event_label':'{{ collection.url }}', 'event_action':'Shop All Button' });" {% endif %}>SHOP ALL</a>
+                              	</center>
+                          	</div>
+						</div>
+              	{%- endif -%}
+          	</div>
+		</section>
+	</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "New Featured collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured collection"
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "New Featured collection",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.new-featured-collection {
+    padding: 50px 0px;
+}
+
+.featured-collection-section {
+    padding-top: 50px;
+}
+  
+@media only screen and (min-width: 61.85em){
+.new-featured-collection .product-tile .button {
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 1;
+  	width: 50%;
+}
+}
+  
+@media screen and (max-width: 767px){
+.featured-collection-section {
+    padding-top: 30px;
+}
+.new-featured-collection {
+    padding: 50px 0px 0px;
+} 
+}
+</style>

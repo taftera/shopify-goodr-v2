@@ -1,0 +1,13 @@
+  <script>
+  //Prep Data  
+  var apiJSON = JSON.stringify({    
+    "contentname": location.pathname,
+    "contenttitle": "{{ section.settings.title | escape }}",
+    "sessionid": getPersonifyCookie("PERSONIFY"),
+    "shopperid": getPersonifyShopperId(),
+	"referrer": personify_referrer
+  });
+  
+  //Call API
+  callAPI(apiJSON, "viewcontent", false, null);
+</script>

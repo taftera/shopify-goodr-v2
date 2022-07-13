@@ -1,0 +1,159 @@
+<script type="text/javascript">
+  function getSrc($el) {
+    var backgroundImgURL = $el.css('background-image');
+    var src = backgroundImgURL.substring( (backgroundImgURL.indexOf('(') + 2), ( backgroundImgURL.indexOf(')') + 1) );
+    return src;
+  };
+  
+    
+  function animatePlatformDown($platform) {
+    $platform.animate({
+      opacity: "0",
+      bottom: 0,
+    }, {
+      duration: 700,
+      easing: "swing"
+    });
+  };
+  
+  function animatePlatformUp($platform) {
+    $platform.animate({
+      opacity: "1",
+      bottom: 25,
+    }, {
+      duration: 700,
+      easing: "swing",
+      complete: function() {
+        animatePlatformDown($platform);
+      }
+    });
+  };
+
+  function animateImageDown($initialImage) {
+    $initialImage.animate({
+      top: "25",
+    }, {
+      duration: 700,
+      easing: "swing"
+    });
+  };
+
+  function animateImageUp($initialImage) {
+    $initialImage.animate({
+      top: "0",
+    }, {
+      duration: 700,
+      easing: "swing",
+      complete: function() {
+        animateImageDown($initialImage);
+      }
+    });
+  };
+
+
+
+  function newImgFromBackground() {
+    var $productTile = $(this);
+    var $imageContainer = $productTile.find('.product-tile__image.hover-effect');
+    var $initialImage = $imageContainer.find('img:first').addClass('initial-product-img');
+    var src = getSrc($imageContainer);
+    var $newImg = $('<img class="new-hover-image" src="' + src + '">').hide();
+    $imageContainer.css('background-image', '');
+    var $platformEl = $('<img class="interstellar-platform" src="https://cdn.shopify.com/s/files/1/0084/1616/5946/files/hover_platform.png?3482" >');
+    var $hoverImgContainer = $('<div class="show-on-hover"></div>');
+    $hoverImgContainer.append($newImg, $platformEl);
+    $imageContainer.append($platformEl);
+    var spaceShipInterval;
+
+    function animateShip() {
+      animateImageUp($initialImage);
+      animatePlatformUp($platformEl);
+    }
+
+    function stopSpaceShipInterval() {
+      clearInterval(spaceShipInterval);
+    }
+    $imageContainer.mouseenter(function() {
+      animateShip();
+      spaceShipInterval = setInterval(animateShip, 1400);
+      return spaceShipInterval;
+    }); 
+
+    $imageContainer.mouseleave(function(){
+      $initialImage.stop(true);
+      $platformEl.stop(true);
+      stopSpaceShipInterval();
+      animateImageDown($initialImage);
+      animatePlatformDown($platformEl);
+    });
+  }
+
+  $(document).ready(function() {
+    var interstellarProductTiles = $('.interstellar .product-tile');
+    interstellarProductTiles.each(newImgFromBackground);
+  });
+</script>
+
+<div class="interstellar">
+{% paginate collection.products by 60 %}
+
+  {% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+  {% else %}
+    {% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+  {% endif %}
+   <header role="banner" class="hero-banner">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    <p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+</div>
+</div>
+  </header>
+
+  <div class="filter-container">
+    {% include 'filter-menu' %}
+  </div>
+
+  <div class="container--fluid">
+    <div class="row">
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or   product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% if collection.handle == "interstellar-sun-repellers" %}
+        	{% include 'product-tile-interstellar' %}
+        {% else %}
+        	{% include 'product-tile' %}
+        {% endif %}
+      </div>
+
+    {% else %}
+      {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+        {% for i in (1..8) %}
+          <a href="#">
+            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+          </a>
+
+          <p>
+            <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
+          </p>
+
+          <p>
+            {{ 1999 | money }}
+          </p>
+        {% endfor %}
+      {% else %}
+        <p>{{ 'collections.general.no_matches' | t }}</p>
+      {% endif %}
+
+    {% endfor %}
+    </div>
+  </div>
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+{% endpaginate %}
+</div>

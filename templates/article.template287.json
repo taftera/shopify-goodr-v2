@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "c1c11687-764e-4e71-98ff-7d70ecc0a0b9": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "THEY WERE OUT OF BLACK ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/they_were_out_of_black_blog_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "493495f6-b5a3-4339-8bdc-1fdb688acbb6": {
+          "type": "text",
+          "settings": {
+            "title": "A Snapshot of the Grim Reapers of North America Conference",
+            "text": "<p>\n\nWe know what you’re thinking… There’s a conference? There’s more than one Grim Reaper?! \n<br><br>\nUh, obviously!!! According to a quick search we did online, it appears that 65 million people die each year worldwide. That is 178,000 each day, 7,425 each hour, and 120 each minute. In the United States alone, 2.6 million people die each year. That is 7,123 each day, 297 each hour, and 5 every minute. That’s way too many souls for one reaper to reap every day. \n<br><br>\nWhich takes us back to the Grim Reapers of North America Conference. Most years, the convention is held in some lame banquet hall or hotel. No one is ever excited to see them show up, which is why they have such a hard time getting a good venue. They’re less popular than the IRS, which is really a shame since they do know how to party!!!\n<br><br>\nLast year’s convention was basically a total disaster. It was hosted at the Holidaze Inn in Sheboygan. There was a snowstorm which ended up shutting down the planned excursion to the Kohler-Andrae State Park. A Reaper can only play so many games of Charades and Leading Ladies before things get really boring, so of course they got sloppy-wasted in the hotel’s Biergarten. A bunch of souls escaped and infested the hotel, they trashed the buffet and began haunting the rooms. Things got weird when the hotel insisted on hiring a clairvoyant to “clean” the hotel and the Grim Reapers of North America ended up with a HUGE cleaning bill and lost their deposit. Apparently trying to get ectoplasm stains out of a polyester bedspread is very difficult. Unfortunately this all led to a serious crackdown and implementation of strict policies by the Grim Reaper Association, including a new dress code. The new dress code could basically be summed up with, “If it isn’t black, it’s whack!!!”\n<br><br>\nOne reaper in particular (we’re withholding his name), was stoked for this year’s convention. It would be taking place in Maui, and he was being given a prestigious award for regularly exceeding his soul reaping quota. (TBH we’re not really sure how one can ethically exceed a soul reaping quota, but we digress.) During that last trip to Sheboygan, he got stuck sharing a room with Reaper “Stinky” Cornelius, who had noticeable trouble digesting the jars of homemade sauerkraut he insisted on packing in his suitcase. (Our Reaper friend may not technically have his own soul, but he still has a sense of smell for God’s sake, Cornelius!) You know, Reapers really are just like the rest of us, masquerading in flesh suits and all. That whole skeletal spectral entity thing is a myth. Most of them don’t even carry a scythe anymore, way too hard to check on an airplane. \n<br><br>\nSo back to our Reaper friend. He may be a soul-reaping savant, but he is also a wicked procrastinator. He remembered to pick up several romance novels, some rubbers, and a new black thong speedo, but he totally spaced on sunglasses. He grabbed a pair of these sweet NEW gray Circle G sunglasses at the last minute at The goodr Cabana because they were out of black. The Cabana employee assured him that no one would even notice that they weren’t black.\n<br><br>\nUnfortunately, when he showed up at the Reaper Convention in his gray sunnies, there were plenty of hushed whispers and lots of dirty looks which lead to a grim confrontation (no pun intended HAAA). The Grim Reaper Association representative who was present reprimanded him, angrily citing the dress code by shoving the handbook in his face, then motioned for security to throw him out. He protested, kicking and screaming as they dragged him outside and threw him on his ass. “THEY WERE OUT OF BLACK!!! THEY WERE OUT OF BLACK!!!” he cried. No one cared. This poor guy. He didn’t even get to accept his award. \n<br><br>\nA few days later he returned to The goodr Cabana for a refund on his sunnies. He broke down in tears and explained the whole situation. Carl the Flamingo took pity on him and offered him a new career working at the Cabana hocking these “They Were Out Of Black” sunnies. \n<br><br>\nFor his protection we won’t tell you which employee he is, but we promise he is super nice and helpful if you decide to stop by. If he asks if you want to see his scythe just politely decline. (Old habits die hard.)\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "1f44270a-5d76-402f-ace8-aecc5d1f71c0": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theyre_out_of_black_bleed_image.jpg"
+          }
+        },
+        "c0b66a2f-dbd6-4b46-b685-dd3146e8638c": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "content": "",
+            "image_aligment": "left"
+          }
+        },
+        "8a6c6cbb-c044-4808-84ee-2f0693433188": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "NEVER RUN OUT OF BLACK",
+            "content": "",
+            "article1": "goodrtimes\/its-not-black-its-obsidian-origin-story",
+            "article2": "goodrtimes\/hooked-on-onyx-origin-story",
+            "article3": "goodrtimes\/operation-blackout-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "c1c11687-764e-4e71-98ff-7d70ecc0a0b9",
+        "493495f6-b5a3-4339-8bdc-1fdb688acbb6",
+        "1f44270a-5d76-402f-ace8-aecc5d1f71c0",
+        "c0b66a2f-dbd6-4b46-b685-dd3146e8638c",
+        "8a6c6cbb-c044-4808-84ee-2f0693433188"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

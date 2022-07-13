@@ -1,0 +1,245 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "a54f1c46-3d6d-43a4-999c-4eec5dafc3e5": {
+          "type": "heading",
+          "settings": {
+            "title": "UPCOMING LAUNCHES",
+            "text": "Get a glimpse at what's next",
+            "image": "shopify:\/\/shop_images\/collection-default-banner_1600x_be2d4e9b-0c4f-4a91-bb5f-99f191ad31c1.jpg",
+            "align_text": "left"
+          }
+        },
+        "0ce79eaa-5d53-4273-a48d-4910ef8053a1": {
+          "type": "image_with_text",
+          "disabled": true,
+          "settings": {
+            "title": "EXTREMELY SECRET DROP",
+            "content": "<h2>COMING 5.20.22\n EXTREMELY EXTREME SUNGLASSES FOR EXTREMELY EXTREME PEOPLE<h2><\/h2>\n<\/h2>",
+            "image": "shopify:\/\/shop_images\/IG-Feed---Wrap-G-Teaser-RESIZE.png",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "a4ca570f-771b-4299-b725-55b4e038b7cb": {
+          "type": "intro",
+          "settings": {
+            "title": "MAY LAUNCHES",
+            "text": "<h4>WHAT'S IN STORE FOR MAY<\/h4>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "ca52a464-b7a1-4657-b40c-dc04a4690161": {
+          "type": "intro",
+          "settings": {
+            "title": "EXTREME LAUNCH",
+            "text": "<p>YOU ASKED WE LISTENED. EXTREMELY EXTREME SUNGLASSES FOR EXTREMELY EXTREME PEOPLE. \n<\/p><h4>LAUNCHING 5.20.22<\/h4>",
+            "width": "25%",
+            "align_text": "center"
+          }
+        },
+        "e91fca58-0917-4271-af06-be6b607d256b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IG-Feed---Wrap-G-Teaser-RESIZE.png",
+            "width": "25%",
+            "align_image": "center"
+          }
+        },
+        "9e30c220-070a-4178-bf92-57b68c7f2d74": {
+          "type": "intro",
+          "settings": {
+            "title": "LET'S GET CANUCKED UP",
+            "text": "<p>What are these all aboot, eh? Canada Day thats what.   <\/p><h4>Available 5.29.22<\/h4>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "34fc0a53-6547-4f77-b608-fee06fcf1d57": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LIFESTYLE_IMAGE_f7b82b30-27d8-45e7-be94-c733b783cd53.jpg",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "7bbb6ce5-bfac-4dcb-aec2-9b84c122eef6": {
+          "type": "intro",
+          "settings": {
+            "title": "JUNE LAUNCHES",
+            "text": "<h4>HERE IS WHATS IN STORE IN JUNE<\/h4>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "965a35ca-70f8-4f0f-be45-5faf52edaf60": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Founding_Father_Square.jpg",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "4f2d6403-efed-48b5-b477-45b0c7505daf": {
+          "type": "intro",
+          "settings": {
+            "title": "FOUNDING FATHER ISSUES",
+            "text": "<p>Celebrate the 4th of July with these patriotic shades.  <\/p><h4>Dropping 6.3.22<\/h4>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "4446dadd-c45f-4929-95c4-8999dcc4ef7f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BFFDayProductPage_Assets_Square_Lifestyle.jpg",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "4b09e2cb-5c12-41af-9b19-e36a50dc12f1": {
+          "type": "intro",
+          "settings": {
+            "title": "BEST FLOCKING FRIENDS",
+            "text": "<p>What's better than a pair of sunglasses?!? TWO PAIR. Get one for you & one for your BFF. Also comes with two friendship bracelets so everyone will know you're Best Friends Forever.   <\/p><h4>Releasing 6.8.22<\/h4>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "eb133ec3-4a3e-4b66-ba73-c6329bd22916": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Amelia-Earhart-Ghosted-Me-T-Shirt_Monthly-Tees-2022_lifestyle-002_social-assetRESIZE.png",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "e1cdac74-061b-42ee-ba24-20f43b0e0927": {
+          "type": "intro",
+          "settings": {
+            "title": "AMELIA EARHART GHOSTED ME - APPAREL",
+            "text": "<p>Ever wanted your sunnies to match your shirt? Here's your chance!   <\/p><h4>Available 6.14.22<\/h4>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "9d63458e-0478-42a8-a990-5c686d27ac48": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Avengers_Outline_D2C_Teaser_HeaderRESIZE.png",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "45fa7e31-dcc8-442a-b166-7eb1a7d97dbc": {
+          "type": "intro",
+          "settings": {
+            "title": "SUPER SECRET LAUNCH",
+            "text": "<p>Sign Up to learn more!<\/p>\n<div class=\"klaviyo-form-XBDnV2\"><\/div>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "e9e5739a-4652-4743-a79b-001be21d24c6": {
+          "type": "intro",
+          "settings": {
+            "title": "LATE JUNE LAUNCHES",
+            "text": "",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "e81db856-2770-4755-8455-1f0c783251f4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Wild-Thing_Group-product-004_full-resRESIZE.png",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "efe16dd4-591e-478a-92f5-b5277138e446": {
+          "type": "intro",
+          "settings": {
+            "title": "WILD THING",
+            "text": "<p>Get your paws on all three of these wild styled frames. <br><\/p><h4>Late June<\/h4>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "1028017c-5cb6-4c3e-a06c-ee5e6e09cf5c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Race-Du-Jour-22_No-Signs-This-Year-Please_BIKE_Lifestyle_011_full-resRESIZE.png",
+            "width": "25%",
+            "align_image": "left"
+          }
+        },
+        "048c6578-54f8-4951-9f7c-1e215c22a375": {
+          "type": "intro",
+          "settings": {
+            "title": "NO SIGNS THIS YEAR PLEASE",
+            "text": "<p>Race Du Jour series second pair is coming soon. Be sure to get all four styles.<\/p><h4>Late June<\/h4>",
+            "width": "25%",
+            "align_text": "left"
+          }
+        },
+        "d413c5db-cc11-4f92-8456-9b87212310a4": {
+          "type": "triple_product",
+          "settings": {
+            "title": "CAN'T WAIT FOR THE ABOVE LAUNCHES? SNAG THESE INSTEAD",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "a-gingers-soul",
+            "product2": "bosleys-basset-hound-dreams",
+            "product3": "going-to-valhalla-witness"
+          }
+        },
+        "e8279bbc-fb7d-4078-8b42-e1cbee57870f": {
+          "type": "triple_product",
+          "settings": {
+            "title": "",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "pride-and-no-prejudice",
+            "product2": "nine-dollar-pour-over",
+            "product3": "hades-gonna-hate"
+          }
+        }
+      },
+      "block_order": [
+        "a54f1c46-3d6d-43a4-999c-4eec5dafc3e5",
+        "0ce79eaa-5d53-4273-a48d-4910ef8053a1",
+        "a4ca570f-771b-4299-b725-55b4e038b7cb",
+        "ca52a464-b7a1-4657-b40c-dc04a4690161",
+        "e91fca58-0917-4271-af06-be6b607d256b",
+        "9e30c220-070a-4178-bf92-57b68c7f2d74",
+        "34fc0a53-6547-4f77-b608-fee06fcf1d57",
+        "7bbb6ce5-bfac-4dcb-aec2-9b84c122eef6",
+        "965a35ca-70f8-4f0f-be45-5faf52edaf60",
+        "4f2d6403-efed-48b5-b477-45b0c7505daf",
+        "4446dadd-c45f-4929-95c4-8999dcc4ef7f",
+        "4b09e2cb-5c12-41af-9b19-e36a50dc12f1",
+        "eb133ec3-4a3e-4b66-ba73-c6329bd22916",
+        "e1cdac74-061b-42ee-ba24-20f43b0e0927",
+        "9d63458e-0478-42a8-a990-5c686d27ac48",
+        "45fa7e31-dcc8-442a-b166-7eb1a7d97dbc",
+        "e9e5739a-4652-4743-a79b-001be21d24c6",
+        "e81db856-2770-4755-8455-1f0c783251f4",
+        "efe16dd4-591e-478a-92f5-b5277138e446",
+        "1028017c-5cb6-4c3e-a06c-ee5e6e09cf5c",
+        "048c6578-54f8-4951-9f7c-1e215c22a375",
+        "d413c5db-cc11-4f92-8456-9b87212310a4",
+        "e8279bbc-fb7d-4078-8b42-e1cbee57870f"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

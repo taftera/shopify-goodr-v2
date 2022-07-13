@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "60150f07-8a67-4586-9938-b4ac5d4f2bf1": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "Beast Barbell Origin Story",
+            "text": "A story about Beast Barbell sunglasses",
+            "image": "shopify:\/\/shop_images\/goodr_Barbell-Beast_Full-Line_OS_header.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "83a751a0-a571-4389-8e48-e9c654c7c5d2": {
+          "type": "text",
+          "settings": {
+            "title": "goodr Releases BEAST BARBELL Sunnies To Get Your Face Totally Jacked",
+            "text": "<p>\n<\/p><p>What’s up, y’all? This is Cassie the Cassowary, goodr’s personal trainer. “NO PAIN, NO GAIN! NO PAIN, NO GAIN! WOOOO!” I spent the last four hours chugging protein drinks and smacking punching bags embroidered with the photos of everyone who doubted me. Now I’m writing a blog while inspiring a bunch of clowns to be their best selves. \n“WHY ARE YOU STOPPING?! DO YOU THINK I CAN’T SEE YOU?!?!” Let’s get this done quick.<\/p>\n\n<p>goodr released a new line of sunnies called BEAST Barbell, inspired by barbells -- DOYYY! The creative geniuses here really put a thought into that name. “HEY!!! HEY!!! YOU WITH THE BEARD!!! PROGRESS IS NOT PERFECTION!!! PROGRESS IS NOT PERFECTION!!! BELIEVE IN YOURSELF, YOU HIPSTER F**K!” But real talk, these sunnies are dope. I’m going to rock ‘em when I return to Australia next year to kickbox Evelyn the Emu on PPV.<\/p>\n\n<p>The line includes three sunnies: Drop It Like A Squat (green OG), Gym and Tonic (blue OG), and Whoop Ass Can Opener (red BFG). I take back those shots I fired at goodr’s creative team. Those names are F***ING AMAZING! WOOOO! YOU TOTALLY NAILED IT, NERDS! You’ve probably noticed by my ginormous pyroclastic energy that I am a firebreather. You can be one too. DO SOMETHING TODAY YOUR FUTURE SELF WILL THANK YOU FOR!!!<\/p>\n\nWhen I type, I push every button down with the strength of 1,000 Thors. My fingers are TOTALLY jacked from writing this blog. And if you wear BEAST Barbell sunnies, your face can be totally jacked, too. “HEY!!! HEY!!! GIRL WITH THE RED HAIR!!!! DON’T STOP!!!! NO MATTER HOW SLOW YOU GO, YOU’RE LAPPING EVERYBODY ON THE COUCH!!!” That’s it, this blog is done. I crushed it like I crush everything. Cassie out. WOOOOOOOOO!!!!!!\n",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "64b2f447-6aae-4978-837d-542d16f8bfa4": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": ""
+          }
+        },
+        "59d77d1a-4440-46b3-aa59-f70c7c2a00b3": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Barbell-Beast_Full-Line_OS_thumbnail.jpg"
+          }
+        },
+        "a81d8d23-a388-413e-a888-bc4c292e821a": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "READ MORE",
+            "content": "",
+            "article1": "goodrtimes\/beast-goodr-dream-team",
+            "article2": "goodrtimes\/goodr-x-denver-zoo",
+            "article3": "goodrtimes\/s03e17"
+          }
+        }
+      },
+      "block_order": [
+        "60150f07-8a67-4586-9938-b4ac5d4f2bf1",
+        "83a751a0-a571-4389-8e48-e9c654c7c5d2",
+        "64b2f447-6aae-4978-837d-542d16f8bfa4",
+        "59d77d1a-4440-46b3-aa59-f70c7c2a00b3",
+        "a81d8d23-a388-413e-a888-bc4c292e821a"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

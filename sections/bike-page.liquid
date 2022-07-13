@@ -1,0 +1,557 @@
+<section class="video-banner" id="vid">
+  {{ section.settings.video_background | img_url: '1600x' | img_tag: 'Video banner background', 'video-banner__background'}}
+  <div class="video-banner__content">
+    <div class="video-banner__caption">
+      {% if section.settings.overlay_image %}
+      {{ section.settings.overlay_image | img_url: '400x' | img_tag }}
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+      <h3 style="margin:0;" class="text-color--white mbs">{{ section.settings.text }}</h3>
+      {% endif %}
+
+      <a class="play-video" href="#"
+       data-izimodal-open="#video-modal"
+       data-izimodal-zindex="20000"
+       data-izimodal-preventclose=""> Play Video </a>
+    </div>
+  </div>
+</section>
+
+<div class="iziModal" id="video-modal">
+  <a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+  <div class="rte__video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ section.settings.videoURL.id }}?controls=0&showinfo=0&frameborder=0&modestbranding=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen allow="autoplay;encryted-media"></iframe>
+  </div>
+</div>
+
+<section class="container">
+  <div class="row center-xs pvm">
+    <div class="col-xs-10 col-md-8 col-lg-7">
+      {%- if section.settings.rich_text_title != blank -%}
+        <h2 class="section__title text-align--center">{{ section.settings.rich_text_title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.rich_text_text != blank -%}
+        <div class="rte text-align--center">
+          {{ section.settings.rich_text_text }}
+        </div>
+      {%- endif -%}
+  </div>
+</section>
+
+<section class="containter--full text-over-image {{ section.settings.height }}
+  {% if section.settings.mobile_banner == blank %} text-over-image__mobile-min-height {% endif %}"
+  style="background-image: url({{ section.settings.background | img_url: '1600x' }});">
+  <div class="text-over-image__content
+    text-align--{{ section.settings.text_align }}
+    vertical--{{ section.settings.vertical_position }}
+    {% if section.settings.mobile_banner != blank %} hide--small {% endif %}
+    ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-4
+        {% if section.settings.horizontal_position == 'middle' %}
+          col-sm-offset-3 col-lg-offset-4
+        {% elsif section.settings.horizontal_position == 'right' %}
+          col-sm-offset-6 col-lg-offset-8
+        {% endif %}
+        ">
+        <h2 class="section__title">{{ section.settings.title | escape }}</h2>
+        <div class="banner__text text-color--{{ section.settings.text_color }}">{{ section.settings.content }}<br><br></div>
+        <p><a href="{{ section.settings.url }}" title="{{ section.settings.alt }}" class="button">{{ section.settings.button_text }}</a></p>
+      </div>
+    </div>
+  </div>
+  {% if section.settings.mobile_banner != blank %}
+    <div class="text-over-image__mobile hide--medium-up">
+      {% capture image_size %}800x{% endcapture %}
+      <a href="{{ section.settings.url }}">
+      <img src="{{ section.settings.mobile_banner | img_url: image_size }}"
+          srcset="{{ section.settings.mobile_banner | img_url: image_size }} 1x, {{ section.settings.mobile_banner | img_url: image_size, scale: 2 }} 2x"
+          alt="{{ section.settings.alt | default: shop.name }}">
+      </a>
+    </div>
+  {% endif %}
+</section>
+  
+  
+<section class="collection-list container--full">
+
+  {% if section.settings.title != blank %}
+      <h2 class="section__title">{{ section.settings.collections_title | escape }}</h2>
+  {% endif %}
+
+  {%- assign noOfBlocks = section.blocks.size -%}
+  {%- assign blockWidth = 'col-xs-12 col-md-4 col-lg-4' -%}
+
+  {% if noOfBlocks == '3' %}
+    {%- assign blockWidth = 'col-xs-12 col-md-4' -%}
+  {% endif %}
+
+  <div class="row center-md collection-list__slider">
+
+  {% for block in section.blocks %}
+
+    {% if block.type == 'collection' %}
+    {%- assign collection = collections[block.settings.collection] -%}
+
+    <div class="{{ blockWidth }}">
+      <a href="{{ collection.url | default: "#" }}" class="collection-list-item" {{ block.shopify_attributes }}>
+        {% if block.settings.collection_image != blank %}
+          <div class="collection-list__image">
+            {{ block.settings.collection_image | img_url: '600x600', crop: 'center' | img_tag }}
+          </div>
+        {% elsif collection.image != blank or collection.products.first != blank %}
+          {%- assign image_object = collection.image | default: collection.products.first.featured_image -%}
+          <div class="collection-list__image">
+            {{ image_object | img_url: '600x600', crop: 'center' | img_tag }}
+          </div>
+        {% elsif collection == empty %}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+        {% endif %}
+
+        <div class="collection-list__title">
+          {%- assign default_label = 'homepage.onboarding.collection_title' | t -%}
+          {% if block.settings.custom_title != blank %}
+            <h2>{{ block.settings.custom_title }}</h2>
+          {% else %}
+            <h2>{{ collection.title | default: default_label }}</h2>
+          {% endif %}
+            <p><span class="button button--small">Shop Now</span></p>
+        </div>
+      </a>
+    </div>
+
+    {% endif %}
+  {% endfor %}
+
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</section>
+
+<section class="container">
+  <div class="row pvs">
+  {%- if section.settings.title != blank -%}
+    <div class="col-xs-12">
+      <h3 class="text-align--center" style="color:{{ section.settings.title_color }}">{{ section.settings.columned_title | escape }}</h3>
+    </div>
+  {%- endif -%}
+
+  {%- assign columns = 'col-xs-4 col-sm-4' -%}
+
+  {% for block in section.blocks %}
+    {% if block.type == 'column' %}
+    <div class="{{ columns }}">
+      <div class="columned-content__column">
+        {% if block.settings.image != blank %}
+          {{ block.settings.image | img_url: '545x545' | img_tag }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+        <h4>{{ block.settings.title }}</h4>
+        <p>{{ block.settings.content }}</p>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+  </div>
+</section>
+
+<section class="image-with-text container">
+  <div class="row middle-xs pvs">
+    {% capture image_layout %}
+      <div class="col-xs-12 col-md-6 image-with-text__image">
+        {% if section.settings.image != blank %}
+          {{ section.settings.image | img_url: '1000x' | img_tag }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+    {% endcapture %}
+
+    {% if section.settings.layout == 'left' %}
+      {{ image_layout }}
+    {% endif %}
+
+    <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0 image-with-text__text">
+      {% if section.settings.image_with_text_title != blank %}
+        <h2 class="section__title">{{ section.settings.image_with_text_title | escape }}</h2>
+      {% endif %}
+      {% if section.settings.image_with_text != blank %}
+        <div>{{ section.settings.image_with_text }}</div>
+      {% endif %}
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" {% if section.settings.target_blank %} target="_blank" {% endif %} class="button button--small">
+          {{ section.settings.button_label | escape }}
+        </a>
+      {% endif %}
+    </div>
+
+    {% if section.settings.layout == 'right' %}
+      {{ image_layout }}
+    {% endif %}
+  </div>
+</section>  
+  
+
+
+{% schema %}
+  {
+    "name": "Beast Page",
+    "settings": [
+      {
+        "type":"header",
+        "content": "Banner"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Shop All"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "info": "Go ahead and use basic HTML tags here if you like"
+      },
+      {
+        "type": "select",
+        "id": "horizontal_position",
+        "label": "Text horizontal position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default":   "left",
+        "info":      "Left"
+      },
+      {
+        "type": "select",
+        "id": "vertical_position",
+        "label": "Text vertical position",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default":   "top",
+        "info":      "Top"
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default":   "left",
+        "info":      "Left"
+      },
+      {
+        "type": "select",
+        "id": "height",
+        "label": "Banner height",
+        "options": [
+          {
+            "value": "full-height",
+            "label": "Full height"
+          },
+          {
+            "value": "tall-height",
+            "label": "Tall"
+          },
+          {
+            "value": "short-height",
+            "label": "Short"
+          }
+        ],
+        "default":   "full-height",
+        "info":      "Full"
+      },
+      {
+        "type":      "select",
+        "id":        "text_color",
+        "label":     "Text color",
+        "options": [
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "black",
+            "label": "Black"
+          }
+        ],
+        "default":   "white",
+        "info":      "White"
+      },
+      {
+        "type": "image_picker",
+        "id": "background",
+        "label": "Background image"
+      },
+      {
+        "type": "text",
+        "id": "url",
+        "label": "URL",
+        "default": "/collections/all"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "Shop"
+      },
+      {
+        "type": "text",
+        "id": "alt",
+        "label": "ALT Tag",
+        "default": "Shop all items"
+      },
+      {
+        "type": "header",
+        "content": "Mobile banner"
+      },
+      {
+        "type": "paragraph",
+        "content": "To use an optional banner just for mobile, upload an image here. It must have the text embedded into it. To default back to the regular banner content, just delete this image."
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_banner",
+        "label": "Mobile banner"
+      },
+      {
+        "type":"header",
+        "content": "Rich text"
+      },
+  	  {
+        "type": "text",
+        "id": "rich_text_title",
+        "label": "Heading",
+        "default": "Talk about your brand"
+      },
+      {
+        "type": "richtext",
+        "id": "rich_text_text",
+        "label": "Text",
+        "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      {
+        "type":"header",
+        "content": "Collections title"
+      },
+      {
+        "type": "text",
+        "id": "collections_title",
+        "label": "Heading",
+        "default": "Collection list"
+      },
+      {
+        "type":"header",
+        "content": "Columned content"
+      },
+      {
+        "type": "text",
+        "id": "columned_title",
+        "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Heading color"
+      },
+  
+  	{
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Image alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "image_with_text_title",
+        "label": "Heading",
+        "default": "Image with text"
+      },
+      {
+        "type": "richtext",
+        "id": "image_with_text",
+        "label": "Text",
+        "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "checkbox",
+        "id": "target_blank",
+        "label": "Open button link in a new window?"
+      },	  
+  
+      {
+        "type":"header",
+        "content": "Video banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "video_background",
+        "label": "Banner image"
+      },
+      {
+        "type": "video_url",
+        "id": "videoURL",
+        "label": "Video URL",
+        "accept": ["youtube"],
+        "info": "Add a YouTube video URL here. ie. https://www.youtube.com/watch?v=h4C3kwAcrV0"
+      },
+      {
+        "type": "image_picker",
+        "id": "overlay_image",
+        "label": "Overlay image",
+        "info": "Transparent PNG please",
+        "info": "Optional"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "info": "Optional"
+      }
+
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "label": "Collection",
+            "id": "collection",
+            "type": "collection"
+          },
+          {
+            "type": "text",
+            "id": "custom_title",
+            "label": "Optional custom title for collection"
+          },
+          {
+            "label": "Collection image",
+            "id": "collection_image",
+            "type": "image_picker",
+            "info": "Upload a custome image here if you like, otherwise this will default to the collection featured image, and then the first product in the collection."
+          }
+        ]
+      },
+      {
+        "type": "column",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image or icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Column title"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Beast Page",
+        "category": "Page content"
+      }
+    ]
+  }
+{% endschema %}
+
+  <script type="text/javascript">
+$(function() {
+  $('.collection-list__slider').slick({
+    dots: true,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '80px',
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: "unslick"
+      }
+    ]
+  });
+});
+</script>

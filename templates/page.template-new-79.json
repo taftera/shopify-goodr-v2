@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "baeeee5e-34b3-48b2-b4a5-670f1787fe3c": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GLASSES OF THE GODS",
+            "text": "HOW TO STYLE YOUR LAUREL",
+            "image": "shopify:\/\/shop_images\/GOTG_QuizBackground.jpg",
+            "banner_height": "200px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "b12cc675-cbbf-4948-8a45-5d0f695631ac": {
+          "type": "text",
+          "settings": {
+            "title": "WHICH GOD ARE YOU?",
+            "text": "<p>Find out which of the marble-ous Greek god-inspired goodr Glasses of the Gods sunnies is your destiny. <\/p><p>\nIf you need several pairs to match your many moods, powers, and personalities, Carl feels ya. You'll be covered.<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "d4daa913-1841-4fa6-a5d8-9ef4d8222ec9": {
+          "type": "awards_press_block",
+          "settings": {
+            "show_awards_1": true,
+            "awards_icon_1": "shopify:\/\/shop_images\/Ares_SquareLifestyle.jpg",
+            "awards_text_1": "",
+            "awards_url_1": "",
+            "show_awards_2": true,
+            "awards_icon_2": "shopify:\/\/shop_images\/Athena_SquareLifestyle.jpg",
+            "awards_text_2": "",
+            "awards_url_2": "",
+            "show_awards_3": true,
+            "awards_icon_3": "shopify:\/\/shop_images\/Apollo_Square_Lifestyle.jpg",
+            "awards_text_3": "",
+            "awards_url_3": "",
+            "show_awards_4": true,
+            "awards_icon_4": "shopify:\/\/shop_images\/Poseidon_SquareLifestyle.jpg",
+            "awards_text_4": "",
+            "awards_url_4": ""
+          }
+        },
+        "e0b82971-ad7b-468e-ad9f-72fd3969b4d7": {
+          "type": "image_with_text",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "content": "<p>Find out which of the marble-ous Greek god-inspired goodr Glasses of the Gods sunnies is your destiny. <\/p><p>\nIf you need several pairs to match your many moods, powers, and personalities, Carl feels ya. You'll be covered.<\/p>",
+            "image": "shopify:\/\/shop_images\/Ares_SquareLifestyle.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "98ef8a28-89fc-4a70-b765-1b85f081a590": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Talk about your brand",
+            "text": "<p>Find out which of the marble-ous Greek god-inspired goodr Glasses of the Gods sunnies is your destiny.<\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "69ba5c07-0ddb-4718-b59a-b888c9598792": {
+          "type": "html",
+          "settings": {
+            "code": "<div id=\"quizify\" class=\"quizify\" data-store-id=\"0fd7e4f42a8b4b4ef33394d35212b13e\"><\/div>",
+            "width": "100%"
+          }
+        },
+        "499fa0e9-eda5-4399-a558-bcd4fec7dcb0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "width": "100%"
+          }
+        },
+        "7beb8564-a67f-49d5-95e1-82f02649364b": {
+          "type": "recent_posts",
+          "disabled": true,
+          "settings": {
+            "title": "Recent Blog",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "article1": "",
+            "article2": "",
+            "article3": ""
+          }
+        },
+        "b736e12d-c4d7-4218-8ef7-644ad43576bf": {
+          "type": "awards_press_block",
+          "settings": {
+            "show_awards_1": true,
+            "awards_icon_1": "shopify:\/\/shop_images\/goodr_Glasses_of_the_Gods_Group_Product_025.jpg",
+            "awards_text_1": "View the Whole Collection",
+            "awards_url_1": "https:\/\/goodr.com\/collections\/glasses-of-the-gods",
+            "show_awards_2": true,
+            "awards_icon_2": "shopify:\/\/shop_images\/goodr_Glasses_of_the_Gods_Group_Lifestyle_079.jpg",
+            "awards_text_2": "Read the Awesome Origin Story",
+            "awards_url_2": "https:\/\/goodr.com\/blogs\/origin-story\/glasses-of-the-gods-origin-story",
+            "show_awards_3": false,
+            "awards_text_3": "Awards Text",
+            "awards_url_3": "",
+            "show_awards_4": false,
+            "awards_text_4": "Awards Text",
+            "awards_url_4": ""
+          }
+        },
+        "1944e29d-a5fe-41f8-a97c-4b9533d330d4": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Glasses_of_the_Gods_Group_Lifestyle_091.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "baeeee5e-34b3-48b2-b4a5-670f1787fe3c",
+        "b12cc675-cbbf-4948-8a45-5d0f695631ac",
+        "d4daa913-1841-4fa6-a5d8-9ef4d8222ec9",
+        "e0b82971-ad7b-468e-ad9f-72fd3969b4d7",
+        "98ef8a28-89fc-4a70-b765-1b85f081a590",
+        "69ba5c07-0ddb-4718-b59a-b888c9598792",
+        "499fa0e9-eda5-4399-a558-bcd4fec7dcb0",
+        "7beb8564-a67f-49d5-95e1-82f02649364b",
+        "b736e12d-c4d7-4218-8ef7-644ad43576bf",
+        "1944e29d-a5fe-41f8-a97c-4b9533d330d4"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

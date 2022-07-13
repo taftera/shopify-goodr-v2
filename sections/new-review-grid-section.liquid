@@ -1,0 +1,194 @@
+<section id="section-{{ section.id }}" class="review-grid-section">
+  	<div class="container">
+		<div class="row">
+          	<div class="col-xs-12 col-md-12">
+              	{%- if section.settings.title != blank -%}
+              	<h2 class="h3 section__heading text-align--center"><span>{{ section.settings.title }}</span></h2>
+              	{%- endif -%}
+              	<div class="review-box-container">
+					<div class="row">
+						{%- for block in section.blocks -%}
+							{%- if block.settings.title != blank or block.settings.content != blank -%}
+                      		<div class="col-xs-12 col-sm-6 col-md-3">
+								<div class="review-box{% if block.settings.author_name != blank %} author_name{% endif %}{% if block.settings.show_star %} star_icon{% endif %}">
+									{%- if block.settings.title != blank -%}
+                                  	<h4 class="review-title">{{ block.settings.title }}</h4>
+                                  	{%- endif -%}
+									{%- if block.settings.content != blank -%}
+                                  	<div class="review-content">{{ block.settings.content }}</div>
+                                  	{%- endif -%}
+                                  	{%- if block.settings.author_name != blank -%}
+                                  	<h5 class="review-author">{{ block.settings.author_name }}</h5>
+                                  	{%- endif -%}
+                                  	{%- if block.settings.show_star -%}
+                                  	<div class="review-star"><img src="{{ "review-star.png" | file_img_url: "master" }}" alt="5 Star Image" /></div>
+                                  	{%- endif -%}
+								</div>
+                      		</div>
+							{%- endif -%}
+						{%- endfor -%}
+					</div>
+				</div>
+          	</div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+  {
+    "name": "New Review Grid",
+	"class": "new-review-grid-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+	],
+	"blocks": [
+      {
+        "type": "review_item",
+        "name": "Review Item",
+        "settings": [
+		  {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+		  {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+		  {
+            "type": "text",
+            "id": "author_name",
+            "label": "Author Name"
+          },
+		  {
+            "type": "checkbox",
+            "id": "show_star",
+            "label": "Enable Star Icon"
+          }
+        ]
+      }
+	],
+    "presets": [
+      {
+        "name": "New Review Grid"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.review-grid-section {
+    padding: 40px 0px;
+}
+.review-box-container .row {
+    justify-content: center;
+}
+.review-box-container .review-box {
+    text-align: center;
+    padding: 15px 0px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+}
+.review-box-container {
+    text-align: center;
+    padding-top: 0px;
+}
+  
+.review-box .review-title {
+    font-family: 'Gibson';
+    letter-spacing: 0px;
+    font-size: 22px;
+    line-height: 1;
+    margin: 0px;
+    padding-bottom: 10px;
+  	color: #e86384;
+  	font-weight: 700;
+  	text-transform: uppercase;
+}
+.review-box .review-content {
+    color: #4ec0b2;
+    font-size: 16px;
+    line-height: 1.2;
+  	padding-bottom: 15px;
+}
+.review-box .review-content p:last-child {
+    margin: 0px;
+}
+.review-box .review-author {
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4ec0b2;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  	font-family: 'Gibson';
+	text-transform: uppercase;
+}
+.review-box-container .review-box.author_name {
+    height: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.review-star {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.review-box-container .review-box.star_icon {
+    height: 100%;
+    padding-bottom: 50px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.review-box-container .review-box.author_name.star_icon {
+    padding-bottom: 75px;
+}
+.review-box-container .review-box.star_icon .review-author {
+    bottom: 50px;
+}
+  
+@media screen and (max-width: 767px){
+.review-grid-section {
+    padding: 30px 0px;
+}
+.review-box-container {
+    padding-top: 0px;
+}
+.review-box-container .review-box {
+    padding-top: 30px;
+}
+.review-box .review-title {
+    font-size: 20px;
+}
+.review-star img {
+    max-width: 70%;
+}
+}
+  
+@media screen and (max-width: 480px){
+.review-box .review-title {
+    font-size: 18px;
+}
+.review-star img {
+    max-width: 60%;
+}
+.review-box-container .review-box.author_name.star_icon {
+    padding-bottom: 55px;
+}
+.review-box-container .review-box.star_icon .review-author {
+    bottom: 35px;
+}
+}
+</style>

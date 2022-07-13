@@ -1,0 +1,141 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+              		<p>Everybody loves the color purple. After all, it’s the title of a classic novel by Alice Walker. Is there a book called The Color Blue or The Color Red or The Color Yellow? No, there’s not.</p>
+					<p>Purple is the color of everything awesome. Like grapes, the food of the gods. And eggplants, a vital emoji for conveying thirstiness. And amethyst, which will release all the stress and anxiety in your life, according to our crystal healer Celeste Moonbeam. So, of course people want purple sunglasses!</p>
+                  	<p>You're in luck! goodr has your back. (You can always trust brands with a typo in their name. Also, you can always trust a company that says they have your back, with a big wink. ***WINK***)</p>
+					<p>Our trending frames include fun categories like OGs (original classic shape), BFGs (Big F***ing goodrs for those with big melons), Runaways (fashion-forward cat-eye shape, MEEEOW), Circle Gs (tea shade, hipster-approved), Mach Gs (lightweight aviator frames, without annoying nose pads that leave marks on your skin) and VRGs (futuristic monolens, perfect for the dystopian future, the robots will take over soon, don’t worry about it, we’re all doomed.)</p>
+					<p>If you’re on the search or a stickler for a particular shade of purple, we’ve got different shades of shades. We can hear you hipsters now, going full “WELL ACTUALLY” to everyone you meet. “I love your sunglasses,” shouts a passerby. “Well, hey,” the hipster replies, “Thanks, they’re lilac.” Or maybe instead of “lilac” they say “lavender” or “violet” or “mauve” or “orchid” or “wine” or...mmm, wine. We’ll be right back. We gotta, uh, use the bathroom... yeah, that’s the ticket.</p>
+                  	<p>***Returns with wine stains on face and clothes**** Where were we? Oh yes. Decent polarized sunglasses at a low price. If you have an active lifestyle, sunnies are your friend. If you hurt yourself while running (fell down), bodybuilding (dropped dumbbell on foot), cycling (crashed into dummy holding sign), golfing (cart crash), or gaming (threw controller at a wall, it ricocheted back), the purple sunnies will match your purple bruises!</p>
+                  	<p>HOORAY!!! Also, no matter how active you get, goodr sunglasses won’t slip or bounce because of their snazzy grip coating. Pretty good for $25.</p>
+                  	<p>Seriously, why spend hundreds of dollars on fancy-pants sunnies? How long do you expect those things to last? How long DO they typically last? Probably not as long as you were hoping, right? Plus, doesn’t it get boring wearing the same pair of shades every day? goodr sunglasses include all kinds of categories, colors, and style options, so you can switch them up to coordinate with all of your outfits and style -- from gym gear to cocktail attire to your rodeo clown uniform. ***WINK*** (Should we stop winking???)</p>
+                  	<p>Our sunglasses are functional, ‘ffordable, fashionable, and, most importantly, FUN. Just look at the awesome names printed on the inside of the bow. Currently, our purple lens and/or purple frame sunnies include: Strange Things are Afoot at the Circle G, Electric Dinotopia Carnival, Gardening with a Kraken, King of the Tropics, Grape Ape Mistake, Kunzite Compels You, [Insert Lei’d Joke], Tropical Tummy Tickle, Side Scroll Eye Roll and Los Angeles 2021.</p>
+                  	<p>Well, Los Angeles 2021 has a pretty basic name, but that’s because it coincides with the annual marathons, so shut up. GET OFF OUR BACKS!!!! EVERY YEAR WE CELEBRATE THE CITIES WITH 26.2K RUNNING RACES!!! LIKE TOKYO, LOS ANGELES, BOSTON, BERLIN, CHICAGO, NEW YORK, AND ANTARCTICA!!!! NO, THAT’S NOT A JOKE! THERE’S A MARATHON IN ANTARCTICA!!!!! IT MAKES SENSE!!! YOU’RE THE ONE THAT’S WRONG!!! NOT US!!! SEE?!?! IT'S YOUUUUUU!!!</p>
+                  	<p>Whew. Sorry about that. We got a little worked up there. In fact, we got so excited, our cheeks turned purple. Oh man, we look like one of those Instagram filters now. Ugh. Luckily, we have the perfect purple sunglasses to match. ***WINK***</p>
+                  	<p>So what the hell are you waiting for? I, for one, think this content is A+ and is convincing enough to get you over to our shop and browsing our sunglasses menu. With a great price, amazingly fast shipping, and a superb delivery of style, why would you not want to free yourself from the mainstream colors of sunglasses and join in on the purple movement? C'mon now. No, seriously. Go. Sincerely, your friends at goodr, inc.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

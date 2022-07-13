@@ -1,0 +1,73 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+  {% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+  {% else %}
+    {% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+  {% endif %}
+   <header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    <p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+</div>
+</div>
+  </header>
+
+  <div class="filter-container">
+    {% include 'filter-menu' %}
+  </div>
+
+{% assign tagList = 'carlscloset' | split : ',' | uniq %}
+
+{% for tag in tagList %}
+<div class="container--fluid">
+    <div class="row">
+      	{% assign products_count = 0 %}
+        {% for product in collection.products %}
+            {% if product.tags contains tag %}
+                {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+      	{% if products_count > 0 %}
+      	<div class="section-header">
+          	{% assign handle = tag %}
+			{% case handle %}
+	  			{% when 'carlscloset' %}
+    	 			<h3>SHOP CARL'S CLOSET</h3>
+          			<div class="category-sort-description">Discount codes will only apply to products in this collection</div>
+     				
+			{% endcase %}
+		</div>
+      	{% endif %}
+    	{% assign show_quick_buy = true %}
+    	{% for product in collection.products %}
+    		{% if product.tags contains tag %}
+      			{% include 'bold-product' with product, hide_action: 'skip' %}
+      			<div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or  product.tags contains 'WW84' %}sold-out{% endunless %}{% endunless  %}">
+        			{% include 'product-tile' %}
+      			</div>
+			{% endif %}
+    	{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endpaginate %}
+
+
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+					<h3>ALRIGHT HEAR US OUT</h3>
+                  <p>We wanna make this as easy as we can. Here are the rules:<br>The more you shop this collection, the more you save<br><strong>Spend $50 → Save 10% with code CARLSCLOSET10</strong> at checkout<br><strong>Spend $75 →  Save 15% with code CARLSCLOSET15</strong> at checkout<br><strong>Spend $100 →  Save 20% with code CARLSCLOSET20</strong> at checkout<br>You MUST enter the code at checkout, discounts not automatically applied.<br>Discount code only applies to items in this collection. You can still purchase other sitewide items, but they will not be discounted or contribute to your qualifying cart total.<br> ALL ITEMS IN THIS COLLECTION ARE FINAL SALE</p>
+              	</div>
+			</div>
+		</div>
+	</div>
+</div>

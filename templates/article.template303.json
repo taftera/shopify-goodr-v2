@@ -1,0 +1,129 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "5a54291f-8f1b-4dad-ad70-37d143c03413": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "NATURE FLOCKS",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SUMMIT_WebAssets_goodrtimesHeader_1.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "72e7e954-8aeb-4b68-a36d-804136c13e0a": {
+          "type": "intro",
+          "settings": {
+            "title": "Carl the Flamingo here to say, Nature Flocks.",
+            "text": "",
+            "width": "100%",
+            "align_text": "left"
+          }
+        },
+        "28e8c32b-7cd5-4ecd-bc50-77b668bd8648": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "content": "<p>You may be asking yourself, “But Carl, what does ‘Nature Flocks’ even mean?!”\n<br><br>\nIt’s about how incredible that first sip of freshly brewed coffee tastes on a freezing cold morning when you spot a family of deer emerging out of the woods before anyone else is awake.\n<br><br>\nIt’s about connecting with each other while telling spooooky ghost stories around a crackling fire while roasting marshmallows and making memories under a sea of stars.<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_Summit_Launch_Frequent_Skymall_Shopper_Lifestyle_027_social_asset.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "149f33d1-a861-437b-b9b5-d70bce347f12": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "content": "<p>It’s about pushing yourself further and further up the mountain, farther than you ever thought your body was capable of, just to soak in those striking, peaceful views that seem to stretch for an eternity.\n<br><br>\nIt’s about celebrating conquering whitewater rapids over ice-cold brewskis with your best buds and feeling empowered that together, you can conquer anything. (Except maybe those Class Vs...)\n<br><br>\nIt’s about being able to laugh after finding that leeches have discovered your nether regions after a dip in a freshwater lake. (Just as soon as you’ve stopped screaming hysterically. It’ll make a great story for years to come, we promise!!!)<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_Summit_Launch_Flamingos_on_a_Booze_Cruise_Lifestyle_006_social_asset.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "91a9e5bf-bf18-4c85-afe3-3b2a52849253": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "content": "<p>It’s about how energizing it is for the soul to wake up at an ungodly early hour, just to catch the sunrise coming up over the horizon…\n<br><br>\nIt’s about just flocking getting outside and leaving annoying distractions behind. (“Oops! Sooo sorry I didn’t respond to your email, I was out in the boonies with zero reception.”)\n<br><br>\nThat’s what we mean when we say, Nature Flocks. \n<br><br>\nNature Flocks celebrates anyone and everyone who loves the great outdoors!<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_Summit_Launch_Voight_Kampf_Vision_Lifestyle_016_social_asset.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "63e10a55-a7ed-48bf-9ef1-701522c904d8": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "content": "<p>\nNature Flocks celebrates the casual outdoor enthusiast who likes car camping and campsites with running water, well-stocked bathrooms, and leisurely hikes that are so easy a kindergartener who’s woozy on cold medicine could do ‘em.\n<br><br>\nNature Flocks is for the hardcore rugged outdoors-person who paddles through Class V rapids like a hot knife through butter, climbs 5000-foot peaks like it’s a flight of stairs, who subsists on squirrel meat, and uses rocks for toilet paper.\n<br><br>\nAnd it’s for anyone and everyone in-between!!! EVERYONE is welcome on this peak. If you love to just flocking go outside this space is for you. We can’t wait to create some epic outdoor memories and share in your amazing outdoor adventures!!! \n<br><br>\n(We’ll take a hard pass on the leeches though.)<\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_Summit_Launch_Flamingos_on_a_Booze_Cruise_Lifestyle_002_social_asset.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "right"
+          }
+        },
+        "9c7b7eff-e855-49ae-83d8-e65fa0165dab": {
+          "type": "triple_product",
+          "settings": {
+            "title": "GRAB SUNNIES FOR YOUR NEXT BIG ADVENTURE",
+            "content": "",
+            "product1": "frequent-skymall-shoppers",
+            "product2": "flamingos-on-a-booze-cruise",
+            "product3": "nine-dollar-pour-over"
+          }
+        },
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SUMMITgoodr_Tagline_Horizontal_a7ec60b8-ba54-46e1-8ddd-0fb7f87295e7.jpg"
+          }
+        },
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "TAKE A PEAK... AT THESE BLOGS",
+            "content": "",
+            "article1": "goodrtimes\/s03e15",
+            "article2": "goodrtimes\/goodr-cabana",
+            "article3": "goodrtimes\/capcom-cup"
+          }
+        },
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Carl the Flamingo here to say, Nature Flocks.",
+            "text": "You may be asking yourself, “But Carl, what does ‘Nature Flocks’ even mean?!”\n<br><br>\nIt’s about how incredible that first sip of freshly brewed coffee tastes on a freezing cold morning when you spot a family of deer emerging out of the woods before anyone else is awake.\n<br><br>\nIt’s about connecting with each other while telling spooooky ghost stories around a crackling fire while roasting marshmallows and making memories under a sea of stars.\n<br><br>\nIt’s about pushing yourself further and further up the mountain, farther than you ever thought your body was capable of, just to soak in those striking, peaceful views that seem to stretch for an eternity.\n<br><br>\nIt’s about celebrating conquering whitewater rapids over ice-cold brewskis with your best buds and feeling empowered that together, you can conquer anything. (Except maybe those Class Vs...)\n<br><br>\nIt’s about being able to laugh after finding that leeches have discovered your nether regions after a dip in a freshwater lake. (Just as soon as you’ve stopped screaming hysterically. It’ll make a great story for years to come, we promise!!!)\n<br><br>\nIt’s about how energizing it is for the soul to wake up at an ungodly early hour, just to catch the sunrise coming up over the horizon…\n<br><br>\nIt’s about just flocking getting outside and leaving annoying distractions behind. (“Oops! Sooo sorry I didn’t respond to your email, I was out in the boonies with zero reception.”)\n<br><br>\nThat’s what we mean when we say, Nature Flocks. \n<br><br>\nNature Flocks celebrates anyone and everyone who loves the great outdoors!\n<br><br>\nNature Flocks celebrates the casual outdoor enthusiast who likes car camping and campsites with running water, well-stocked bathrooms, and leisurely hikes that are so easy a kindergartener who’s woozy on cold medicine could do ‘em.\n<br><br>\nNature Flocks is for the hardcore rugged outdoors-person who paddles through Class V rapids like a hot knife through butter, climbs 5000-foot peaks like it’s a flight of stairs, who subsists on squirrel meat, and uses rocks for toilet paper.\n<br><br>\nAnd it’s for anyone and everyone in-between!!! EVERYONE is welcome on this peak. If you love to just flocking go outside this space is for you. We can’t wait to create some epic outdoor memories and share in your amazing outdoor adventures!!! \n<br><br>\n(We’ll take a hard pass on the leeches though.)",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "5a54291f-8f1b-4dad-ad70-37d143c03413",
+        "72e7e954-8aeb-4b68-a36d-804136c13e0a",
+        "28e8c32b-7cd5-4ecd-bc50-77b668bd8648",
+        "149f33d1-a861-437b-b9b5-d70bce347f12",
+        "91a9e5bf-bf18-4c85-afe3-3b2a52849253",
+        "63e10a55-a7ed-48bf-9ef1-701522c904d8",
+        "9c7b7eff-e855-49ae-83d8-e65fa0165dab",
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8",
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0",
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

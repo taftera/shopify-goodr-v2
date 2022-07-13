@@ -1,0 +1,474 @@
+{% include 'bold-product' with product, hide_action: 'break' %}{% if bold_hidden_product %}{% break %}{%endif %}
+
+{% assign prodDescription = product.description | split: 'SPLIT' %}
+{% assign activityTags = '' %}
+{% assign greatForTags = '' %}
+{% for tag in product.tags %}
+  {% if tag contains 'activity' %}
+    {% assign activityTags = activityTags | append: tag | append: ' ' %}
+  {% endif %}
+  {% if tag contains 'great-for' %}
+    {% assign greatForTags = greatForTags | append: tag | append: ' ' %}
+  {% endif %}
+{% endfor %}
+
+<div data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
+
+  <div class="container--wide" itemscope itemtype="http://schema.org/Product">
+    <meta itemprop="name" content="{{ product.title }}{% unless current_variant.title == 'Default Title' %} - {{ current_variant.title }}{% endunless %}">
+    <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+    <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'original' }}" />
+
+    <div class="row middle-xs">
+      <div class="col-xs-12 col-md-8">
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+        <div class="row product__image-gallery">
+          <div class="col-xs-12 col-sm-1">
+            {% if product.images.size > 1 %}
+              <div class="product__thumbnails">
+                  <ul class="thumbnail-nav">
+                    {% for image in product.images %}
+                     {% unless image.alt contains 'FEATURE'  %}
+                    {% capture videotag %}{% endcapture %}
+                    {% if image.alt contains 'youtube'  %}
+                    	{% capture videotag %}data-mobile-remove {% endcapture %}
+                   	{% endif %}
+              		{% if image.alt contains '.gif'  or image.alt contains '.GIF'  %}
+                    	{% capture videotag %}data-desktop-remove  {% endcapture %}
+                   	{% endif %}
+                        <li  {{videotag}}>
+                          <span class="thumbnail-dot" style="background-image:url({{ image.src | img_url: '200x200', crop: 'center' }});"><img src="{{ image.src | img_url: '1000x' }}" alt="{{ image.alt | escape }}" data-product-single-thumbnail></span>
+                        </li>
+                      {% endunless %}
+                    {% endfor %}
+                  </ul>
+                  &nbsp;
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="col-xs-12 col-sm-11">
+            <div class="product__feature-image" data-product-slider>
+              {% for image in product.images %}
+                {% unless image.alt contains 'FEATURE'  %}
+              		{% capture videotag %}{% endcapture %}
+                    {% if image.alt contains 'youtube'  %}
+                    	{% capture videotag %}data-mobile-remove data-video-type="youtube" data-video-url="{{image.alt}}"  data-src="{{ image.src | img_url: '1000x' }}"  {% endcapture %}
+                   	{% endif %}
+              		{% if image.alt contains '.mp4'  or image.alt contains '.MP4'  %}
+                    	{% capture videotag %} data-video-type="mp4" data-video-url="{{image.alt}}"  data-src="{{ image.src | img_url: '1000x' }}"  {% endcapture %}
+                   	{% endif %}
+              		{% if image.alt contains '.gif'  or image.alt contains '.GIF'  %}
+                    	{% capture videotag %}data-desktop-remove  data-video-type="gif" data-video-url="{{image.alt}}"  data-src="{{ image.src | img_url: '1000x' }}"  {% endcapture %}
+                   	{% endif %}
+                <div data-product-slide {{videotag}}>
+                  <img src="{{ image.src | img_url: '1000x' }}" alt="{{ image.alt | escape }}" data-product-image-wrapper {% if forloop.index == 1 %} data-product-featured-image {% endif %}>
+                </div>
+                {% endunless %}
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+{% assign free_product_variant = '' %}
+{% assign free_product_form = false %}
+{% for tag in product.tags %}
+	{% if tag contains "free-gift-product-" %}
+		{% assign free_product_variant = tag | replace: 'free-gift-product-', '' %}
+		{% assign free_product_form = true %}
+	{% endif %}
+{% endfor %}
+      
+      <div class="col-xs-12 col-md-4">
+
+        <h1 itemprop="name" class="product__title">{{ product.title }}</h1>
+
+        <form action="/cart/add" method="post" {% if free_product_form %}class="has-free-product" {% endif %}enctype="multipart/form-data">
+
+          <p data-price-wrapper class="product__price">
+            <span data-product-price>
+              	{% assign toprice = current_variant.price | modulo: 100 %}
+    			{% if toprice > 0 %}
+    	  			${{ current_variant.price | divided_by: 100.0 }}{% assign prs1 = current_variant.price | divided_by: 100.0 %}{% assign prs2 = prs1 | split: "." | size %}{% if prs2 > 1 %}{% assign prs2 = prs1 | split: "." | last | size %}{% if prs2 == 1 %}0{% endif %}{% endif %}
+    			{% else %}
+    				{{ current_variant.price | money }}
+    			{% endif %}
+            </span>
+
+            {% if product.compare_at_price_max > product.price %}
+              <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+              <s data-compare-price>
+                {% if current_variant.compare_at_price > current_variant.price %}
+                	{% assign toprice = current_variant.compare_at_price | modulo: 100 %}
+    				{% if toprice > 0 %}
+    	  				${{ current_variant.compare_at_price | divided_by: 100.0 }}{% assign prs1 = current_variant.price | divided_by: 100.0 %}{% assign prs2 = prs1 | split: "." | size %}{% if prs2 > 1 %}{% assign prs2 = prs1 | split: "." | last | size %}{% if prs2 == 1 %}0{% endif %}{% endif %}
+    				{% else %}
+    					{{ current_variant.compare_at_price | money }}
+    				{% endif %}
+                {% endif %}
+              </s>
+            {% endif %}
+          </p>
+
+          {% if prodDescription.size > 1 %}
+            <div class="rte short-description hide--small">
+              {{ prodDescription | first }}
+            </div>
+          {% endif %}
+
+          <div class="yotpo bottomLine"
+            data-appkey="tNIBjy91cKbBlQGapF8J2eOL9MMS3Puj26Rr4cj9"
+            data-domain="{{shop.permanent_domain | escape }}"
+            data-product-id="{{ product.id }}"
+            data-product-models="{{ product.id }}"
+            data-name="{{ product.title | escape }}"
+            data-url="{{ shop.url }}{{ product.url }}"
+            data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+            data-description="{{ product.description | escape }}"
+            data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+          </div>
+
+          {% unless product.has_only_default_variant %}
+            {% for option in product.options_with_values %}
+              <div class="selector-wrapper js">
+                <label for="SingleOptionSelector-{{ forloop.index0 }}">
+                  {{ option.name }}
+                </label>
+
+                <select
+                  id="SingleOptionSelector-{{ forloop.index0 }}"
+                  data-single-option-selector
+                  data-index="option{{ option.position }}">
+                  {% for value in option.values %}
+                    <option
+                      value="{{ value | escape }}"
+                      {% if option.selected_value == value %}selected="selected"{% endif %}>
+                        {{ value }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% endfor %}
+          {% endunless %}
+
+          <select name="id" class="no-js" data-product-select>
+            {% for variant in product.variants %}
+{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
+              <option
+                {% if variant == current_variant %}selected="selected"{% endif %}
+                {% unless variant.available %}disabled="disabled"{% endunless %}
+                value="{{ variant.id }}">
+                  {{ variant.title }}
+              </option>
+            {% endfor %}
+          </select>
+
+          <div class="row middle-xs">
+            <div class="col-xs-12">
+
+              <label for="Quantity" class="visually-hidden">{{ 'products.product.quantity' | t }}</label>
+              <div class="quantity-selector">
+                {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+                <span class="quantity__button" data-action="decrease-quantity">-</span>
+                <input type="text" class="quantity__input" pattern="[0-9]*" name="quantity" id="Quantity" value="1">
+                <span class="quantity__button" data-action="increase-quantity">+</span>
+              </div>
+
+              &nbsp; &nbsp;
+
+              <button
+                type="submit"
+                name="add"
+                id="add"
+                class="button"
+                data-add-to-cart
+                {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+                  <span data-add-to-cart-text>
+                    {% if current_variant.available %}
+                      {{ 'products.product.add_to_cart' | t }}
+                    {% else %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% endif %}
+                  </span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="row pvm">
+
+      {% if prodDescription.size > 1 %}
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="rte product__description">
+
+          <div class="hide--medium-up">
+            {{ prodDescription | first }}
+          </div>
+
+          {{ prodDescription[1] }}
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="col-xs-10 col-xs-offset-1">
+        {% assign activityTagsArray = activityTags | split: ' ' %}
+        {% assign greatForTagsArray = greatForTags | split: ' ' %}
+        <div class="row center-xs">
+
+        {% if activityTags.size > 0 %}
+        <div class="col-xs-12 col-md-4">
+          <h3 class="tag__title">Made For</h3>
+          {% for i in activityTagsArray %}
+            <span class="product__tag">
+            {{ 'icon-' | append: i | append: '.jpg' | file_img_url: '120x' | img_tag }}<br>
+            {{ i | replace: 'activity-', '' | replace: '-', ' ' }}
+            </span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if greatForTagsArray.size > 0 %}
+        <div class="col-xs-12 col-md-4">
+          <h3 class="tag__title">Great For</h3>
+          {% for i in greatForTagsArray %}
+            <span class="product__tag">
+            {{ 'icon-' | append: i | append: '.jpg' | file_img_url: '120x' | img_tag }}<br>
+            {{ i | replace: 'great-for-', '' | replace: '-', ' ' }}
+            </span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div class="rte product__description" itemprop="description">
+
+          {% if prodDescription.size > 2 %}
+          	{% assign prodDescriptionNew = prodDescription[2] | split: '<!--SAKE-IT-OUT-->' %}
+          	{{ prodDescriptionNew[0] }}
+          		{% include 'shakeitout-product' %}
+          	{{ prodDescriptionNew[1] }}
+          {% else %}
+          	{% assign prodDescriptionNew = product.description | split: '<!--SAKE-IT-OUT-->' %}
+          	{{ prodDescriptionNew[0] }}
+          		{% include 'shakeitout-product' %}
+          	{{ prodDescriptionNew[1] }}
+            {{ product.description }}
+          {% endif %}
+        </div>
+      </div>
+
+      {% for image in product.images %}
+       {% if image.alt contains 'FEATURE' %}
+          <div class="col-xs-12 col-sm-6">
+            <img src="{{ image.src | img_url: '600x' }}" alt="{{ image.alt | escape }}" data-product-single-thumbnail>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% comment %}
+  {% for image in product.images %}
+   {% if image.alt contains 'youtube' %}
+   <section class="container-fluid video-banner mbm">
+     {{ image.src | img_url: '1600x' | img_tag: 'Video banner background', 'video-banner__background'}}
+     <div class="video-banner__content">
+       <div class="video-banner__caption">
+         <a class="play-video" href="#"
+          data-izimodal-open="#video-modal"
+          data-izimodal-zindex="20000"
+          data-izimodal-preventclose=""> Play Video </a>
+       </div>
+     </div>
+   </section>
+
+   <div class="iziModal" id="video-modal">
+     <a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+     <div class="rte__video-wrapper">
+       <iframe width="560" height="315" src="{{ image.alt }}?controls=0&showinfo=0&frameborder=0&modestbranding=1&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+     </div>
+   </div>
+
+    {% endif %}
+  {% endfor %}
+{% endcomment %}
+  {% unless product == empty %}
+    <script type="application/json" data-product-json>
+      {{ product | json }}
+    </script>
+  {% endunless %}
+</div>
+
+{% if free_product_form %}
+		<form action="/cart/add" method="post" enctype="multipart/form-data" class="free-product-form">
+          	<input name="id" type="hidden" value="{{free_product_variant}}" />
+  			<input type="hidden"  pattern="[0-9]*" name="quantity" id="Quantity" value="1">
+		  	<input name="properties[Offer]" type="hidden" value="FREE With {{ product.title }}" />
+              <button
+                type="submit"
+                name="add"
+                id="add"
+                class="button"
+                data-add-to-cart>
+                  <span data-add-to-cart-text>
+                      {{ 'products.product.add_to_cart' | t }}
+                  </span>
+              </button>
+        </form>
+	
+{% endif %}
+
+
+
+
+
+
+
+<script>
+
+initProductSliders = function(){
+  
+  
+  if(!$('.product__feature-image').hasClass('slick-initialized')) {
+    console.log('init reg');
+    
+     var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+    var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+  if (w <750){
+  	
+    $("[data-mobile-remove]").remove();
+  }
+  else
+  {
+  $("[data-desktop-remove]").remove();
+  }
+    
+    $('.product__feature-image').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      asNavFor: '.thumbnail-nav',
+      infinite: false,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 750,
+          settings: {
+            dots: true
+          }
+        }
+      ]
+    });
+  }
+  
+  
+  if(!$('.thumbnail-nav').hasClass('slick-initialized')) {
+    console.log('init thumbnail');
+    
+    $('.thumbnail-nav').slick({
+      slidesToShow: 8,
+      slidesToScroll: 8,
+      dots: false,
+      infinite: false,
+      vertical: true,
+      asNavFor: '.product__feature-image',
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 750,
+          settings: "unslick"
+        }
+      ]
+    });
+  }
+
+  
+  $('.product__feature-image').on('afterChange', function(event, slick, currentSlide){
+    try {
+      $('.product__feature-image [data-product-slide]:nth-child('+(currentSlide+1)+')').each(function(){
+      
+      var videotype = $(this).attr("data-video-type");
+  	  var videourl = $(this).attr("data-video-url");
+	  var res = videourl.split("/");
+      if(videotype=="youtube")
+      {
+        
+        var ratio = 1.7777;
+        var height = $(this).width()/ ratio;
+      	$(this).html('<iframe width="100%" height="'+height+'px" src="'+videourl+'?autoplay=1&loop=1&mute=1&showinfo=0&controls=0&playlist='+res[res.length-1]+'" frameborder="0" ></iframe>');
+      }
+      else if(videotype=="mp4")
+      {
+        var ratio = 1.7777;
+        var height = $(this).width()/ ratio;
+      	$(this).html('<video playsinline autoplay loop muted width="100%" height="'+height+'px"><source src="'+videourl+'"  type="video/mp4">Your browser does not support the video tag.</video>');
+      }
+      else if(videotype=="gif")
+      {
+      	$(this).html('<center><img src="'+videourl+'" data-product-image-wrapper /></center>');
+      }
+     });
+	}
+	catch(err) {
+	}
+});
+  
+  $('.product__feature-image').on('beforeChange', function(event, slick, currentSlide){
+    try {
+      $('.product__feature-image [data-product-slide]:nth-child('+(currentSlide+1)+')').each(function(){
+      var videotype = $(this).attr("data-video-type");
+  	  var imgsrc = $(this).attr("data-src");
+      if(videotype=="youtube" || videotype=="mp4" || videotype=="gif")
+      {
+        $(this).html('<img src="'+imgsrc+'" data-product-image-wrapper />');
+      }
+     });
+	}
+	catch(err) {
+	}
+});
+  
+};
+
+$(function() {
+
+
+  initProductSliders();
+  var resizeTimer;
+  $(window).on('resize', function(e) {
+
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      initProductSliders();
+    }, 250);
+
+  });
+
+  $('.product__feature-image img')
+    .wrap('<span style="display:inline-block"></span>')
+    .css('display', 'block');
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Product pages",
+    "settings": [
+
+    ]
+  }
+{% endschema %}

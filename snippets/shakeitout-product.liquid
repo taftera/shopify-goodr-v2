@@ -1,0 +1,345 @@
+{% assign title = product.metafields.c_f.title %}
+{% assign button = product.metafields.c_f.button %}
+{% assign video = product.metafields.c_f.video %}
+{% assign imagelist = product.metafields.c_f.imagelist %}
+
+<div class="shakeitout-section">
+    <div class="row middle-xs">
+    	<div class="col-xs-12 col-sm-12">
+            <div class="shakeitout-section-box">
+                  	{% if title != blank %} 
+                  		<h3 class="title">{{ title }}</h3>
+                  	{% endif %}
+                
+                <div class="shakeitout-section-box-inner">
+                  {% comment %}
+                  	{% if video %}
+                    <button id="shakeItOut" class="button button--large shakeitout-prev-nav" data-btn="prev-nav" onclick="showShakeVideo(this)">
+                      	{% if button %}
+	                  		{{ button }}
+                 		{% else %} 
+                 			Shake it Out!
+                  		{% endif %}
+                    </button>
+                  	{% endif %}
+                  {% endcomment %}
+                  	{% if imagelist %}
+                    <div class="shakeitout-slider">
+                      	{% assign imagelists = imagelist | split: ',' %}
+                      	{% for image in imagelists %}
+							<img src="{{ image | file_url }}" />
+						{% endfor %}
+                    </div>
+                  	{% endif %}
+                  	{% if video %}
+                  	<div class="shakeitout-section-video-inner">
+                    	<video autoplay muted loop id="shakeitoutVideo">
+  							<source src="{{ video | file_url }}" type="video/mp4">
+						</video>
+                      	<button class="shake-slider-btn" onclick="showShakeSlider()"></button>
+            		</div>
+                  {% endif %}
+                  {% comment %}
+                  {% if video %}
+                	<button id="shakeItOut" class="button button--large shakeitout-next-nav" data-btn="next-nav" onclick="showShakeVideo(this)">
+                      	{% if button %}
+	                  		{{ button }}
+                 		{% else %} 
+                 			Shake it Out!
+                  		{% endif %}
+                  	</button>
+                  	{% endif %}
+                  {% endcomment %}
+            	</div>
+              	<button id="shakeItOutPlay" class="shakeItOutPlay">
+                	
+				</button>
+        	</div>
+		</div>
+    </div>
+</div>
+
+<style>
+
+  #shakeItOutPlay {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    max-width: 100px;
+    padding: 0;
+    height: 100px;
+	width: 100px;
+	background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;
+}
+  #shakeItOutPlay{background-image:url('{{ 'sweat-button-v1_1.png' | asset_url }}');}
+  #shakeItOutPlay.play{background-image:url('{{ 'sweat-button-v1_1.png' | asset_url }}');}
+.shakeitout-section {
+    margin: 50px 0;
+}
+.shakeitout-section-box {
+    border: 2px solid #4ec0b2;
+    position: relative;
+    text-align: center;
+    background: #fff;
+  	padding:20px 0 0 0;
+  	min-height: 150px;
+  	background:#EDEDED;
+}
+.shakeitout-section-box .shakeitout-section-box-inner {
+    display: block;
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+  	z-index: 1;
+  padding:0 50px;
+  
+}
+
+.shakeitout-section-box h3.title {
+    margin-top: 0;
+    text-transform: uppercase;
+  	z-index: 1;
+}
+.shakeitout-slider .slick-prev:after, .shakeitout-slider .slick-next:after {
+    background-size: cover;
+    width: 44px;
+    height: 38px;
+}
+.shakeitout-slider .slick-prev, .shakeitout-slider .slick-next {
+    width: 44px;
+    height: 38px;
+}
+.shakeitout-slider .slick-prev {
+	left: -70px;
+}
+.shakeitout-slider .slick-next {
+	right: -70px;
+}
+.shakeitout-slider .slick-next:after {
+  background-image: url('{{ 'next.png' | asset_url  }}');
+}
+.shakeitout-slider .slick-prev:after {
+    
+      background-image: url('{{ 'back.png' | asset_url  }}');
+}
+.shakeitout-section-box .shakeitout-next-nav, .shakeitout-section-box .shakeitout-prev-nav {
+    padding: 15px;
+  	position: absolute;
+  	top: 50%;
+  	margin-top: -25px;
+  	display: none;
+  	z-index: 1;
+  	-webkit-transition: all 0.5s ease-out;
+  	-moz-transition: all 0.5s ease-out;
+  	-o-transition: all 0.5s ease-out;
+  	transition: all 0.5s ease-out;
+}
+.shakeitout-section-box .shakeitout-prev-nav {
+    right: 115%;
+}
+.shakeitout-section-box .shakeitout-next-nav {
+    left: 115%;
+}
+.shakeitout-section-box .slick-prev.slick-arrow.slick-disabled, .shakeitout-section-box .slick-next.slick-arrow.slick-disabled {
+    
+}
+  
+.shakeitout-section-video-inner {
+    text-align: center;
+  	display: none;
+}
+#shakeitoutVideo {
+    width: 100%;
+    height: auto;
+  	margin-bottom: -6px;
+}
+.shake-slider-btn {
+    background-size: cover;
+    width: 44px;
+    height: 38px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+  	background-color: transparent;
+	border: none;
+	padding: 0;
+  	margin-top: -20px;
+}
+.shake-slider-btn.next-btn {
+  	background-image: url('//cdn.shopify.com/s/files/1/0084/1616/5946/files/right-button.png?18810');
+    right: -70px;
+}
+.shake-slider-btn.prev-btn {
+  	background-image: url('//cdn.shopify.com/s/files/1/0084/1616/5946/files/left-button.png?18810');
+  	left: -70px;
+}
+
+  
+@media screen and (max-width: 767px){
+.shakeitout-section-box:before {
+    width: 84px;
+    height: 66px;
+}
+.shakeitout-section-box:after {
+    width: 90px;
+    height: 63px;
+}
+  
+  .shakeitout-slider .slick-prev {
+	left: -50px;
+}
+.shakeitout-slider .slick-next {
+	right: -50px;
+}
+  #shakeItOutPlay {
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    right: 5px;
+    bottom: 5px;
+}
+}
+
+@media screen and (max-width: 649px){
+  {% comment %}
+  .shakeitout-slider .slick-prev, .shakeitout-slider .slick-next {
+    top: -45px;
+}
+.shakeitout-section-box .shakeitout-section-box-inner {
+    padding-top: 70px;
+}
+.shakeitout-section-box h3.title {
+    font-size: 24px;
+}
+.shakeitout-slider .slick-prev {
+	left: -40px;
+}
+.shakeitout-slider .slick-next {
+	right: -40px;
+}
+.shakeitout-section-box .shakeitout-next-nav, .shakeitout-section-box .shakeitout-prev-nav {
+    top: 0;
+    margin-top: 0;
+}
+.shakeitout-section-box .shakeitout-prev-nav {
+    right: 80%;
+}
+.shakeitout-section-box .shakeitout-next-nav {
+    left: 80%;
+}
+.shakeitout-slider .slick-next {
+    right: 20px;
+}
+.shakeitout-slider .slick-prev {
+    left: 20px;
+}
+  {% endcomment %}
+}
+
+@media screen and (max-width: 479px){
+  {% comment %}
+.shakeitout-section-box:before {
+    width: 54px;
+    height: 41px;
+}
+.shakeitout-section-box:after {
+    width: 54px;
+    height: 44px;
+}
+.shakeitout-section-box .shakeitout-prev-nav {
+    right: 45%;
+}
+.shakeitout-section-box .shakeitout-next-nav {
+    left: 45%;
+}
+.shakeitout-section-box h3.title {
+    font-size: 22px;
+}
+.shake-slider-btn {
+    top: 0;
+    margin-top: 0;
+}
+.shake-slider-btn.next-btn {
+    right: 20px;
+}
+.shake-slider-btn.prev-btn {
+  	left: 20px;
+}
+  {% endcomment %}
+}
+
+</style>
+<script>
+jQuery( document ).ready(function($) {
+  	$('.shakeitout-slider').slick({
+      	infinite: false,
+      	swipe: false,
+      	fade: true
+   	});
+  	showShakeBtn();
+  	$('.shakeitout-slider .slick-arrow').click(function() {
+      	/* showShakeBtn(); */
+    });
+});
+
+function showShakeVideo(ele)
+{	
+	$('.shakeitout-slider').hide();
+  	$('.shakeitout-prev-nav').hide();
+  	$('.shakeitout-next-nav').hide();
+  	if($(ele).attr('data-btn') == 'prev-nav'){
+      	$('.shake-slider-btn').addClass('next-btn');
+    	$('.shake-slider-btn').removeClass('prev-btn');
+    } else if ($(ele).attr('data-btn') == 'next-nav'){
+      	$('.shake-slider-btn').addClass('prev-btn');
+      	$('.shake-slider-btn').removeClass('next-btn');
+    }
+  	$('.shakeitout-section-video-inner').show();
+}
+  
+jQuery("#shakeItOutPlay").click(function(){
+  if(jQuery(this).hasClass("play"))
+  {
+    jQuery(this).removeClass("play")
+    $('.shakeitout-slider').show();
+  	$('.shakeitout-prev-nav').show();
+  	$('.shakeitout-next-nav').show();
+  	$('.shakeitout-section-video-inner').hide();
+  }
+  else
+  {
+    jQuery(this).addClass("play")
+    $('.shakeitout-slider').hide();
+  	$('.shakeitout-prev-nav').hide();
+  	$('.shakeitout-next-nav').hide();
+  	$('.shakeitout-section-video-inner').show();
+  }
+  	
+});
+
+function showShakeSlider()
+{
+  	$('.shakeitout-section-video-inner').hide();
+	$('.shakeitout-slider').show();
+  	showShakeBtn();
+}
+
+function showShakeBtn()
+{
+	if ($('.shakeitout-slider .slick-prev').attr('aria-disabled') == "true") {
+  		$('.shakeitout-prev-nav').show();
+	} else {
+  		$('.shakeitout-prev-nav').hide();
+	}
+  	if ($('.shakeitout-slider .slick-next').attr('aria-disabled') == "true") {
+  		$('.shakeitout-next-nav').show();
+	} else {
+  		$('.shakeitout-next-nav').hide();
+	}
+}
+
+</script>

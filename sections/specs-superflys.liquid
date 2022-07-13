@@ -1,0 +1,60 @@
+
+{% assign showLensView = false %}
+{% assign prodDescription = product.description | split: 'SPLIT' %}
+{% if prodDescription.size > 2 %}
+  {% assign showLensView = true %}
+{% endif %}
+
+
+<div class="tab-menu">
+  <ul class="make-tabs">
+    {% if showLensView %}<li><a href="#lens-view">Lens view</a></li>{% endif %}
+    <li><a href="#lens-tech">Lens tech</a></li>
+    <li><a href="#frame-size">Frame info</a></li>
+  </ul>
+  {% if showLensView %}
+  <div class="tab-content" id="lens-view">
+    {% assign productDescription = prodDescription | last %}
+    {% if productDescription contains "widgetic-embed" %}
+    	{{ productDescription }}
+    {% else %}
+    	{% assign Lenscode = product.metafields.global.lens_view %}
+    	{% if Lenscode != blank %}
+    		{{ Lenscode }}
+    	{% endif %}
+    {% endif %}
+  </div>
+  {% endif %}
+  <div class="tab-content" id="lens-tech">
+	{% include 'lens-tech-img' %}
+  </div>
+  <div class="tab-content" id="frame-size">
+    {{ section.settings.frame_size_img | img_url: '1200x' | img_tag }}
+    {% include 'prop65-warning' %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Specs - Superflys",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "lens_tech_img",
+        "label": "Lens tech image"
+      },
+      {
+        "type": "textarea",
+        "id": "lens_tech",
+        "label": "Lens tech content",
+        "default": "<ul><li>Item</li><li>Item</li></ul>"
+      },
+      {
+        "type": "image_picker",
+        "id": "frame_size_img",
+        "label": "Frame size image"
+      }
+    ]
+  }
+{% endschema %}

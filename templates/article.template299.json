@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "5a54291f-8f1b-4dad-ad70-37d143c03413": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "LOOK MA, NO HANDS! ORIGIN STORY",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Look_Ma_No_Hands_400.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6": {
+          "type": "text",
+          "settings": {
+            "title": "AN EXTREME POEM TO AN EXTREME MOTHER",
+            "text": "<p>I SKYDIVED INTO A F^&*ING VOLCANO\nLANDED ON MY TUNGSTEN SURFBOARD\nRODE WAVES OF LAVA, SCREAMED, “AIN’T NO-\n-BODY WHO IS THIS HARDCORE!!”\n<br><br>\nMA SAID, “THAT’S NICE.”\n<br><br>\nI DROVE A RACECAR OFF OF A SKYSCRAPER ROOF,\nLANDED ON A SMALLER SKYSCRAPER ROOF,\nLANDED ON A MEDIUM-SIZE BUILDING’S ROOF,\nTHEN HIT THE GROUND SMOOTH, DID NOT EVEN SAY “OOF.”\n<br><br>\nMA SAID, “THAT’S NICE.”\n<br><br>\nI CRUSHED KITZBÜHEL'S STREIF ON HAHNENKAMM MOUNTAIN\nONE OF THE MOST DANGEROUS DOWNHILL SKI LANDS\n90 MILES PER HOUR, 260 FOOT JUMPS – COUNT ‘EM!!!\nWHILE SCREAMING, “LOOK MA, NO HANDS!”\n<br><br>\nMA SAID, “THAT’S NICE.”\n<br><br>\nI GAVE MA ONE PAIR OF goodr SUNGLASSES,\nWRAP G, EXTREME WRAPAROUND LENS\nAND SAID “YOU MAKE OTHER MAs LOOK LIKE DUMBASSES,\nI LOVE YOU. HOPE YOUR LIFE NEVER ENDS.”\n<br><br>\nMA SAID, “THAT’S NICE…JUST KIDDING. I LOVE YOU TOO, DUMMY. THANKS FOR THE EXTREMELY SWEET SHADES!!!”\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Look_Ma_No_Hands_10677.jpg"
+          }
+        },
+        "5fdfc3f8-dde9-42a0-bb09-19e0d631bbcf": {
+          "type": "single_product_wide",
+          "settings": {
+            "product": "look-ma-no-hands"
+          }
+        },
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "LOOK MA, MORE BLOGS",
+            "content": "",
+            "article1": "origin-story\/save-a-bull-ride-a-rodeo-clown-origin-story",
+            "article2": "origin-story\/i-do-my-own-stunts-origin-story",
+            "article3": "origin-story\/nuclear-gnar-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "5a54291f-8f1b-4dad-ad70-37d143c03413",
+        "d2e6d6ed-29ce-4e5c-93b5-35eec2a9c9a6",
+        "6bf61592-7eba-4bf1-89c4-5e082c3456c8",
+        "5fdfc3f8-dde9-42a0-bb09-19e0d631bbcf",
+        "b1a1fd14-798c-4f51-8605-a2a56061afd0"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

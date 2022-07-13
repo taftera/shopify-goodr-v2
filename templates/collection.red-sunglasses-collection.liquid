@@ -1,0 +1,138 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+
+{% capture prd_type  %}{% for product in collection.products %},{{ product.type }}{% endfor %}{% endcapture %}
+{% assign typeList = prd_type | remove_first: "," | split : ',' | uniq %}
+
+{% assign hidetypes = "Custom Bundle" %}
+
+
+{% for type in typeList %}
+	{% assign count = 0 %}
+	{% for product in collection.products %}
+    	{% if product.type == type %}
+			{% if product.available %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if count == 0 %}
+		{% assign hidetypes = hidetypes | append: ";" %}
+		{% assign hidetypes = hidetypes | append: type %}
+	{% endif %}
+{% endfor %}
+{% assign exclude = hidetypes | split: ';' %}
+
+{% for type in typeList %}
+{% unless exclude contains type %}
+<div class="container--fluid">
+    <div class="row">
+      	<div class="section-header">
+          	{% assign type_code = type | downcase | replace: ' ', '_' %}
+          	
+          	{% capture cat_title %}collections.category_title.{{ type_code }}{% endcapture %}
+          	{% assign title = cat_title | t %}
+          
+          	{% assign collectionName = collection.handle %}
+          	
+          	
+          	{% if title contains 'translation missing'  %}
+          		<h3>{{ type }}</h3>
+          	{% else %}
+				<h3>{{ title }}</h3>
+          	{% endif %}
+          
+          	{% capture cat_description %}collections.category_sort_description.{{ type_code }}{% endcapture %}
+          	{% assign cat_desc = cat_description | t %}          
+          	{% assign descriptions = cat_desc | strip | split: '|' %}
+			
+          	{% assign description_default = '' %}
+            {% assign description_collection = '' %}
+            {% assign description_text = '' %}
+            	
+			{% for description in descriptions %}
+          		{% if description contains '---' %}
+          			{% assign description_collection_handle = description | strip | split: '---' |  first %}
+          			{% if description_collection_handle == collection.handle %}
+          				{% assign description_collection = description | strip | split: '---' |  last %}
+          			{% endif %}
+          		{% else %}
+          			{% assign description_default = description %}
+          		{% endif %}
+    		{% endfor %}
+          	{% if description_collection != "" %}
+				{% assign description_text = description_collection %}
+            {% else %}
+          		{% assign description_text = description_default %}
+            {% endif %}
+          	{% if cat_desc contains 'translation missing' %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ description_text }}</div>
+          	{% endif %}
+          	
+      	</div>
+    {% assign show_quick_buy = true %}
+    {% for product in collection.products %}
+    {% if product.type == type %}
+      {% include 'bold-product' with product, hide_action: 'skip' %}
+      <div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series'   or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        {% include 'product-tile' %}
+      </div>
+	{% endif %}
+    {% endfor %}
+    
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+					<p>Do you work for Target and want matching red sunglasses to pair with your ever-so-stylish polo? Do you want a pair of trending women's red sunglasses that obviously match with every piece of clothing in your closet? Do you want red-framed sunglasses that don’t draw attention to you in the slightest when you wear them? Then shop our most neutral, toned-down, boring, not at all bold women's red sunglasses accessories.</p>
+                  	<p>If you can’t understand sarcasm, then we’ll lay it out for you. Obviously we’re joking because red sunnies are just about the most bold color you choose when it comes to your eyewear accessory of choice.</p>
+					<p>Alright, let's get down to the facts. We know what kind of person you are. We know why you’re really here. You want to achieve that Taylor Swift circa 2012 look. You know, with the vintage red sunglasses and the bright lipstick to match that she wore on her smash album that is literally titled “Red.”</p>
+					<p>Or maybe you’re a hipster still holding onto the idea that you’re innovative and complicated, and no one understands you in your lenses as you search for new ways to show your opposition to literally everything. Still proclaiming your hatred for mainstream culture while literally mimicking a style created by them: the red-framed sunglasses.</p>
+                  	<p>Or perhaps red-framed sunglasses are your attempt to add flavor into your insanely boring wardrobe. If so, congratulations on finally making an effort. Yay for you! You’ve chosen a great place to start shopping.</p>
+                  	<p>Okay, we’ll stop insulting our potential customer now, even though our sarcastic delivery is awesome. We think you’re awesome, and we think our women's sunglasses will elevate that awesomeness to a level that could truly never be achieved otherwise.</p>
+                  	<p>With amazing quality at an affordable price and great shipping deals (yes, we told you they’re awesome), how could you not want to be an attention-seeking, Taylor-swift-loving, contradicting hipster who looks like the coolest damn person in any room?</p>
+                  	<p>If you don’t want that then, well… check out some of the other colors that we offer. They’re not as fun, but maybe you’re just not ready for the almighty style that red sunnies inevitably bring. But if you are, look no further. Our bright-colored shades are arguably the most popular in the country (we made that up) and for sure in the world (we made that up too), so why wouldn't you want the hottest product of 2021 (we definitely made that up)? We hear they're popular in the United Kingdom too (We're not sure if this one is true or not). Add some color into your style and jump aboard our goodr ship of fun.</p>
+                  	<p>Seeing red means something different around here. Don’t make it weird. We’re talking about our polarized red sunglasses. I guess you don't really see red when you wear them though, you just wear red shades. Anyway, our brands designs are fun and make you look cool without having to depend on Instagram filters. May you find your perfect pair today!</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

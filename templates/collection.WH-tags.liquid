@@ -1,0 +1,81 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+<header role="banner" class="hero-banner" style="background-image: url({{ collectionBanner }});">
+    <h1 class="text-align--center collection__title">{{ collection.title }}</h1>
+    <div class="row center-xs">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    		<p class="text-align--center text-color--white collection__description">{{ collection.description }} </p>
+		</div>
+	</div>
+</header>
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+{% comment %}
+{% include 'nosto-element' with 'categorypage-nosto-1' %}
+{% endcomment %}
+
+{% assign tagList = 'WH30,WH40,WH50,WH60,chotchkies' | split : ',' | uniq %}
+
+{% for tag in tagList %}
+<div class="container--fluid">
+    <div class="row">
+      	{% assign products_count = 0 %}
+        {% for product in collection.products %}
+            {% if product.tags contains tag %}
+                {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+      	{% if products_count > 0 %}
+      	<div class="section-header">
+          	{% assign handle = tag %}
+			{% case handle %}
+	  			{% when 'WH30' %}
+    	 			<h3>30% OFF</h3>
+  				{% when 'WH40' %}
+     				<h3>40% OFF</h3>
+				{% when 'WH50' %}
+     				<h3>50% OFF</h3>
+          		{% when 'WH60' %}
+     				<h3>60% OFF</h3>
+          		{% when 'chotchkies' %}
+     				<h3>LEFTOVER CHOTCHKIES</h3>
+  				{% else %}
+     				<h3>{{ tag }}</h3>
+			{% endcase %}
+          	<div class="category-sort-description">No returns or exchanges on items marked "FINAL SALE."</div>
+		</div>
+      	{% endif %}
+    	{% assign show_quick_buy = true %}
+    	{% for product in collection.products %}
+    		{% if product.tags contains tag %}
+      			{% include 'bold-product' with product, hide_action: 'skip' %}
+      			<div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        			{% include 'product-WH-tags.liquid' %}
+      			</div>
+			{% endif %}
+    	{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+
+{% comment %}
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+{% endcomment %}

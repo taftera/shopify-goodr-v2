@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "6d45824e-db0e-4cc8-b67d-f2d49a2eb503": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "BACKPACKER RADIO",
+            "text": "Thru-hiking through rose tinted lenses",
+            "image": "shopify:\/\/shop_images\/goodr_Summit_Launch_Ninja_Kick_The_Damn_Rabbit_Baby_Carl_003_full_res_fc21f973-731e-471a-9d73-d3c800a84475.jpg",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "9bcd4a7e-569c-4994-b07b-67ce930946e4": {
+          "type": "text",
+          "settings": {
+            "title": "WELCOME THRU-HIKING FANS! USE CODE \"BACKPACKER15\" FOR A SWEET DEAL.",
+            "text": "<p><\/p><p>\"Life is better looking through goodr’s shades\" <i><\/i><\/p>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "9f84500e-43c6-49e8-9333-edb4f63c175e": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "SHOP BACKPACKER'S FAVE SUNNIES",
+            "content": "<p>No slip. No bounce. All polarized. All fun.<\/p>",
+            "virtual_try_on": false,
+            "product1": "a-gingers-soul",
+            "product2": "amelia-earhart-ghosted-me",
+            "product3": "influencers-pay-double"
+          }
+        },
+        "8ec22589-8c55-4160-a17c-91bc5e3d44c5": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "",
+            "content": "",
+            "virtual_try_on": false,
+            "product1": "sunbathing-with-wizards",
+            "product2": "beelzebubs-bourbon-burpees",
+            "product3": "kitty-hawkers-ray-blockers"
+          }
+        },
+        "8e1fbc56-36a1-41a5-9596-48b377fa0440": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/goodr_Summit_Launch_Voight_Kampf_Vision_Lifestyle_004_social_asset.jpg"
+          }
+        },
+        "ecad9934-3985-46fa-b9fb-05d0fd922d60": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "HOW'S THE VIEW FROM UP THERE?",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/stay-fly-ornithologists",
+            "article2": "origin-story\/cheesy-flight-attendant-origin-story",
+            "article3": "goodrtimes\/burro-racing"
+          }
+        }
+      },
+      "block_order": [
+        "6d45824e-db0e-4cc8-b67d-f2d49a2eb503",
+        "9bcd4a7e-569c-4994-b07b-67ce930946e4",
+        "9f84500e-43c6-49e8-9333-edb4f63c175e",
+        "8ec22589-8c55-4160-a17c-91bc5e3d44c5",
+        "8e1fbc56-36a1-41a5-9596-48b377fa0440",
+        "ecad9934-3985-46fa-b9fb-05d0fd922d60"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

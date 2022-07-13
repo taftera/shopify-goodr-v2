@@ -1,0 +1,74 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available when you add "Rich text" section on the Theme Editor.
+
+  Theme Store required settings
+  - Heading: title of the rich text section
+  - Text: description of the rich text section
+{%- endcomment -%}
+<section class="video-banner">
+  {{ section.settings.background | img_url: '1600x' | img_tag: 'Video banner background', 'video-banner__background'}}
+  <div class="video-banner__content">
+    <div class="video-banner__caption">
+      {% if section.settings.overlay_image %}
+      {{ section.settings.overlay_image | img_url: '600x' | img_tag }}
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+      <h3 class="text-color--white mbs">{{ section.settings.text }}</h3>
+      {% endif %}
+
+      <a class="play-video" href="#"
+       data-izimodal-open="#video-modal"
+       data-izimodal-zindex="20000"
+       data-izimodal-preventclose=""> Play Video </a>
+    </div>
+  </div>
+</section>
+
+<div class="iziModal frg" id="video-modal">
+  <a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+  <div class="rte__video-wrapper">
+    <div class="youtube-player" id="{{ section.settings.videoURL.id }}"></div>    
+	{%- comment -%}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ section.settings.videoURL.id }}?frameborder=0&modestbranding=1&enablejsapi=1&version=3&playerapiid=ytplayer&rel=0" allowfullscreen allow="autoplay;encryted-media"></iframe>
+	{%- endcomment -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Video banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background",
+        "label": "Banner image"
+      },
+      {
+        "type": "video_url",
+        "id": "videoURL",
+        "label": "Video URL",
+        "accept": ["youtube"],
+        "info": "Add a YouTube video URL here. ie. https://www.youtube.com/watch?v=h4C3kwAcrV0"
+      },
+      {
+        "type": "image_picker",
+        "id": "overlay_image",
+        "label": "Overlay image",
+        "info": "Transparent PNG please",
+        "info": "Optional"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "info": "Optional"
+      }
+    ],
+    "presets": [{
+        "name": "Video banner",
+        "category": "Promotional"
+    }]
+  }
+{% endschema %}

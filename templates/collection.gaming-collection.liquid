@@ -1,0 +1,135 @@
+{% include 'personify' %}
+{% include 'personify-collection' %}
+{% paginate collection.products by 500 %}
+
+
+{% if collection.image %}
+    {% assign collectionBanner = collection.image | img_url: '1600x' %}
+{% else %}
+	{% assign collectionBanner = 'collection-default-banner.jpg' | file_img_url: '1600x' %}
+{% endif %}
+
+{% assign collectionMobileBanner = collection.metafields.global.header_mobile_image %}
+{% assign collectionHeaderHorizontalAlign = collection.metafields.global.header_horizontal_align | downcase | remove:" " %}
+{% assign collectionHeaderVerticalAlign = collection.metafields.global.header_vertical_align | downcase | remove:" " %}
+{% assign collectionHeaderContentWidth = collection.metafields.global.header_content_width | downcase | remove:" " %}
+{% assign collectionHeaderGradientWidth = collection.metafields.global.header_gradient_width | downcase | remove:" " %}
+{% assign collectionMobileDescText = collection.metafields.global.mobile_description_text %}
+{% assign collectionMobileHeaderHorizontalAlign = collection.metafields.global.mobile_header_horizontal_align | downcase | remove:" " %}
+{% assign collectionMobileHeaderVerticalAlign = collection.metafields.global.mobile_header_vertical_align | downcase | remove:" " %}
+
+
+<header role="banner" class="hero-banner new-header horizontal-align--{{ collectionHeaderHorizontalAlign }} mobile-horizontal-align--{{ collectionMobileHeaderHorizontalAlign }} vertical-align--{{ collectionHeaderVerticalAlign }} mobile-vertical-align--{{ collectionMobileHeaderVerticalAlign }}">
+  	<img class="desktop-img" src="{{ collectionBanner }}" alt="Desktop Header Img" />
+  	<img class="mobile-img"  src="{{ collectionMobileBanner }}" alt="Mobile Header Img" />
+  	<div class="banner-content" style="max-width: {{ collectionHeaderContentWidth }};">
+    	<h1 class="h1 collection__title">{{ collection.title }}</h1>
+    	<div class="content">
+			<p class="text-color--white collection__description collection__description_desktop">{{ collection.description }}</p>
+          	<p class="text-color--white collection__description collection__description_mobile">{% if collectionMobileDescText != blank %} {{ collectionMobileDescText }} {% else %} {{ collection.description }} {% endif %}</p>
+		</div>
+	</div>
+  	<div class="new-header-overlay" style="max-width: {{ collectionHeaderGradientWidth }};"></div>
+</header>
+
+
+<div class="filter-container">
+    {% include 'filter-menu' %}
+</div>
+
+
+{% assign tagList = 'GAME,BLUE MIRAGE' | split : ',' | uniq %}
+
+{% for tag in tagList %}
+<div class="container--fluid">
+    <div class="row">
+      	{% assign products_count = 0 %}
+        {% for product in collection.products %}
+            {% if product.tags contains tag %}
+                {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+      	{% if products_count > 0 %}
+      	{% assign tag_code = tag | downcase | replace: ' ', '_' %}
+      	{% capture tag_description %}collections.tag_sort_description.{{ tag_code }}{% endcapture %}
+        {% assign tag_desc = tag_description | t %}
+      	<div class="section-header">
+			<h3>{{ tag }}</h3>
+          	{% if tag_desc contains 'translation missing'  %}
+          		<div class="category-sort-description"></div>
+          	{% else %}
+				<div class="category-sort-description">{{ tag_desc }}</div>
+          	{% endif %}
+		</div>
+      	{% endif %}
+    	{% assign show_quick_buy = true %}
+    	{% for product in collection.products %}
+    		{% if product.tags contains tag %}
+      			{% include 'bold-product' with product, hide_action: 'skip' %}
+      			<div class="col-xs-6 col-sm-4 col-lg-4 {% unless product.available %}{% unless product.tags contains 'Marathon Series' or  product.tags contains 'pabst1' %}sold-out{% endunless %}{% endunless  %}">
+        			{% include 'product-tile' %}
+      			</div>
+			{% endif %}
+    	{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endpaginate %}
+
+<!-- Code by ELK to put newsletter box at bottom of collection page -->
+    {% section 'newsletter' %}
+<!-- End - Code by ELK to put newsletter box at bottom of collection page -->
+{% include 'nosto-element' with 'categorypage-nosto-2' %}
+
+<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+          		<div class="collection-paragraph">
+					<h2>Gaming Glasses</h2>
+					<p>At goodr, we’re recklessly committed to fun...blah blah blah, sunglasses. You, too, are recklessly committed to fun, as confirmed by a quick google search that reminded us the root of the word gaming is from the Old English ‘gamen’ which means “amusement, fun.” Boom! Introducing GAME goodr, our gaming glasses line created especially for you. That's right. We created sunglasses for gamers who might get too serious at times (yeah, we saw that broken controller and controller-sized dent in the drywall) but who game because it’s fun. And while we’re at it, let’s dispel this tired “mom’s basement couch potato” stereotype, shall we? Because gamers go outside too. So here are some gaming glasses for when you do just that.</p>
+					<h3>'ffordable Blue Light Blocking Glasses</h3>
+					<p>We saw the gaming community was underserved by sunglasses and more specifically, blue light blocking glasses. The eyewear was expensive, ugly, uncomfortable, and didn’t meet our four Fs. (Fun, functional, fashionable, and ‘ffordable, and yes, we can make up words.) We wanted to bring our ‘four F's’ glasses to the gaming community, so we launched GAME goodr in October 2020. This was our fifth vertical, following RUN goodr (for runners), BIKE goodr (for cyclists), BEAST goodr (for the CrossFit, OCR & bodybuilding community), and GOLF goodr (for dressage enthusiasts, nah, just kidding, for golfers, obviously.) We may never end the rivalry between console gamers and computer gamers, but both sides can agree on one thing: fun, functional, fashionable, ‘ffordable gaming glasses.</p>
+					<h3>Introducing The Best Gaming Glasses in the Game</h3>
+					<p>With GAME goodr, we launched our first set of gaming eyewear. The 8-Bit Line featured eight glasses inspired by retro games: Professional Respawner, Side Scroll Eye Roll, Wakka Wakka Wakka Wakka, Modern Day Snake Oil, Blue Shades of Death, Insert Coin To Continue, Rage Quit And Hit It, and It’s Not Just A Game. One year later, we followed up by launching Blue Mirage Refresh, with four new colorways: Citron+Alt+Delete; Don’t Tab Shame Me; Stop, Drop and Scroll; and Workin’ It From Home. All of the frames won’t slip or bounce while throwing fireballs, shooting aliens, or eating wayyy too many pellets.</p>
+					<p>What are gaming glasses (or computer glasses)? For us, there are two kinds: Stylish glasses with polarized lenses for gamers to wear while going outside, and gaming glasses with blue light blocking lenses for gamers to wear while playing, or looking at a screen. Five styles in the 8-Bit Line contain our patented Blue Mirage Technology, aka blue light blocking glasses aka “blue light blockers.” We’re waging war on blue light like Gargamel waged war on the Smurfs, just with some tinted lenses!</p>
+					<p>You might be wondering: “What are blue light glasses? Are blue light glasses bad for you? And why should we block blue light? Did blue light say mean things to us on Twitter?!?! IS BLUE LIGHT #CANCELED?!” No. Well, maybe. But as far as we know, no. Here’s the deal: Allegedly, blue light is bad for your tired eyes. (And allegedly, these shades will solve all your problems and help you live forever. Step right up, folks! Give the computer glasses a try! Can you afford not to?!?!?!) Yes, we said “allegedly,” and that’s the key word. Let’s break down blue light glasses more in-depth.</p>
+					<h3>The Infamous Digital Eye Strain with Gaming Glasses</h3>
+					<p>In the visible light spectrum, blue light has the shortest wavelengths and the highest energy. *adjusts scientist glasses* Therefore, it has the most potential to harm your eyes and cause eye strain. Meanwhile, white light is a combination of all the visible wavelengths, and red light has the longest wavelengths and lowest energy. Pretty surprising, right? Because red light FEELS harsher than blue light? Remember that short-lived 90s Nintendo system, the Virtual Boy? It was, like, all red light and people hated it because of hella digital eye strain! One of Nintendo’s rare failures. HA. But we digress.</p>
+					<p>Are gaming glasses good for your eyes? Some experts say blue light exposure is beneficial, especially exposure from the sun during the day. Reportedly this type of light boosts alertness, elevates mood, and helps memory. (“Wow, I can remember how to do algebra!”) However, long-term exposure to blue light, particularly from artificial sources like any kind of digital screens, including computer screens, phone screens, fluorescent lights, and LED lights, might be harmful. So, other experts, who are real Debbie Downers, say this contributes to digital eye strain and increases the risk of macular degeneration. (BTW, If Nicki Minaj’s cousin’s friend is reading, blue light does NOT cause testicular swelling. Hope you feel better, bro.)</p>
+					<p>That’s allegedly why we allegedly have to say “allegedly” all the allegedly time. (Allegedly.) Some scientists say, “Blue light is bad.” Some say, “Blue light is NOT bad.” Others say, “Hey! How’d you get in the operating room? SECURITY!!!!” That’s why we call our blue light blocking technology ‘Blue Mirage.’ (It’s also why we named one of our pairs Modern Day Snake Oil. HA.) Look, we can’t guarantee blocking blue light will solve all your problems. But the option is there for those who want it. It’s like when you’re gaming and pass by a save point. Some of us always save, just to be safe. (And avoid a rage quit.)</p>
+					<h3>The Nitty Gritty of Blue Light Glasses</h3>
+					<p>Let’s get into the nitty-gritty (ooooh, “Nitty Gritty.” Good stripper name) on gaming with glasses: There haven’t been enough studies with conclusive evidence to link blue light to eye strain, headaches, and fatigue. Blue Mirage goodrs are not polarized but they do protect against UV400. Blue light blocking refers to 380nm through 500 nm wavelengths. Testing shows our Blue Mirage blocks 25%(±5) of that wavelength spectrum. (BTW, nm means nanometers, which is 0.000000001 of a meter. So, if you want to insult somebody, tell them their brain or reproductive organs are blah blah blah nanometers long. Ho, ho!)</p>
+					<p>Why are gaming glasses beneficial? Some people like tinted lenses with blue light glasses because of the connection between blue light and sleep. As we all know, a good night’s sleep is paramount to good health. Sleep deprivation has been linked to a variety of total bummers, like high blood pressure, diabetes, heart attack, heart failure, stroke, obesity, depression, impairment in immunity, and lower sex drive. Also, you guessed it -- blue light from artificial sources is linked to sleep problems. Stop scrolling a mini-computer screen in bed before you fall asleep! It’s flocking up your circadian rhythm (or sleep cycle) and leading to digital eye strain. It's a real thing, people. But you know what can help you combat these issues? You guessed it: gaming glasses.</p>
+					<p>Circadian rhythms are a natural process that regulates the sleep-wake cycle and repeats every 24 hours. It’s always running in the background, like Facebook, except instead of spying on your conversations to spam you with targeted ads, it’s carrying out essential functions and processes. The external environment sends signals to the circadian rhythm to prime the body for being awake and going to sleep. Large amounts of blue light in the evening may disrupt your internal clock, making your body think it should be awake when it should be asleep. (“HEY! IT’S JUST A PRANK, BRO!”)</p>
+					<p>Let’s once again get into the nitty-gritty (ooooh, “Nitty Gritty,” good rap name): Blue light is effective at suppressing the production of melatonin, the hormone that tells your body to sleep. So, if you’re blocking blue light with glasses, your pineal gland (HAHA, “PINEAL”) will secrete (EWWWW, “SECRETE”) melatonin. Allegedly. Maybe. Possibly. Look, we don’t f***ing know.</p>
+					<p>We have blue light blockers for anybody that wants them, be they casual gamers, professional gamers, or anyone that feels they look at screens wayyyy too much.</p>
+					<h3>Are Blue Light Blocking Glasses Used By Gaming Pros?</h3>
+					<p>Do pro gamers wear computer glasses? Absolutely! We’ve even worked with some of them! Last November, GAME goodr officially partnered with CLG to design protective gaming glasses. No, CLG does not stand for Certified Local Government, Coastal Logistics Group, or Cthulhu Lovers Gathering. CLG refers to Counter Logic Gaming, a top-tier North American esports organization respected for its championship legacy, passionate fanbase, and thriving, boundary-pushing esports community.</p>
+					<p>The alliance named goodr an official partner for all CLG teams and included a joint venture to create exclusive CLG branded glasses. In addition, goodr received promo on CLG’s Twitch channel, product integration in CLG content, and the ability to activate alongside CLG at events, real and virtual. (Also, all the CLG athletes agreed to let goodr employees win if they ever compete in League of Legends, Fortnite, Counter Strike: Global Offensive, Apex Legends, and Super Smash Bros! J/K. They would absolutely smoke us.)</p>
+					<p>That’s not all! In August 2021, goodr partnered with Esports Stadium Arlington, the largest dedicated esports facility in North America. The facility serves as a turnkey solution for esports events and productions built to serve the unique needs and demands of the esports community. In other words, this was a pretty big deal. Anonymous and totally-not-made-up sources say this partnership was so groundbreaking it literally broke the ground, creating massive seismic activity. But you probably didn’t feel it because you were sitting in a fancy-schmancy vibrating gaming chair. “The Big One” could come and go in California and gamers wouldn’t even notice. Sad.</p>
+					<h3>Computer Glasses Built to Reduce Eye Strain</h3>
+					<p>Who makes the best blue light gaming glasses? We say us. They're made with a lightweight frame, low color distortion lenses, and are great for long gaming sessions to avoid that pesky eye fatigue and eye strain. And obviously, we’re biased. But goodr can back up words with awards! Since launching in 2015, we’ve won Runner’s World Gear of the Year three times, for the OGs (original frames), BFGs (frames for bigger heads), and VRGs (futuristic mono lens frames). Plus we won PGA Buyer’s Choice, Men’s Health Best Buy, Rolling Stone’s Favorite Sunglasses For Athletes, GQ’s Best Sunglasses of 2020, and Inc. Magazine’s Best Places To Work. Most awesomely, goodr was featured in Oprah Daily’s Summer Quarterly edition for must-have gear. (Everybody, look under your chair! YOU get goodrs! And YOU get goodrs! And YOU get goodrs! But actually, you don’t.)</p>
+					<h3>Made For Gamers, By Gamers</h3>
+					<p>goodr has about 100 employees (as of this writing, in December 2021), which includes gamers from many generations. Some avidly play the latest games on PC, Nintendo Switch, PS 5, and X-Box Series S & X. Others stay slightly behind to save money, gaming on Nintendo Wii U, PS4, PS3, Xbox One, and Xbox 360. Some nostalgia-fiends fondly remember playing Nintendo Wii, GameCube, N64, PS2, PS1, Xbox, Super Nintendo, Sega Dreamcast, Game Gear, and Genesis. Some weirdos remember the Atari Jaguar, Neo Geo, 3DO, and Virtual Boy. And some old fogeys grew up playing NES, Sega Master System, Atari 2600/7800, and classic arcade games. (Fun fact: The goodr office has a Ms. Pac-Man arcade game and new employees have to play in a tournament! Whoever loses gets fired. J/K. About someone getting fired. The tournament is legit.)</p>
+					<p>In fact, in August 2020, a ragtag group of goodr gamers splurged on Nintendo Switches and obsessively played Animal Crossing: New Horizons. Originally, it was just a fun way to connect. With 'Rona raging, we couldn’t travel anywhere or hang out with each other in real life. But on AC, we could visit each other’s gorgeous tropical islands and playfully slap each other with nets. Together, we got into crippling debt to Tom “Crook” Nook. We crafted. We collected. We gardened. We played the Stalk Market. We traded Bell farming tips. We built beautiful virtual homes that made our real homes look like trash. (And some Animal Crossing noobs begged Bell multi-millionaires for money!)</p>
+					<h3>Welcome to goodrland!</h3>
+					<p>This innocent diversion soon grew into a monstrous beast, like Gregor Samsa in Franz Kafka’s The Metamorphosis. (Woo! This copywriter’s B.A. in Literature is totally paying off!) Our Game Shark, aka the GAME goodr community manager, Theresa, got the brilliant idea to pass off playing video games as work -- we mean, bring the goodr brand into an innovative new space.</p>
+					<p>So, she created goodrland, an island representing goodr’s brand, culture, and characters, plus all five verticals. (Well, almost all five. We still need those damn DIY instructions for golf!)</p>
+					<p>If you travel to goodr’s blog, the goodrTIMES, you can find a video of Theresa showing off goodrland. Feast your eyes on paradise! goodrland has everything: Flamingo Mountain, carved in the shape of our avian CEO, Carl the Flamingo; a Carl avatar, designed to resemble our human CEO Stephen Lease (man bun + kimono + monocle); an ‘LLTK’ sign and doghouse to represent Stephen’s dearly departed Basset Hound, Bosley (Long Live The King); the name ‘goodr’ in letter-shaped islands; pink flowers; flamingo furniture; a beach campsite; a racetrack for RUN; an obstacle course for BEAST; bikes for BIKE (duh); arcades plus Switch in Carl’s house for GAME; a T-Rex fighting a Triceratops to represent the PH-Gs (coming soon); a pink ostrich neighbor named Flora who looks a LOT like a flamingo; and this paragraph is long enough, holy crap, so let’s just end it now, cool? Cool.</p>
+					<p>We created QR codes for followers to goodr up their game with Animal Crossing patterns for sunglasses and apparel. Also, we opened the goodrland gates so the community could visit our gorgeous island. Oh, wonderful it felt, for their avatars to playfully slap our avatars with nets! Even though the real world has opened back up, it’s still fun to escape once and while with a goodrland vacation. (It’s a LOT cheaper than Hawaii!)</p>
+					<h3>Enter: Carl The Flamingo</h3>
+					<p>For some goodr employees, the dream is to make Carl the Flamingo a playable character in Super Smash Bros. Until Nintendo responds to our needy beg-letters, we did the next best thing. We created our own video game! Move over "mustachioed plumber guy" and "creepy anthropomorphic blue hedgehog!” Gaming's newest superstar is Carl the Flamingo! In goodr Tropic Dash (a side-scroller), Carl must steal as many sunglasses, cocktails, and shrimp as possible. (That's right, STEAL. Not collect. Carl's a kleptomaniac.) But make sure you avoid obstacles like the evil UV rays and maybe-evil blue light. They're constantly trying to kill you, like all animals in Australia.</p>
+					<p>If you’re interested in playing Tropic Dash, go to goodr.com/pages/game. It’s pretty straightforward. Begin by pressing Start. Duh. Click your mouse, tap on your trackpad, or, if you’re playing on mobile, tap that finger to get Carl the Flamingo to jump, jump, JUMP! Then hop over the dangerous UV rays and deadly blue light. You earn 10 points every time you successfully hop over them. Scores are reset at the beginning of every month. (If you legitimately beat CEO Carl's high score, we might contact you for a prize!)</p>
+					<p>Although Carl the Flamingo is relatively new to the gaming space, he’s already a self-declared expert. (Like most gamers, HA.) On GAME goodr’s Instagram account, he generously doles out advice in a series called Carl’s Cheat Codes. Here’s a sample: “It’s always lag.” “Try turning it off and on.” “Put a cup of water in the microwave with cold pizza and it will rehydrate the cheese.”</p>
+					<p>“Gaming achievements also count as life achievements, except when they’re too hard.” “Just because a fast food joint has WiFi does not mean you should be using it to game.” And finally: “During play, you must move your whole body. (It may not do anything, but damn if it doesn’t feel like it helps.)”</p>
+					<p>Okay, some of Carl’s cheat codes are total nonsense. But if you’re after substance, we’ve got your back. The goodrTIMES features dozens of interviews with gamers, including professional CLG eSports athletes, goodr employees, and members of the Flamboyance, our ambassador program. They each answered questions about gaming, like: What’s your gaming handle, and what’s the story behind it? How long have you been gaming and what does gaming mean to you? How do you spend your time outside? What’s your overall health, exercise, and nutrition routine? What is one life hack you would like to share with the world? And finally: What is your favorite song right now that gets you pumped every time either to work out or compete and why?</p>
+					<h3>It's Been a Long Time Coming</h3>
+					<p>Older generations like to complain about today’s newfangled technology. (Probably because they don’t understand it, HA.) They argue smartphones, social media, and the internet, in general, have changed the world for the worse. And maybe they have a point. However, we see several ways technology has made the world better, particularly for gamers. It’s easier for gaming enthusiasts all over the planet to find each other and connect. No matter who you are, you can find your tribe, enthusiasts who share the same interest, no matter how niche. Although gaming is no longer niche. It’s mainstream! And thanks to that mainstream recognition, negative stereotypes about gamers -- as basement-dwelling socially awkward losers -- are a thing of the past. Games are getting more advanced too, with storytelling to rival major motion pictures and puzzles to challenge the mind. (Try mindless button-mashing to beat Portal 2, we’ll wait.) And, obviously, contemporary gamers have access to the best blue light blocking glasses.</p>
+					<p>Did you know video games are about 70 years old? Seriously. People have been playing games for that long. Technically, their history began in the 50s and 60s when scientists designed simple games and simulations on mainframe computers where the gaming experience was a bit different. Where will video games be at 100 years old, or 130 years old, or 150 years old? We don’t know. We’d ask our psychic, Miss Carlessa, but she died in a car accident. Hmm. Seems like if she was really psychic, she could have avoided that car accident. Anyway, video games are evolving, and goodr, will evolve with them, to embrace all types of gamers and create a huge improvement in their eyewear with a fancy lens tint. To quote our mission statement: We exist to give you permission to be unabashedly yourself...unless you’re an asshole. No more screen time for you. Game over.</p>
+              	</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog-content",
+      "blocks": {
+        "14b64363-bbf6-4be8-bede-d4c26002f126": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "goodr x Denver Zoo Penguin",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/denver_zoo_header.png",
+            "banner_height": "400px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "53311ed0-5606-47c1-bb7d-a7f43c561dc9": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>This is goodr’s third collaboration with Denver Zoo, a non-profit Zoo dedicated to saving wildlife through education and conservation. These new All I Do Is Penguin Win Win Win sunnies honor Denver Zoo’s African penguins with a fun gray and black feather print design inspired by our fabulous little feathered friends. All proceeds from these shades will go to Denver Zoo.\n<br><br>\nSilly fact, did you know that African penguins are sometimes referred to as jackass penguins?! They aren’t called that because they do stupid, death-defying tricks on a reality show, but rather because they bray like donkeys. (Carl the Flamingo does too, when he’s drunk and can’t find the TV remote. Don’t tell him we told you that.)\n<br><br>\nAfrican penguins are among Denver Zoo’s most popular species, waddling around their habitat in now-closed Bird World for more than 20 years. Now the Zoo’s 17 African penguins, a species deemed endangered by the International Union for the Conservation of Nature, are getting a brand-new home: Pinnacol African Penguin Point.\n<br><br>\nHome to more than 3,000 animals representing more than 450 species, Denver Zoo is a non-profit 501(c)(3) organization, and the city’s oldest and most passionate advocate for the natural world. The Zoo is among the most visited cultural destinations in Colorado, serving almost 2 million people per year, and accredited by the Association of Zoos and Aquariums (AZA), which assures the highest standards of animal care. With the mission inspiring communities to save wildlife for future generations, Denver Zoo dedicates almost $2 million annually to Zoo-led programs aimed at protecting animals within their natural habitats around the world. For more information, visit DenverZoo.org.\n\n<\/p>",
+            "show_article_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "5e6131d6-a4f1-43e4-9a24-36f91b6dd115": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Denver_zoo_thumbnail_bleed.png"
+          }
+        },
+        "9dec4601-a6b6-4d59-b738-5bbc12285325": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "GOODR GIVES BACK",
+            "content": "<p>LEAVING THE WORLD A BETTER PLACE<\/p>",
+            "article1": "goodrtimes\/goodr-x-denver-zoo",
+            "article2": "goodrtimes\/party-like-a-flockstar-origin-story",
+            "article3": "goodrtimes\/these-shades-are-trash-origin-story"
+          }
+        }
+      },
+      "block_order": [
+        "14b64363-bbf6-4be8-bede-d4c26002f126",
+        "53311ed0-5606-47c1-bb7d-a7f43c561dc9",
+        "5e6131d6-a4f1-43e4-9a24-36f91b6dd115",
+        "9dec4601-a6b6-4d59-b738-5bbc12285325"
+      ],
+      "settings": {
+        "hide_blog_menu": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

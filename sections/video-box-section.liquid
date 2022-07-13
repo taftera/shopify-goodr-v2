@@ -1,0 +1,245 @@
+<!-- Video Box Section  -->
+<style>
+.video-box-section {
+    padding: 30px 0;
+}
+</style>
+<section class="video-box-section">
+	<div class="container">
+  		<div class="row">
+          	<div class="video_row_block_section">
+            	<div class="rte" >
+					<div class="col-xs-12 col-sm-12">
+						<div class="text-align--{{ section.settings.align_text }}">
+							{% if section.settings.title != blank %}
+								<h3>{{ section.settings.title | escape }}</h3>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				<div class="center-xs">
+                  	{% if section.settings.show_video_1 %}
+                  		<div class="custom__item custom__item--v1" {{ section.shopify_attributes }} >
+							<section class="video-banner" id="vid">
+								{{ section.settings.video_background_1 | img_url: '850x480', crop: 'center' | img_tag: section.settings.image.alt, 'video-banner__background'}}
+								<div class="video-banner__content">
+									<div class="video-banner__caption">
+										<a class="play-video" href="#"
+										data-izimodal-open="#video-modalv1"
+										data-izimodal-zindex="20000"
+										data-izimodal-preventclose=""> Play Video </a>
+									</div>
+								</div>
+							</section>
+							{% if section.settings.text_1 != blank %}
+								<div class="text-align--{{ section.settings.align_text_1 }}">
+									<p class="video-title ">{{ section.settings.text_1 }}</p>
+								</div>
+							{% endif %}
+							<div class="iziModal" id="video-modalv1">
+								<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+								<div class="rte__video-wrapper">
+									<div class="youtube-player" id="{{ section.settings.video_url_1.id }}"></div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+					{% if section.settings.show_video_2 %}
+						<div class="custom__item custom__item--v2" {{ section.shopify_attributes }} >
+							<section class="video-banner" id="vid">
+								{{ section.settings.video_background_2 | img_url: '850x480', crop: 'center' | img_tag: section.settings.image.alt, 'video-banner__background'}}
+								<div class="video-banner__content">
+									<div class="video-banner__caption">
+										<a class="play-video" href="#"
+										data-izimodal-open="#video-modalv2"
+										data-izimodal-zindex="20000"
+										data-izimodal-preventclose=""> Play Video </a>
+									</div>
+								</div>
+							</section>
+                          	{% if section.settings.text_2 != blank %}
+                              	<div class="text-align--{{ section.settings.align_text_2 }}">
+                          			<p class="video-title ">{{ section.settings.text_2 }}</p>
+                              	</div>
+							{% endif %}
+							<div class="iziModal" id="video-modalv2">
+								<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+								<div class="rte__video-wrapper">
+									<div class="youtube-player" id="{{ section.settings.video_url_2.id }}"></div>
+								</div>
+							</div>
+						</div>
+                  	{% endif %}
+					{% if section.settings.show_video_3 %}
+                  		<div class="custom__item custom__item--v3" {{ section.shopify_attributes }} >
+							<section class="video-banner" id="vid">
+								{{ section.settings.video_background_3 | img_url: '850x480', crop: 'center' | img_tag: section.settings.image.alt, 'video-banner__background'}}
+								<div class="video-banner__content">
+									<div class="video-banner__caption">
+										<a class="play-video" href="#"
+										data-izimodal-open="#video-modalv3"
+										data-izimodal-zindex="20000"
+										data-izimodal-preventclose=""> Play Video </a>
+									</div>
+								</div>
+							</section>
+                          	{% if section.settings.text_3 != blank %}
+                              	<div class="text-align--{{ section.settings.align_text_3 }}">
+                          			<p class="video-title ">{{ section.settings.text_3 }}</p>
+                              	</div>
+                            {% endif %}
+							<div class="iziModal" id="video-modalv3">
+								<a href="javascript:void(0)" class="iziModal__close" data-izimodal-close>{% include 'icon-close' %}</a>
+								<div class="rte__video-wrapper">
+									<div class="youtube-player" id="{{ section.settings.video_url_3.id }}"></div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+  		</div>
+	</div>  	
+</section>
+
+{% schema %}
+{
+    "name": "Video Box Section",
+	"settings": [
+		{
+			"type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Talk about your brand"
+		},
+		{
+            "type": "select",
+            "id": "align_text",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+				{"value": "left", "label": "Left"},
+				{"value": "center", "label": "Centered"},
+				{"value": "right", "label": "Right"}
+            ]
+		},
+		{
+        	"type": "header",
+        	"content": "Video Box 1"
+		},
+		{
+   			"type": "checkbox",
+   			"id": "show_video_1",
+   			"label": "Show Video Box",
+   			"default": false
+		},
+		{
+            "type": "video_url",
+            "id": "video_url_1",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+		},
+		{
+        	"type": "image_picker",
+        	"id": "video_background_1",
+        	"label": "Video background"
+		},
+		{
+        	"type": "text",
+        	"id": "text_1",
+        	"label": "Video Title"
+		},
+		{
+            "type": "select",
+            "id": "align_text_1",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+				{"value": "left", "label": "Left"},
+				{"value": "center", "label": "Centered"},
+				{"value": "right", "label": "Right"}
+            ]
+		},
+		{
+        	"type": "header",
+        	"content": "Video Box 2"
+		},
+		{
+   			"type": "checkbox",
+   			"id": "show_video_2",
+   			"label": "Show Video Box",
+   			"default": false
+		},
+		{
+            "type": "video_url",
+            "id": "video_url_2",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+		},
+		{
+        	"type": "image_picker",
+        	"id": "video_background_2",
+        	"label": "Video background"
+		},
+		{
+        	"type": "text",
+        	"id": "text_2",
+        	"label": "Video Title"
+		},
+		{
+            "type": "select",
+            "id": "align_text_2",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+		},
+		{
+        	"type": "header",
+        	"content": "Video Box 3"
+		},
+		{
+   			"type": "checkbox",
+   			"id": "show_video_3",
+   			"label": "Show Video Box",
+   			"default": false
+		},
+		{
+            "type": "video_url",
+            "id": "video_url_3",
+            "label": "YouTube or Vimeo link",
+            "accept": ["youtube", "vimeo"]
+		},
+		{
+        	"type": "image_picker",
+        	"id": "video_background_3",
+        	"label": "Video background"
+		},
+		{
+        	"type": "text",
+        	"id": "text_3",
+        	"label": "Video Title"
+		},
+		{
+            "type": "select",
+            "id": "align_text_3",
+            "label": "Horizontal alignment",
+            "default": "center",
+            "options": [
+              {"value": "left", "label": "Left"},
+              {"value": "center", "label": "Centered"},
+              {"value": "right", "label": "Right"}
+            ]
+		}
+	],
+    "presets": [
+      {
+        "name": "Video Box Section",
+        "category": "Video"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,198 @@
+<section id="section-{{ section.id }}" class="containter--full full-image-section">
+  	<div class="container--fluid">
+		<div class="row">
+          	<div class="col-xs-12 col-md-12">
+              	{%- if section.settings.title != blank -%}
+              	<h2 class="h3 section__heading text-align--center"><span>{{ section.settings.title }}</span></h2>
+              	{%- endif -%}
+          	</div>
+      	</div>
+  	</div>
+  
+	{%- if section.settings.image_1 != blank -%}
+		<div class="image-slide{% if section.settings.mobile_image_1 != blank %} mb_image{% endif %}{% if section.settings.enable_zoom_1 != blank %} img-hover-zoom{% endif %}">
+			<a {% if section.settings.image_1_url != blank %} href="{{ section.settings.image_1_url }}" {% if template.name == "index" %} onclick="gtag('event', 'Click', { 'event_category': 'Home', 'event_label':'{{ section.settings.image_1_url }}', 'event_action':'Full Width Image 1' });" {% endif %}{% endif %}>
+				<img class="desktop-image" src="{{ section.settings.image_1 | img_url: "master" }}"
+				srcset="{{ section.settings.image_1 | img_url: "master" }} 1x, {{ section.settings.image_1 | img_url: "master", scale: 2 }} 2x"
+				alt="{{ section.settings.image_1.alt | default: shop.name }}">
+              	{%- if section.settings.mobile_image_1 != blank -%}
+              	<img class="mobile-image" src="{{ section.settings.mobile_image_1 | img_url: "master" }}"
+					srcset="{{ section.settings.mobile_image_1 | img_url: "master" }} 1x, {{ section.settings.mobile_image_1 | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+              	{%- endif -%}
+			</a>
+		</div>
+	{%- endif -%}
+  	{%- if section.settings.image_2 != blank -%}
+		<div class="image-slide{% if section.settings.mobile_image_2 != blank %} mb_image{% endif %}{% if section.settings.enable_zoom_2 != blank %} img-hover-zoom{% endif %}">
+			<a {% if section.settings.image_2_url != blank %} href="{{ section.settings.image_2_url }}" {% if template.name == "index" %} onclick="gtag('event', 'Click', { 'event_category': 'Home', 'event_label':'{{ section.settings.image_2_url }}', 'event_action':'Full Width Image 2' });" {% endif %}{% endif %}>
+				<img class="desktop-image" src="{{ section.settings.image_2 | img_url: "master" }}"
+				srcset="{{ section.settings.image_2 | img_url: "master" }} 1x, {{ section.settings.image_2 | img_url: "master", scale: 2 }} 2x"
+				alt="{{ section.settings.image_2.alt | default: shop.name }}">
+              	{%- if section.settings.mobile_image_2 != blank -%}
+              	<img class="mobile-image" src="{{ section.settings.mobile_image_2 | img_url: "master" }}"
+					srcset="{{ section.settings.mobile_image_2 | img_url: "master" }} 1x, {{ section.settings.mobile_image_2 | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+              	{%- endif -%}
+			</a>
+		</div>
+	{%- endif -%}
+  	{%- if section.settings.image_3 != blank -%}
+		<div class="image-slide{% if section.settings.mobile_image_3 != blank %} mb_image{% endif %}{% if section.settings.enable_zoom_3 != blank %} img-hover-zoom{% endif %}">
+			<a {% if section.settings.image_3_url != blank %} href="{{ section.settings.image_3_url }}" {% if template.name == "index" %} onclick="gtag('event', 'Click', { 'event_category': 'Home', 'event_label':'{{ section.settings.image_3_url }}', 'event_action':'Full Width Image 3' });" {% endif %}{% endif %}>
+				<img class="desktop-image" src="{{ section.settings.image_3 | img_url: "master" }}"
+				srcset="{{ section.settings.image_3 | img_url: "master" }} 1x, {{ section.settings.image_3 | img_url: "master", scale: 2 }} 2x"
+				alt="{{ section.settings.image_3.alt | default: shop.name }}">
+              	{%- if section.settings.mobile_image_3 != blank -%}
+              	<img class="mobile-image" src="{{ section.settings.mobile_image_3 | img_url: "master" }}"
+					srcset="{{ section.settings.mobile_image_3 | img_url: "master" }} 1x, {{ section.settings.mobile_image_3 | img_url: "master", scale: 2 }} 2x"
+					alt="{{ section.settings.alt | default: shop.name }}">
+              	{%- endif -%}
+			</a>
+		</div>
+	{%- endif -%}
+</section>
+
+{% schema %}
+  {
+    "name": "New 3 Full Image",
+    "settings": [
+		{
+        	"type": "text",
+        	"id": "title",
+        	"label": "Heading"
+      	},
+		{
+			"type": "header",
+			"content": "Image 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_1",
+			"label": "Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "mobile_image_1",
+			"label": "Mobile Image (optional)",
+			"info": "Image size would be 600 x 500"
+		},
+		{
+			"type": "url",
+			"id": "image_1_url",
+			"label": "URL"
+		},
+		{
+			"type": "checkbox",
+			"id": "enable_zoom_1",
+			"label": "Enable Zoom Effects"
+		},
+		{
+			"type": "header",
+			"content": "Image 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_2",
+			"label": "Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "mobile_image_2",
+			"label": "Mobile Image (optional)",
+			"info": "Image size would be 600 x 500"
+		},
+		{
+			"type": "url",
+			"id": "image_2_url",
+			"label": "URL"
+		},
+		{
+			"type": "checkbox",
+			"id": "enable_zoom_2",
+			"label": "Enable Zoom Effects"
+		},
+		{
+			"type": "header",
+			"content": "Image 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_3",
+			"label": "Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "mobile_image_3",
+			"label": "Mobile Image (optional)",
+			"info": "Image size would be 600 x 500"
+		},
+		{
+			"type": "url",
+			"id": "image_3_url",
+			"label": "URL"
+		},
+		{
+			"type": "checkbox",
+			"id": "enable_zoom_3",
+			"label": "Enable Zoom Effects"
+		}
+	],
+    "presets": [
+		{
+			"name": "New 3 Full Image"
+		}
+	]
+  }
+{% endschema %}
+
+<style>
+#section-{{ section.id}} {
+    padding: 40px 0px;
+}
+#section-{{ section.id}} .image-slide img {
+  	display: grid;
+  	width: 100%;
+}
+#section-{{ section.id}} .image-slide img.mobile-image {
+  	display: none;
+}
+.full-image-section .section__heading {
+    padding-bottom: 40px;
+}
+.img-hover-zoom {
+  	overflow: hidden;
+}
+.img-hover-zoom img {
+  	-webkit-transition: all 1.5s ease;
+  	-moz-transition: all 1.5s ease;
+  	-o-transition: all 1.5s ease;
+  	transition: all 1.5s ease;
+}
+.img-hover-zoom:hover img {
+  	transform: scale(1.1);
+}
+  
+  
+  
+@media screen and (min-width: 1200px){
+.full-image-section .container--fluid {
+    padding: 0 4rem;
+}
+}
+  
+@media screen and (max-width: 767px){
+#section-{{ section.id}} {
+    padding: 30px 0px;
+}
+#section-{{ section.id}} .image-slide.mb_image img.desktop-image {
+  	display: none;
+}
+#section-{{ section.id}} .image-slide img.mobile-image {
+  	display: grid;
+}
+.full-image-section .section__heading {
+    padding-bottom: 20px;
+}
+}
+</style>

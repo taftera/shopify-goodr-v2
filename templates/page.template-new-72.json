@@ -1,0 +1,214 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "a542ccea-f92c-40fc-a15b-31974399f175": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "GAMERS GIFT GUIDE",
+            "text": "Level up your game with goodr",
+            "image": "shopify:\/\/shop_images\/game_ESAPartnership_BlogAssets_BLOG_HEADER_A_3cbdc216-811d-49db-a0f9-437dfc107853.jpg",
+            "banner_height": "200px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "4883b715-bf2a-401a-8fe9-0c88efc6c1eb": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "goodr + You = game changer",
+            "content": "Imagine this: You're on the later end of the 6th straight hour of online play. Suddenly you get a notification that the latest game you've been counting down the days for has just dropped. Frantically, you pause and navigate to the page to place an order. Now THAT'S a site for sore eyes. Literally. Your eyeballs are burning. You forgot to blink after all this time and the computer's evil blue light rays have targeted your retinas worse than a n00b with a headset. \n<p><\/p><p>\nWe want to set you and your teammates up for success. This holiday season, stock your armory with this exclusive gamer bundle deal:   \n<\/p><p><\/p><p>\n<b>BUY 1 PAIR BLUE MIRAGE GLASSES + 1 PAIR SUNGLASSES <\/b> and get a <b>GOODR SWITCH CASE FOR FREE<\/b> using the code <b>LEVELUPGOODR<\/b> at checkout. <\/p><p>\nOk gamers. Here are the instructions. <\/p><p><b>1.<\/b> Add the pair of regular sunnies and the pair of blue blockers to your cart. Add more if you want. We won't stop you. In fact, we might like you more. <\/p><p><b>2.<\/b> Add the goodr Switch Case to your cart. Don't worry about the price tag, that'll get SLASHED in the next step.<\/p><p>\n<b>3.<\/b> Enter the code <b>LEVELUPGOODR<\/b> in the discount section at checkout and click \"Apply\"\n<\/p><p><b>4.<\/b> Purchase and GAME THE FLOCK OUT.<\/p><p>This deal is while supplies last so employ that trigger finger fast.<\/p><p> \n<\/p><p><\/p>",
+            "image": "shopify:\/\/shop_images\/goodr_GAME_Switch_Case_product_005_1.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "dc5ba418-5a88-456c-a518-a6d660ec3849": {
+          "type": "heading",
+          "settings": {
+            "title": "CODE: LEVELUPGOODR",
+            "text": "<p>Copy the code above and enter it at checkout for the switch case to be free! Happy gaming!<\/p><p>All purchases using this promo code will be final sale.<\/p>",
+            "align_text": "center"
+          }
+        },
+        "9b704332-9220-43b5-bf04-379bf239f540": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "dont-tab-shame-me",
+            "product2": "switch-case",
+            "product3": "voight-kampff-vision"
+          }
+        },
+        "bb5478ff-8649-4c63-9aaa-a85bdced0003": {
+          "type": "html",
+          "settings": {
+            "code": "<div class=\"text-align--center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"\/collections\/gaming-glasses\" target=\"_blank\" class=\"button button--extra large\">\n          SHOP MORE GAME GOODR\n        <\/a>\n<\/div>",
+            "width": "100%"
+          }
+        },
+        "5c7127a8-b88e-4789-95e1-0a87009edd4b": {
+          "type": "html",
+          "settings": {
+            "code": "<p><\/p>",
+            "width": "100%"
+          }
+        },
+        "605cf083-bf3c-49ac-9f97-89a1f04af759": {
+          "type": "function_block",
+          "settings": {
+            "title": "DropkickUndead5",
+            "image": "shopify:\/\/shop_images\/outlaw_Bishop_1.jpg",
+            "image_aligment": "right",
+            "tab_title_1": "DEFINE A GAMER",
+            "tab_text_1": "A gamer is anyone who enjoys the hobby of video games, table top, or card games. Most of the time folks tend to enjoy more than one of those types, but to me it doesn’t matter if you keep up with the Joneses and have to have the top of the line gear or still enjoy booting up your old N64 for some Mario Party 2 as long as you are having fun, you are a gamer.",
+            "tab_title_2": "DEBUNKING THE GAMING STIGMA",
+            "tab_text_2": "I tend to surround myself with people who are like minded. We enjoy some competitive online gaming sessions Saturday night, then Sunday afternoon we play basketball on a neighborhood court. I myself enjoy playing most sports as well as attempting to be as active as possible when the Texas heat lets me. Haha",
+            "tab_title_3": "EXCITED FOR THIS HOLIDAY SEASON",
+            "tab_text_3": "Halo Infinite is definitely big on my radar right now, I kinda stepped away from the series after Halo 4. However nostalgia is calling my name more and more with every new trailer put out.",
+            "tab_title_4": "CURRENT GAME OBSESSION",
+            "tab_text_4": "I just started my 5th play through of The Witcher 3: Wild Hunt, I’ve already sunk about 250hrs into it so I guess you can call that my “light” obsession.",
+            "tab_title_5": "",
+            "tab_text_5": "",
+            "tab_title_6": "",
+            "tab_text_6": "",
+            "tab_title_7": "",
+            "tab_text_7": "",
+            "tab_title_8": "",
+            "tab_text_8": ""
+          }
+        },
+        "5b33ce01-256a-47e3-9be1-8c9197413160": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<hr>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "d59c65dd-e8af-4aaa-a29b-0a341cb25db8": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "DEBUNK SOME GAMING STIGMAS",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "its-not-just-a-game",
+            "product2": "switch-case",
+            "product3": "professional-respawner"
+          }
+        },
+        "57e1fa01-6922-4983-b3b3-96d926c0ed8f": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<hr>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "c46070e7-499a-4e0c-8bb8-f8c3bfaf52c4": {
+          "type": "function_block",
+          "settings": {
+            "title": "SirMikeyyRocks",
+            "image": "shopify:\/\/shop_images\/Michael_Serrano.jpg",
+            "image_aligment": "left",
+            "tab_title_1": "DEFINE A GAMER",
+            "tab_text_1": "No matter what console you decide to play on (PC, Xbox, PS, Switch, etc.), you’re a gamer. Simple as that!",
+            "tab_title_2": "DEBUNKING THE GAMING STIGMA",
+            "tab_text_2": "For me, it’s putting in the same dedication that I put into gaming as I do with my running.",
+            "tab_title_3": "EXCITED FOR THIS HOLIDAY SEASON",
+            "tab_text_3": "Oh, pshhh. Easy: that’s going to have to be Halo Infinite. Been a die-hard Halo fan since 2001 and I cannot wait to play Infinite on my Series X. Another big title I’m excited for is Forza Horizon 5!",
+            "tab_title_4": "CURRENT GAME OBSESSION",
+            "tab_text_4": "Currently obsessing over Far Cry 6, Hades, and Microsoft Flight Simulator.",
+            "tab_title_5": "",
+            "tab_text_5": "",
+            "tab_title_6": "",
+            "tab_text_6": "",
+            "tab_title_7": "",
+            "tab_text_7": "",
+            "tab_title_8": "",
+            "tab_text_8": ""
+          }
+        },
+        "3906d5bb-2fee-443c-a052-d786f7f83585": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<hr>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "034a1431-98c3-4f4c-b398-bbc8ad39e322": {
+          "type": "triple_product_new",
+          "settings": {
+            "title": "SIRMIKEYYROCKS' FAVES",
+            "content": "<p><\/p>",
+            "virtual_try_on": false,
+            "product1": "stop-drop-and-scroll",
+            "product2": "switch-case",
+            "product3": "vincents-absinthe-night-terrors"
+          }
+        },
+        "2f1d2b4a-d6b8-4bd8-b98b-42cbd7fcf113": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<hr>",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "left"
+          }
+        },
+        "54e7d126-37bf-4ab7-9efd-5f7f2d5d7924": {
+          "type": "bleed_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GameGoodr_1600x1067_4a57aeff-137d-4444-96f7-35eb3089d604.jpg"
+          }
+        },
+        "72b6e186-4ffd-44d4-9081-119636e509e2": {
+          "type": "recent_posts",
+          "settings": {
+            "title": "IT's all fun and games",
+            "content": "<p><\/p>",
+            "article1": "goodrtimes\/golden-shades-winner-exclusive-interview",
+            "article2": "goodrtimes\/citron-alt-delete-origin-story",
+            "article3": "goodrtimes\/s03e18"
+          }
+        }
+      },
+      "block_order": [
+        "a542ccea-f92c-40fc-a15b-31974399f175",
+        "4883b715-bf2a-401a-8fe9-0c88efc6c1eb",
+        "dc5ba418-5a88-456c-a518-a6d660ec3849",
+        "9b704332-9220-43b5-bf04-379bf239f540",
+        "bb5478ff-8649-4c63-9aaa-a85bdced0003",
+        "5c7127a8-b88e-4789-95e1-0a87009edd4b",
+        "605cf083-bf3c-49ac-9f97-89a1f04af759",
+        "5b33ce01-256a-47e3-9be1-8c9197413160",
+        "d59c65dd-e8af-4aaa-a29b-0a341cb25db8",
+        "57e1fa01-6922-4983-b3b3-96d926c0ed8f",
+        "c46070e7-499a-4e0c-8bb8-f8c3bfaf52c4",
+        "3906d5bb-2fee-443c-a052-d786f7f83585",
+        "034a1431-98c3-4f4c-b398-bbc8ad39e322",
+        "2f1d2b4a-d6b8-4bd8-b98b-42cbd7fcf113",
+        "54e7d126-37bf-4ab7-9efd-5f7f2d5d7924",
+        "72b6e186-4ffd-44d4-9081-119636e509e2"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

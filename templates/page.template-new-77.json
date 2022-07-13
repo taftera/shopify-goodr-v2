@@ -1,0 +1,276 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "b7d52332-b05d-4b31-abfa-546a84a05c53": {
+          "type": "banner_heading",
+          "settings": {
+            "title": "The goodr Cabana x Run Residencies",
+            "text": "Bringing run clubs to the goodr Cabana on Abbot Kinney!",
+            "image": "shopify:\/\/shop_images\/goodr_Philanthrophy_Header_BLOG_HEADER_336db125-8536-4dc9-ae59-11832e6fcbcb.jpg",
+            "banner_height": "200px",
+            "align_text": "left",
+            "align_vertical_text": "end",
+            "overlay_opacity": 0.8
+          }
+        },
+        "9b2ea9c7-5f01-4ba9-957d-8b12f22951e4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "content": "<p>We're committing to serial monogamy at The goodr Cabana with our new Run Residencies (aka RUNsidencies).<br><br>\nWhat are Run Residencies you might ask? Every month we are going to work with a different local run club or community group that suffer-smiles along with us thinking Running is Fun? <br><br>\n\nThey will be hosting group runs kicking off from our very own <a href=\"https:\/\/www.instagram.com\/cabanagoodr\/\">\n@cabanagoodr<\/a>.  Stay tuned at the beginning of each month for a story and post announcing weekly run dates and more!<br><br>\nCheck out our RUNsidency highlight on IG for ongoing updates and be sure to <strong>click the button below to fill out the form if your run club is based in LA and interested in hosting runs from the cabana!<\/strong><br><br>\nNext step - RUNmarriage?<\/p>",
+            "image": "shopify:\/\/shop_images\/RunGoodr_RUNResidency_IGFeed_Intro.jpg",
+            "title_align_text": "center",
+            "align_text": "left",
+            "image_aligment": "left"
+          }
+        },
+        "8f5175a2-2db0-45b9-80ba-d8502f851e09": {
+          "type": "html",
+          "settings": {
+            "code": "<div class=\"text-align--center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https:\/\/goodr.typeform.com\/to\/e9kJXG4H\" target=\"_blank\" class=\"button button--extra large\">\n          HOST A RUN CLUB AT THE CABANA\n        <\/a>\n<\/div>",
+            "width": "100%"
+          }
+        },
+        "faea8728-b717-4310-84df-0beda7a25712": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "200e858b-309c-4212-ab4e-15ce4c9b6ee4": {
+          "type": "intro",
+          "settings": {
+            "title": "MEET THE LA LEGGERS",
+            "text": "<p>Every Saturday this June, <a href=\"https:\/\/www.instagram.com\/rungoodr\/\">\n@rungoodr<\/a> is hosting <a href=\"https:\/\/www.instagram.com\/laleggers\/\">\n@laleggers<\/a> for Run Residencies! On June 4, June 11, June 18 and June 25th, we're meeting at The goodr Cabana (1348 Abbot Kinney Blvd, Venice, CA 90291) for a 5K or 5-mile run at 7:30AM. <\/p><p>So you might not want to party all night. Or maybe you DO want to party all night and stumble down Abbot Kinney at 7:30AM in a rumpled cocktail dress with crusty makeup and a long piece of toilet paper dangling from one strappy heel. You do you, friend! All are welcome!<\/p><p>The LA Leggers is one of the largest running and walking clubs in Southern California. We’re a supportive, positive, and uplifting running community that brings out the best in all our members since 1989. <\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "38a9f012-5ae9-4d33-9037-478ee7555824": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "ALL THE DEETS:",
+            "content": "<p><strong>WHERE: <\/strong>The goodr Cabana<br><br>\n\n<strong>WHAT:<\/strong><br>\nA 5k or 5 mile<br><br>\n\n\n<strong>WHEN:<\/strong><br>\nMeet at 7:30AM<br>\n<\/p><p>\nJune 4th\n<br>\nJune 11th\n<br>\nJune 18th\n<br>\nJune 25th<\/p>",
+            "image": "shopify:\/\/shop_images\/IG_FEED_POST_-_03.jpg",
+            "title_align_text": "center",
+            "align_text": "center",
+            "image_aligment": "left"
+          }
+        },
+        "7107b32d-3c6d-4582-8117-1207c4b8eed7": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "34d1b4c1-6a8e-4e3b-b5c9-7fe186acf7b6": {
+          "type": "intro",
+          "settings": {
+            "title": "MEET BLACK MEN RUN LA",
+            "text": "<p>This May, we're teaming up with Black Men Run Los Angeles. Join us and <a href=\"https:\/\/www.instagram.com\/BMRlosangeles\/\">\n@BMRlosangeles<\/a> Saturdays at 7:30 AM at The goodr Cabana. You can treat yourself to bottomless mimosas and an all-day nap afterwards, we won't tell anyone!!!\n<\/p><p>\nBlack Men Run Los Angeles' mission is to change the negative cardiovascular trends that disproportionately affect African American males, by encouraging them to get out and be active.\nRunning on a regular basis helps boost confidence, relieves stress, eliminates depression, increases mental sharpness, and has physical benefits. We can't argue with that!!! (Even if it sometimes means runner's toe, shin splints, bloody nipples, and dragging our hungover ass out of bed on a Saturday morning. Running is fun?) <\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "655f4dae-b6fc-42f2-8c35-ca08ebc18084": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "ALL THE DEETS:",
+            "content": "<p><strong>WHERE: <\/strong>The goodr Cabana<br><br>\n\n<strong>WHAT:<\/strong><br>\nA Saturday run!<br><br>\n\n\n<strong>WHEN:<\/strong><br>\nMeet at 7:30AM<br>\n<\/p><p>\nMay 7th\n<br>\nMay 14th\n<br>\nMay 21st\n<br>\nMay 28th<\/p>",
+            "image": "shopify:\/\/shop_images\/Image_from_iOS_e1f06219-ce61-44b5-bde4-cccaa33ca4ef.jpg",
+            "title_align_text": "center",
+            "align_text": "center",
+            "image_aligment": "left"
+          }
+        },
+        "ebf3388c-bbc3-4162-ac51-dc7a9d5a8192": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "5cf357a3-10e6-4e86-bfa9-343e88c7ba32": {
+          "type": "intro",
+          "settings": {
+            "title": "MEET THE MIDNIGHT RUNNERS",
+            "text": "<p><br>This month, we're teaming up with Midnight Runners for weekly group runs at The goodr Cabana! At 6:45 pm, we rally. At 7 pm, we run. <br><br><strong>Every Monday this April: 4\/4, 4\/11, 4\/18 & 4\/25.<\/strong> <br><br>(No, we're not running with the Midnight Runners at midnight. Carl caught the Lycan Virus so at midnight he turns into a ferocious were-flamingo and roams the streets of Abbot Kinney feasting on people, thinking their flesh is shrimp and their blood is piña colada. IT'S NOT SAFE!!!)\n<a href=\"https:\/\/www.instagram.com\/midnightrunnerslosangeles\/\">\n@midnightrunnerslosangeles<\/a> are a volunteer-led run crew with\na passion for music, fun & fitness. Check out their page for more info!<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "e043e2c0-a0a9-403b-a95c-555ff46ef016": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "ALL THE DEETS:",
+            "content": "<p><strong>WHERE: <\/strong>The goodr Cabana<br><br>\n\n<strong>WHAT:<\/strong><br>\nAn evening Monday run to start the week off strong!<br><br>\n\n<strong>WHO:<\/strong><br>\nCOME ONE COME ALL! All levels welcome.<br><br>\n\n<strong>WHEN:<\/strong><br>\nMeet at 6:45PM<br>\nRun starts at 7PM on:<br><br>\n\nApril 4th<br>\nApril 11th<br>\nApril 18th<br>\nApril 25th<br>\n<\/p>",
+            "image": "shopify:\/\/shop_images\/IG_FEED_POST_-_03_1.jpg",
+            "title_align_text": "center",
+            "align_text": "center",
+            "image_aligment": "left"
+          }
+        },
+        "d1212411-b825-4f81-ac8b-74d8abacb1c5": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "688d43e9-75fb-4b92-a910-16e8b0bca72d": {
+          "type": "intro",
+          "settings": {
+            "title": "MEET THE ELECTRIC ATHLETIC CLUB",
+            "text": "<p><br>ZAP!!!!! The <a href=\"https:\/\/www.instagram.com\/ElectricAthleticClub\/\">\n@ElectricAthleticClub<\/a> is joining <a href=\"https:\/\/www.instagram.com\/RUNgoodr\/\">\n@RUNgoodr<\/a> for Run Residencies! Every Wednesday this March, we're meeting at The goodr Cabana at 7pm, with options for a 3-mile or 5-mile run. (Aw, no 2,790-mile run from LA to NYC?!) Everyone is welcome!<br><br>\nThe Electric Athletic Club's training program includes road runs, speed work, circuit training, and cross-training sessions at local fitness studios. Also, following each workout, there's a \"No Shower Happy Hour\" at a local watering hole! Wow! That includes Carl the Flamingo's two favorite things! Alcohol, and not bathing.<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "9872a367-29d7-46ae-8f34-f55090932e4b": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "ALL THE DEETS:",
+            "content": "<p><strong>WHERE:<\/strong>\nThe goodr Cabana<br><br>\n\n<strong>WHAT:<\/strong><br>\nAn evening mid-week run with friends<br><br>\n\n<strong>WHO:<\/strong><br>\nCOME ONE COME ALL! All levels welcome.\n<br><br>\n\n<strong>WHEN:<\/strong><br>\n7PM on:<br><br>\n\nMarch 2nd<br>\nMarch 9th<br>\nMarch 16th<br>\nMarch 23rd<br>\nMarch 30th<\/p>",
+            "image": "shopify:\/\/shop_images\/IG_Feed_Post_-_01.jpg",
+            "title_align_text": "center",
+            "align_text": "center",
+            "image_aligment": "left"
+          }
+        },
+        "fb92bfc6-a8bc-4924-a226-d1dcc4a4b16e": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "ee60603f-46c3-446f-8c1e-874482e82796": {
+          "type": "intro",
+          "settings": {
+            "title": "MEET THE COFFEE CLUB",
+            "text": "<p><br>Meet <a href=\"https:\/\/www.instagram.com\/sbcoffeeclub\/\">\n@SBCoffeclub<\/a>!! Their mission statement is to connect through a weekly gathering of friends who empower and inspire each other all before the sun rises.<\/p>",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "b30aaea6-c627-4d4d-81a6-aafe2e99affb": {
+          "type": "text",
+          "settings": {
+            "title": "ALL THE DEETS:",
+            "text": "",
+            "show_page_content": false,
+            "width": "100%-offset",
+            "align_text": "center"
+          }
+        },
+        "af3cabc3-5720-463e-8d27-294472107444": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IG_FEED_-_04.jpg",
+            "width": "50%",
+            "align_image": "left"
+          }
+        },
+        "b9463edc-fe77-45d5-9afb-d37b435ac442": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p><br><br><strong>WHERE:<\/strong> <br>The goodr Cabana <br><br>\n<strong>WHAT:<\/strong> <br>A morning run with friends<br><br>\n<strong>WHO:<\/strong><br> COME ONE COME ALL! All levels welcome. <br>You don’t need to be part of Coffee Club to join us! <br><br>\n<strong>WHEN: <\/strong><br>5:30AM on: <br>\n<br>Friday, February 4\n<br>Friday, February 18\n<\/p>",
+            "show_page_content": false,
+            "width": "50%",
+            "align_text": "center"
+          }
+        },
+        "320079cc-1367-48f2-8943-2799a7ada584": {
+          "type": "html",
+          "settings": {
+            "code": "<hr>",
+            "width": "100%"
+          }
+        },
+        "6ffa4c16-bdac-4c97-9cfd-8dee30cae805": {
+          "type": "intro",
+          "settings": {
+            "title": "MEET THE MOVEMENT RUNNERS",
+            "text": "<br>Meet <a href=\"https:\/\/www.instagram.com\/MovementRunners\/\">\n@MovementRunners<\/a>! Their mission is to help new runners run for the first time and prepare for races like 5Ks, 10Ks, and full marathons. (And maybe they'll carry YOU piggyback on a run if you ask nicely!) They're taking over the Cabana in Abbot Kinney every Thursday in January at 7pm. It's part of our new Run Residencies program. We regularly host run clubs at your mom's house. J\/K, at the Cabana. <br><br>See you there, filthy noobs!!!",
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "a40f0e8d-2043-47a8-a4cd-61cd532e62d9": {
+          "type": "text",
+          "settings": {
+            "title": "ALL THE DEETS:",
+            "text": "",
+            "show_page_content": false,
+            "width": "100%",
+            "align_text": "center"
+          }
+        },
+        "5eac1ef3-5036-43c5-9878-f663764b8222": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IG_FEED_-_01.jpg",
+            "width": "33%",
+            "align_image": "left"
+          }
+        },
+        "2513c768-9f73-426b-9706-4261f5d630c8": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p><strong>WHERE:<\/strong> The goodr Cabana <br><br>\n<strong>WHAT:<\/strong> A party pace group run<br><br>\n<strong>WHO:<\/strong> EVERYONE!!!!! All levels welcome. <br>You don’t need to be part of Movement Runners to join us! <br><br>\n<strong>WHEN: <\/strong>7PM on:\n<br>January 6\n<br>January 13\n<br>January 20\n<br>January 27<\/p>",
+            "show_page_content": false,
+            "width": "33%",
+            "align_text": "center"
+          }
+        },
+        "5dfac176-bb1a-47b7-83e8-06520c9dc132": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IG_FEED_-_03.jpg",
+            "width": "33%",
+            "align_image": "right"
+          }
+        }
+      },
+      "block_order": [
+        "b7d52332-b05d-4b31-abfa-546a84a05c53",
+        "9b2ea9c7-5f01-4ba9-957d-8b12f22951e4",
+        "8f5175a2-2db0-45b9-80ba-d8502f851e09",
+        "faea8728-b717-4310-84df-0beda7a25712",
+        "200e858b-309c-4212-ab4e-15ce4c9b6ee4",
+        "38a9f012-5ae9-4d33-9037-478ee7555824",
+        "7107b32d-3c6d-4582-8117-1207c4b8eed7",
+        "34d1b4c1-6a8e-4e3b-b5c9-7fe186acf7b6",
+        "655f4dae-b6fc-42f2-8c35-ca08ebc18084",
+        "ebf3388c-bbc3-4162-ac51-dc7a9d5a8192",
+        "5cf357a3-10e6-4e86-bfa9-343e88c7ba32",
+        "e043e2c0-a0a9-403b-a95c-555ff46ef016",
+        "d1212411-b825-4f81-ac8b-74d8abacb1c5",
+        "688d43e9-75fb-4b92-a910-16e8b0bca72d",
+        "9872a367-29d7-46ae-8f34-f55090932e4b",
+        "fb92bfc6-a8bc-4924-a226-d1dcc4a4b16e",
+        "ee60603f-46c3-446f-8c1e-874482e82796",
+        "b30aaea6-c627-4d4d-81a6-aafe2e99affb",
+        "af3cabc3-5720-463e-8d27-294472107444",
+        "b9463edc-fe77-45d5-9afb-d37b435ac442",
+        "320079cc-1367-48f2-8943-2799a7ada584",
+        "6ffa4c16-bdac-4c97-9cfd-8dee30cae805",
+        "a40f0e8d-2043-47a8-a4cd-61cd532e62d9",
+        "5eac1ef3-5036-43c5-9878-f663764b8222",
+        "2513c768-9f73-426b-9706-4261f5d630c8",
+        "5dfac176-bb1a-47b7-83e8-06520c9dc132"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

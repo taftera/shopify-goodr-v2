@@ -1,0 +1,948 @@
+@charset "UTF-8";
+/*============================================================================
+  [replace with theme name] | Built with Slate
+    - You cannot use native CSS/Sass @imports in this file without a build script
+==============================================================================*/
+
+/*================ UTILS ================*/
+/**
+ * Sets a media query for the specified breakpoint
+ *
+ * Accepts:
+ * - $media-query: {String} Breakpoint variable (list found in variables.scss)
+ *
+ * Usage:
+ * .selector {
+ *   @include media-query($medium-up) {
+ *     color: red;
+ *   }
+ * }
+ */
+@mixin media-query($media-query) {
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @if $media-query == $name and $declaration {
+      $breakpoint-found: true;
+
+      @media only screen and #{$declaration} {
+        @content;
+      }
+    }
+  }
+}
+
+/**
+ * Outputs list of transition properties
+ *
+ * Accepts:
+ * - $transitions: {String} List of transition properties to set
+ *
+ * Usage:
+ * .selector {
+ *   @include transition(width, height 0.5s ease-in);
+ * }
+ */
+@mixin transition($transitions...) {
+  $output: ();
+
+  @each $transition in $transitions {
+    $output: append($output, get-transition-properties($transition), comma);
+  }
+  transition: $output;
+}
+
+/**
+ * Forces an element to self-clear its children
+ *
+ * Usage:
+ * .selector {
+ *   @include clearfix;
+ * }
+ */
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  // stylelint-disable-next-line
+  *zoom: 1;
+}
+
+/**
+ * Hide element but make it accessible to screen readers
+ *
+ * Usage:
+ * .selector {
+ *   @include visually-hidden;
+ * }
+ */
+@mixin visually-hidden() {
+  // stylelint-disable-next-line
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/**
+ * Reverse the properties applied by @mixin visually-hidden
+ *
+ * Accepts:
+ * - $position: {String} Positioning method for element
+ *
+ * Usage:
+ * .selector {
+ *   @include visually-shown(relative);
+ * }
+ */
+@mixin visually-shown($position: inherit) {
+  // stylelint-disable-next-line
+  position: $position !important;
+  overflow: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+}
+
+
+@mixin drop-type {
+  color: #ffffff;
+  text-shadow: -4px 4px $color-accent;
+  text-stroke: 1px $color-accent;
+  -webkit-text-stroke: 1px $color-accent;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     text-shadow:
+        -4px 4px $color-accent,
+        -1px -1px $color-accent,
+        1px 1px $color-accent,
+        -1px 1px $color-accent,
+        1px -1px $color-accent;
+   }
+}
+
+/**
+ * Returns the transition properties in the correct format
+ * This function is used by @mixin transition($transitions...)
+ */
+@function get-transition-properties($transition) {
+  $property: all;
+  $duration: $transition-duration;
+  $easing: $transition-timing;
+  $delay: null;
+
+  $defaultProperties: (
+    $property,
+    $duration,
+    $easing,
+    $delay
+  );
+
+  $properties: ();
+
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+
+    @if $i <= length($transition) {
+      $p: nth($transition, $i);
+    } @else {
+      $p: nth($defaultProperties, $i);
+    }
+
+    $properties: append($properties, $p);
+  }
+
+  @return $properties;
+}
+
+
+// Rem Calc
+$rem-base : 16px;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  $remValues: ();
+  @for $i from 1 through $max {
+	$remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+
+/*================ SETTINGS ================*/
+// Text colors
+$color-body-text: {{ settings.color_body_text }};
+
+// Background colors
+$color-body: {{ settings.color_main_bg }};
+
+// Placeholders
+$placeholder-color-foreground: #161d25;
+$placeholder-color-background: #f9fafb;
+
+// Other colors
+$color-accent: {{ settings.color_accent }};
+$color-secondary: {{ settings.color_secondary }};
+$color-border: {{ settings.color_border }};
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey: #acadaf;
+$color-lightgrey: #cecdd3;
+
+// Helper colors for form error states
+$color-disabled: #000000;
+$color-disabled-border: #000000;
+$color-error: $color_secondary;
+$color-error-bg: #ffffff;
+$color-success: #000000;
+$color-success-bg: #000000;
+
+// Typography
+$font-heading: "futura-pt-bold",'futura',sans-serif;
+$font-heading-weight: bold;
+$font-body: "brandon-grotesque",sans-serif;
+$font-body-weight: 300;
+$font-body-style: normal;
+$font-body-bold-weight: bold;
+
+// Radius
+$button-radius: {{ settings.button_radius }}px;
+
+// Transitions
+$transition-duration: 0.45s;
+$transition-timing: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+// Grid
+$grid-medium: 48em;
+$grid-large: 61.85em;
+$grid-widescreen: 87.5em;
+$grid-max-width: 73.75em;
+$grid-gutter: 30px;
+
+// Breakpoints used with the media-query mixin
+$small: 'small';
+$medium: 'medium';
+$medium-down: 'medium-down';
+$medium-up: 'medium-up';
+$large: 'large';
+$large-down: 'large-down';
+$large-up: 'large-up';
+$widescreen: 'widescreen';
+
+$breakpoints: (
+  $small '(max-width: #{$grid-medium - 1})',
+  $medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
+  $medium-down '(max-width: #{$grid-large - 1})',
+  $medium-up '(min-width: #{$grid-medium})',
+  $large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
+  $large-down '(max-width: #{$grid-widescreen - 1})',
+  $large-up '(min-width: #{$grid-large})',
+  $widescreen '(min-width: #{$grid-widescreen})'
+);
+
+
+/*================ CORE ================*/
+//@import url('core/reset.scss');
+html {
+  //font-size: 62.5%;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: $font-body-weight;
+  font-style: $font-body-style;
+
+  font-size: rem-calc(18);
+  line-height: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  line-height: 1.1em;
+  font-weight: $font-heading-weight;
+  color: $color-body-text;
+}
+
+h1 {
+  font-size: rem-calc(38);
+  line-height: 1.1em;
+  @include drop-type;
+  margin: 0;
+  @include media-query($medium-up){
+    font-size: rem-calc(48);
+  }
+}
+
+h2 {
+  @include drop-type;
+  font-size: rem-calc(30);
+  margin: 0 0 0.5rem 0;
+  @include media-query($medium-up){
+    font-size: rem-calc(38);
+  }
+}
+
+h3 {
+  font-size: rem-calc(28);
+  margin: 1rem 0 0.5rem;
+}
+
+h4 {
+  font-family: $font-body;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+h5 {
+  font-weight: $font-heading-weight;
+  font-size: rem-calc(16);
+  color: $color_secondary;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+p {
+  margin: 0 0 1.5rem 0;
+}
+
+a:focus {
+  color: inherit;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.85em;
+}
+
+dl {
+  dt {
+    text-transform: uppercase;
+    font-size: rem-calc(14);
+    letter-spacing: 0.05em;
+  }
+  dd {
+    padding-bottom: 0.2em;
+  }
+}
+
+hr {
+  height: 1px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid $color-accent;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.rte {
+  text-align: left;
+
+  h2, h3, h4, h5 {
+    margin: 1.5rem 0;
+  }
+
+  h4 {
+    letter-spacing: normal;
+    font-weight: normal;
+  }
+
+  img {
+    height: auto;
+  }
+
+  table {
+    table-layout: fixed;
+  }
+
+  p, ul, ol {
+    font-size: rem-calc(18);
+    margin-bottom: 1.2em;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 ($grid-gutter / 2) $grid-gutter;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  strong {
+    font-weight: $font-body-bold-weight;
+  }
+}
+
+a {
+  color: $color-accent;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.is-accordion-title {
+  cursor: pointer;
+  padding: 15px 40px 0.5em 0;
+  position: relative;
+  border-top: 2px solid $color-lightgrey;
+  margin: 0.5em 0 0 0!important;
+  &:after {
+    content: '+';
+    border: 2px solid $color_secondary;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    text-align: center;
+    line-height: 1em;
+  }
+  &.open:after {
+    content: '-';
+  }
+}
+
+
+// Allow table to scroll for tables in the RTE since we don't know
+// how many columns they will contain. Class added by JS.
+.rte-table {
+  overflow: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+// This class is wrapped around YouTube/Vimeo embeds in the RTE
+// to make them responsive and prevent layout breaking
+.rte__video-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 0;
+  height: auto;
+  padding-bottom: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// This class is wrapped around tables in the RTE
+// to prevent layout breaking with a scrollable parent
+.rte__table-wrapper {
+  overflow: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Helpers */
+
+
+.clearfix {
+  @include clearfix;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.js-focus-hidden:focus {
+  outline: none;
+}
+
+.label-hidden {
+  @include visually-hidden;
+
+  // No placeholders, so force show labels
+  .no-placeholder & {
+    @include visually-shown;
+  }
+}
+
+.visually-shown {
+  @include visually-shown;
+}
+
+// Only show when JS is not supported
+.no-js:not(html) {
+  display: none;
+
+  .no-js & {
+    display: block;
+  }
+}
+
+// Only show when JS is supported
+.js {
+  .no-js & {
+    display: none;
+  }
+}
+
+// Only show when browser cookies are not supported
+.supports-no-cookies:not(html) {
+  display: none;
+
+  html.supports-no-cookies & {
+    display: block;
+  }
+}
+
+// Only show when browser cookies are supported
+.supports-cookies {
+  html.supports-no-cookies & {
+    display: none;
+  }
+}
+
+// Skip to content button
+// Overrides .visually-hidden when focused
+.skip-link:focus {
+  @include visually-shown(absolute);
+  z-index: 10000;
+  padding: $grid-gutter / 2;
+  background-color: $color-body;
+  color: $color-body-text;
+  transition: none;
+}
+
+// Hide outline on focus for elements which are given focus by JS
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+.hide {
+  /* stylelint-disable declaration-no-important */
+  display: none !important;
+}
+
+
+/* media-query mixin breakpoints */
+.hide--small {
+  @include media-query($small){
+    display: none;
+  }
+}
+.hide--medium-down {
+  @include media-query($medium-down){
+    display: none;
+  }
+}
+.hide--medium-up {
+  @include media-query($medium-up){
+    display: none;
+  }
+}
+.hide--large-up {
+  @include media-query($large-up){
+    display: none;
+  }
+}
+
+
+/* flexboxgrid breakpoints */
+.hide--xs {
+  display: none;
+}
+.show--xs {
+  display: block;
+}
+
+@media only screen and (min-width: 48em) {
+  .hide--sm {
+    display: none;
+  }
+  .show--sm {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 61.85em) {
+  .hide--md {
+    display: none;
+  }
+  .show--md {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .hide--lg {
+    display: none;
+  }
+  .show--lg {
+    display: block;
+  }
+}
+
+
+
+// Spacing helpers
+
+// Margin (m) or padding (p).
+// Top (t), left (l), right (r), bottom (b), vertical (v), horizontal (h), or all (a).
+// None (n), small (s), medium (m), or large (l).
+
+.ptn { padding-top: 0; }
+.prn { padding-right: 0; }
+.pbn { padding-bottom: 0; }
+.pln { padding-left: 0; }
+.pvn { padding-top: 0; padding-bottom: 0;}
+.phn { padding-left: 0; padding-right: 0; }
+.pan { padding: 0; }
+
+.pts { padding-top: $grid-gutter; }
+.prs { padding-right: $grid-gutter; }
+.pbs { padding-bottom: $grid-gutter; }
+.pls { padding-left: $grid-gutter; }
+.pvs { padding-top: $grid-gutter; padding-bottom: $grid-gutter;}
+.phs { padding-left: $grid-gutter; padding-right: $grid-gutter; }
+.pas { padding: $grid-gutter; }
+
+.ptm { padding-top: $grid-gutter*2; }
+.prm { padding-right: $grid-gutter*2; }
+.pbm { padding-bottom: $grid-gutter*2; }
+.plm { padding-left: $grid-gutter*2; }
+.pvm { padding-top: $grid-gutter*2; padding-bottom: $grid-gutter*2;}
+.phm { padding-left: $grid-gutter*2; padding-right: $grid-gutter*2; }
+.pam { padding: $grid-gutter*2; }
+
+.ptl { padding-top: $grid-gutter*4; }
+.prl { padding-right: $grid-gutter*4; }
+.pbl { padding-bottom: $grid-gutter*4; }
+.pll { padding-left: $grid-gutter*4; }
+.pvl { padding-top: $grid-gutter*4; padding-bottom: $grid-gutter*4;}
+.phl { padding-left: $grid-gutter*4; padding-right: $grid-gutter*4; }
+.pal { padding: $grid-gutter*4; }
+
+.mtn { margin-top: 0; }
+.mrn { margin-right: 0; }
+.mbn { margin-bottom: 0; }
+.mln { margin-left: 0; }
+.mvn { margin-top: 0; margin-bottom: 0;}
+.mhn { margin-left: 0; margin-right: 0; }
+.man { margin: 0; }
+
+.mts { margin-top: $grid-gutter; }
+.mrs { margin-right: $grid-gutter; }
+.mbs { margin-bottom: $grid-gutter; }
+.mls { margin-left: $grid-gutter; }
+.mvs { margin-top: $grid-gutter; margin-bottom: $grid-gutter;}
+.mhs { margin-left: $grid-gutter; margin-right: $grid-gutter; }
+.mas { margin: $grid-gutter; }
+
+.mtm { margin-top: $grid-gutter*2; }
+.mrm { margin-right: $grid-gutter*2; }
+.mbm { margin-bottom: $grid-gutter*2; }
+.mlm { margin-left: $grid-gutter*2; }
+.mvm { margin-top: $grid-gutter*2; margin-bottom: $grid-gutter*2;}
+.mhm { margin-left: $grid-gutter*2; margin-right: $grid-gutter*2; }
+.mam { margin: $grid-gutter*2; }
+
+.mtl { margin-top: $grid-gutter*4; }
+.mrl { margin-right: $grid-gutter*4; }
+.mbl { margin-bottom: $grid-gutter*4; }
+.mll { margin-left: $grid-gutter*4; }
+.mvl { margin-top: $grid-gutter*4; margin-bottom: $grid-gutter*4;}
+.mhl { margin-left: $grid-gutter*4; margin-right: $grid-gutter*4; }
+.mal { margin: $grid-gutter*4; }
+
+
+// Typography helpers
+
+.text-align--left { text-align: left; }
+.text-align--right { text-align: right; }
+.text-align--center { text-align: center; }
+
+.text-color--white { color: $color-white; }
+.text-color--black { color: $color-black; }
+
+.section__title {
+  font-size: rem-calc(38);
+  margin: 0.5rem 0;
+  @include media-query($medium-up){
+    font-size: rem-calc(45);
+  }
+}
+
+.td-center--medium-up {
+  @include media-query($medium-up){
+    text-align: center;
+  }
+}
+.td-right--medium-up {
+  @include media-query($medium-up){
+    text-align: right;
+  }
+}
+
+.page__title {
+  text-align: center;
+  margin: 2rem 0;
+}
+.title--alt {
+  text-transform: uppercase;
+  color: $color-body-text;
+}
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+
+/*================ COMPONENTS ================*/
+.button,
+input[type=submit],
+input[type=button],
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  border: 1px solid $color-accent;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  user-select: none;
+  appearance: none;
+  color: $color-white;
+  border-radius: $button-radius;
+  padding: 0.7rem 2.2rem;
+  margin: 0.1rem 0;
+  font-family: $font-heading;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  position: relative;
+  background: $color-accent;
+  transition: background-color $transition-duration $transition-timing,
+    color $transition-duration $transition-timing,
+    border $transition-duration $transition-timing;
+  &:not([disabled]):hover {
+    background-color: transparent;
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+  &:hover {
+    background-color: transparent;
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    &:hover {
+      background: inherit;
+      border-color: inherit;
+      color: inherit;
+    }
+  }
+  &.button--large {
+    font-size: 0.9em;
+    padding: 0.5rem 1rem;
+  }
+  &.button--small {
+    font-size: rem-calc(10);
+    padding: 0.5rem 1rem;
+  }
+  &.button--full {
+    width: 100%;
+  }
+  &.button--cancel {
+    background-color: $color_secondary;
+    border-color: $color_secondary;
+    &:hover {
+      background-color: transparent;
+      border-color: $color_secondary;
+      color: $color_secondary;
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+
+  .no-svg & {
+    display: none;
+  }
+}
+
+.icon--wide {
+  width: 40px;
+}
+
+svg,
+symbol {
+  &.icon:not(.icon--full-color) {
+    circle,
+    ellipse,
+    g,
+    line,
+    path,
+    polygon,
+    polyline,
+    img {
+      max-width: 100%;
+    }
+
+    rect {
+      fill: inherit;
+      stroke: inherit;
+    }
+  }
+}
+
+// A generic way to visually hide content while
+// remaining accessible to screen readers (h5bp.com)
+.icon-fallback-text {
+  @include visually-hidden;
+
+  .no-svg & {
+    @include visually-shown(static);
+  }
+}
+
+// Payment icons
+.payment-icons {
+  user-select: none;
+  cursor: default;
+}
+
+
+/*================ TEMPLATES ================*/
+
+.wrap {
+
+  font-family: $font-body;
+  font-weight: $font-body-weight;
+  font-style: $font-body-style;
+
+  p, span {
+    font-family: $font-body;
+    font-style: $font-body-style;
+    letter-spacing: normal;
+  }
+
+  .btn {
+    font-family: $font-heading;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: $button-radius;
+    padding: 0.7rem 1.5rem;
+    font-size: rem-calc(14);
+    @include media-query($medium-up){
+      font-size: 1rem;
+      padding: 0.7rem 2.2rem;
+    }
+  }
+
+  .btn__content {
+    font-family: $font-heading;
+    font-weight: bold;
+  }
+
+  h2, h3, h4, h5 {
+    font-family: $font-heading;
+    line-height: 1.1em;
+    font-weight: $font-heading-weight;
+    line-height: 1.1em;
+    color: #11435c;
+    text-shadow: none;
+    -webkit-text-stroke: transparent;
+    text-stroke: transparent;
+  }
+
+  .section__title {
+    color: #11435c;
+    text-shadow: none;
+    -webkit-text-stroke: transparent;
+    text-stroke: transparent;
+    font-size: rem-calc(24);
+  }
+
+  .wrap,
+  .main,
+  .sidebar,
+  .sidebar::after {
+    background: transparent;
+    box-shadow: none;
+  }
+
+
+  .field__input--select {
+    padding-right: 35px;
+  }
+
+}
+
+.floating-labels .field--show-floating-label .field__label {
+  margin-top: 4px;
+  line-height: 1em;
+}
+
