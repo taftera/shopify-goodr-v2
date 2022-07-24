@@ -1,0 +1,122 @@
+/* Feetures collapsible */
+.gdr_collapsible {
+  background-color: #f5f2ee;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  color: #e86384;
+  cursor: pointer;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+  outline: none;
+  text-align: left;
+  width: 100%;
+}
+
+.active,
+.gdr_collapsible:hover {
+  background-color: #e86384;
+  color: #ffffff;
+  border-bottom: 1px solid #4ec0b2;
+}
+
+.gdr_content {
+  padding: 0 2rem;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* -> Goodr Collapsible Stores */
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+#input-container #input-search,
+#input-container #select-state {
+  border: 1px solid #e86384;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  text-align: center;
+  padding: 1rem;
+  width: calc(50% - 1rem);
+}
+#input-container #select-state {
+  background-color: #e86384;
+  color: #ffffff;
+  outline: none;
+}
+#input-container #input-search:focus-visible,
+#input-container #select-state:focus-visible {
+  box-shadow: none;
+  outline: none;
+  outline-offset: 0;
+}
+#input-container #select-state option {
+  background-color: var(--gdr-lightgray);
+  color: var(--gdr-secondary);
+}
+#input-container #select-state option:disabled {
+  color: var(--gdr-gray);
+}
+
+#error-state .error {
+  background-color: red;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  /*   margin-bottom: 1rem; */
+  margin-top: 0.5rem;
+  text-align: center;
+}
+#store-display {
+  margin-bottom: 3rem;
+}
+.gdr--collapsible {
+  background-color: #e86384;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius: 0 !important;
+}
+
+.gdr--active,
+.gdr--collapsible:hover {
+  background-color: #4ec0b2;
+}
+
+.gdr--content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: var(--gdr-lightgray);
+}
+.gdr--content-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+@media (max-width: 425px) {
+  #input-container,
+  .gdr--content-data {
+    flex-direction: column;
+  }
+  #input-container #input-search,
+  #input-container #select-state {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  .gdr--content-data img {
+    max-width: 100%;
+  }
+}

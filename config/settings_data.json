@@ -255,7 +255,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/NavSquares_300x300Tortoiseshell_400x_90e2811d-a96e-4d87-a063-1772eb79fff8.jpg",
               "title": "BEST SELLERS",
-              "image_url": "shopify:\/\/collections\/top-sellers"
+              "image_url": "shopify:\/\/collections\/all-models"
             }
           },
           "8267c231-fe8d-4bdf-8660-8ce2dc668d59": {
@@ -263,7 +263,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/NavSquares_300x300PHG_400x_04e3a8f9-e1cb-491a-95c3-3a05bcf0a603.jpg",
               "title": "PHG's",
-              "image_url": "shopify:\/\/collections\/phg"
+              "image_url": "shopify:\/\/collections\/phgs"
             }
           },
           "d4cd3abf-3e24-4e0c-bf7c-788d91fb7cc5": {
@@ -271,7 +271,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/NavSquares_300x300WrapG_400x_055bd7a6-0158-4f63-bfa4-860e2a8f5a64.jpg",
               "title": "WRAP G's",
-              "image_url": "shopify:\/\/collections\/wrap-g"
+              "image_url": "shopify:\/\/collections\/wrap-gs"
             }
           },
           "03514cf6-16ae-476e-a8f6-55d12461a412": {
@@ -355,40 +355,42 @@
           "1534607005399": {
             "type": "link_list",
             "settings": {
-              "footer_title": "Get in Touch",
-              "footer_linklist": "footer"
-            }
-          },
-          "1534607015705": {
-            "type": "link_list",
-            "settings": {
-              "footer_title": "Come say hey",
-              "footer_linklist": ""
+              "footer_title": "¡Contáctanos!",
+              "footer_linklist": "get-in-touch"
             }
           },
           "1534607029947": {
             "type": "link_list",
             "settings": {
-              "footer_title": "THE ESSENTIALS",
-              "footer_linklist": ""
+              "footer_title": "Información Básica",
+              "footer_linklist": "nitty-gritty"
+            }
+          },
+          "1534607015705": {
+            "type": "link_list",
+            "settings": {
+              "footer_title": "Hola qué tal",
+              "footer_linklist": "come-say-hey"
             }
           },
           "004cf357-4eaf-4d3d-8bbe-bcc74e37010b": {
             "type": "custom_logo",
             "settings": {
               "footer_title": "",
+              "logo_img": "shopify:\/\/shop_images\/1-percent-for-the-planet.png",
               "logo_url": "shopify:\/\/pages\/one-percent-for-the-planet"
             }
           }
         },
         "block_order": [
           "1534607005399",
-          "1534607015705",
           "1534607029947",
+          "1534607015705",
           "004cf357-4eaf-4d3d-8bbe-bcc74e37010b"
         ],
         "settings": {
-          "footer_content": "We are recklessly committed to fun... BLAH, BLAH, BLAH, sunglasses.",
+          "logo": "shopify:\/\/shop_images\/GoodrSunglasses_Logo_RGB.png",
+          "footer_content": "Estamos excesivamente comprometidos con la diversión ... bla, bla, bla, lentes de sol.",
           "show_payment_icons": false
         }
       },
@@ -36855,55 +36857,39 @@
       "1653896867d04abd97": {
         "type": "new-image-slider",
         "blocks": {
-          "a1c7ea0d-e1b2-4e4f-a60c-8cf990f9b7f2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/ThorLoveAndThunder_VCB_004b594b-05bd-4e2d-b9cd-7eaca6b6f53a.jpg",
-              "image_url": ""
-            }
-          },
           "b6082bf6-c236-4d50-8dda-fdd36e06de1c": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/VCB_350x600_Black.jpg",
+              "image": "shopify:\/\/shop_images\/VCB_350x600_2.jpg",
               "image_url": "shopify:\/\/products\/captain-americas-uv-shield"
             }
           },
           "8624545d-70ce-4b8c-9074-10d7d0f36c44": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/VCB_350x600_King.jpg",
-              "image_url": ""
+              "image": "shopify:\/\/shop_images\/VCB_350x600_3.jpg",
+              "image_url": "shopify:\/\/collections\/the-ogs"
             }
           },
           "7d48b07c-7caa-4069-9429-b7e82b6e2858": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/VCB_350x600_WrapG.jpg",
-              "image_url": ""
-            }
-          },
-          "d4d88316-983a-4896-9bf4-046859767a06": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/0622_RidgeSupply_VCBsCOLLECTION.jpg",
-              "image_url": ""
+              "image": "shopify:\/\/shop_images\/VCB_350x600_4.jpg",
+              "image_url": "shopify:\/\/collections\/wrap-gs"
             }
           },
           "41331f9d-1e60-4050-a347-b362859aefd9": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/VCB_350x600_Best_1.jpg",
-              "image_url": ""
+              "image": "shopify:\/\/shop_images\/VCB_350x600_1.jpg",
+              "image_url": "shopify:\/\/collections\/all-models"
             }
           }
         },
         "block_order": [
-          "a1c7ea0d-e1b2-4e4f-a60c-8cf990f9b7f2",
           "b6082bf6-c236-4d50-8dda-fdd36e06de1c",
           "8624545d-70ce-4b8c-9074-10d7d0f36c44",
           "7d48b07c-7caa-4069-9429-b7e82b6e2858",
-          "d4d88316-983a-4896-9bf4-046859767a06",
           "41331f9d-1e60-4050-a347-b362859aefd9"
         ],
         "settings": {
@@ -36918,32 +36904,32 @@
           "f833282a-d0d9-488e-b595-066a2ae3939d": {
             "type": "icon_item",
             "settings": {
-              "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFun.jpg",
-              "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFun.jpg",
+              "icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-Divertidos.png",
+              "hover_icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-Divertidos1.png",
               "icon_url": "shopify:\/\/pages\/fun"
             }
           },
           "c6489937-4bcc-42ac-8271-acd58a3c8d19": {
             "type": "icon_item",
             "settings": {
-              "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFashionable.jpg",
-              "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFashionable.jpg",
+              "icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-A-la-moda.png",
+              "hover_icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-A-la-moda1.png",
               "icon_url": "shopify:\/\/pages\/fashionable"
             }
           },
           "e32264cb-7081-4679-bc92-bbb806c4d4d5": {
             "type": "icon_item",
             "settings": {
-              "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFunctional.jpg",
-              "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFunctional.jpg",
+              "icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-Funcionales.png",
+              "hover_icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-Funcionales1.png",
               "icon_url": "shopify:\/\/pages\/functional"
             }
           },
           "022ad02d-863a-45d0-a573-bcffcfaf7cf2": {
             "type": "icon_item",
             "settings": {
-              "icon": "shopify:\/\/shop_images\/ValueIcons_300x300_DefaultFfordable.jpg",
-              "hover_icon": "shopify:\/\/shop_images\/ValueIcons_300x300_HoverFfordable.jpg",
+              "icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-Accesibles.png",
+              "hover_icon": "shopify:\/\/shop_images\/Iconos-Goodr-2022-Accesibles1.png",
               "icon_url": "shopify:\/\/pages\/ffordable"
             }
           }
@@ -36963,12 +36949,12 @@
         "type": "new-three-full-image-section",
         "settings": {
           "title": "ALL TIME BEST",
-          "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Bosley_e123fcd1-b278-42e1-823f-07079496fd50.jpg",
-          "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Bosley.jpg",
+          "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Bosley.jpg",
+          "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Bosley_1785db13-5052-45fc-bef8-ba41c6efbaa6.jpg",
           "image_1_url": "shopify:\/\/products\/bosleys-basset-hound-dreams",
           "enable_zoom_1": true,
-          "image_2": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Ginger_30d25b1d-0a06-4f3c-9cb1-bfaa3fa8a79c.jpg",
-          "mobile_image_2": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Ginger.jpg",
+          "image_2": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_A-Gingers.jpg",
+          "mobile_image_2": "shopify:\/\/shop_images\/FullWidthProduct_800x533_-A-Gingers.jpg",
           "image_2_url": "shopify:\/\/products\/a-gingers-soul",
           "enable_zoom_2": true,
           "image_3_url": "",
@@ -37151,8 +37137,8 @@
         "type": "new-three-full-image-section",
         "settings": {
           "title": "",
-          "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_AboutUs.jpg",
-          "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_AboutUs.jpg",
+          "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Sobre-nosotros.jpg",
+          "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Sobre-nosotros.jpg",
           "image_1_url": "",
           "enable_zoom_1": false,
           "image_2_url": "#",

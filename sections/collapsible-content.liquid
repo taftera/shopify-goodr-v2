@@ -1,0 +1,127 @@
+<div class="page-width">
+  <div>
+    <h2>{{ section.settings.gdr_header }}</h2>
+  </div>
+  <div>
+    {% for block in section.blocks %}
+      {%- case block.type -%}
+        {%- when 'item' -%}
+        <button type="button" class="gdr_collapsible">{{ block.settings.gdr_subheader }}</button>
+        <div class="gdr_content">{{ block.settings.gdr_subrichtext }}</div>
+        {%- when 'table' -%}
+        <button type="button" class="gdr_collapsible">{{ block.settings.gdr_subheader }}</button>
+        <div class="gdr_content">
+          <table style="min-width: 570px; margin: 3rem 0;">
+            <tbody>
+              <tr>
+              <td style="border: 0 !important;"></td>
+              <td colspan="3" style="background-color: #000000; color: white;" width="84%" align="center">
+              <h3 class="h2" style="margin: 0; color: white;">Localiza Tu Talla De Tenis</h3>
+              </td>
+              </tr>
+              <tr style="background-color: #000000; color: white;">
+              <td width="16%">TALLAS FEETURES</td>
+              <td width="28%">TALLA MEXICANA UNISEX</td>
+              <td width="28%">TALLA AMERICANA HOMBRE</td>
+              <td width="28%">TALLA AMERICANA MUJER</td>
+              </tr>
+              <tr>
+              <td style="background-color: #000000; color: #ffffff;">S</td>
+              <td>21 A 24</td>
+              <td>3 A 6</td>
+              <td>4 A 7</td>
+              </tr>
+              <tr>
+              <td style="background-color: #000000; color: #ffffff;">M</td>
+              <td>24 A 27</td>
+              <td>6 A 9</td>
+              <td>7 A 10</td>
+              </tr>
+              <tr>
+              <td style="background-color: #000000; color: #ffffff;">L</td>
+              <td>27 A 30</td>
+              <td>9 A 12</td>
+              <td>10 A 13</td>
+              </tr>
+              <tr>
+              <td style="background-color: #000000; color: #ffffff;">XL</td>
+              <td>30 A 33</td>
+              <td>12 A 15</td>
+              <td>NO APLICA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      {%- endcase -%}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "GoodrCollapsible",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collapsible block"
+    },
+    {
+      "type": "text",
+      "id": "gdr_header",
+      "label": "Header",
+      "default": "#Feetures"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Block",
+      "limit": 25,
+      "settings": [
+        {
+          "type": "text",
+          "id": "gdr_subheader",
+          "label": "Subheader",
+          "default": "#Feetures"
+        },
+        {
+          "type": "richtext",
+          "id": "gdr_subrichtext",
+          "label": "Sub Text Area"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "name": "Sizes",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "gdr_subheader",
+          "label": "Subheader",
+          "default": "#Feetures"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Goodr Collapsible",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

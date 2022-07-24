@@ -1,0 +1,122 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-template",
+      "blocks": {
+        "e08cc270-2632-49db-8566-ec80161534db": {
+          "type": "heading",
+          "settings": {
+            "title": "Preguntas frecuentes",
+            "text": "",
+            "align_text": "left"
+          }
+        }
+      },
+      "block_order": [
+        "e08cc270-2632-49db-8566-ec80161534db"
+      ],
+      "settings": {
+      }
+    },
+    "16586854950b9f29ef": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16586854953311a0f0-0": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Opciones de pago.",
+            "gdr_subrichtext": "<p>En <strong>goodr.mx<\/strong> contamos con dos opciones de pago:<strong>Paypal<\/strong> (Tarjeta de Crédito directa ó cuenta paypal) y<strong>Oxxo Pago<\/strong> (con tiempo límite de 3 días para realizar el depósito).<\/p><p>Contamos con un <strong>plan de mensualidades a 3 meses<\/strong>, válido comprando mínimo 2,500 MXN. Pagando exclusivamente con Paypal (tarjetas Banamex, BBVA, Banorte, HSBC, Santander y American Express).<\/p>"
+          }
+        },
+        "16586854953311a0f0-1": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Facturación",
+            "gdr_subrichtext": "<p>Sólo se puede solicitar tu factura durante los siguientes 2 días naturales posteriores a tu compra enviando un correo a <a href=\"mailto:admin@natural.gs\">admin@natural.gs<\/a> con tus datos completos, en caso que hayan pasado los 2 días no se podrá generar.<\/p>"
+          }
+        },
+        "16586854953311a0f0-2": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Envíos y entrega.",
+            "gdr_subrichtext": "<p><strong>Información sobre tiempos de envío<\/strong><br\/>El tiempo de entrega es de 3 a 7 días hábiles; si el destino es CDMX, Monterrey o Guadalajara el tiempo de entrega es de 2 a 3 días hábiles. (Puede variar dependiendo de la zona de entrega)<\/p><p><strong>Información sobre días y horas de entrega<br\/><\/strong>Los envíos se procesan para su salida, de lunes a viernes (a excepción de los días festivos) antes de las 9 a.m. Es decir si realizaste tu compra a las 8 a.m., saldrá ese mismo día para entrega, en caso de que la generes después de las 9 a.m. saldría al día siguiente. Si realizas tu compra en sábado o domingo, se envía el lunes posterior a ello.<\/p><p><strong>Información sobre empresa paquetera<br\/><\/strong>El servicio de paquetería que utilizamos es UPS.<br\/>Contacto directo de servicio al cliente UPS 01-800-7433-877.<\/p><p><strong>Información sobre costo del envío<br\/><\/strong>El envío tiene un costo de $99 MXN.<\/p><p><strong>Información sobre días festivos e interrupciones del servicio<br\/><\/strong>Prepara tus pedidos con tiempo en los días festivos, estaremos fuera de servicio en las siguiente fechas:<br\/>Del 23 al 25 de Diciembre (se reanudan envíos 28 y 29 de diciembre), 30 al 1 Enero (se reanudan envíos a partir del 4 de Enero), 5 de Febrero, 21 de Marzo, Días Santos, 1 de Mayo, 16 de Septiembre, 20 de Noviembre. (Contemplando días de asueto)<\/p>"
+          }
+        },
+        "61cdceea-38a3-4f7a-9db9-2e148862f17d": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Órdenes en proceso.",
+            "gdr_subrichtext": "<p><strong>Información sobre número de rastreo<br\/><\/strong>Si tu pedido fue generado antes de las 9 a.m., la guía del envío te la compartiremos a través del correo con el que se realizó el pedido antes de las 5 p.m., en caso que se haya realizado posterior a las 9 a.m., recibirás tu guía al día siguiente previo a las 5 p.m.<br\/>Si efectuaste el pago y no has recibido tu guía, envíanos un correo a <a href=\"mailto:hola@goodr.mx\">hola@goodr.mx<\/a><\/p><p><strong>Estatus de tu orden<br\/><\/strong>Con la guía proporcionada por correo, podrás revisar la fecha estimada de entrega y rastrear directamente tu pedido en <a href=\"https:\/\/www.ups.com\/track?loc=es_MX&requester=ST\/\">UPS<\/a><\/p>"
+          }
+        },
+        "6e7b0588-a4f2-42dd-9c8c-b3edac5be8ad": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Expertos que pueden asesorarte.",
+            "gdr_subrichtext": "<p>En caso de que necesites más información sobre los modelos que estés revisando escríbenos a <a href=\"mailto:hola@goodr.mx\">hola@goodr.mx<\/a><\/p>"
+          }
+        },
+        "fd39dcbb-e4ea-473f-81ac-57469673fceb": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Consejos de limpieza y cuidados.",
+            "gdr_subrichtext": "<p>No es que pensemos que estás limpiando tus goodr con una fibra metálica para sartén, PERO ... para mantenerlos en perfectas condiciones y que no muestren signos de desgaste natural, recomendamos:<\/p><p>1.- Usar un limpiador de lentes a base de gel y un paño de microfibra ... ¡la bolsa en la que vienen funciona de maravilla!<br\/>2.- Jabón suave y agua, después secar suavemente con un paño suave, ¡también funciona!<br\/>3.- Intentar evitar las aguas bravas en tus lentes. No se recomienda el agua salada, el agua de la piscina y las aguas pantanosas infestadas de mosquitos.<br\/>4.- Guardarlos en la bolsa cuando no los uses.<br\/>5.- Colocarlos cómodamente sobre una almohada con incrustaciones de oro por la noche también asegurará su longevidad.<\/p>"
+          }
+        },
+        "72150df9-0c1d-4cd3-95a2-23e6695fcd02": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Devoluciones y cambios.",
+            "gdr_subrichtext": "<p>Estamos en la mejor disposición de evaluar tu caso. (envíanos el detalle para poder revisarlo al correo <a href=\"mailto:hola@goodr.mx\">hola@goodr.mx<\/a>)<\/p>"
+          }
+        },
+        "33b0a63c-8daa-454c-89e0-038947c8d468": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Garantías.",
+            "gdr_subrichtext": "<p>Nuestra política tiene una duración de <strong>30 días en garantía<\/strong> contra defectos de fábrica o en materiales. Los productos que entren en garantía se cambian por otros iguales o de valor equivalente (sujeto a disponibilidad). Todas las garantías son evaluadas individualmente.<\/p>"
+          }
+        },
+        "85895d99-c9cc-4615-8a09-8854ff24d823": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Políticas de Devoluciones.",
+            "gdr_subrichtext": "<p>A veces no es malo ser inseguro. Por ejemplo, aquí en Goodr estamos tratando desesperadamente de llenar el vacío emocional en nuestros corazones con el amor de nuestros clientes. Realmente queremos que nos ames. Por favor ámanos. Necesitamos esto.<\/p><p>Como parte de nuestro desesperado grito de atención, queremos asegurarnos de que esté 100% satisfecho con el producto que compró. Queremos que hables de nosotros con todos sus amigos (a quienes deberías presentarnos totalmente).<br\/>Para ayudarte a llegar allí, ofrecemos un período de devolución\/cambio de 30 días para todos los artículos pedidos en goodr.com con las siguientes advertencias:<br\/>» Todos los artículos devueltos o cambiados deben estar en las mismas condiciones en las que se entregaron, lo que significa que no están gastados, sin usar y sin daños (con excepción a los daños causados por ataques de osos realizados caso por caso).<br\/>» La garantía corre a partir de la fecha de compra original.<br\/>» Todas las devoluciones y cambios deben iniciarse desde el punto de venta original (es decir, goodr.com)<br\/>» NO aceptamos devoluciones o cambios en artículos que están específicamente marcados como \"VENTA FINAL\" o “SALE”.<\/p>"
+          }
+        },
+        "836b333c-2556-4523-b16f-f4423bf35032": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Políticas de Garantía.",
+            "gdr_subrichtext": "<p>Información sobre tiendas físicas:<\/p><p><a href=\"https:\/\/goodr.mx\/pages\/tiendas-goodr-mexico\">Ver tiendas<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16586854953311a0f0-0",
+        "16586854953311a0f0-1",
+        "16586854953311a0f0-2",
+        "61cdceea-38a3-4f7a-9db9-2e148862f17d",
+        "6e7b0588-a4f2-42dd-9c8c-b3edac5be8ad",
+        "fd39dcbb-e4ea-473f-81ac-57469673fceb",
+        "72150df9-0c1d-4cd3-95a2-23e6695fcd02",
+        "33b0a63c-8daa-454c-89e0-038947c8d468",
+        "85895d99-c9cc-4615-8a09-8854ff24d823",
+        "836b333c-2556-4523-b16f-f4423bf35032"
+      ],
+      "settings": {
+        "gdr_header": ""
+      }
+    },
+    "16586854828d8694de": {
+      "type": "collapsible-code",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16586854950b9f29ef",
+    "16586854828d8694de"
+  ]
+}

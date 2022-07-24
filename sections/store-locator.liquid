@@ -1,0 +1,151 @@
+<div class="container">
+  <div class="col-xs-12">
+    <h1 class="page__title">{{ page.title | escape }}</h1>
+  </div>
+  <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div id="input-container">
+      <input id="input-search" type="text" placeholder="Busca por estado" />
+      <select id="select-state">
+        <option selected disabled>Selecciona un Estado</option>
+        <option value="Aguascalientes">Aguascalientes</option>
+        <option value="Baja California">Baja California</option>
+        <option value="Baja California Sur">Baja California Sur</option>
+        <option value="Campeche">Campeche</option>
+        <option value="Chiapas">Chiapas</option>
+        <option value="Chihuahua">Chihuahua</option>
+        <option value="CDMX">Ciudad de México</option>
+        <option value="Coahuila">Coahuila</option>
+        <option value="Colima">Colima</option>
+        <option value="Durango">Durango</option>
+        <option value="Estado de México">Estado de México</option>
+        <option value="Guanajuato">Guanajuato</option>
+        <option value="Guerrero">Guerrero</option>
+        <option value="Hidalgo">Hidalgo</option>
+        <option value="Jalisco">Jalisco</option>
+        <option value="Michoacán">Michoacán</option>
+        <option value="Morelos">Morelos</option>
+        <option value="Nayarit">Nayarit</option>
+        <option value="Nuevo León">Nuevo León</option>
+        <option value="Oaxaca">Oaxaca</option>
+        <option value="Puebla">Puebla</option>
+        <option value="Querétaro">Querétaro</option>
+        <option value="Quintana Roo">Quintana Roo</option>
+        <option value="San Luis Potosí">San Luis Potosí</option>
+        <option value="Sinaloa">Sinaloa</option>
+        <option value="Sonora">Sonora</option>
+        <option value="Tabasco">Tabasco</option>
+        <option value="Tamaulipas">Tamaulipas</option>
+        <option value="Tlaxcala">Tlaxcala</option>
+        <option value="Veracruz">Veracruz</option>
+        <option value="Yucatán">Yucatán</option>
+        <option value="Zacatecas">Zacatecas</option>
+      </select>
+    </div>
+    <div id="error-state" style="display: none">
+      <p class="error">Favor de presionar 'Enter'</p>
+    </div>
+    <div id="store-display"></div>
+  </div>
+</div>
+
+<script src="{{ 'store-locations.js' | asset_url }}"></script>
+<script>
+  const inputSearch = document.querySelector('#input-search');
+  const selectState = document.querySelector('#select-state');
+  const storeDisplay = document.querySelector('#store-display');
+  const errorState = document.querySelector('#error-state');
+  function findMatches(wordToMatch, storeLocations) {
+    return storeLocations.filter((store) => {
+      const regex = new RegExp(wordToMatch, 'gi');
+      return store.state.match(regex) || store.alcaldia.match(regex);
+    });
+  }
+  function displayMatches() {
+    const matchArray = findMatches(this.value, storeLocations);
+    const html = matchArray.map((place) => {
+      const regex = new RegExp(this.value, 'gi');
+      const storeAlcaldia = place.alcaldia.replace(
+        regex,
+        `<span>${this.value}</span>`
+      );
+      const storeState = place.state.replace(
+        regex,
+        `<span>${this.value}</span>`
+      );
+      const storeName = place.name;
+      const storeLocal = place.local;
+      const storeStreet = place.calle;
+      const storeCity = place.colonia;
+      const storePostalCode = place.postal_code;
+      const storeTelefono = place.phone;
+      const storeLatitude = place.latitude;
+      const storeLongitude = place.longitude;
+      const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${storeName},${storeState},Mexico&zoom=15&size=400x400&maptype=roadmap&markers=color:green%7Clabel:G%7C${storeLatitude},${storeLongitude}&key=AIzaSyDNkdwXjP46pZ-wxLYcdACWeltTMJZqdOo`;
+      const linkUrl = `https://www.google.com/maps/search/${storeName},${storeState},Mexico`;
+      return `
+        <button type="button" class="gdr--collapsible">
+          ${storeAlcaldia}, ${storeState} - ${storeName}
+        </button>
+        <div class="gdr--content">
+          <div class="gdr--content-data">
+            <div>
+              <h3>${storeName}</h3>
+              <span>${storeStreet}</span><br/>
+              <span>${storeAlcaldia}</span>, <span>${storeCity}</span><br/>
+              <span>${storeState}</span><br/>
+              <span>Código Postal: ${storePostalCode}</span><br/>
+              <span>Local: ${storeLocal}</span>
+            </div>
+            <div>
+              <a href="${linkUrl}" alt="${storeName} | ${storeState}" title="${storeName} | ${storeState}" target="_blank"><img style="margin: 1rem 0;" src="${mapUrl}" /></a>
+            </div>
+          </div>
+        </div>`;
+      });
+    storeDisplay.innerHTML = html.join(' ');
+    
+    // Collapsible JS Script
+    var coll = document.getElementsByClassName("gdr--collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("gdr--active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  }
+  inputSearch.addEventListener('change', displayMatches);
+  inputSearch.addEventListener('keyup', displayMatches);
+  inputSearch.addEventListener('input', displayMatches);
+  selectState.addEventListener('change', (event) => {
+    inputSearch.value = event.target.value;
+    inputSearch.focus();
+    errorState.style.display = 'block';
+  });
+  const availableStates = [];
+  storeLocations.filter((store) => {
+    if (!availableStates.includes(store.state)) {
+      return availableStates.push(store.state);
+    }
+  });
+  const stateOptions = document.querySelectorAll('#select-state option');
+  stateOptions.forEach((option) => {
+    //console.log(option.value);
+    if (!availableStates.includes(option.value)) {
+      option.setAttribute('disabled', true);
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "spaced-section"
+}
+{% endschema %}

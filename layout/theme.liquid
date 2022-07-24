@@ -75,10 +75,11 @@
             console.error('wrapper is not right configured');
         }
     })();
-</script>{% render 'pagefly-head' %}
+</script>
+{% render 'pagefly-head' %}
 {% render 'orbislabs_sitemap_noindex' %}
 {% include 'easylockdown_head' %}
-    {% include 'gtm-enhanced-data' %}
+{% include 'gtm-enhanced-data' %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -92,22 +93,7 @@
   	<meta property="og:image:width" content="1600" />
 	<meta property="og:image:height" content="1067" />
   	{% endif %}
-  
-  <!-- facebook domain Code for goodr.com -->
-  <meta name="facebook-domain-verification" content="s9tsq718vmyn1wr1hzzp83ujcumtch" />
-  
-  <!-- Hotjar Tracking Code for goodr.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1152575,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-  
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -116,17 +102,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TVB9VQ');</script>
 <!-- End Google Tag Manager -->
   <meta name="google-site-verification" content="VsOdrKWlpH4SVxFJQwx0ki4v2B8w4WtgTRYsqAW-FIU" />
-  
-<!-- Anti-flicker snippet (recommended) 
-<style>.async-hide { opacity: 0 !important} </style>
-<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-})(window,document.documentElement,'async-hide','dataLayer',5000,
-{'GTM-NN3HFK2':true});</script>
- -->
-
-  
 <!-- Global site tag (gtag.js) - Google Ads: 954015316 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-954015316"></script>
 <script>
@@ -137,36 +112,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   gtag('config', 'AW-954015316');
 </script>
  
-  
- 
-  <!-- Start of Async Drift Code -->
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('zd9wta3kebig');
-</script>
-<!-- End of Async Drift Code -->
   {% if settings.favicon != blank %}
   <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
   {% endif %}
@@ -457,6 +402,9 @@ drift.load('zd9wta3kebig');
  
 {% render 'pagefly-header' %}
    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/leOxg7fhDlnKJDsy1-C41Q" async></script>
+{% if page.template_suffix == 'faq' or page.template_suffix == 'store-locator' %}
+  {{ 'goodrmx_custom.css' | asset_url | stylesheet_tag }}
+{% endif %}
 </head> 
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} {% if page.id != blank %} page-{{ page.id }}{% endif %} {% if article.id != blank %} article-{{ article.id }}{% endif %}">
