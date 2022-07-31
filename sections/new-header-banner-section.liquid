@@ -1,347 +1,376 @@
 <section id="section-{{ section.id }}" class="header-banner-section">
-	<div class="header-banner-box {{ section.settings.box_layout }}">
-      	<div class="header-banner-box-left" {% if section.settings.bg_image != blank %} style="background-image: url('{{ section.settings.bg_image | img_url: "master" }}');"{% endif %}>
-      		<div class="banner-content-box text--{{ section.settings.heading_align }}">
-              	{%- if section.settings.title != blank -%}
-              		<h2 class="banner_title">{{ section.settings.title }}</h2>
-              	{%- endif -%}
-              	{%- if section.settings.button_text != blank and section.settings.button_url != blank -%}
-              		<a href="{{ section.settings.button_url }}" class="button" {% if template.name == "index" %} onclick="gtag('event', 'Click', { 'event_category': 'Home', 'event_label':'{{ section.settings.button_url }}', 'event_action':'Shop Now Button' });" {% endif %} >{{ section.settings.button_text }}</a>
-              	{%- endif -%}
-          	</div>
-		</div>
-      	<div class="header-banner-box-right" {% if section.settings.image != blank %} style="background-image: url('{{ section.settings.image | img_url: "master" }}');"{% endif %}></div>
-	</div>
+  <div class="header-banner-box {{ section.settings.box_layout }}">
+    <div
+      class="header-banner-box-left"
+      {% if section.settings.bg_image != blank %}
+        style="background-image: url('{{ section.settings.bg_image | img_url: "master" }}');"
+      {% endif %}
+    >
+      <div class="banner-content-box text--{{ section.settings.heading_align }}">
+        {%- if section.settings.subtitle != blank -%}
+          <h3 class="banner_subtitle">{{ section.settings.subtitle }}</h3>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="banner_title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.button_text != blank and section.settings.button_url != blank -%}
+          <a
+            href="{{ section.settings.button_url }}"
+            class="button"
+            {% if template.name == "index" %}
+              onclick="gtag('event', 'Click', { 'event_category': 'Home', 'event_label':'{{ section.settings.button_url }}', 'event_action':'Shop Now Button' });"
+            {% endif %}
+          >
+            {{- section.settings.button_text -}}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+    <div
+      class="header-banner-box-right"
+      {% if section.settings.image != blank %}
+        style="background-image: url('{{ section.settings.image | img_url: "master" }}');"
+      {% endif %}
+    ></div>
+  </div>
 </section>
 
 {% schema %}
-  {
-    "name": "New Header Banner",
-	"class": "new-header-banner-section",
-    "settings": [
-	  {
-        "type": "header",
-        "content": "Header Image"
-      },
-	  {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      },
-	  {
-        "type": "header",
-        "content": "Header Content"
-      },
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "Shop All"
-      },
-	  {
-        "type": "text",
-        "id": "button_text",
-        "label": "Button text",
-        "default": "Shop Now"
-      },
-	  {
-        "type": "url",
-        "id": "button_url",
-        "label": "Button Url"
-      },
-      {
-        "type": "select",
-        "id": "heading_align",
-        "label": "Box Text align",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left",
-        "info": "Left"
-      },
-      {
-        "type": "image_picker",
-        "id": "bg_image",
-        "label": "Content Box BG Image"
-      },
-	  {
-        "type": "header",
-        "content": "Content Layout"
-      },
-	  {
-        "type": "color",
-        "id": "heading_color",
-        "label": "Heading Color",
-		"default": "#FFFFFF"
-      },
-	  {
-        "type": "checkbox",
-        "id": "heading_overlay",
-        "label": "Heading overlay",
-        "default": true
-      },
-	  {
-        "type": "color",
-        "id": "heading_overlay_color",
-        "label": "Heading overlay Color",
-        "default": "#e86384"
-      },
-	  {
-        "type": "color",
-        "id": "btn_bg_color",
-        "label": "Button BG Color",
-		"default": "#e86384"
-      },
-	  {
-        "type": "color",
-        "id": "btn_font_color",
-        "label": "Button Font Color",
-		"default": "#FFFFFF"
-      },
-	  {
-        "type": "color",
-        "id": "btn_bg_color_hover",
-        "label": "Hover - Button BG Color",
-		"default": "#4ec0b2"
-      },
-	  {
-        "type": "color",
-        "id": "btn_font_color_hover",
-        "label": "Hover - Button Font Color",
-		"default": "#FFFFFF"
-      },
-	  {
-        "type": "header",
-        "content": "Section Layout"
-      },
-	  {
-        "type": "color",
-        "id": "background_color",
-        "label": "Background Color"
-      },
-	  {
-        "type": "select",
-        "id": "box_layout",
-        "label": "Section Layout",
-        "options": [
-          {
-            "value": "text-image",
-            "label": "Text + Image"
-          },
-          {
-            "value": "image-text",
-            "label": "Image + Text"
-          }
-        ],
-        "default": "text-image"
-      }
-    ],
-    "presets": [
-      {
-        "name": "New Header Banner"
-      }
-    ]
-  }
+{
+  "name": "New Header Banner",
+  "class": "new-header-banner-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subheading",
+      "default": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Url"
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Box Text align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "info": "Left"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Content Box BG Image"
+    },
+    {
+      "type": "header",
+      "content": "Content Layout"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_overlay",
+      "label": "Heading overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "heading_overlay_color",
+      "label": "Heading overlay Color",
+      "default": "#e86384"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button BG Color",
+      "default": "#e86384"
+    },
+    {
+      "type": "color",
+      "id": "btn_font_color",
+      "label": "Button Font Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color_hover",
+      "label": "Hover - Button BG Color",
+      "default": "#4ec0b2"
+    },
+    {
+      "type": "color",
+      "id": "btn_font_color_hover",
+      "label": "Hover - Button Font Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "select",
+      "id": "box_layout",
+      "label": "Section Layout",
+      "options": [
+        {
+          "value": "text-image",
+          "label": "Text + Image"
+        },
+        {
+          "value": "image-text",
+          "label": "Image + Text"
+        }
+      ],
+      "default": "text-image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Header Banner"
+    }
+  ]
+}
 {% endschema %}
 
 <style>
-#section-{{ section.id }} {
-  background-color: {{ section.settings.background_color }};
-}
+  #section-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+  }
 
-.header-banner-box {
-    display: flex;
-    width: 100%;
-}
-.header-banner-box .header-banner-box-left {
-    width: 50%;
-  	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.header-banner-box .header-banner-box-right {
-    width: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.banner-content-box {
-    padding: 40px;
-    max-width: 730px;
-    margin-left: auto;
-}
-.banner_title {
-    font-size: 78px;
-    color: #fff;
-    text-shadow: -4px 4px #e86384;
-    text-stroke: 2px #e86384;
-    -webkit-text-stroke: 2px #e86384;
-    font-family: 'Gibson';
-    font-weight: 900;
-    line-height: 1;
-    margin: 0px;
-  	font-family: Gibson;
-}
-.banner-content-box .button {
+  .header-banner-box {
+      display: flex;
+      width: 100%;
+  }
+  .header-banner-box .header-banner-box-left {
+      width: 50%;
+    	background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+  .header-banner-box .header-banner-box-right {
+      width: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+  .banner-content-box {
+      padding: 40px;
+      max-width: 730px;
+      margin-left: auto;
+  }
+  .banner_title,
+  .banner_subtitle {
+      font-size: 78px;
+      color: #fff;
+      text-shadow: -4px 4px #e86384;
+      text-stroke: 2px #e86384;
+      -webkit-text-stroke: 2px #e86384;
+      font-family: 'Gibson';
+      font-weight: 900;
+      line-height: 1;
+      margin: 0px;
+    	font-family: Gibson;
+  }
+  .banner_subtitle {
+    font-weight: 400 !important;
+    font-size: 58px !important;
+    margin: 0 !important;
+  }
+  .banner-content-box .button {
     border-color: #e86384;
     background: #e86384;
-  	color: #ffffff;
+    color: #ffffff;
     margin-top: 30px;
     min-width: 180px;
-}
-.banner-content-box .button:hover {
+  }
+  .banner-content-box .button:hover {
     border-color: #e86384 !important;
     background: #4ec0b2 !important;
-  	color: #ffffff !important;
-}
-.banner-content-box.text--left {
-  	text-align: left;
-}
-.banner-content-box.text--right {
-  	text-align: right;
-}
-.banner-content-box.text--center {
-  	text-align: center;
-}
-.header-banner-box.image-text {
+    color: #ffffff !important;
+  }
+  .banner-content-box.text--left {
+    text-align: left;
+  }
+  .banner-content-box.text--right {
+    text-align: right;
+  }
+  .banner-content-box.text--center {
+    text-align: center;
+  }
+  .header-banner-box.image-text {
     flex-direction: row-reverse;
-}
-.header-banner-box.image-text .banner-content-box {
+  }
+  .header-banner-box.image-text .banner-content-box {
     margin-right: auto;
     margin-left: unset;
-}
-  
-#section-{{ section.id }} .banner_title {
+  }
+
+  #section-{{ section.id }} .banner_title,
+  #section-{{ section.id }} .banner_subtitle {
     color: {% if section.settings.heading_color != blank %}{{ section.settings.heading_color }}{% else %}#000{% endif %};
-  	text-shadow: unset;
+    text-shadow: unset;
     text-stroke: unset;
     -webkit-text-stroke: unset;
     font-family: 'Gibson';
     font-weight: 900;
     line-height: 1;
     margin: 0px;
-}
-  
-{%- if section.settings.heading_overlay -%}
-#section-{{ section.id }} .banner_title {
-  	text-shadow: -4px 4px {{ section.settings.heading_overlay_color }};
+  }
+  #section-{{ section.id }} .banner_subtitle {
+    font-weight: 400;
+  }
+
+  {%- if section.settings.heading_overlay -%}
+  #section-{{ section.id }} .banner_title,
+  #section-{{ section.id }} .banner_subtitle {
+    text-shadow: -4px 4px {{ section.settings.heading_overlay_color }};
     text-stroke: 2px {{ section.settings.heading_overlay_color }};
     -webkit-text-stroke: 2px {{ section.settings.heading_overlay_color }};
-}
-{%- endif -%}
+  }
+  {%- endif -%}
 
-#section-{{ section.id }} .banner-content-box .button {
+  #section-{{ section.id }} .banner-content-box .button {
     border-color: {{ section.settings.btn_bg_color }};
     background: {{ section.settings.btn_bg_color }};
-  	color: {{ section.settings.btn_font_color }};
-}
-#section-{{ section.id }} .banner-content-box .button:hover {
+    color: {{ section.settings.btn_font_color }};
+  }
+  #section-{{ section.id }} .banner-content-box .button:hover {
     border-color: {{ section.settings.btn_bg_color_hover }} !important;
     background: {{ section.settings.btn_bg_color_hover }} !important;
-  	color: {{ section.settings.btn_font_color_hover }} !important;
-}
+    color: {{ section.settings.btn_font_color_hover }} !important;
+  }
 
-  
-@media screen and (max-width: 1399px){
-.banner_title {
-	font-size: 72px;
-} 
-}
-  
-@media screen and (max-width: 1299px){
-.banner_title {
-	font-size: 62px;
-} 
-}
-  
-@media screen and (max-width: 1199px){
-.banner_title {
-    font-size: 52px;
-    text-shadow: -3px 3px #e86384;
-    text-stroke: 1px #e86384;
-    -webkit-text-stroke: 1px #e86384;
-}
-} 
- 
-@media screen and (max-width: 989px){
-.banner_title {
-	font-size: 42px;
-}
-.banner-content-box {
-    padding: 30px;
-}
-.banner-content-box .button {
-    margin-top: 25px;
-}
-}
- 
-@media screen and (max-width: 780px){
-.banner_title {
-    font-size: 41px;
-}
-}
-  
-@media screen and (max-width: 767px){
-.header-banner-box {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-}
-.header-banner-box.image-text {
-    flex-direction: column-reverse;
-}
-.header-banner-box .header-banner-box-left {
-    width: 100%;
-}
-.header-banner-box .header-banner-box-right {
-    width: 100%;
-    padding-top: 56.25%;
-}
-.banner_title {
-    font-size: 62px;
-}
-}
 
-@media screen and (max-width: 580px){
-.banner_title {
-    font-size: 52px;
-    text-shadow: -2px 2px #e86384;
-    text-stroke: 1px #e86384;
-    -webkit-text-stroke: 1px #e86384;
-}
-}
-  
-@media screen and (max-width: 480px){
-.banner_title {
-    font-size: 42px;
-    text-shadow: -2px 2px #e86384;
-    text-stroke: 1px #e86384;
-    -webkit-text-stroke: 1px #e86384;
-}
-}
+  @media screen and (max-width: 1399px){
+    .banner_title { font-size: 72px; }
+    .banner_subtitle { font-size: 52px; }
+  }
 
-@media screen and (max-width: 399px){
-.banner_title {
-    font-size: 38px;
-}
-}
-  
-@media screen and (max-width: 359px){
-.banner_title {
-    font-size: 34px;
-}
-.banner-content-box {
-    padding: 25px;
-}
-}
+  @media screen and (max-width: 1299px){
+    .banner_title { font-size: 62px; }
+    .banner_subtitle { font-size: 42px; }
+  }
+
+  @media screen and (max-width: 1199px){
+    .banner_title,
+    .banner_subtitle {
+      font-size: 52px;
+      text-shadow: -3px 3px #e86384;
+      text-stroke: 1px #e86384;
+      -webkit-text-stroke: 1px #e86384;
+    }
+    .banner_subtitle {
+      font-size: 32px;
+    }
+  }
+
+  @media screen and (max-width: 989px){
+    .banner_title { font-size: 42px; }
+    .banner_subtitle { font-size: 22px; }
+    .banner-content-box { padding: 30px; }
+    .banner-content-box .button { margin-top: 25px; }
+  }
+
+  @media screen and (max-width: 780px){
+    .banner_title { font-size: 41px; }
+    .banner_subtitle { font-size: 21px; }
+  }
+
+  @media screen and (max-width: 767px){
+    .header-banner-box {
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+    .header-banner-box.image-text { flex-direction: column-reverse; }
+    .header-banner-box .header-banner-box-left { width: 100%; }
+    .header-banner-box .header-banner-box-right {
+      width: 100%;
+      padding-top: 56.25%;
+    }
+    .banner_title { font-size: 62px; }
+    .banner_subtitle { font-size: 42px; }
+  }
+
+  @media screen and (max-width: 580px){
+    .banner_title,
+    .banner_subtitle {
+      font-size: 52px;
+      text-shadow: -2px 2px #e86384;
+      text-stroke: 1px #e86384;
+      -webkit-text-stroke: 1px #e86384;
+    }
+    .banner_subtitle { font-size: 32px; }
+  }
+
+  @media screen and (max-width: 480px){
+    .banner_title,
+    .banner_subtitle {
+      font-size: 42px;
+      text-shadow: -2px 2px #e86384;
+      text-stroke: 1px #e86384;
+      -webkit-text-stroke: 1px #e86384;
+    }
+    .banner_subtitle { font-size: 22px; }
+  }
+
+  @media screen and (max-width: 399px){
+    .banner_title { font-size: 38px; }
+    .banner_subtitle { font-size: 18px; }
+  }
+
+  @media screen and (max-width: 359px){
+    .banner_title { font-size: 34px; }
+    .banner_subtitle { font-size: 14px; }
+    .banner-content-box { padding: 25px; }
+  }
 </style>

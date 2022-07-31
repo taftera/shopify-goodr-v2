@@ -472,7 +472,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% comment %}
     {% include 'ajaxify-cart' %}
     {% endcomment %}
-    <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"26023404"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+    {% comment %} <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"26023404"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script> {% endcomment %}
 
   
   {% comment %}
@@ -482,8 +482,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
   {% endcomment %}
     
-<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+{% comment %} <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script> {% endcomment %}
 <script>
+  /*
     var klaviyo = klaviyo || [];
     klaviyo.init({
       account: "MJmvz3",
@@ -518,9 +519,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      success_text_color: "#1B9500"
     }
   });
+  */
 </script>
 
-
+{% comment %} 
 <!-- Back in Stock helper snippet -->
 {% render 'back-in-stock-helper' %}
 <!-- End Back in Stock helper snippet -->
@@ -529,11 +531,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script type="text/javascript" async
   src="//l.getsitecontrol.com/5wv1mlyw.js">
 </script>
-  
+   {% endcomment %}
 
-{% render 'special-offers' %}
+{% comment %} {% render 'special-offers' %} {% endcomment %}
   
-  
+{% comment %} 
 <!-- Start Code SMS Popup Code -->
 <a class="sms-popup-box" style="display: none;" data-izimodal-open="#sms-popup" data-izimodal-zindex="20000" data-izimodal-preventclose="" >
   	<button href="javascript:void(0)" class="popup-close-button" aria-label="close"><svg width="10" height="10" viewBox="0 0 23 23" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" fill="white" d="M9.34583 11.2L0.384011 2.23818C-0.128004 1.72617 -0.128004 0.896026 0.384011 0.384011C0.896026 -0.128004 1.72617 -0.128004 2.23818 0.384011L11.2 9.34583L20.1618 0.384011C20.6738 -0.128004 21.504 -0.128004 22.016 0.384011C22.528 0.896026 22.528 1.72617 22.016 2.23818L13.0542 11.2L22.016 20.1618C22.528 20.6738 22.528 21.504 22.016 22.016C21.504 22.528 20.6738 22.528 20.1618 22.016L11.2 13.0542L2.23818 22.016C1.72617 22.528 0.896026 22.528 0.384011 22.016C-0.128003 21.504 -0.128003 20.6738 0.384011 20.1618L9.34583 11.2Z"></path></svg></button>
@@ -546,8 +548,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="sms-form-content">
     	<div class="klaviyo-form-WKUae8"></div>  
   	</div>
-</div>  
+</div>   {% endcomment %}
 <script>
+  /*
 jQuery( document ).ready(function($) {
   	
   	var PopupCookies = extractUserNameFromCookie('phonePopupCookies');
@@ -597,7 +600,8 @@ jQuery( document ).ready(function($) {
             }
 		});
 	});
-});
+});  
+*/
 const createCookie = (cookieName, cookieValue) => {
 	// Expiry date conversion into UTC standard string
 	const daysToExpire = new Date(2147483647 * 1000).toUTCString();
