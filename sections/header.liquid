@@ -104,10 +104,10 @@
                     <div class="nav-top__mega-dropdown mega-menu-class-{{ link.title | handle }}">
                       <div class="container--fluid">
                         <div class="row  top-xs" adata-link-title="{{ link.title }}">
-                          {%- if link.title == 'Shop' or link.title == 'Estilos' -%}<div class="col-xs-6 col-md-6 col-lg-6 menu-list"><div class="row">{%- endif -%}
+                          {%- if link.title == 'Comprar' or link.title == 'Estilos' -%}<div class="col-xs-6 col-md-6 col-lg-6 menu-list"><div class="row">{%- endif -%}
                             {%- for childlink in link.links -%}
                               {%- if link.title != 'COMMUNITIES' -%}
-                              {%- if link.title == 'Shop' or link.title == 'Estilos' -%}<div class="col-xs-12 col-md-4">{%- endif -%}
+                              {%- if link.title == 'Comprar' or link.title == 'Estilos' -%}<div class="col-xs-12 col-md-4">{%- endif -%}
                                 <ul class="nav-top__mega-dropdown-child">
                                   <li>
                                     <a href="{{ childlink.url }}" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Desktop', 'event_label':'{{ link.title }}', 'event_action':'{{ childlink.title }}' });" class="nav-link--child">
@@ -130,12 +130,12 @@
                                     {%- endif -%}
                                   </li>
                                 </ul>
-                              {%- if link.title == 'Shop' or link.title == 'Estilos' -%}</div>{%- endif -%}
+                              {%- if link.title == 'Comprar' or link.title == 'Estilos' -%}</div>{%- endif -%}
                               {%- endif -%}
                             {% endfor %}
-                          {%- if link.title == 'Shop' or link.title == 'Estilos' -%}</div></div>{%- endif -%}
+                          {%- if link.title == 'Comprar' or link.title == 'Estilos' -%}</div></div>{%- endif -%}
 
-                          {%- if link.title == 'Shop' -%}
+                          {%- if link.title == 'Comprar' -%}
                           <div class="col-xs-6 col-md-6 col-lg-6">
                             <div class="row">
                             {%- for block in section.blocks -%}

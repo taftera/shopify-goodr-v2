@@ -25,7 +25,7 @@
         </form>
     
     	<ul class="nav-mobile">
-      		{% for link in linklists.new-mobile-menu-2.links %}
+      		{% for link in linklists.main-menu-2-0.links %}
         		{% if link.links != blank %}
           			<li class="nav-mobile__item">
             			<a class="nav-link--parent" href="{{ link.url }}" onclick="gtag('event', 'Click', { 'event_category': 'NAV - Mobile', 'event_label':'{{ link.title }}', 'event_action':'{{ link.title }} - Main Link' });">

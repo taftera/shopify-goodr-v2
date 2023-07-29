@@ -46,7 +46,7 @@
           "type": "item",
           "settings": {
             "gdr_subheader": "Órdenes en proceso.",
-            "gdr_subrichtext": "<p><strong>Información sobre número de rastreo<br\/><\/strong>Si tu pedido fue generado antes de las 9 a.m., la guía del envío te la compartiremos a través del correo con el que se realizó el pedido antes de las 5 p.m., en caso que se haya realizado posterior a las 9 a.m., recibirás tu guía al día siguiente previo a las 5 p.m.<br\/>Si efectuaste el pago y no has recibido tu guía, envíanos un correo a <a href=\"mailto:hola@goodr.mx\">hola@goodr.mx<\/a><\/p><p><strong>Estatus de tu orden<br\/><\/strong>Con la guía proporcionada por correo, podrás revisar la fecha estimada de entrega y rastrear directamente tu pedido en <a href=\"https:\/\/www.ups.com\/track?loc=es_MX&requester=ST\/\">UPS<\/a><\/p>"
+            "gdr_subrichtext": "<p><strong>Información sobre número de rastreo<br\/><\/strong>Si tu pedido fue generado antes de las 9 a.m., la guía del envío te la compartiremos a través del correo con el que se realizó el pedido antes de las 5 p.m., en caso que se haya realizado posterior a las 9 a.m., recibirás tu guía al día siguiente previo a las 5 p.m.<br\/>Si efectuaste el pago y no has recibido tu guía, envíanos un correo a <a href=\"mailto:hola@goodr.mx\">hola@goodr.mx<\/a><\/p><p><strong>Estatus de tu orden<br\/><\/strong>Con la guía proporcionada por correo, podrás revisar la fecha estimada de entrega y rastrear directamente tu pedido en <a href=\"https:\/\/www.ups.com\/track?loc=es_MX&requester=ST\/\">UPS<\/a><\/p><p><strong>Aclaración<\/strong><br\/>En caso de alguna aclaración necesaria en dirección , talla o color del producto se le contactara al correo con el que se realizo la orden . A partir del envío del correo se espera una respuesta dentro de un plazo no mayor a 48 horas , de lo contrario se cancelará o enviará de forma parcial el pedido.<\/p>"
           }
         },
         "6e7b0588-a4f2-42dd-9c8c-b3edac5be8ad": {
@@ -83,13 +83,6 @@
             "gdr_subheader": "Políticas de Devoluciones.",
             "gdr_subrichtext": "<p>A veces no es malo ser inseguro. Por ejemplo, aquí en Goodr estamos tratando desesperadamente de llenar el vacío emocional en nuestros corazones con el amor de nuestros clientes. Realmente queremos que nos ames. Por favor ámanos. Necesitamos esto.<\/p><p>Como parte de nuestro desesperado grito de atención, queremos asegurarnos de que esté 100% satisfecho con el producto que compró. Queremos que hables de nosotros con todos sus amigos (a quienes deberías presentarnos totalmente).<br\/>Para ayudarte a llegar allí, ofrecemos un período de devolución\/cambio de 30 días para todos los artículos pedidos en goodr.com con las siguientes advertencias:<br\/>» Todos los artículos devueltos o cambiados deben estar en las mismas condiciones en las que se entregaron, lo que significa que no están gastados, sin usar y sin daños (con excepción a los daños causados por ataques de osos realizados caso por caso).<br\/>» La garantía corre a partir de la fecha de compra original.<br\/>» Todas las devoluciones y cambios deben iniciarse desde el punto de venta original (es decir, goodr.com)<br\/>» NO aceptamos devoluciones o cambios en artículos que están específicamente marcados como \"VENTA FINAL\" o “SALE”.<\/p>"
           }
-        },
-        "836b333c-2556-4523-b16f-f4423bf35032": {
-          "type": "item",
-          "settings": {
-            "gdr_subheader": "Políticas de Garantía.",
-            "gdr_subrichtext": "<p>Información sobre tiendas físicas:<\/p><p><a href=\"https:\/\/goodr.mx\/pages\/tiendas-goodr-mexico\">Ver tiendas<\/a><\/p>"
-          }
         }
       },
       "block_order": [
@@ -101,8 +94,33 @@
         "fd39dcbb-e4ea-473f-81ac-57469673fceb",
         "72150df9-0c1d-4cd3-95a2-23e6695fcd02",
         "33b0a63c-8daa-454c-89e0-038947c8d468",
-        "85895d99-c9cc-4615-8a09-8854ff24d823",
-        "836b333c-2556-4523-b16f-f4423bf35032"
+        "85895d99-c9cc-4615-8a09-8854ff24d823"
+      ],
+      "settings": {
+        "gdr_header": ""
+      }
+    },
+    "1659394873fa48d796": {
+      "type": "collapsible-content",
+      "blocks": {
+        "16593948738c1a0f78-0": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Tiendas",
+            "gdr_subrichtext": "<p>Información sobre tiendas físicas:<\/p><p><a href=\"https:\/\/goodr.mx\/pages\/tiendas-goodr-mexico\">Ver tiendas<\/a><\/p>"
+          }
+        },
+        "16593948738c1a0f78-1": {
+          "type": "item",
+          "settings": {
+            "gdr_subheader": "Contacto",
+            "gdr_subrichtext": "<p>Contáctanos por medio de correo<\/p><p>Escríbenos y te responderemos tan pronto sea posible a <a href=\"mailto:hola@goodr.mx\">hola@goodr.mx<\/a><br\/> Nuestro horario de atención es de Lunes a Viernes de 9:00 am a 5:00 pm. (Con excepción de atención los días feriados)<\/p><p>Contáctanos por medio de teléfono<\/p><p>Será un placer atenderte: <a href=\"tel:8181233496\">(81) 81 23 34 96<\/a><br\/> Nuestro horario de atención es de Lunes a Jueves de 9:00 am a 4:00 pm. <br\/> (Con excepción de atención los días feriados)<\/p><p><strong>NG SUPPLY S.A. DE C.V.<\/strong><br\/> Distribuidor Nacional autorizado.<br\/> Santa Catarina, N.L. México.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16593948738c1a0f78-0",
+        "16593948738c1a0f78-1"
       ],
       "settings": {
         "gdr_header": ""
@@ -117,6 +135,7 @@
   "order": [
     "main",
     "16586854950b9f29ef",
+    "1659394873fa48d796",
     "16586854828d8694de"
   ]
 }

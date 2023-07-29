@@ -12,9 +12,9 @@
     "share_twitter": false,
     "share_pinterest": false,
     "social_twitter_link": "https:\/\/twitter.com\/goodr",
-    "social_facebook_link": "https:\/\/www.facebook.com\/rungoodr",
+    "social_facebook_link": "https:\/\/www.facebook.com\/goodrmx\/",
     "social_pinterest_link": "",
-    "social_instagram_link": "https:\/\/www.instagram.com\/goodr\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/goodrmx\/",
     "social_snapchat_link": "",
     "social_tumblr_link": "",
     "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCsxfWO2Z5p1k_zo_cHf-O8g",
@@ -237,24 +237,24 @@
           "7acbcf37-2a60-4c00-9d14-6fa7399d79da": {
             "type": "shop_all_blocks",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NavSquares_300x300_Apparel.jpg",
-              "title": "APPAREL",
-              "image_url": "shopify:\/\/collections\/apparel"
+              "image": "shopify:\/\/shop_images\/GOODR_WEB.jpg",
+              "title": "FARMERS MARKET",
+              "image_url": "shopify:\/\/collections\/farmers-market"
             }
           },
           "4e2b9d1f-3c06-4a99-b754-aff760a19903": {
             "type": "shop_all_blocks",
             "settings": {
-              "image": "shopify:\/\/shop_images\/AVENGERS_Outlines_NavSquare.jpg",
-              "title": "marvel | goodr",
-              "image_url": "shopify:\/\/collections\/marvel"
+              "image": "shopify:\/\/shop_images\/Blue-Mirage-500x500.jpg",
+              "title": "BLUE MIRAGE",
+              "image_url": "shopify:\/\/collections\/blue-mirage"
             }
           },
           "cd057bd2-d657-40a8-b673-d41563dc38dc": {
             "type": "shop_all_blocks",
             "settings": {
               "image": "shopify:\/\/shop_images\/NavSquares_300x300Tortoiseshell_400x_90e2811d-a96e-4d87-a063-1772eb79fff8.jpg",
-              "title": "BEST SELLERS",
+              "title": "Los más vendidos",
               "image_url": "shopify:\/\/collections\/all-models"
             }
           },
@@ -337,10 +337,10 @@
           "225cb9ef-a544-4b05-ab62-a287be2b36d3"
         ],
         "settings": {
-          "help_link": "shopify:\/\/pages\/centro-de-ayuda-goodr",
+          "help_link": "",
           "announcement_bar_enabled": true,
           "announcement_bar_home_page_only": false,
-          "announcement_bar_text": "FREE U.S. Standard Shipping on Orders $50+",
+          "announcement_bar_text": "👓 ENVÍO GRATIS  👓",
           "announcement_bar_link": "",
           "announcement_bar_text_2": "",
           "announcement_bar_link_2": "",
@@ -36837,21 +36837,21 @@
       "1653896517e60ff95d": {
         "type": "new-header-banner-section",
         "settings": {
-          "image": "shopify:\/\/shop_images\/PRODUCT_960x550-100.jpg",
-          "title": "<br>FREE SHIPPING ON RED WHITE & BLACKOUT COLLECTION<br>",
-          "button_text": "SHOP NOW",
-          "button_url": "shopify:\/\/collections\/marvel",
+          "image": "shopify:\/\/shop_images\/BANNE_1_GOODR_1.png",
+          "title": "DISPONIBLES",
+          "subtitle": "TUS LENTES FAVORITOS",
+          "button_text": "VER MÁS",
+          "button_url": "shopify:\/\/collections\/all",
           "heading_align": "center",
-          "bg_image": "shopify:\/\/shop_images\/TITLE_960X550-100.jpg",
           "heading_color": "#ffffff",
           "heading_overlay": true,
-          "heading_overlay_color": "#d63d36",
-          "btn_bg_color": "#d63d36",
+          "heading_overlay_color": "#e86384",
+          "btn_bg_color": "#e86384",
           "btn_font_color": "#ffffff",
-          "btn_bg_color_hover": "#d63d36",
-          "btn_font_color_hover": "#222222",
-          "background_color": "#222222",
-          "box_layout": "text-image"
+          "btn_bg_color_hover": "#4ec0b2",
+          "btn_font_color_hover": "#ffffff",
+          "background_color": "#4ec0b2",
+          "box_layout": "image-text"
         }
       },
       "1653896867d04abd97": {
@@ -36861,7 +36861,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/VCB_350x600_2.jpg",
-              "image_url": "shopify:\/\/products\/captain-americas-uv-shield"
+              "image_url": "shopify:\/\/collections\/all-black"
             }
           },
           "8624545d-70ce-4b8c-9074-10d7d0f36c44": {
@@ -36893,8 +36893,8 @@
           "41331f9d-1e60-4050-a347-b362859aefd9"
         ],
         "settings": {
-          "title": "NO SLIP. NO BOUNCE. ALL POLARIZED.<br> $25 ACTIVE SUNGLASSES FOR ANYONE",
-          "title_mobile": "$25 ACTIVE SUNGLASSES FOR ANYONE",
+          "title": "No resbalan. No rebotan. Todo Polarizado. Todo diversión",
+          "title_mobile": "No resbalan. No rebotan. Todo Polarizado. Todo diversión",
           "section_width": "container--fluid"
         }
       },
@@ -36948,7 +36948,7 @@
       "165389696142acdac4": {
         "type": "new-three-full-image-section",
         "settings": {
-          "title": "ALL TIME BEST",
+          "title": "Los más vendidos",
           "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Bosley.jpg",
           "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Bosley_1785db13-5052-45fc-bef8-ba41c6efbaa6.jpg",
           "image_1_url": "shopify:\/\/products\/bosleys-basset-hound-dreams",
@@ -36963,6 +36963,7 @@
       },
       "16538969822d44ecf3": {
         "type": "new-logo-grid-section",
+        "disabled": true,
         "blocks": {
           "e95b13b3-e147-44b4-b554-412e1b2103a9": {
             "type": "logo_icon",
@@ -37078,9 +37079,9 @@
       "1653897011fd7577ab": {
         "type": "new-newsletter",
         "settings": {
-          "section_title": "STAY UP TO DATE",
-          "subheading": "On our latest shades and exclusive deals",
-          "form_code": "Q2fUFs"
+          "section_title": "Para estar actualizado",
+          "subheading": "Sobre nuestros modelos más recientes y promociones exclusivas subscríbete a nuestro newsletter",
+          "form_code": "S62Fyy"
         }
       },
       "1653897132fd046977": {
@@ -37089,36 +37090,36 @@
           "4def0d88-d3b6-4972-a2d1-e58922b0e6d0": {
             "type": "review_item",
             "settings": {
-              "title": "ABSOLUTELY LOVE<br>THESE SUN GLASSES!",
-              "content": "<p>Absolutely love these sunglasses! I bought some for my whole fam and even friends! Fit perfect! Lightweight! Stay in place! I'll never buy another brand!!<\/p>",
-              "author_name": "LINDSEY K.",
+              "title": "Perdidamente enamorada",
+              "content": "<p> ¡Me encantan estos lentes de sol! Compré algunos para toda mi familia e incluso amigos. Ajuste perfecto y muy ligeros, son mis favoritos.<\/p>",
+              "author_name": "Lucía Treviño",
               "show_star": true
             }
           },
           "04afcc78-c4c1-4b04-9532-9c96cd6fb49d": {
             "type": "review_item",
             "settings": {
-              "title": "GOODR SUNNIES<br> FOR LIFE!",
-              "content": "<p>Finally a pair of sunnies that are comfortable, sporty and cute!!! I love them for everyday and runs. Only complaint...too many choices I WANT THEM ALL<\/p>",
-              "author_name": "TAMMIE M.",
+              "title": "Colores y formas sin fin",
+              "content": "<p> Por fin encontré un par de lentes que son cómodos, deportivos y bonitos. Los amo para usar de diario y para correr, hay demasiadas opciones y ¡las quiero TODAS!<\/p>",
+              "author_name": "Anna Herrera",
               "show_star": true
             }
           },
           "f46954f2-e60c-4c44-83c6-d8b90ee94741": {
             "type": "review_item",
             "settings": {
-              "title": "GOODR'S<br> ARE COOLR",
-              "content": "<p>Was gladr that I gave them a try. Goodr construction, not junk that will break in a couple of weeks. It's pretty simpler, if you want to be coolr, get you some goodr's!<\/p>",
-              "author_name": "DAVID B.",
+              "title": "Goodr te hace ver cool",
+              "content": "<p>Me alegro de haberlos probado, no son como otros que se rompen al par de<br\/> semanas de uso, si quieres verte cool usando lentes usa Goodr.<\/p>",
+              "author_name": "Juan Rodriguez",
               "show_star": true
             }
           },
           "4fbbfaea-3aec-4594-b34a-23ea1d0972a4": {
             "type": "review_item",
             "settings": {
-              "title": "SUPER DUPER CUTE <br>AND RAD",
-              "content": "<p>Super rad! Many compliments. The cutest, most vibrant colors - love the lenses. And they stay on my face well, even when I chase the niblings around.<\/p>",
-              "author_name": "HEATHER H.",
+              "title": "Los mejores lentes",
+              "content": "<p>Son geniales, tienen las mejores opciones de color , no se caen una vez que los tienes puestos y te hacen ver bien. Muy contento de tenerlos.<\/p>",
+              "author_name": "Mario Mendoza",
               "show_star": true
             }
           }
@@ -37130,16 +37131,16 @@
           "4fbbfaea-3aec-4594-b34a-23ea1d0972a4"
         ],
         "settings": {
-          "title": "LOVED BY YOU"
+          "title": "Lo que dicen de nosotros"
         }
       },
       "16538971502b4259c1": {
         "type": "new-three-full-image-section",
         "settings": {
           "title": "",
-          "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Sobre-nosotros.jpg",
-          "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Sobre-nosotros.jpg",
-          "image_1_url": "",
+          "image_1": "shopify:\/\/shop_images\/FullWidthProduct_1920x350_Nuestro-blog.jpg",
+          "mobile_image_1": "shopify:\/\/shop_images\/FullWidthProduct_800x533_Nuestro-blog.jpg",
+          "image_1_url": "shopify:\/\/blogs\/goodr-times",
           "enable_zoom_1": false,
           "image_2_url": "#",
           "enable_zoom_2": false,
@@ -37158,7 +37159,15 @@
       "16538969822d44ecf3",
       "1653896992514eaef6",
       "1653897011fd7577ab"
-    ]
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
