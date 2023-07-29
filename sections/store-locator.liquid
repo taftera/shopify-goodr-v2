@@ -80,7 +80,7 @@
       const storeTelefono = place.phone;
       const storeLatitude = place.latitude;
       const storeLongitude = place.longitude;
-      const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${storeName},${storeState},Mexico&zoom=15&size=400x400&maptype=roadmap&markers=color:green%7Clabel:G%7C${storeLatitude},${storeLongitude}&key=AIzaSyCKp4smwEZxg8LpoYM8Ig3KioSZPxPd3Lc`;
+      const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${storeName},${storeState},Mexico&zoom=15&size=400x400&maptype=roadmap&markers=color:green%7Clabel:G%7C${storeLatitude},${storeLongitude}&key=${googleAPI}`;
       const linkUrl = `https://www.google.com/maps/search/${storeName},${storeState},Mexico`;
       return `
         <button type="button" class="gdr--collapsible">
